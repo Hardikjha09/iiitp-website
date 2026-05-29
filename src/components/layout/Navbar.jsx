@@ -5,52 +5,24 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Social Icons
 const FacebookIcon = ({ size }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   </svg>
 );
 
 const TwitterIcon = ({ size }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="white">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
 
 const LinkedinIcon = ({ size }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
     <rect x="2" y="9" width="4" height="12" />
     <circle cx="4" cy="4" r="2" />
   </svg>
 );
-
 const Navbar = () => {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
@@ -102,31 +74,6 @@ const Navbar = () => {
     else root.style.fontSize = "16px";
   };
 
-  // Language control
-  const changeLanguage = (lang) => {
-    const host = window.location.hostname;
-
-    // Always set base path cookie
-    if (lang === 'en') {
-      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    } else {
-      document.cookie = `googtrans=/en/${lang}; path=/`;
-    }
-
-    // Only set domain cookie if it's not localhost
-    if (host !== 'localhost' && host !== '127.0.0.1') {
-      if (lang === 'en') {
-        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=${host}; path=/;`;
-        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=.${host}; path=/;`;
-      } else {
-        document.cookie = `googtrans=/en/${lang}; domain=${host}; path=/`;
-        document.cookie = `googtrans=/en/${lang}; domain=.${host}; path=/`;
-      }
-    }
-
-    window.location.reload();
-  };
-
   const primaryLinks = [
     {
       name: "About Us",
@@ -160,23 +107,7 @@ const Navbar = () => {
         { name: "NIRF", path: "/nirf" },
       ]
     },
-    {
-      name: "Administration",
-      path: "#",
-      hasDropdown: true,
-      subLinks: [
-        { name: "Chairperson", path: "/administration/chairperson" },
-        { name: "Director", path: "/about/director-desk" },
-        { name: "Registrar", path: "/administration/registrar" },
-        { name: "Board of Governors", path: "/administration/board-of-governors" },
-        { name: "Finance Committee", path: "/administration/finance-committee" },
-        { name: "Building and Works Committee", path: "/administration/building-and-works-committee" },
-        { name: "Senate", path: "/administration/senate" },
-        { name: "Board of Studies (CSE)", path: "/administration/board-of-studies-cse" },
-        { name: "Board of Studies (ECE)", path: "/administration/board-of-studies-ece" },
-        { name: "Board of Studies (AS&H)", path: "/administration/board-of-studies-ash" },
-      ]
-    },
+    { name: "Administration", path: "/administration", hasDropdown: false },
     {
       name: "Academics",
       path: "#",
@@ -243,98 +174,40 @@ const Navbar = () => {
         { name: "PostDoc Fellow", path: "/research/postdoc-fellow" },
       ]
     },
-    { name: "People", path: "/people", hasDropdown: false },
+    {
+      name: "People",
+      path: "#",
+      hasDropdown: true,
+      subLinks: [
+        { name: "Faculty", path: "/people/faculty" },
+        { name: "Visiting Faculty", path: "/people/visiting-faculty" },
+        { name: "Non-Teaching Staff", path: "/people/non-teaching-staff" },
+        { name: "Alumni", path: "/people/alumni" },
+      ],
+    },
     {
       name: "Life@IIITP",
-      path: "#",
+      path: "/life",
       hasDropdown: true,
       subLinks: [
         { name: "Overview", path: "/life" },
-        {
-          name: "Professional Clubs",
-          hasDropdown: true,
-          path: "/life?tab=clubs",
-          subLinks: [
-            { name: "Blueprint", path: "/life?tab=clubs&club=blueprint" },
-            { name: "Club Heads (2025-26)", path: "https://www.iiitp.ac.in/sites/default/files/2025-09/Club%20Head%20and%20Co%20Head-2025-2026.pdf", isExternal: true },
-            { name: "Rang", path: "/life?tab=clubs&club=rang" },
-            { name: "QuantNum", path: "/life?tab=clubs&club=quantnum" },
-            { name: "Bit-Legion", path: "/life?tab=clubs&club=bit-legion" },
-            { name: "C-CUBE", path: "/life?tab=clubs&club=c-cube" },
-            { name: "E-Cell", path: "/life?tab=clubs&club=e-cell" },
-            { name: "Eclectic", path: "/life?tab=clubs&club=eclectic" },
-            { name: "SAAZ", path: "https://saaz-iiitp.vercel.app/", isExternal: true },
-            { name: "Vanity Crew", path: "/life?tab=clubs&club=vanity-crew" },
-            { name: "Sports", path: "/life?tab=clubs&club=sports" },
-            { name: "ROFIES", path: "/life?tab=clubs&club=rofies" },
-            { name: "localhost", path: "/life?tab=clubs&club=localhost" },
-            { name: "Horizon", path: "/life?tab=clubs&club=horizon" },
-            { name: "Abhinay", path: "/life?tab=clubs&club=abhinay" },
-            { name: "Q-riocity", path: "/life?tab=clubs&club=q-riocity" },
-          ]
-        },
-        {
-          name: "Activities",
-          hasDropdown: true,
-          path: "/life?tab=activities",
-          subLinks: [
-            { name: "Azadi Ka Amrit Mahotsav", path: "/life?tab=activities&act=azadi" },
-            { name: "EBSB", path: "/life?tab=activities&act=ebsb" },
-            { name: "Fit India Movement", path: "/life?tab=activities&act=fit-india" },
-            { name: "Hindi Pakhwada", path: "/life?tab=activities&act=hindi" },
-            { name: "Swachh Bharat", path: "/life?tab=activities&act=swachh" },
-            { name: "Unity Day", path: "/life?tab=activities&act=unity" },
-            { name: "Yoga Day", path: "/life?tab=activities&act=yoga" },
-            { name: "Youth Day", path: "/life?tab=activities&act=youth" },
-            { name: "AI Talent Hackathon", path: "/life?tab=activities&act=ai-talent" },
-          ]
-        },
-        { name: "Photo Gallery", path: "/life?tab=gallery" },
-        { name: "College Events", path: "/life?tab=events" },
-        { name: "HR Summit (2021)", path: "/life?tab=hr-summit" },
-        { name: "Magazine", path: "/life?tab=magazine" },
-        { name: "Permanent Campus", path: "/life?tab=campus" },
         { name: "ACM Chapter", path: "/#" },
-        { name: "Sports & Gymnasium", path: "/#" },
       ]
     },
-    {
-      name: "Notice",
-      path: "#",
-      hasDropdown: true,
-      subLinks: [
-        { name: "ANTI-RAGGING COMMITTEE & SQUADS", path: "/notice/anti-ragging" },
-        { name: "Late Fee for the even semester", path: "/notice/late-fee" },
-        {
-          name: "National Overseas Scholarship Scheme for ST students (2025-26)",
-          path: "#",
-          hasDropdown: true,
-          subLinks: [
-            { name: "Letter", path: "/documents/Letter to 265 institutions regarding NSP portal opening for the Year 2025-26.pdf", isExternal: true },
-            { name: "Guidelines NATIONAL FELLOWSHIP & SCHOLARSHIP", path: "/documents/Guidelines Scholarship - Top Class Part - B_compressed_compressed.pdf", isExternal: true }
-          ]
-        },
-        { name: "Odd Semester B.Tech (3rd, 5th & 7th Semesters) / M.Tech (3rd Semester) for AY (2025-26)", path: "/documents/Odd Sem Registration Instruction for Btech and Mtech_0.pdf", isExternal: true },
-        { name: "Rajbhasha Committee", path: "/documents/Rajbhasha committee.pdf", isExternal: true },
-        { name: "List of Faculty Advisor for B.Tech, M.Tech & PhD (Odd Semester) AY 2025-26", path: "/documents/List of Faculty Advisor for Odd Sem Registration.pdf", isExternal: true },
-        { name: "Notice in respect to the registration to the registration for B.Tech, M.Tech & PhD", path: "/documents/Notice in respect to the regstration for B.Tech, M.Tech & Ph.D programmes.pdf", isExternal: true },
-        { name: "List of Holidays", path: "/documents/office order (Holidays).pdf", isExternal: true },
-      ]
-    },
+    { name: "Notice", path: "/notice", hasDropdown: false },
     { name: "Careers", path: "/careers", hasDropdown: false },
     { name: "Placement", path: "/placement", hasDropdown: false },
     { name: "Contact Us", path: "/contact", hasDropdown: false },
-    { name: "E-TENDER", path: "/e-tender", hasDropdown: false },
-    // {
-    //   name: "More",
-    //   path: "#",
-    //   hasDropdown: true,
-    //   subLinks: [
-    //     { name: "RTI", path: "/rti" },
-    //     { name: "Suo-Motu Disclosure", path: "/suo-motu-disclosure" },
-    //     { name: "राजभाषा अनुभाग", path: "/rajbhasha-anubhag" },
-    //   ]
-    // },
+    { 
+      name: "E-TENDER", 
+      path: "#", 
+      hasDropdown: true,
+      subLinks: [
+        { name: "Live E-Tender", path: "/e-tender/live" },
+        { name: "Archive E-Tender", path: "/e-tender/archive" },
+        { name: "Awarded Tender", path: "https://www.iiitp.ac.in/sites/default/files/2026-04/Awarde%20Tender.pdf", isExternal: true },
+      ]
+    },
   ];
 
   const secondaryLinks = [
@@ -342,13 +215,14 @@ const Navbar = () => {
     // { name: "NIRF", path: "/nirf" },
     // { name: "Report and Minutes", path: "/#" },
     // { name: "RTI", path: "/#" },
+    // { name: "Sports & Gymnasium", path: "/#" },
     // { name: "Suo-Motu Disclosure", path: "/#" },
     // { name: "राजभाषा अनुभाग", path: "/#" },
     // { name: "ACM Chapter", path: "/#" },
   ];
 
   const navLinkClass = ({ isActive }) =>
-    `relative py-1 px-2.5 text-xs md:text-sm font-medium transition-colors duration-200 group flex items-center ${isActive ? "text-brand-red dark:text-brand-red-dark" : "text-white hover:text-brand-red dark:text-gray-200 dark:hover:text-brand-red-dark"
+    `relative py-2 px-3 text-sm font-medium transition-colors duration-200 group flex items-center ${isActive ? "text-brand-red dark:text-brand-red-dark" : "text-white hover:text-brand-red dark:text-gray-200 dark:hover:text-brand-red-dark"
     }`;
 
   const navLinkUnderline = ({ isActive }) => (
@@ -362,28 +236,28 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full shadow-md bg-primary dark:bg-surface-dark transition-colors duration-200">
       {/* Row 1: Logo + Name + Controls */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-blue-800/50 dark:border-gray-800">
-        <div className="flex justify-between items-center py-1 md:py-2">
+        <div className="flex justify-between items-center py-3 md:py-4">
           {/* Logo + Name */}
-          <Link to="/" className="flex items-center space-x-2 md:space-x-3">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+          <Link to="/" className="flex items-start space-x-3">
+            <div className="w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden flex items-center justify-center shrink-0">
               <img src="/iiitp-logo.png" alt="IIIT Pune Logo" className="w-full h-full object-contain" />
             </div>
             <div className="text-white dark:text-text-dark leading-tight">
-              <h1 className="text-sm md:text-base lg:text-lg font-bold font-serif">
+              <h1 className="text-xl md:text-2xl font-bold font-serif">
                 Indian Institute of Information Technology Pune
               </h1>
-              <h2 className="text-xs md:text-sm lg:text-base font-medium opacity-90 font-serif mt-0.5">
+              <h2 className="text-sm md:text-2xl font-medium opacity-90 font-serif mt-1">
                 भारतीय सूचना प्रौद्योगिकी संस्थान, पुणे
               </h2>
-              <p className="text-[9px] md:text-[11px] opacity-80 mt-0.5">(An Institute of National Importance)</p>
-              <p className="text-[7px] md:text-[9px] opacity-70 mt-0.5">
+              <p className="text-[10px] md:text-sm opacity-80 mt-1">(An Institute of National Importance)</p>
+              <p className="text-[8px] md:text-xs opacity-70 mt-0.5">
                 Gat No. 5 &amp; 6, Village Nanoli-Tathawade, Tal. Maval, Pune - 412106
               </p>
             </div>
           </Link>
 
           {/* Right Controls */}
-          <div className="flex flex-col items-end gap-1 md:gap-1.5">
+          <div className="flex flex-col items-end gap-3">
             {/* Top Row: Dark mode + Language + Text Size + Mobile menu */}
             <div className="flex items-center gap-2 md:gap-3">
               {/* Dark Mode */}
@@ -401,19 +275,15 @@ const Navbar = () => {
               {/* Language Selector */}
               <div className="hidden md:flex items-center bg-blue-900/40 dark:bg-gray-800/40 rounded-lg px-1.5 py-1 gap-0.5">
                 <button
-                  onClick={() => changeLanguage('en')}
-                  className="px-1.5 py-0.5 rounded font-medium text-xs text-white hover:bg-blue-700 dark:hover:bg-gray-700 transition-colors notranslate"
+                  className="px-1.5 py-0.5 rounded font-medium text-xs text-white hover:bg-blue-700 dark:hover:bg-gray-700 transition-colors"
                   title="English"
-                  translate="no"
                 >
                   EN
                 </button>
                 <span className="text-gray-400 dark:text-gray-500 text-xs font-light">|</span>
                 <button
-                  onClick={() => changeLanguage('hi')}
-                  className="px-1.5 py-0.5 rounded font-medium text-xs text-white hover:bg-blue-700 dark:hover:bg-gray-700 transition-colors notranslate"
+                  className="px-1.5 py-0.5 rounded font-medium text-xs text-white hover:bg-blue-700 dark:hover:bg-gray-700 transition-colors"
                   title="Hindi"
-                  translate="no"
                 >
                   हिं
                 </button>
@@ -459,27 +329,27 @@ const Navbar = () => {
             {/* Bottom Row: Social Icons + Search (Desktop only) */}
             <div className="hidden md:flex items-center gap-1.5">
               {/* Social Icons */}
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
                 <a
                   href="https://www.facebook.com/iiitpune"
                   aria-label="Facebook"
-                  className="text-white hover:text-accent-dark transition-colors p-1.5"
+                  className="opacity-80 hover:opacity-100 transition-opacity p-1.5"
                 >
-                  <FacebookIcon size={14} />
+                  <FacebookIcon size={18} />
                 </a>
                 <a
                   href="https://x.com/IIIT_PUNE"
                   aria-label="Twitter"
-                  className="text-white hover:text-accent-dark transition-colors p-1.5"
+                  className="opacity-80 hover:opacity-100 transition-opacity p-1.5"
                 >
-                  <TwitterIcon size={14} />
+                  <TwitterIcon size={18} />
                 </a>
                 <a
                   href="https://www.linkedin.com/school/iiitpune/posts/?feedView=all"
                   aria-label="LinkedIn"
-                  className="text-white hover:text-accent-dark transition-colors p-1.5"
+                  className="opacity-80 hover:opacity-100 transition-opacity p-1.5"
                 >
-                  <LinkedinIcon size={14} />
+                  <LinkedinIcon size={18} />
                 </a>
               </div>
 
@@ -519,14 +389,14 @@ const Navbar = () => {
 
       {/* Row 2: Primary Nav Links (Desktop) */}
       <nav className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-center items-center py-1 gap-x-2 gap-y-0.5">
+        <div className="flex flex-wrap justify-center items-center py-2 gap-x-2 gap-y-1">
           {primaryLinks.map((link) => (
             <div key={link.name} className="relative group">
               <NavLink
                 to={link.path}
                 className={({ isActive }) => {
                   const isLinkActive = link.path === "#"
-                    ? (link.name === "About Us" && location.pathname.startsWith("/about")) || (link.name === "Academics" && location.pathname.startsWith("/academics")) || (link.name === "Administration" && location.pathname.startsWith("/administration"))
+                    ? (link.name === "About Us" && location.pathname.startsWith("/about")) || (link.name === "Academics" && location.pathname.startsWith("/academics"))
                     : isActive;
                   return navLinkClass({ isActive: isLinkActive });
                 }}
@@ -534,7 +404,7 @@ const Navbar = () => {
               >
                 {({ isActive }) => {
                   const activeState = link.path === "#"
-                    ? (link.name === "About Us" && location.pathname.startsWith("/about")) || (link.name === "Academics" && location.pathname.startsWith("/academics")) || (link.name === "Administration" && location.pathname.startsWith("/administration"))
+                    ? (link.name === "About Us" && location.pathname.startsWith("/about")) || (link.name === "Academics" && location.pathname.startsWith("/academics"))
                     : isActive;
                   return (
                     <>
@@ -548,20 +418,16 @@ const Navbar = () => {
                 }}
               </NavLink>
               {link.hasDropdown && link.subLinks && (
-                <div className="absolute top-full left-0 mt-0 w-64 bg-white dark:bg-surface-dark rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-800 flex flex-col z-50">
+                <div className="absolute top-full left-0 mt-0 w-56 bg-white dark:bg-surface-dark rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-800 flex flex-col z-50">
                   {link.subLinks.map((sub) => (
                     <div key={sub.name} className="relative group/sub">
                       {sub.hasDropdown ? (
                         <>
-                          <Link
-                            to={sub.path || "#"}
-                            className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark cursor-pointer flex justify-between items-center transition-colors w-full"
-                          >
+                          <div className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark cursor-pointer flex justify-between items-center transition-colors">
                             {sub.name}
-                            <ChevronDown className="w-3 h-3 -rotate-90 opacity-70 shrink-0" />
-                          </Link>
-                          {/* Flyout panel to the RIGHT */}
-                          <div className="absolute left-full top-0 w-56 bg-white dark:bg-surface-dark rounded-md shadow-lg border border-gray-100 dark:border-gray-800 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 flex flex-col z-[60] max-h-[70vh] overflow-y-auto custom-scrollbar">
+                            <ChevronDown className="w-3 h-3 -rotate-90 opacity-70" />
+                          </div>
+                          <div className="absolute top-0 left-full ml-0 w-48 bg-white dark:bg-surface-dark rounded-md shadow-lg opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 border border-gray-100 dark:border-gray-800 flex flex-col z-50">
                             {sub.subLinks.map((nested) =>
                               nested.isExternal ? (
                                 <a
@@ -569,7 +435,7 @@ const Navbar = () => {
                                   href={nested.path}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark transition-colors text-left border-l-2 border-transparent hover:border-brand-red"
+                                  className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark first:rounded-t-md last:rounded-b-md transition-colors text-left"
                                 >
                                   {nested.name}
                                 </a>
@@ -577,7 +443,7 @@ const Navbar = () => {
                                 <Link
                                   key={nested.name}
                                   to={nested.path}
-                                  className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark transition-colors text-left border-l-2 border-transparent hover:border-brand-red"
+                                  className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark first:rounded-t-md last:rounded-b-md transition-colors text-left"
                                 >
                                   {nested.name}
                                 </Link>
@@ -609,17 +475,6 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        {/* <div className="flex flex-wrap justify-center items-center py-1 pb-2 gap-x-4 gap-y-1 text-xs opacity-90 border-t border-blue-800/30 dark:border-gray-800 mt-1 pt-2">
-          {secondaryLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className="text-white hover:text-accent-dark dark:text-gray-300 transition-colors"
-            >
-              {link.name}
-            </NavLink>
-          ))}
-        </div> */}
       </nav>
 
       {/* Mobile Menu */}
@@ -646,34 +501,34 @@ const Navbar = () => {
               </div>
 
               {/* Mobile Social + Language + Text Size */}
-              <div className="flex items-center gap-3 px-3">
+              <div className="flex items-center gap-4 px-3">
                 <a
                   href="https://www.facebook.com/iiitpune"
                   aria-label="Facebook"
-                  className="text-white hover:text-accent-dark transition-colors"
+                  className="opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  <FacebookIcon size={16} />
+                  <FacebookIcon size={20} />
                 </a>
                 <a
                   href="https://x.com/IIIT_PUNE"
                   aria-label="Twitter"
-                  className="text-white hover:text-accent-dark transition-colors"
+                  className="opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  <TwitterIcon size={16} />
+                  <TwitterIcon size={20} />
                 </a>
                 <a
                   href="https://www.linkedin.com/school/iiitpune/posts/?feedView=all"
                   aria-label="LinkedIn"
-                  className="text-white hover:text-accent-dark transition-colors"
+                  className="opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  <LinkedinIcon size={16} />
+                  <LinkedinIcon size={20} />
                 </a>
                 <div className="ml-auto flex items-center bg-blue-900/40 dark:bg-gray-800/40 rounded-lg px-1.5 py-1 gap-0.5">
-                  <button onClick={() => changeLanguage('en')} className="px-1.5 py-0.5 rounded text-xs text-white hover:bg-blue-700 transition-colors notranslate" translate="no">
+                  <button className="px-1.5 py-0.5 rounded text-xs text-white hover:bg-blue-700 transition-colors">
                     EN
                   </button>
                   <span className="text-gray-400 text-xs">|</span>
-                  <button onClick={() => changeLanguage('hi')} className="px-1.5 py-0.5 rounded text-xs text-white hover:bg-blue-700 transition-colors notranslate" translate="no">
+                  <button className="px-1.5 py-0.5 rounded text-xs text-white hover:bg-blue-700 transition-colors">
                     हिं
                   </button>
                 </div>
@@ -720,7 +575,7 @@ const Navbar = () => {
                           }}
                           className={({ isActive }) => {
                             const activeState = link.path === "#"
-                              ? (link.name === "About Us" && location.pathname.startsWith("/about")) || (link.name === "Academics" && location.pathname.startsWith("/academics")) || (link.name === "Administration" && location.pathname.startsWith("/administration"))
+                              ? (link.name === "About Us" && location.pathname.startsWith("/about")) || (link.name === "Academics" && location.pathname.startsWith("/academics"))
                               : isActive;
                             return `flex-1 px-3 py-2 rounded-md text-base font-medium transition-colors ${activeState
                               ? "bg-brand-red text-white dark:bg-brand-red-dark/50"
@@ -754,13 +609,9 @@ const Navbar = () => {
                                 {sub.hasDropdown ? (
                                   <>
                                     <div className="flex items-center justify-between">
-                                      <Link
-                                        to={sub.path || "#"}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className="flex-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-brand-red transition-colors text-left"
-                                      >
+                                      <div className="flex-1 px-3 py-2 text-sm font-medium text-gray-300">
                                         {sub.name}
-                                      </Link>
+                                      </div>
                                       <button
                                         onClick={(e) => toggleDropdown(sub.name, e)}
                                         className="p-2 text-white hover:bg-blue-800/50 rounded-md"
@@ -841,24 +692,6 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Secondary Links */}
-              {/* <div className="flex flex-wrap gap-2 px-3">
-                  {secondaryLinks.map((link) => (
-                    <NavLink
-                      key={link.name}
-                      to={link.path}
-                      className={({ isActive }) =>
-                        `px-3 py-1.5 rounded-full text-xs font-medium transition-colors border border-blue-800/50 dark:border-gray-700 ${isActive
-                          ? "bg-blue-800 text-white dark:bg-gray-700"
-                          : "text-gray-200 hover:bg-blue-800/50 dark:text-gray-400 dark:hover:bg-gray-800"
-                        }`
-                      }
-                    >
-                      {link.name}
-                    </NavLink>
-                  ))}
-                </div> */}
             </div>
           </motion.div>
         )}

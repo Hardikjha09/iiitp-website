@@ -12,7 +12,7 @@ import {
   Navigation, 
   Search, 
   Copy, 
-  Check 
+  Check
 } from 'lucide-react';
 
 const transportModes = [
@@ -258,6 +258,17 @@ const ContactPage = () => {
                       <strong>Phone:</strong> <a href="tel:02114224510" className="hover:text-accent dark:hover:text-accent-dark">02114-224510</a><br />
                       <strong>Email:</strong> <a href="mailto:enquiry@iiitp.ac.in" className="hover:text-accent dark:hover:text-accent-dark">enquiry@iiitp.ac.in</a>
                     </p>
+                    <div className="pt-4 flex items-center space-x-5">
+                      <a href="https://www.linkedin.com/school/indian-institute-of-information-technology-pune/" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="LinkedIn">
+                        <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6 object-contain" />
+                      </a>
+                      <a href="https://twitter.com/IIITPune" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="X (Twitter)">
+                        <img src="/x.png" alt="X (Twitter)" className="w-6 h-6 object-contain" />
+                      </a>
+                      <a href="https://www.facebook.com/Indian-Institute-of-Information-Technology-Pune-101140938435131/" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Facebook">
+                        <img src="/facebook.png" alt="Facebook" className="w-6 h-6 object-contain" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

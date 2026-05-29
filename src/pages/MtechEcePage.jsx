@@ -56,7 +56,7 @@ const MtechEcePage = () => {
           
           <div className="lg:col-span-3 space-y-12">
             
-            <section className="relative overflow-hidden bg-gradient-to-br from-gray-800 to-black rounded-2xl shadow-xl text-white p-8 md:p-10 border border-gray-700">
+            <section className="relative overflow-hidden bg-gradient-to-br from-gray-800 to-black rounded-2xl shadow-xl text-white p-8 md:p-10 border border-gray-700 h-full">
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold font-serif mb-6 text-white">
                   Program Overview
@@ -102,7 +102,7 @@ const MtechEcePage = () => {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 sticky top-24">
+            <div className="bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 sticky top-24 h-full">
               <h3 className="font-bold font-serif text-lg text-primary dark:text-white mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
                 Department Links
               </h3>

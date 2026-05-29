@@ -1,0 +1,257 @@
+{
+  "faculty": [
+    {
+      "designation": "Faculty Members | Indian Institute of Information Technology, Pune",
+      "name": "Language"
+    },
+    {
+      "name": "Main navigation"
+    },
+    {
+      "designation": "Assistant Professor\nHoD CSE\nAssociate Dean (Infrastructure, Administration & Finance)",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_8796-min.JPG",
+      "name": "Dr. Bhupendra Singh",
+      "expertise": "Digital Forensics, Cyber Security, Natural Language Processing"
+    },
+    {
+      "designation": "Assistant Professor\nAssociate Dean (Academics)",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_8775-min_0.JPG",
+      "name": "Dr. Sanjeev Sharma",
+      "expertise": "Artificial Intelligence, Machine Learning, Deep Learning"
+    },
+    {
+      "designation": "Assistant Professor\nHoD ECE",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_8789-min%20%281%29.JPG",
+      "name": "Dr. Nagendra Kushwaha",
+      "expertise": "Low-power (SoC) architecture and design, Mixed-signal and analog circuit design, Hardware accelerators and PE array integration"
+    },
+    {
+      "designation": "Assistant Professor\nAssociate Dean (R&D and Faculty Welfare)",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_9144-min.JPG",
+      "name": "Dr. Sushant Kumar",
+      "expertise": "Wireless Communication, Synchronization Parameters Estimation, Modulation"
+    },
+    {
+      "designation": "Assistant Professor\nLibrary / Digital Library I/C",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/Dr%20Anagha%20Khiste-min.jpg",
+      "name": "Dr. Anagha Uday Khiste",
+      "expertise": "Algebra, Discrete Mathematics, Lattice theory, Order structure, Graph theory"
+    },
+    {
+      "designation": "Assistant Professor\nHoD ASH",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_9056-min.jpg",
+      "name": "Dr. Jatin Majithia",
+      "expertise": "Commutative Algebra, Graph theory, Lattice theory, Fractional Differential equations"
+    },
+    {
+      "designation": "Assistant Professor\nController of Examination",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/DSC_9053-min.jpg",
+      "name": "Dr. Chandrakant Narayan Guled",
+      "expertise": "Applied Mathematics, Computational dynamics, Optimization."
+    },
+    {
+      "designation": "Assistant Professor",
+      "image": "https://iiitp.ac.in/sites/default/files/2023-02/ph11.JPG",
+      "name": "Dr.Mahendra Pratap Yadav",
+      "expertise": "Cloud Computing, Machine Learning, AI, Data Mining, Software Engineering and Formal Methods"
+    },
+    {
+      "designation": "Assistant Professor\nSports I/C",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-04/IMG_6797.jpeg",
+      "name": "Dr. Shrikant Salve",
+      "expertise": "Human-Computer Interaction, Usability Engineering, Augmented Reality, User-Centered Deep Learning"
+    },
+    {
+      "designation": "Assistant Professor",
+      "image": "https://iiitp.ac.in/sites/default/files/inline-images/Profile%20Photo_3.jpg",
+      "name": "Dr. Sonam Maurya",
+      "expertise": "Wireless Sensor Network, (IoT), (VANET), Mobile and Wireless Networks, Machine Learning, Deep Learning and Image Processing"
+    },
+    {
+      "designation": "Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-01/Dr.%20Priyank%20pic01.jpg",
+      "name": "Dr. Priyank Jain",
+      "expertise": "Data Science, Data Privacy and security, and Machine Learning"
+    },
+    {
+      "designation": "Assistant Professor\n(Boy's Hostel 1 Warden)",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/20240715170959288_0.jpeg",
+      "name": "Dr. Dheeraj Dubey",
+      "expertise": "5G and Beyond, Free Space Optics, Machine Learning, Under Water Communication"
+    },
+    {
+      "designation": "Assistant Professor\nAssistant Registrar (Academics)",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/sumit%20pic.jpg",
+      "name": "Dr. Sumit Kumar Gupta",
+      "expertise": "Community Detection Algorithms, Graph Algorithms, Social Network Analysis, Data Science, Artificial Intelligence and Machine Learning"
+    },
+    {
+      "designation": "Assistant Professor\nFaculty In-charge, TPO",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-01/Kaptan%20Singh.png",
+      "name": "Dr. Kaptan Singh",
+      "expertise": "Web of Things, Cyber Security, Algorithms, and Theoretical Computer Science"
+    },
+    {
+      "designation": "Assistant Professor\nChief Warden",
+      "image": "https://www.iiitp.ac.in/sites/default/files/inline-images/Screenshot%202024-07-16%20at%203.19.41%20PM.png",
+      "name": "Dr. Shubham Shukla",
+      "expertise": "Robot Path Planning , Nature Inspired Optimisation technique,Microcontrollers and Embedded Systems & Design"
+    },
+    {
+      "designation": "Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2024-07/Dipen%20Bepari.jpg",
+      "name": "Dr. Dipen Bepari",
+      "expertise": "Cognitive Radio, NOMA, IRS, Energy Harvesting, 5G and beyond communications"
+    },
+    {
+      "designation": "Assistant Professor\nWebsite I/C",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2024-07/Shivangi.jpg",
+      "name": "Dr. Shivangi Shukla",
+      "expertise": "Information Security, Privacy, Cloud Computing Security, and Security and Privacy in Internet of Things."
+    },
+    {
+      "designation": "Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2024-07/410167717_3485636961747276_822957193122217876_n.jpg",
+      "name": "Dr. KM Divya Chaturvedi",
+      "expertise": "SIW-based Cavity-backed Multi-band Antennas with Intrinsically Isolated Ports and Smart Antenna Design with IoT-enabled devices."
+    },
+    {
+      "designation": "Assistant Professor\nGirls' Hostel Warden",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2024-08/image%20%281%29%20%282%29.png",
+      "name": "Dr. Habila Basumatary",
+      "expertise": "Cyber Security in IoT, Smart Micro-Grids, EV Charging, and Energy Efficiency in WSN."
+    },
+    {
+      "designation": "Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2024-08/Sanga_Chaki%20-%20Copy.jpg",
+      "name": "Dr. Sanga Chaki",
+      "expertise": "Machine Learning, Deep Learning, Affective Computing, Sound and Music Computing, and Trustworthy"
+    },
+    {
+      "designation": "Assistant Professor\nCoordinator PG/ Ph.D.\nBoys' Hostel 2 Warden",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2024-08/Mahesh_Joshi_0.JPG",
+      "name": "Dr. Mahesh Joshi",
+      "expertise": "Biometric authentication, Partial fingerprint Identification, Biometric Security, Internet-of-Things (IoT) security."
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://iiitp.ac.in/sites/default/files/2024-01/DrMARahman_01-removebg-preview.png",
+      "name": "Dr. Mohammad Akhlaqur Rahman",
+      "expertise": "Medical Image Processing."
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://iiitp.ac.in/sites/default/files/2024-01/IMG_20240116_105326.jpg",
+      "name": "Dr. Sakshi Semwal",
+      "expertise": "Magical Realism in South Asian literature. Postcolonial Studies, Gender Studies, Anglophone Literature"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://iiitp.ac.in/sites/default/files/2024-01/Image_Anu%20Priya.jpg",
+      "name": "Ms. Anu Priya",
+      "expertise": "Image Processing, Computer Vision, Deep Learning, Deep Reinforcement Learning, Robot Path Planning."
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-01/PriyankaJoshi1_0.jpeg",
+      "name": "Dr. Priyanka Joshi",
+      "expertise": "Hardware security, Cyber security, Internet-of-Things (IoT) security, and Multi-agent security."
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-01/ProfilePhoto.jpeg",
+      "name": "Ms. Shamal Kashid",
+      "expertise": "Machine Learning, Deep Learning, Multimedia Security, Multimedia Summarization"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-01/IMG_20200223_141342.jpg",
+      "name": "Ms. Anupama Arun",
+      "expertise": "Machine Learning and Deep Learning"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-08/priya%20photo.jpeg",
+      "name": "Ms. Priya Jadhav",
+      "expertise": "Machine Learning, Mixed Reality- AR,VR and HCI"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2025-10/SabahTazeen.jpeg",
+      "name": "Ms. Sabah Tazeen",
+      "expertise": "Data Gathering and Recharging in Wireless Sensor Networks"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2026-01/PHOTOGRAPH_Website.jpg",
+      "name": "Dr. Ashish Singh",
+      "expertise": "VLSI Interconnects"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2026-02/Yashdeep_Singh.jpeg",
+      "name": "Mr. Yashdeep Singh",
+      "expertise": "Theoretical Computer Science, Graph Theory, Algorithms"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2026-02/Dr.%20Sohini%20Gayenpic.jpeg",
+      "name": "Dr. Sohini Gayen",
+      "expertise": "English Literature"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2026-02/Tushar%20Prakash%20Gawande.png",
+      "name": "Dr. Tushar Prakash Gawande",
+      "expertise": "Embedded system design, VLSI Design, Data analysis"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "image": "https://www.iiitp.ac.in/sites/default/files/2026-03/Manish_profile_pic.jpeg",
+      "name": "Mr. Manish Kumar",
+      "expertise": "Machine Learning & Deep learning, Autonomous vehicles vision system"
+    },
+    {
+      "designation": "Adjunct Assistant Professor",
+      "name": "Quick Links"
+    },
+    {
+      "name": "Locate us"
+    }
+  ],
+  "visiting_faculty": [
+    {
+      "designation": "Visiting Faculty | Indian Institute of Information Technology, Pune",
+      "name": "Language"
+    },
+    {
+      "name": "Main navigation"
+    },
+    {
+      "designation": "Director Desk",
+      "image": "https://home.iitk.ac.in/~lbehera/img/personal.jpg",
+      "name": "Quick Links"
+    },
+    {
+      "name": "Locate us"
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Language"
+    },
+    {
+      "name": "Main navigation"
+    },
+    {
+      "designation": "Director Desk",
+      "name": "Higher Education"
+    },
+    {
+      "name": "Quick Links"
+    },
+    {
+      "name": "Locate us"
+    }
+  ]
+}

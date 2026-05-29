@@ -83,6 +83,17 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-brand-red mr-3 shrink-0" />
                 <p>enquiry@iiitp.ac.in</p>
               </div>
+                    <div className="pt-4 flex items-center space-x-5">
+                <a href="https://www.linkedin.com/school/indian-institute-of-information-technology-pune/" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="LinkedIn">
+                  <img src="/linkedin.png" alt="LinkedIn" className="w-6 h-6 object-contain" />
+                </a>
+                <a href="https://twitter.com/IIITPune" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="X (Twitter)">
+                  <img src="/x.png" alt="X (Twitter)" className="w-6 h-6 object-contain" />
+                </a>
+                <a href="https://www.facebook.com/Indian-Institute-of-Information-Technology-Pune-101140938435131/" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Facebook">
+                  <img src="/facebook.png" alt="Facebook" className="w-6 h-6 object-contain" />
+                </a>
+              </div>
             </div>
           </div>
 

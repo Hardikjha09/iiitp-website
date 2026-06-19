@@ -341,7 +341,7 @@ const Navbar = () => {
         { name: "College Events", path: "/life/events" },
         { name: "HR Summit (2021)", path: "https://placements.iiitp.ac.in/HrSummit/", isExternal: true },
         { name: "Magazine", path: "/life/magazine" },
-        { name: "Permanent Campus", path: "/life/campus" },
+        { name: "Campus Tour", path: "/life/campus" },
         // { name: "ACM Chapter", path: "/#" },
         // { name: "Sports & Gymnasium", path: "/#" },
       ]

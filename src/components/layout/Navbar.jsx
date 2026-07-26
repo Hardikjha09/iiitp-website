@@ -283,7 +283,15 @@ const Navbar = () => {
           subLinks: [
             { name: "B.Tech.", path: "#" },
             { name: "M.Tech.", path: "/documents/MTech_Ordinances_Updated_till_11th_Senate.docx.pdf", isExternal: true },
-            { name: "Ph.D.", path: "/documents/IIIT Pune_PhD Ordinances and Regulations_Revised.pdf", isExternal: true }
+            { 
+              name: "Ph.D.", 
+              path: "#",
+              hasDropdown: true,
+              subLinks: [
+                { name: "Ph.D. Ordinance 2026", path: "/documents/IIIT Pune_PhD Ordinances and Regulations_Revised.pdf", isExternal: true },
+                { name: "Ph.D. Ordinance 2020", path: "/documents/IIIT_Pune_PhD_Ordinances_and_Regulations_2020.pdf", isExternal: true },
+              ]
+            }
           ]
         },
         {
@@ -771,9 +779,38 @@ const Navbar = () => {
                             {sub.name}
                             <ChevronDown className="w-3 h-3 -rotate-90 opacity-70" />
                           </div>
-                          <div className={`absolute top-0 left-full ml-0 w-48 max-h-[65vh] overflow-y-auto bg-white dark:bg-surface-dark rounded-md shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 flex flex-col z-50 ${isNavigating ? 'hidden' : 'opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible'}`}>
+                          <div className={`absolute top-0 left-full ml-0 w-48 bg-white dark:bg-surface-dark rounded-md shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 flex flex-col z-50 ${isNavigating ? 'hidden' : 'opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible'} ${!sub.subLinks.some(nested => nested.hasDropdown) ? 'max-h-[65vh] overflow-y-auto' : ''}`}>
                             {sub.subLinks.map((nested) =>
-                              nested.isExternal ? (
+                              nested.hasDropdown ? (
+                                <div key={nested.name} className="relative group/nested">
+                                  <div className="px-4 py-2 text-xs text-gray-700 dark:text-gray-300 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark cursor-pointer flex justify-between items-center transition-colors">
+                                    {nested.name}
+                                    <ChevronDown className="w-3 h-3 -rotate-90 opacity-70" />
+                                  </div>
+                                  <div className={`absolute top-0 left-full ml-0 w-52 max-h-[65vh] overflow-y-auto bg-white dark:bg-surface-dark rounded-md shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 flex flex-col z-50 ${isNavigating ? 'hidden' : 'opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible'}`}>
+                                    {nested.subLinks.map((subNested) =>
+                                      subNested.isExternal ? (
+                                        <a
+                                          key={subNested.name}
+                                          href={subNested.path}
+                                          target="_blank" rel="noopener noreferrer"
+                                          className="block px-4 py-2 text-xs text-gray-700 dark:text-gray-300 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark first:rounded-t-md last:rounded-b-md transition-colors text-left"
+                                        >
+                                          {subNested.name}
+                                        </a>
+                                      ) : (
+                                        <Link
+                                          key={subNested.name}
+                                          to={subNested.path}
+                                          className="block px-4 py-2 text-xs text-gray-700 dark:text-gray-300 hover:bg-brand-red/10 dark:hover:bg-brand-red-dark/10 hover:text-brand-red dark:hover:text-brand-red-dark first:rounded-t-md last:rounded-b-md transition-colors text-left"
+                                        >
+                                          {subNested.name}
+                                        </Link>
+                                      )
+                                    )}
+                                  </div>
+                                </div>
+                              ) : nested.isExternal ? (
                                 <a
                                   key={nested.name}
                                   href={nested.path}
@@ -1054,12 +1091,64 @@ const Navbar = () => {
                                           className="flex flex-col pl-4 space-y-1 mt-1 overflow-hidden"
                                         >
                                           {sub.subLinks.map((nested) =>
-                                            nested.isExternal ? (
+                                            nested.hasDropdown ? (
+                                              <div key={nested.name} className="flex flex-col">
+                                                <div className="flex items-center justify-between">
+                                                  <div className="flex-1 px-3 py-2 text-xs font-medium text-gray-300">
+                                                    {nested.name}
+                                                  </div>
+                                                  <button
+                                                    onClick={(e) => toggleDropdown(nested.name, e)}
+                                                    className="p-2 text-white hover:bg-blue-800/50 rounded-md"
+                                                  >
+                                                    <ChevronDown
+                                                      className={`w-4 h-4 transition-transform ${openDropdowns[nested.name] ? "rotate-180" : ""}`}
+                                                    />
+                                                  </button>
+                                                </div>
+                                                <AnimatePresence>
+                                                  {openDropdowns[nested.name] && (
+                                                    <motion.div
+                                                      initial={{ height: 0, opacity: 0 }}
+                                                      animate={{ height: "auto", opacity: 1 }}
+                                                      exit={{ height: 0, opacity: 0 }}
+                                                      className="flex flex-col pl-4 space-y-1 mt-1 overflow-hidden"
+                                                    >
+                                                      {nested.subLinks.map((subNested) =>
+                                                        subNested.isExternal ? (
+                                                          <a
+                                                            key={subNested.name}
+                                                            href={subNested.path}
+                                                            target="_blank" rel="noopener noreferrer"
+                                                            className="block px-3 py-2 text-xs font-medium rounded-md transition-colors text-gray-300 hover:text-brand-red hover:bg-brand-red/10 dark:text-gray-400 dark:hover:text-brand-red-dark dark:hover:bg-brand-red-dark/10"
+                                                          >
+                                                            {subNested.name}
+                                                          </a>
+                                                        ) : (
+                                                          <NavLink
+                                                            key={subNested.name}
+                                                            to={subNested.path}
+                                                            onClick={() => setIsMobileMenuOpen(false)}
+                                                            className={({ isActive }) =>
+                                                              `block px-3 py-2 text-xs font-medium rounded-md transition-colors ${isActive
+                                                                ? "text-accent-dark bg-blue-900/30 dark:bg-gray-800"
+                                                                : "text-gray-300 hover:text-brand-red hover:bg-brand-red/10 dark:text-gray-400 dark:hover:text-brand-red-dark dark:hover:bg-brand-red-dark/10"
+                                                              }`
+                                                            }
+                                                          >
+                                                            {subNested.name}
+                                                          </NavLink>
+                                                        )
+                                                      )}
+                                                    </motion.div>
+                                                  )}
+                                                </AnimatePresence>
+                                              </div>
+                                            ) : nested.isExternal ? (
                                               <a
                                                 key={nested.name}
                                                 href={nested.path}
                                                 target="_blank" rel="noopener noreferrer"
-
                                                 className="block px-3 py-2 text-xs font-medium rounded-md transition-colors text-gray-300 hover:text-brand-red hover:bg-brand-red/10 dark:text-gray-400 dark:hover:text-brand-red-dark dark:hover:bg-brand-red-dark/10"
                                               >
                                                 {nested.name}
@@ -1078,7 +1167,7 @@ const Navbar = () => {
                                               >
                                                 {nested.name}
                                               </NavLink>
-                                            ),
+                                            )
                                           )}
                                         </motion.div>
                                       )}

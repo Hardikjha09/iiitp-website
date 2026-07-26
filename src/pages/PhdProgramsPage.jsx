@@ -127,6 +127,67 @@ const PhdProgramsPage = () => {
           </div>
         </section>
 
+        {/* Ph.D. Ordinances & Regulations Section */}
+        {/* <section className="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 rounded-3xl p-6 md:p-8 shadow-xs space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 dark:border-gray-800 pb-4">
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold font-serif text-gray-900 dark:text-white flex items-center gap-2">
+                <BookOpen className="w-6 h-6 text-brand-red dark:text-brand-red-dark" />
+                Ph.D. Ordinances & Regulations
+              </h2>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                Official rules, regulations, and guidelines governing doctoral studies at IIIT Pune
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a
+              href="/documents/IIIT Pune_PhD Ordinances and Regulations_Revised.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/30 hover:border-brand-red dark:hover:border-brand-red-dark hover:bg-brand-red/5 dark:hover:bg-brand-red-dark/10 transition-all duration-200 group"
+            >
+              <div className="space-y-1">
+                <span className="inline-block px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full bg-brand-red/10 text-brand-red dark:bg-brand-red-dark/20 dark:text-brand-red-dark">
+                  Latest Version
+                </span>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-red dark:group-hover:text-brand-red-dark transition-colors">
+                  Ph.D. Ordinances & Regulations 2026
+                </h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Revised ordinance rules & academic regulations (PDF)
+                </p>
+              </div>
+              <div className="p-2.5 rounded-xl bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 group-hover:bg-brand-red group-hover:text-white transition-all">
+                <BookOpen className="w-5 h-5" />
+              </div>
+            </a>
+
+            <a
+              href="/documents/IIIT_Pune_PhD_Ordinances_and_Regulations_2020.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/30 hover:border-brand-red dark:hover:border-brand-red-dark hover:bg-brand-red/5 dark:hover:bg-brand-red-dark/10 transition-all duration-200 group"
+            >
+              <div className="space-y-1">
+                <span className="inline-block px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+                  Archive
+                </span>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-brand-red dark:group-hover:text-brand-red-dark transition-colors">
+                  Ph.D. Ordinances & Regulations 2020
+                </h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  Previous 2020 ordinance document (PDF)
+                </p>
+              </div>
+              <div className="p-2.5 rounded-xl bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 group-hover:bg-brand-red group-hover:text-white transition-all">
+                <BookOpen className="w-5 h-5" />
+              </div>
+            </a>
+          </div>
+        </section> */}
+
       </div>
     </div>
   );

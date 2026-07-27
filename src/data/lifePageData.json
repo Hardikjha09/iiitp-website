@@ -1014,11 +1014,34 @@
   ],
   "EVENTS": [
     {
+      "name": "Campus Visit by CTO of Narravance (22 July 2026)",
+      "type": "Industry Visit",
+      "typeColor": "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300",
+      "desc": "IIIT Pune was privileged to host Mr. Pratik Ratadiya, CTO and Head of Product at Narravance, for an enriching and thought-provoking campus visit. The discussions spanned several impactful areas: Research Culture, Lab Setup & Center of Excellence, Academic Enrichment, and Industry-Academia Collaboration.",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173091383_37.jpg",
+        "/assets/lifepage/linkedin_img_1785173091414_38.jpg",
+        "/assets/lifepage/linkedin_img_1785173091444_39.jpg",
+        "/assets/lifepage/linkedin_img_1785173091473_40.jpg",
+        "/assets/lifepage/linkedin_img_1785173091504_41.jpg"
+      ],
+      "highlights": [
+        "Visit by Mr. Pratik Ratadiya, CTO of Narravance",
+        "Discussions on Research Culture and Lab Setup",
+        "Industry-Academia Collaboration"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_cto-researchculture-labsetup-activity-7485611367127990272-Iz1n"
+        }
+      ]
+    },
+    {
       "name": "Visit of South Korean Delegates — Indo-Korean Center, Pune (14 July 2026)",
       "type": "International Visit",
       "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
       "desc": "A delegation from the Indo-Korean Center, Pune, comprising Dr. Lim Eunjoo and Mr. Sanjib Ghatak, visited the Indian Institute of Information Technology, Pune (IIIT Pune) on 14th July 2026. The visit was organised by the International Relations Office, IIIT Pune, with the objective of introducing both institutions to each other and exploring avenues for academic, research, and cultural collaboration between India and South Korea. During the interaction sessions, both delegations presented an overview of their respective institutions. Dr. Jatin Majithia presented IIIT Pune's academic programmes, research areas, active funded projects, and student activities. The discussions were wide-ranging and productive, identifying priorities for possible collaboration including student and faculty exchange programs, joint research projects (in AI, Cybersecurity, VLSI, IoT, and Signal Processing), structured pathways for student employability in Korea, and cultural exchange programs.",
-      "reportUrl": "/assets/lifepage/IIIT_Pune_Korean_Visit_Report_Brief.pdf",
       "images": [
         "/assets/lifepage/indo-korean-1.jpeg",
         "/assets/lifepage/indo-korean-2.jpeg",
@@ -1033,6 +1056,172 @@
         "Discussion on Student & Faculty Exchange Programs",
         "Collaboration on AI, Cybersecurity, and Semiconductor Research",
         "Avenues for Student Placement & Internship in Korea"
+      ],
+      "links": [
+        {
+          "label": "View Report",
+          "url": "/assets/lifepage/IIIT_Pune_Korean_Visit_Report_Brief.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Visit by Dean of International Relations, IIT Bombay (10 July 2026)",
+      "type": "Institutional Visit",
+      "typeColor": "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300",
+      "desc": "IIIT Pune was privileged to host the Dean of International Relations from IIT Bombay for a highly productive visit focused on building a deeper academic and research connection between the two institutions. Key areas of discussion included signing an MoU to formalize a framework for institutional collaboration, joint research opportunities, and international outreach.",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173091259_33.jpg",
+        "/assets/lifepage/linkedin_img_1785173091290_34.jpg",
+        "/assets/lifepage/linkedin_img_1785173091321_35.jpg",
+        "/assets/lifepage/linkedin_img_1785173091351_36.jpg"
+      ],
+      "highlights": [
+        "Visit by Dean of IR, IIT Bombay",
+        "Discussions on MoU and research collaborations",
+        "Exploring global academic partnerships"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_dean-internationalrelations-iiitpune-activity-7481288569853059073-9oxE"
+        }
+      ]
+    },
+    {
+      "name": "Interactive Session on Wireless Communication (04 July 2026)",
+      "type": "Academic Session",
+      "typeColor": "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",
+      "desc": "IIIT Pune hosted an interactive session with Prof. Vivek Ashok Bohara from Indraprastha Institute of Information Technology, Delhi. Prof. Bohara's research spans some of the most exciting frontiers in wireless communication. The session was highly engaging and sparked meaningful discussions on research directions and potential collaborations.",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173091197_31.jpg",
+        "/assets/lifepage/linkedin_img_1785173091229_32.jpg"
+      ],
+      "highlights": [
+        "Session with Prof. Vivek Ashok Bohara, IIIT Delhi",
+        "Discussions on wireless communication",
+        "Exploring potential collaborations"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_wireless-communication-research-activity-7479189442407137280-EMhM"
+        }
+      ]
+    },
+    {
+      "name": "IBM Leadership visits IIIT Pune (01 July 2026)",
+      "type": "Industry Visit",
+      "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+      "desc": "We were delighted to host senior leadership from IBM at our campus for discussions on research collaboration in Cybersecurity, Data Storage, and Quantum Computing. A promising step towards deepening the industry-academia connect. Looking forward to what we build together!",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173089905_1.jpg",
+        "/assets/lifepage/linkedin_img_1785173090160_2.jpg",
+        "/assets/lifepage/linkedin_img_1785173090202_3.jpg",
+        "/assets/lifepage/linkedin_img_1785173090263_4.jpg",
+        "/assets/lifepage/linkedin_img_1785173090301_5.jpg",
+        "/assets/lifepage/linkedin_img_1785173090336_6.jpg"
+      ],
+      "highlights": [
+        "IBM Leadership Visit",
+        "Research collaboration in Cybersecurity, Data Storage, and Quantum Computing",
+        "Deepening the industry-academia connect"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_cybersecurity-datastorage-quantumcomputing-activity-7478101968545067008-GOwB"
+        }
+      ]
+    },
+    {
+      "name": "Faculty Development Program on AI-Driven Adaptive Optical and Wireless Communication Systems (05–12 June 2026)",
+      "type": "Faculty Development Program",
+      "typeColor": "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300",
+      "desc": "A 7-day Faculty Development Program (FDP) titled \"AI-Driven Adaptive Optical and Wireless Communication Systems\" was conducted from 05 June 2026 to 12 June 2026 in collaboration with the Electronics and ICT (E&ICT) Academy, IIIT Jabalpur, and IIIT Pune.\n\nThe FDP focused on recent advancements in Artificial Intelligence-enabled adaptive communication technologies, intelligent optical and wireless networks, machine learning applications in communication systems, next-generation communication architectures, and emerging research challenges and opportunities in the field.\n\nThe program brought together experts from academia and industry to share their knowledge and research insights, thereby enhancing the technical expertise and research capabilities of participants in the rapidly evolving domain of AI-driven communication systems.\n\nThe program was coordinated by the organizing team at IIIT Pune under the guidance of the designated FDP Coordinator, Dr. Dheeraj Dubey, IIIT Pune.",
+      "images": [],
+      "highlights": [
+        "7-day FDP (05–12 June 2026)",
+        "Collaboration with E&ICT Academy",
+        "Focus on AI & Wireless Communication",
+        "Expert Insights from Academia & Industry"
+      ],
+      "links": []
+    },
+    {
+      "name": "World Environment Day Celebration (06 June 2026)",
+      "type": "Plantation Drive",
+      "typeColor": "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300",
+      "desc": "IIIT Pune celebrated World Environment Day through a special tree plantation drive under the inspiring initiative “Ek Ped Maa Ke Naam”. Our alumni and employees actively participated by planting saplings on campus, reinforcing our collective commitment towards environmental sustainability and a greener future.",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173090369_7.jpg",
+        "/assets/lifepage/linkedin_img_1785173090408_8.jpg",
+        "/assets/lifepage/linkedin_img_1785173090450_9.jpg",
+        "/assets/lifepage/linkedin_img_1785173090495_10.jpg",
+        "/assets/lifepage/linkedin_img_1785173090533_11.jpg",
+        "/assets/lifepage/linkedin_img_1785173090569_12.jpg",
+        "/assets/lifepage/linkedin_img_1785173090625_13.jpg",
+        "/assets/lifepage/linkedin_img_1785173090658_14.jpg",
+        "/assets/lifepage/linkedin_img_1785173090691_15.jpg"
+      ],
+      "highlights": [
+        "Tree plantation drive",
+        "Ek Ped Maa Ke Naam initiative",
+        "Alumni and employee participation"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_iiitpune-worldenvironmentday-ekpedmaakenaam-activity-7469062634651299840-9Gkz"
+        }
+      ]
+    },
+    {
+      "name": "First-Ever Alumni Interaction: Pune Chapter (06 June 2026)",
+      "type": "Alumni Meet",
+      "typeColor": "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300",
+      "desc": "We are proud to announce the successful organization of IIIT Pune's first-ever Alumni Interaction: Pune Chapter, held on 6th June 2026. The event witnessed enthusiastic participation from alumni spanning the 2020-2025 graduating batches, coming together to reconnect, reflect, and reimagine their journeys since leaving campus.",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173090725_16.jpg",
+        "/assets/lifepage/linkedin_img_1785173090757_17.jpg",
+        "/assets/lifepage/linkedin_img_1785173090788_18.jpg",
+        "/assets/lifepage/linkedin_img_1785173090819_19.jpg",
+        "/assets/lifepage/linkedin_img_1785173090849_20.jpg",
+        "/assets/lifepage/linkedin_img_1785173090881_21.jpg",
+        "/assets/lifepage/linkedin_img_1785173090911_22.jpg",
+        "/assets/lifepage/linkedin_img_1785173090941_23.jpg",
+        "/assets/lifepage/linkedin_img_1785173090972_24.jpg"
+      ],
+      "highlights": [
+        "Alumni Interaction: Pune Chapter",
+        "Inspiring career journeys",
+        "Conversations bridging academia and industry"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_iiitpune-pune-iiitpune-activity-7468991910096015363-o4xa"
+        }
+      ]
+    },
+    {
+      "name": "Visit by Prof. Vikram Gadre, IIT Bombay (05 June 2026)",
+      "type": "Academic Visit",
+      "typeColor": "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300",
+      "desc": "We were honoured to host Prof. Vikram Gadre from the Indian Institute of Technology, Bombay. The visit brought together our faculty for a thoughtful and wide-ranging discussion on the research landscape and innovation ecosystem at IIIT Pune. A key highlight was an in-depth conversation around the ANRF PAIR Project and other collaborative funding opportunities.",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173091002_25.jpg",
+        "/assets/lifepage/linkedin_img_1785173091036_26.jpg"
+      ],
+      "highlights": [
+        "Visit by Prof. Vikram Gadre, IIT Bombay",
+        "Discussion on research landscape and innovation",
+        "Discussions on the ANRF PAIR Project"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_faculty-iiitpune-iitbombay-activity-7468664267064471552-aitn"
+        }
       ]
     },
     {
@@ -1052,19 +1241,30 @@
         "Strategic Roadmapping for the Nanoli Permanent Campus",
         "Special Lecture 'Vision for IIIT Pune' for 60+ Faculty & Staff",
         "Laboratory Tours & Individualized Research Dialogue"
-      ]
+      ],
+      "links": []
     },
     {
-      "name": "Faculty Development Program on AI-Driven Adaptive Optical and Wireless Communication Systems (05–12 June 2026)",
-      "type": "Faculty Development Program",
-      "typeColor": "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300",
-      "desc": "A 7-day Faculty Development Program (FDP) titled \"AI-Driven Adaptive Optical and Wireless Communication Systems\" was conducted from 05 June 2026 to 12 June 2026 in collaboration with the Electronics and ICT (E&ICT) Academy, IIIT Jabalpur, and IIIT Pune.\n\nThe FDP focused on recent advancements in Artificial Intelligence-enabled adaptive communication technologies, intelligent optical and wireless networks, machine learning applications in communication systems, next-generation communication architectures, and emerging research challenges and opportunities in the field.\n\nThe program brought together experts from academia and industry to share their knowledge and research insights, thereby enhancing the technical expertise and research capabilities of participants in the rapidly evolving domain of AI-driven communication systems.\n\nThe program was coordinated by the organizing team at IIIT Pune under the guidance of the designated FDP Coordinator, Dr. Dheeraj Dubey, IIIT Pune.",
-      "images": [],
+      "name": "Workshop on Patent Filing Process (29 May 2026)",
+      "type": "Workshop",
+      "typeColor": "bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300",
+      "desc": "IIIT Pune successfully organized a workshop on “Patent Filing Process: From Idea to Grant” by renowned Patent Attorney Dr. Alok Gupta, in the presence of Hon’ble Director Prof. Vineet Kansal. The session provided valuable insights into Intellectual Property Rights (IPR), patent drafting, filing procedures, and innovation protection for researchers.",
+      "images": [
+        "/assets/lifepage/linkedin_img_1785173091071_27.jpg",
+        "/assets/lifepage/linkedin_img_1785173091102_28.jpg",
+        "/assets/lifepage/linkedin_img_1785173091134_29.jpg",
+        "/assets/lifepage/linkedin_img_1785173091166_30.jpg"
+      ],
       "highlights": [
-        "7-day FDP (05–12 June 2026)",
-        "Collaboration with E&ICT Academy",
-        "Focus on AI & Wireless Communication",
-        "Expert Insights from Academia & Industry"
+        "Workshop by Dr. Alok Gupta",
+        "Insights into IPR and patent drafting",
+        "Innovation protection for researchers"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn Post",
+          "url": "https://www.linkedin.com/posts/iiitpune_iiitpune-ipr-patent-activity-7466121340786434048-g8q3"
+        }
       ]
     },
     {
@@ -1082,6 +1282,12 @@
         "Bot Racing Championship",
         "Poster Design + Dance Battles",
         "Intercollegiate Participation"
+      ],
+      "links": [
+        {
+          "label": "View Report",
+          "url": "/assets/lifepage/Conclave × E-Summit 2026 Event Report (1).pdf"
+        }
       ]
     },
     {
@@ -1099,6 +1305,12 @@
         "82 Complete Team Registrations",
         "43 Project Submissions",
         "Top 6 Teams in Offline Finale"
+      ],
+      "links": [
+        {
+          "label": "View Report",
+          "url": "/assets/lifepage/Thinking_Machine_Hackathon_Event_Report.pdf"
+        }
       ]
     },
     {
@@ -1116,7 +1328,8 @@
         "Fashion Showcase",
         "Star Night Concert",
         "Literary Events"
-      ]
+      ],
+      "links": []
     },
     {
       "name": "Eklavya Sports Fest",
@@ -1133,7 +1346,8 @@
         "Basketball, Kabaddi",
         "Esports Tournament",
         "Inter-Batch Leagues"
-      ]
+      ],
+      "links": []
     },
     {
       "name": "InfInITy Coding Contest",
@@ -1150,7 +1364,8 @@
         "25K+ Global Participants",
         "CodeChef 6-Star Rated",
         "Grandmaster Participation"
-      ]
+      ],
+      "links": []
     }
   ],
   "EDITIONS": [

@@ -292,8 +292,12 @@ const BtechCsePage = () => {
                   </div>
 
                   <div className="flex items-center justify-center text-sm text-gray-700 dark:text-gray-300 w-full pt-1">
-                    <a href="mailto:bhupendra@iiitp.ac.in" className="hover:text-brand-red transition-colors break-all">
-                      bhupendra@iiitp.ac.in
+                    <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <a
+                      href="mailto:hodcse@iiitp.ac.in"
+                      className="hover:text-brand-red transition-colors break-all"
+                    >
+                      hodcse@iiitp.ac.in
                     </a>
                   </div>
                   <div className="flex items-center justify-center text-sm text-gray-700 dark:text-gray-300 w-full">

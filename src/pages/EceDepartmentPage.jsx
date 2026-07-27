@@ -40,13 +40,12 @@ const EceDepartmentPage = () => {
   }, []);
 
   // HOD Profile URL & details helper
-  const hodProfile = eceFaculty.find(f => f.slug === "nagendra-kushwaha") || {
-    name: "Dr. Nagendra Kushwaha",
-    designation: "Assistant Professor & Head (ECE)",
-    email: "nagendra@iiitp.ac.in",
-    phone: "+91 9881457120",
-    slug: "nagendra-kushwaha"
-  };
+  const originalHod = eceFaculty.find(f => f.slug === "nagendra-kushwaha");
+
+const hodProfile = {
+  ...originalHod,
+  email: "hodece@iiitp.ac.in"
+};
 
   const btechCurriculum = [
     {

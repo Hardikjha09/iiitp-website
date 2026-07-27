@@ -38,13 +38,12 @@ const AshDepartmentPage = () => {
   }, []);
 
   // HOD Profile URL & details helper
-  const hodProfile = ashFaculty.find(f => f.slug === "jatin-majithia") || {
-    name: "Dr. Jatin Majithia",
-    designation: "Assistant Professor & Head (ASH)",
-    email: "jatinmajithia@iiitp.ac.in",
-    phone: "+91 9403650522",
-    slug: "jatin-majithia"
-  };
+  const originalHod = ashFaculty.find(f => f.slug === "jatin-majithia");
+
+const hodProfile = {
+  ...originalHod,
+  email: "hodash@iiitp.ac.in"
+};
 
   const foundationCurriculum = [
     {

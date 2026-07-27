@@ -40,13 +40,12 @@ const CseDepartmentPage = () => {
   }, []);
 
   // HOD Profile URL & details helper
-  const hodProfile = cseFaculty.find(f => f.slug === "bhupendra-singh") || {
-    name: "Dr. Bhupendra Singh",
-    designation: "Assistant Professor & Head (CSE)",
-    email: "bhupendra@iiitp.ac.in",
-    phone: "+91 9673095708, +91 9325302119",
-    slug: "bhupendra-singh"
-  };
+  const originalHod = cseFaculty.find(f => f.slug === "bhupendra-singh");
+
+const hodProfile = {
+  ...originalHod,
+  email: "hodcse@iiitp.ac.in"
+};
 
   const btechCurriculum = [
     {

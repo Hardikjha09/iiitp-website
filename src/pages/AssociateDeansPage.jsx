@@ -24,16 +24,23 @@ const AssociateDeansPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const deansList = associateDeansData.map(dean => {
-    const details = facultyDetails[dean.slug] || {};
-    
-    return {
-      ...details,
-      name: dean.name,
-      slug: dean.slug,
-      designation: details.designation,
-    };
-  });
+  const deanEmailOverrides = {
+  "sanjeev-sharma": "asd.academics@iiitp.ac.in ",
+  "sushant-kumar": "asd.rndfw@iiitp.ac.in",
+  "bhupendra-singh": "asd.iaf@iiitp.ac.in ",
+};
+
+const deansList = associateDeansData.map(dean => {
+  const details = facultyDetails[dean.slug] || {};
+
+  return {
+    ...details,
+    name: dean.name,
+    slug: dean.slug,
+    designation: details.designation,
+    email: deanEmailOverrides[dean.slug] || details.email,
+  };
+});
 
   return (
     <div className="min-h-screen transition-colors duration-200">

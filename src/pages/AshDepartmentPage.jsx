@@ -295,7 +295,7 @@ const hodProfile = {
             {activeProgram === "foundation" && (
               <div className="space-y-6">
                 <p className="text-gray-650 dark:text-gray-350 leading-relaxed text-justify text-sm sm:text-base mb-6">
-                  The Department of Applied Science and Humanities contributes to the core and elective curriculum of all undergraduate and postgraduate programs within the institution by offering courses in the following domains:
+                  The Department of Applied Sciences and Humanities contributes to the undergraduate and postgraduate curriculum by offering a comprehensive suite of courses that equip students with the mathematical, communication, ethical, environmental, and innovation competencies required for engineering education.
                 </p>
 
                 <div className="space-y-8">
@@ -304,38 +304,28 @@ const hodProfile = {
                       <div className="w-8 h-8 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary dark:text-blue-400">
                         <BookOpen className="w-4 h-4" />
                       </div>
-                      Applied Mathematics
+                      Courses Offered
                     </h3>
-                    <p className="text-gray-650 dark:text-gray-350 text-sm mb-4">
-                      The department delivers a comprehensive suite of mathematical courses, ensuring students grasp the core mathematical concepts required for problem-solving in emerging technologies. Key areas include:
-                    </p>
                     <ul className="list-none space-y-2 text-sm text-gray-750 dark:text-gray-300 ml-2">
                       {[
-                        "Engineering Calculus",
-                        "Linear Algebra and Differential Equations",
-                        "Probability and Random Processes",
-                        "Discrete Structure",
-                        "Linear and Nonlinear Optimization",
-                        "Applied Graph Theory"
-                      ].map((course, i) => (
+                          "Calculus and Differential Equations",
+                          "Linear Algebra and Discrete Structure",
+                          "Probability and Random Process",
+                          "Applied Graph Theory",
+                          "Linear and Non-Linear Optimization",
+                          "Indian Knowledge System (IKS)",
+                          "Environmental Science",
+                          "Language and Writing Skills",
+                          "Humanities and Social Ethics",
+                          "Innovation and Entrepreneurship Studies",
+                          "Research Methodology"
+                        ].map((course, i) => (
                         <li key={i} className="flex items-center gap-2">
                           <div className="w-1.5 h-1.5 rounded-full bg-brand-red shrink-0" />
                           {course}
                         </li>
                       ))}
                     </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-bold font-serif text-primary dark:text-white mb-3 flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                        <Users className="w-4 h-4" />
-                      </div>
-                      Humanities & Social Sciences
-                    </h3>
-                    <p className="text-gray-650 dark:text-gray-350 text-sm mb-4">
-                      Recognizing the importance of a holistic education, the department offers various courses that enrich the technical curriculum with humanistic and social perspectives. These courses are critical for developing leadership skills, ethical judgment, and global citizenship.
-                    </p>
                   </div>
                 </div>
 

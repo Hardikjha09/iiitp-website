@@ -46,22 +46,24 @@ const hodProfile = {
 };
 
   const foundationCurriculum = [
-    {
-      semester: 1,
-      totalCredits: 21,
-      courses: [
-        { name: "Engineering Mathematics-I", hours: "3-0-0", credits: 3 },
-        { name: "Engineering Mathematics-II", hours: "3-0-0", credits: 3 },
-        { name: "Probability and Random Process", hours: "3-0-0", credits: 3 },
-        { name: "Discrete Structure", hours: "3-0-0", credits: 3 },
-        { name: "Language & Writing Skills", hours: "2-0-0", credits: 2 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 },
-        { name: "Consciousness and Values", hours: "2-0-0", credits: 2 },
-        { name: "Humanities", hours: "2-0-0", credits: 2 },
-        { name: "Entrepreneurship Studies", hours: "1-0-0", credits: 1 },
-      ]
-    }
-  ];
+  {
+    semester: 1,
+    totalCredits: 23,
+    courses: [
+      { name: "Calculus and Differential Equations", hours: "3-1-0", credits: 3 },
+      { name: "Linear Algebra and Discrete Structure", hours: "3-1-0", credits: 3 },
+      { name: "Probability and Random Process", hours: "3-0-0", credits: 3 },
+      { name: "Applied Graph Theory", hours: "3-0-0", credits: 3 },
+      { name: "Linear and Non-Linear Optimization", hours: "3-0-0", credits: 3 },
+      { name: "Indian Knowledge System (IKS)", hours: "1-0-0", credits: 1 },
+      { name: "Environmental Science", hours: "2-0-0", credits: 2 },
+      { name: "Language and Writing Skills", hours: "2-0-0", credits: 2 },
+      { name: "Humanities and Social Ethics", hours: "2-0-0", credits: 2 },
+      { name: "Innovation and Entrepreneurship Studies", hours: "2-0-0", credits: 2 },
+      { name: "Research Methodology", hours: "1-0-1", credits: 2 },
+    ]
+  }
+];
 
   const renderCurriculumTable = (curriculum, activeSemester, setActiveSemester, semCount) => {
     return (

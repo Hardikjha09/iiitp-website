@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router';
 import PageHeader from '../components/shared/PageHeader';
 import { Download, ExternalLink, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 

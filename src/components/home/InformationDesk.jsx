@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen, Users, FlaskConical, Library, Briefcase, Home, Activity, MessageSquareWarning } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 const items = [
   { icon: BookOpen, label: 'Academics', path: '/academics', color: 'text-blue-600 dark:text-blue-400' },

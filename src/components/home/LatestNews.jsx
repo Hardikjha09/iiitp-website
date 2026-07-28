@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const LatestNews = () => {
   const [news, setNews] = useState([]);

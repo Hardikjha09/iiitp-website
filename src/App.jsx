@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
   useLocation,
-} from "react-router-dom";
+} from "react-router";
 import ScrollToTop from "./components/shared/ScrollToTop";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";

@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import PageHeader from "../components/shared/PageHeader";
 import { Clock, Users, Award, Mail, Phone, ExternalLink, BookOpen, Building, Microchip, Cpu, GraduationCap, Network, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";

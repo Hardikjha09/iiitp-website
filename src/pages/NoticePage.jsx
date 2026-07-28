@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PageHeader from '../components/shared/PageHeader';
 import { Search, Filter, Download } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 const NoticePage = () => {
   const [notices, setNotices] = useState([]);

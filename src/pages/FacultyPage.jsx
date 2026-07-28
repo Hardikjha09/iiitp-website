@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import PageHeader from '../components/shared/PageHeader';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Search } from 'lucide-react';
 import facultyDetails from '../data/faculty_details.json';
 

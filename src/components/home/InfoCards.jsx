@@ -12,7 +12,7 @@ import {
   BookOpen,
   Briefcase
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import campusFrontImg from '../../assets/campus_front.jpg';
 import FadeInSection from '../shared/FadeInSection';
 

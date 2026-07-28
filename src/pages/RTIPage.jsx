@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import PageHeader from '../components/shared/PageHeader';
 import { Mail, Phone, ExternalLink, Link as LinkIcon } from 'lucide-react';
 

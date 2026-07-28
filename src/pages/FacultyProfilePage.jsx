@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router';
 import PageHeader from '../components/shared/PageHeader';
 import {
   FileText, ArrowLeft, Mail, Phone, BookOpen, GraduationCap,

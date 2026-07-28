@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router';
 import PageHeader from '../components/shared/PageHeader';
 import CommitteeTable from '../components/shared/CommitteeTable';
 import { motion, AnimatePresence } from 'framer-motion';

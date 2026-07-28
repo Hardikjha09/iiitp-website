@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TrendingUp, Users, Building2, Award, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion, useInView } from 'framer-motion';
 
 const stats = [

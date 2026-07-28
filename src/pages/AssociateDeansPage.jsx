@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PageHeader from '../components/shared/PageHeader';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Mail, Phone } from 'lucide-react';
 import facultyDetails from '../data/faculty_details.json';
 

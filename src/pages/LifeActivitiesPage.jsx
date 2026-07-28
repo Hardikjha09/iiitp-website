@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router';
 import { Image } from 'lucide-react';
 import LifePageLayout from '../components/life/LifePageLayout';
 import lifePageData from '../data/lifePageData.json';

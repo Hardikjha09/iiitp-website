@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router';
 import { ExternalLink, Image, Mail, X } from 'lucide-react';
 import LifePageLayout from '../components/life/LifePageLayout';
 import lifePageData from '../data/lifePageData.json';

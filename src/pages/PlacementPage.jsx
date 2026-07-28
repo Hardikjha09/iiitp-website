@@ -11,7 +11,7 @@ import {
   TrendingUp, Users, Building2, Award, Mail, Phone,
   Globe, ExternalLink, ChevronRight, GraduationCap, Target
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 

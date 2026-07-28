@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router';
 import { FileText, ArrowLeft, Download } from 'lucide-react';
 import shortlistingsData from '../data/shortlistings.json';
 import Navbar from '../components/layout/Navbar';

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { ChevronRight } from 'lucide-react';
 import LifePageLayout from '../components/life/LifePageLayout';
 

@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router';
 import PageHeader from '../components/shared/PageHeader';
 import Breadcrumb from '../components/shared/Breadcrumb';
 import { Mail, User } from 'lucide-react';

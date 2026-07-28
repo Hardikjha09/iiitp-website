@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PageHeader from '../components/shared/PageHeader';
 import { Calendar, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);

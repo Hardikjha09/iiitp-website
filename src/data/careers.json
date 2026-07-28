@@ -28,6 +28,10 @@
       "title": "Advertisement for Positions in Start-up and Incubation Cell on contract basis",
       "buttons": [
         {
+          "label": "Shortlistings",
+          "link": "careers-documents/INCUBATION SHORTLIST LIST TO BE UPDATED ON WEBSITE.pdf"
+        },
+        {
           "label": "Details",
           "file": "careers-documents/Draft Advt Startup & Incubation Centre.docx (1).pdf"
         },

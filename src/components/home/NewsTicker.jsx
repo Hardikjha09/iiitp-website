@@ -15,6 +15,7 @@ const NewsTicker = () => {
       .catch(() => {
         // Fallback mock news
         setNews([
+          { id: 101, title: "Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE)", link: "/documents/Advertisement%20for%20Assistant%20Professor%20Temporary%20in%20ECE.pdf" },
           { id: 103, title: "Physical Reporting Instructions: JoSAA/CSAB 2026", link: "/documents/DETAILS%20OF%20ADMISSION%20PROCESS%20FOR%20FIRST%20SEMESTER%202026-27.pdf" },
           { id: 1, title: "Admissions for B.Tech 2025-26 via JoSAA/CSAB are now open" },
           { id: 2, title: "IIIT Pune secures top rank in National Smart India Hackathon 2024" },

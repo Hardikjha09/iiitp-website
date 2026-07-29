@@ -16,6 +16,14 @@ const LatestNews = () => {
       .catch(() => {
         setNews([
           {
+            id: 101,
+            title: "Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE)",
+            date: "29-07-2026",
+            excerpt:
+              "Applications are invited for the position of Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE) at IIIT Pune.",
+            link: "/documents/Advertisement%20for%20Assistant%20Professor%20Temporary%20in%20ECE.pdf",
+          },
+          {
             id: 103,
             title: "Physical Reporting Instructions: JoSAA/CSAB 2026",
             date: "21-07-2026",

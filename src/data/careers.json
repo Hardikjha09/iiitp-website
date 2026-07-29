@@ -1,6 +1,20 @@
 {
   "live": [
     {
+      "title": "Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE)",
+      "buttons": [
+        {
+          "label": "Details",
+          "file": "/careers-documents/ECE - AP Temp advt.pdf"
+        },
+        {
+          "label": "Apply Now",
+          "link": "https://iiitprec.samarth.edu.in/"
+        }
+      ],
+      "date": "29-07-2026"
+    },
+    {
       "title": "RECRUITMENT NOTICE FOR THE POST OF ASSISTANT PROFESSOR (TEMPORARY)",
       "buttons": [
         {

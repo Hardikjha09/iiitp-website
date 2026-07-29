@@ -288,7 +288,7 @@ const Navbar = () => {
               path: "#",
               hasDropdown: true,
               subLinks: [
-                { name: "Ph.D. Ordinance 2026", path: "/documents/IIIT Pune_PhD Ordinances and Regulations_Revised.pdf", isExternal: true },
+                { name: "Ph.D. Ordinance 2024", path: "/documents/IIIT Pune_PhD Ordinances and Regulations_Revised.pdf", isExternal: true },
                 { name: "Ph.D. Ordinance 2020", path: "/documents/IIIT_Pune_PhD_Ordinances_and_Regulations_2020.pdf", isExternal: true },
               ]
             }

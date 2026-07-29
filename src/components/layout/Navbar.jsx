@@ -321,7 +321,7 @@ const Navbar = () => {
           ]
         },
         { name: "Events", path: "/research/events" },
-        { name: "MOUs", path: "/research/mous" },
+        { name: "MoUs", path: "/research/MoUs" },
         { name: "Patents", path: "/research/patents" },
         { name: "Publications", path: "/research/publications" },
         // {

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "year": 2026,
-    "organization": "IIT Bombay",
+    "organization": "IIIT Pune and IIT Bombay Sign MoU",
     "logo": "/Mougallery/logo IIT b.png",
     "department": "Institute Level",
     "signedDate": "23 July 2026",
@@ -11,13 +11,52 @@
     "tags": [
       "Research",
       "Academic Collaboration",
-      "Innovation"
+      "MoU",
+      "Innovation",
+      "Institute of National Importance"
     ],
-    "pdf": "",
     "gallery": [
       "/Mougallery/IITB_MoU_1.jpg",
       "/Mougallery/IITB_MoU_2.jpg",
       "/Mougallery/IITB_MoU_3.jpg"
     ]
+  },
+  {
+    "id": 2,
+    "year": 2026,
+    "organization": "IIIT Pune Explores Collaboration with Rashtriya Raksha University",
+    "logo": "/Mougallery/RRU_MoU.png",
+    "department": "Institute Level",
+    "signedDate": "- June 2026",
+    "validTill": "-- June 2029",
+    "description": "IIIT Pune recently held a productive interaction with Rashtriya Raksha University (RRU) to explore collaboration in the areas of education, training, and research. The discussions laid the foundation for a forthcoming Memorandum of Understanding (MoU), aimed at fostering academic excellence, innovation, and knowledge exchange in technology, national security, and strategic studies.",
+    "tags": [
+      "RRU",
+      "Research",
+      "National Security",
+      "MoU"
+    ],
+    "gallery": [
+      "/Mougallery/RRU_MoU_1.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "year": 2026,
+    "organization": "IIIT Pune Signs MoU with TrustLab, IIT Bombay",
+    "logo": "/Mougallery/logo IIT b.png",
+    "department": "TrustLab",
+    "signedDate": "03 June 2026",
+    "validTill": "02 June 2029",
+    "description": "IIIT Pune has signed a Memorandum of Understanding (MoU) with TrustLab, IIT Bombay to collaborate in the areas of Cyber Security and Digital Trust. The partnership aims to promote research, innovation, knowledge sharing, and skill development, while preparing future-ready professionals to address emerging cybersecurity challenges.",
+    "tags": [
+      "Cyber Security",
+      "Digital Trust",
+      "Innovation",
+      "Higher Education",
+      "Research Collaboration"
+    ],
+    "gallery": []
   }
+  
 ]

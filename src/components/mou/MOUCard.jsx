@@ -60,6 +60,10 @@ const MOUCard = ({ mou, onOpenGallery }) => {
 
         </h3>
 
+        <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-6">
+          {mou.description}
+        </p>
+
         <div className="mt-5 space-y-3">
 
           <div className="flex items-center gap-3">
@@ -163,52 +167,28 @@ const MOUCard = ({ mou, onOpenGallery }) => {
 
         {/* Buttons */}
 
-        <div className="grid grid-cols-2 gap-3 mt-8">
+        <div className="mt-8">
 
           <button
-            onClick={openPDF}
+            onClick={() => onOpenGallery(mou)}
             className="
-            flex
-            items-center
-            justify-center
-            gap-2
-            bg-blue-600
-            hover:bg-blue-700
-            text-white
-            py-3
-            rounded-xl
-            font-medium
-            transition
+              w-full
+              flex
+              items-center
+              justify-center
+              gap-2
+              bg-blue-600
+              hover:bg-blue-700
+              text-white
+              py-4
+              rounded-xl
+              font-medium
+              transition
             "
           >
-
-            <ExternalLink size={18} />
-
-            View MOU
-
+            <Images size={18} />
+              Signing Ceremony
           </button>
-
-           <button
-             onClick={() => onOpenGallery(mou)}
-             className="
-                flex
-                items-center
-                justify-center
-                gap-2
-                border
-                border-blue-600
-                text-blue-600
-                hover:bg-blue-50
-                dark:hover:bg-slate-800
-                py-3
-                rounded-xl
-                font-medium
-                transition
-                "
-                >
-                <Images size={18} />
-                Gallery
-            </button>
 
         </div>
 

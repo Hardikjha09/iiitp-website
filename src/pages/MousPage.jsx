@@ -37,7 +37,7 @@ const MousPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
 
-      <PageHeader title="MOUs" />
+      <PageHeader title="MoUs" />
 
       <div className="max-w-7xl mx-auto px-4 py-16">
 
@@ -46,14 +46,14 @@ const MousPage = () => {
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 mb-10">
 
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
-            Memorandum of Understanding (MOUs)
+            Memorandum of Understanding (MoUs)
           </h2>
 
           <div className="w-24 h-1 bg-blue-600 mt-3 rounded-full"></div>
 
           <p className="mt-6 text-gray-600 dark:text-gray-300 leading-8">
             The Institute has established Memorandums of Understanding
-            (MOUs) with leading industries, universities and research
+            (MoUs) with leading industries, universities and research
             organizations to promote academic collaboration,
             internships, faculty exchange, research activities,
             innovation and skill development.

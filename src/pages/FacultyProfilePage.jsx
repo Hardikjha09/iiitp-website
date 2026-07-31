@@ -30,6 +30,25 @@ const LinkedinIcon = ({ className }) => (
 
 import facultyDetails from '../data/faculty_details.json';
 
+const normalizeResearchLinks = (links = []) => {
+  return (links || [])
+    .map((link) => {
+      if (typeof link === 'string') {
+        const trimmed = link.trim();
+        return trimmed ? { title: trimmed, url: trimmed } : null;
+      }
+
+      if (link && typeof link === 'object') {
+        const url = link.url || link.link || '';
+        const title = link.title || url || 'External link';
+        return url ? { title, url } : null;
+      }
+
+      return null;
+    })
+    .filter(Boolean);
+};
+
 const FacultyProfilePage = () => {
   const { slug } = useParams();
   const [activeTab, setActiveTab] = useState('biography');
@@ -80,8 +99,9 @@ const FacultyProfilePage = () => {
     const formattedName = nameParts.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
     // Filter out Google Scholar, ORCID, and Scopus from researchLinks as they are already displayed in the top section
-    const otherLinks = (details.researchLinks || []).filter(link => {
-      const lower = link.toLowerCase();
+    const normalizedResearchLinks = normalizeResearchLinks(details.researchLinks);
+    const otherLinks = normalizedResearchLinks.filter(({ title, url }) => {
+      const lower = `${title} ${url}`.toLowerCase();
       return !lower.includes('scholar.google') && !lower.includes('orcid') && !lower.includes('scopus');
     });
 
@@ -93,7 +113,7 @@ const FacultyProfilePage = () => {
       email: details.email || '',
       phone: details.phone || '',
       linkedin: details.linkedin || '',
-      researchLinks: [...new Set(otherLinks)],
+      researchLinks: otherLinks,
       books_chapters: details.books_chapters || '',
       publications: details.publications || '',
       patents: details.patents || '',
@@ -461,14 +481,14 @@ const FacultyProfilePage = () => {
                 {profile.researchLinks && profile.researchLinks.length > 0 ? (
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {profile.researchLinks.map((link, idx) => (
-                      <li key={idx}>
+                      <li key={`${link.url}-${idx}`}>
                         <a
-                          href={link}
+                          href={link.url}
                           target="_blank" rel="noopener noreferrer"
                           className="group block p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary hover:bg-blue-50 dark:hover:bg-gray-800 transition-all"
                         >
                           <div className="overflow-hidden">
-                            <p className="text-base text-gray-900 dark:text-white font-medium truncate w-full group-hover:text-primary transition-colors">{link}</p>
+                            <p className="text-base text-gray-900 dark:text-white font-medium truncate w-full group-hover:text-primary transition-colors">{link.title}</p>
                           </div>
                         </a>
                       </li>

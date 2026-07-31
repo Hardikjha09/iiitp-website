@@ -3793,45 +3793,45 @@
     "department": "CSE"
   },
   "rahul-kaushik": {
-    "designation": "Adjunct Assistant Professor",
-    "image": "/assets/faculty_photos/rahulkaushik.jpeg",
-    "bio": "Dr. Rahul Kaushik is an Assistant Professor (Temporary) of Mathematics in the Department of Applied Sciences and Humanities (ASH) at IIIT Pune. He obtained his Ph.D. in Mathematics from the Harish-Chandra Research Institute (HRI), Prayagraj, under the supervision of Prof. Manoj K. Yadav. Prior to joining IIIT Pune, he served as an NBHM Postdoctoral Fellow and Institute Postdoctoral Fellow at IISER Pune and later as a Postdoctoral Fellow at NISER Bhubaneswar. His research interests include finite p-groups, the Matrix Waring Problem, Lie algebra, and word maps. His work has been published in reputed journals such as the Journal of Algebra, Journal of Algebra and its Applications, and Linear Algebra and its Applications. He has presented his work at several national and international conferences and has received the NBHM Postdoctoral Fellowship, the Harish-Chandra Memorial Award, and secured AIR 14 in the CSIR-JRF/NET examination.",
-    "education": "Ph.D. (Mathematics)",
-    "publications": [
-      {
-        "title": "Commutators and commutator subgroups of finite p-groups",
-        "link": "https://www.sciencedirect.com/science/article/pii/S0021869320305238?via%3Dihub"
-      },
-      {
-        "title": "Commutators in groups of order p⁷",
-        "link": "https://www.worldscientific.com/doi/10.1142/S021949882350158X"
-      },
-      {
-        "title": "Waring Problem For Triangular Matrix Algebra",
-        "link": "https://www.sciencedirect.com/science/article/abs/pii/S0024379524001277?via%3Dihub"
-      }
-    ],
-    "resume": "/assets/resume/rahulkaushik_resume.pdf",
-    "expertise": "Finite p-groups, Matrix Waring Problem, Lie Algebra, Word Maps, Group Theory",
-    "email": "rahul@iiitp.ac.in",
-    "phone": "9017390074",
-    "google_scholar": "https://scholar.google.com/citations?hl=en&user=i4A0EN0AAAAJ&authuser=3",
-    "orcid": "",
-    "scopus": "",
-    "books_chapters": [],
-    "patents": [],
-    "seminars": [],
-    "projects": "",
-    "supervisions": "",
-    "linkedin": "https://www.linkedin.com/in/r-rahulkaushik/",
-    "researchLinks": [
-      {
-        "title": "Personal Academic Website",
-        "url": "https://sites.google.com/view/rahulkaushik/home"
-      }
-    ],
-    "department": "ASH"
-  },
+  "designation": "Adjunct Assistant Professor",
+  "image": "/assets/faculty_photos/rahulkaushik.jpeg",
+  "bio": "Dr. Rahul Kaushik is an Adjunct Assistant Professor of Mathematics in the Department of Applied Sciences and Humanities (ASH) at IIIT Pune. He obtained his Ph.D. in Mathematics from the Harish-Chandra Research Institute (HRI), Prayagraj, under the supervision of Prof. Manoj K. Yadav. Prior to joining IIIT Pune, he served as an NBHM Postdoctoral Fellow and Institute Postdoctoral Fellow at IISER Pune, followed by a Postdoctoral Fellowship at NISER Bhubaneswar. His research interests include finite p-groups, the Matrix Waring Problem, Lie algebras, word maps, and group theory. His research has been published in reputed journals such as the Journal of Algebra, Journal of Algebra and Its Applications, and Linear Algebra and Its Applications. He has presented his work at several national and international conferences and has received the NBHM Postdoctoral Fellowship, the Harish-Chandra Memorial Award, and secured AIR 14 in the CSIR-JRF/NET examination.",
+  "education": "Ph.D. (Mathematics)",
+  "publications": [
+    {
+      "title": "Commutators and Commutator Subgroups of Finite p-Groups",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0021869320305238?via%3Dihub"
+    },
+    {
+      "title": "Commutators in Groups of Order p⁷",
+      "link": "https://www.worldscientific.com/doi/10.1142/S021949882350158X"
+    },
+    {
+      "title": "Waring Problem for Triangular Matrix Algebra",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S0024379524001277?via%3Dihub"
+    }
+  ],
+  "resume": "/assets/resume/rahulkaushik_resume.pdf",
+  "expertise": "Finite p-Groups, Matrix Waring Problem, Lie Algebras, Word Maps, Group Theory",
+  "email": "rahul@iiitp.ac.in",
+  "phone": "+91-9017390074",
+  "google_scholar": "https://scholar.google.com/citations?hl=en&user=i4A0EN0AAAAJ&authuser=3",
+  "orcid": "",
+  "scopus": "",
+  "books_chapters": [],
+  "patents": [],
+  "seminars": [],
+  "projects": [],
+  "supervisions": [],
+  "linkedin": "https://www.linkedin.com/in/r-rahulkaushik/",
+  "researchLinks": [
+    {
+      "title": "Personal Academic Website",
+      "url": "https://sites.google.com/view/rahulkaushik/home"
+    }
+  ],
+  "department": "ASH"
+},
   "rohit-ramchandra-joshi": {
     "designation": "Adjunct Assistant Professor",
     "image": "/assets/faculty_photos/rohitjoshi.jpeg",

@@ -9,11 +9,11 @@ const slides = [
   { id: 3, image: '/carousel/slide_3.jpeg' },
   { id: 4, image: '/carousel/slide_4.jpeg' },
   { id: 5, image: '/carousel/slide_5.jpeg' },
-  {id: 6, image: '/carousel/slide_6.jpeg' },
-  {id: 7, image: '/carousel/slide_7.jpeg' },
-  {id: 8, image: '/carousel/slide_8.jpeg' },
-  {id: 9, image: '/carousel/slide_9.jpeg' },
-  {id: 10, image: '/carousel/slide_10.jpeg' }
+  { id: 6, image: '/carousel/slide_6.jpeg' },
+  { id: 7, image: '/carousel/slide_7.jpeg' },
+  { id: 8, image: '/carousel/slide_8.jpeg' },
+  { id: 9, image: '/carousel/slide_9.jpeg' },
+  { id: 10, image: '/carousel/slide_10.jpeg' }
 ];
 
 const HeroCarousel = () => {

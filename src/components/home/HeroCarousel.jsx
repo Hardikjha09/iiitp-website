@@ -13,7 +13,7 @@ const slides = [
   {id: 7, image: '/carousel/slide_7.jpeg' },
   {id: 8, image: '/carousel/slide_8.jpeg' },
   {id: 9, image: '/carousel/slide_9.jpeg' },
-  {id: 10, image: '/carousel/slide_10.jpeg' },
+  {id: 10, image: '/carousel/slide_10.jpeg' }
 ];
 
 const HeroCarousel = () => {

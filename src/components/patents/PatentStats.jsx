@@ -52,33 +52,30 @@ const PatentStats = ({ patents }) => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-8">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
       {stats.map((item, index) => {
         const Icon = item.icon;
 
         return (
           <div
             key={index}
-            className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 p-4"
+            className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-md dark:border-gray-800 dark:bg-surface-dark"
           >
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
-                <Icon
-                  size={30}
-                  className="text-[#0F4C81]"
-                />
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                <Icon size={24} className="text-primary" />
               </div>
 
               <div>
-                <h4 className="text-base font-medium text-gray-700 dark:text-gray-300">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">
                   {item.title}
                 </h4>
 
-                <h2 className="text-4xl font-bold text-[#0F4C81]">
-  {item.value}
-</h2>
+                <h2 className="text-3xl font-bold font-serif text-primary dark:text-white">
+                  {item.value}
+                </h2>
 
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   {item.subtitle}
                 </p>
               </div>

@@ -12,24 +12,18 @@ const YearAccordion = ({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="mb-8 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-md">
+    <div className="mb-8">
 
       {/* Header */}
 
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between px-6 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white"
+        className="w-full flex items-center justify-between px-6 py-4 bg-transparent text-gray-900 dark:text-white"
       >
-        <div className="text-left">
-
-          <h2 className="text-2xl font-bold">
-            {year}
+        <div>
+          <h2 className="text-xl font-semibold">
+            MoUs
           </h2>
-
-          <p className="text-sm text-blue-100 mt-1">
-            {data.length} MOU{data.length > 1 ? "s" : ""}
-          </p>
-
         </div>
 
         <motion.div

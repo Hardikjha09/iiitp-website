@@ -24,20 +24,11 @@ const PatentIllustration = ({ type }) => {
   };
 
   return (
-    <div className="relative w-28 h-28">
-
-      {/* Outer Glow */}
-      <div className="absolute inset-0 rounded-full bg-blue-100 blur-xl opacity-70"></div>
-
-      {/* Main Circle */}
-      <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-blue-50 via-white to-blue-100 border border-blue-200 shadow-md flex items-center justify-center">
-
-        <div className="text-[#0F4C81]">
-          {renderIcon()}
-        </div>
-
+    <div className="relative h-24 w-24">
+      <div className="absolute inset-0 rounded-full bg-primary/10 blur-xl opacity-70"></div>
+      <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-blue-100 bg-gradient-to-br from-white via-blue-50 to-sky-100 shadow-sm dark:border-gray-700 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700">
+        <div className="text-primary">{renderIcon()}</div>
       </div>
-
     </div>
   );
 };

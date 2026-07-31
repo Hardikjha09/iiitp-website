@@ -12,11 +12,17 @@ const PatentFilters = ({
   setSelectedStatus,
 }) => {
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-3xl border border-gray-200 dark:border-slate-700 shadow-sm p-4 mb-10">
+    <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-surface-dark md:p-5">
+      <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          Filter Patents
+        </h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          Search by title, inventor, year, department, or status.
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3">
-
-        {/* Search */}
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
         <div className="relative xl:col-span-2">
           <Search
             size={20}
@@ -28,15 +34,14 @@ const PatentFilters = ({
             placeholder="Search patent..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full h-11 rounded-xl border border-gray-300 dark:border-slate-600 pl-12 pr-4 text-gray-700 dark:text-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0F4C81]"
+            className="h-11 w-full rounded-xl border border-gray-300 bg-white pl-12 pr-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#0F4C81] dark:border-gray-700 dark:bg-slate-800 dark:text-white"
           />
         </div>
 
-        {/* Year */}
         <select
           value={selectedYear}
           onChange={(e) => setSelectedYear(e.target.value)}
-          className="h-11 rounded-xl border border-gray-300 dark:border-slate-600 px-4 dark:bg-slate-800 dark:text-white"
+          className="h-11 rounded-xl border border-gray-300 bg-white px-4 text-gray-700 dark:border-gray-700 dark:bg-slate-800 dark:text-white"
         >
           <option value="">Year</option>
           <option value="2026">2026</option>
@@ -50,29 +55,21 @@ const PatentFilters = ({
           <option value="2018">2018</option>
         </select>
 
-        {/* Department */}
         <select
           value={selectedDepartment}
           onChange={(e) => setSelectedDepartment(e.target.value)}
-          className="h-11 rounded-xl border border-gray-300 dark:border-slate-600 px-4 dark:bg-slate-800 dark:text-white"
+          className="h-11 rounded-xl border border-gray-300 bg-white px-4 text-gray-700 dark:border-gray-700 dark:bg-slate-800 dark:text-white"
         >
           <option value="">Department</option>
-          <option value="Computer Science & Engineering">
-            Computer Science
-          </option>
-          <option value="Electronics & Communication Engineering">
-            Electronics
-          </option>
-          <option value="Applied Sciences">
-            Applied Sciences
-          </option>
+          <option value="Computer Science & Engineering">Computer Science</option>
+          <option value="Electronics & Communication Engineering">Electronics</option>
+          <option value="Applied Sciences">Applied Sciences</option>
         </select>
 
-        {/* Status */}
         <select
           value={selectedStatus}
           onChange={(e) => setSelectedStatus(e.target.value)}
-          className="h-11 rounded-xl border border-gray-300 dark:border-slate-600 px-4 dark:bg-slate-800 dark:text-white"
+          className="h-11 rounded-xl border border-gray-300 bg-white px-4 text-gray-700 dark:border-gray-700 dark:bg-slate-800 dark:text-white"
         >
           <option value="">Status</option>
           <option value="Granted">Granted</option>
@@ -80,7 +77,6 @@ const PatentFilters = ({
           <option value="Filed">Filed</option>
           <option value="Design Registered">Design Registered</option>
         </select>
-
       </div>
     </div>
   );

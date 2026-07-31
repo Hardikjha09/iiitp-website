@@ -395,58 +395,57 @@ const PatentsPage = () => {
 });
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-900 transition-colors duration-200">
+    <div className="min-h-screen transition-colors duration-200">
       <PageHeader title="Patents" />
 
-      <div className="container mx-auto px-4 py-10">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="space-y-8">
+          <section>
+            <PatentStats patents={patents} />
+          </section>
 
-        {/* Statistics */}
-        <PatentStats patents={patents} />
+          <section>
+            <PatentFilters
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+              selectedYear={selectedYear}
+              setSelectedYear={setSelectedYear}
+              selectedDepartment={selectedDepartment}
+              setSelectedDepartment={setSelectedDepartment}
+              selectedStatus={selectedStatus}
+              setSelectedStatus={setSelectedStatus}
+            />
+          </section>
 
-        {/* Search & Filters */}
-        <PatentFilters
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          selectedYear={selectedYear}
-          setSelectedYear={setSelectedYear}
-          selectedDepartment={selectedDepartment}
-          setSelectedDepartment={setSelectedDepartment}
-          selectedStatus={selectedStatus}
-          setSelectedStatus={setSelectedStatus}
-        />
+          <section>
+            <div className="mb-6 flex flex-col gap-3 border-b border-gray-200 pb-3 dark:border-gray-800 md:flex-row md:items-end md:justify-between">
+              <div>
+                <h2 className="text-2xl font-bold font-serif text-primary dark:text-white">
+                  Patents Portfolio
+                </h2>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                  Discover innovative technologies developed by IIIT Pune.
+                </p>
+              </div>
 
-          <div className="flex items-center justify-between mb-8">
-
-            <div>
-
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
-                Patents Portfolio
-              </h2>
-
-              <p className="text-gray-500 mt-2">
-                Discover innovative technologies developed by IIIT Pune.
-              </p>
-
+              <div className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-medium text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                {filteredPatents.length} {filteredPatents.length === 1 ? "Patent" : "Patents"}
+              </div>
             </div>
 
-            <div className="text-sm text-gray-500 bg-white rounded-full px-5 py-2 shadow-sm border">
-              {filteredPatents.length} Patents
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {filteredPatents.length > 0 ? (
+                filteredPatents.map((patent) => (
+                  <PatentCard key={patent.id} patent={patent} />
+                ))
+              ) : (
+                <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center text-gray-600 dark:border-gray-700 dark:bg-surface-dark dark:text-gray-300 md:col-span-2 xl:col-span-3">
+                  No patents found for the selected filters.
+                </div>
+              )}
             </div>
-
-          </div>
-
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {filteredPatents.length > 0 ? (
-            filteredPatents.map((patent) => (
-              <PatentCard key={patent.id} patent={patent} />
-            ))
-          ) : (
-            <div className="md:col-span-2 xl:col-span-3 rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center text-gray-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
-              No patents found for the selected filters.
-            </div>
-          )}
+          </section>
         </div>
-
       </div>
     </div>
   );

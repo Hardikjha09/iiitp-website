@@ -16,23 +16,24 @@ const MOUCard = ({ mou, onOpenGallery }) => {
     <div
       className="
       bg-white
-      dark:bg-slate-900
+      dark:bg-surface-dark
       rounded-2xl
-      shadow-md
-      hover:shadow-xl
+      shadow-xl
+      hover:shadow-2xl
       border
       border-gray-200
-      dark:border-slate-700
+      dark:border-gray-800
       transition-all
       duration-300
-      hover:-translate-y-1
+      transform
+      hover:-translate-y-2
       overflow-hidden
       "
     >
 
       {/* Logo */}
 
-<div className="h-40 overflow-hidden rounded-t-2xl bg-gray-50 dark:bg-slate-800">
+<div className="h-40 overflow-hidden rounded-t-2xl bg-slate-50 dark:bg-surface-dark">
   <img
     src={mou.logo}
     alt={mou.organization}
@@ -54,7 +55,7 @@ const MOUCard = ({ mou, onOpenGallery }) => {
 
       <div className="p-6">
 
-        <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
 
           {mou.organization}
 
@@ -146,28 +147,9 @@ const MOUCard = ({ mou, onOpenGallery }) => {
 
         </div>
 
-        {/* Group */}
-          <div
-            className="
-                group
-                bg-white
-                dark:bg-slate-900
-                rounded-2xl
-                shadow-md
-                hover:shadow-xl
-                border
-                border-gray-200
-                dark:border-slate-700
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                overflow-hidden
-            "
-        ></div>
-
         {/* Buttons */}
 
-        <div className="mt-8">
+        <div className="mt-8 space-y-3">
 
           <button
             onClick={() => onOpenGallery(mou)}
@@ -177,8 +159,8 @@ const MOUCard = ({ mou, onOpenGallery }) => {
               items-center
               justify-center
               gap-2
-              bg-blue-600
-              hover:bg-blue-700
+              bg-primary
+              hover:bg-primary/90
               text-white
               py-4
               rounded-xl
@@ -187,8 +169,37 @@ const MOUCard = ({ mou, onOpenGallery }) => {
             "
           >
             <Images size={18} />
-              Signing Ceremony
+            Signing Ceremony
           </button>
+
+          {mou.pdf && (
+            <button
+              onClick={openPDF}
+              className="
+                w-full
+                flex
+                items-center
+                justify-center
+                gap-2
+                border
+                border-gray-200
+                dark:border-gray-800
+                bg-white
+                dark:bg-surface-dark
+                text-gray-700
+                dark:text-gray-200
+                py-4
+                rounded-xl
+                font-medium
+                transition
+                hover:bg-gray-50
+                dark:hover:bg-slate-800
+              "
+            >
+              <ExternalLink size={18} />
+              View MoU PDF
+            </button>
+          )}
 
         </div>
 

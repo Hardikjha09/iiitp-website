@@ -54,6 +54,19 @@ html {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
 }
 
+/* Sky blue dotted background */
+.bg-grid-sky {
+  background-color: #e0f2fe;
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.18) 1.5px, transparent 1.5px);
+}
+
+.dark .bg-grid-sky {
+  background-color: #0f172a;
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+}
+
 /* Hide Scrollbar globally */
 ::-webkit-scrollbar {
   display: none;
@@ -830,4 +843,4 @@ html {
 
 .dark .international-relations-page nav[aria-label="Breadcrumb"] a:hover {
   color: #F87171 !important;
-}
+}

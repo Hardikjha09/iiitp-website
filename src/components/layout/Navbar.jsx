@@ -437,7 +437,7 @@ const Navbar = () => {
       // }))
     },
     { name: "Careers", path: "/careers", hasDropdown: false },
-    { name: "Placement", path: "https://placements.iiitp.ac.in/", hasDropdown: false, isExternal: true },
+    { name: "Placement", path: "/placement", hasDropdown: false},
     { name: "Contact Us", path: "/contact", hasDropdown: false },
     {
       name: "International Relations",

@@ -3710,9 +3710,9 @@
     "researchLinks": [],
     "department": "CSE"
   },
-    "debadreeta-bose": {
+    "debadreeta-das": {
     "designation": "Adjunct Assistant Professor",
-    "image": "/assets/faculty_photos/debadreetabose.jpg",
+    "image": "/assets/faculty_photos/debadreetadas.jpg",
     "bio": "I'm a researcher and academic specializing in next-generation wireless communication networks, with expertise in 5G/6G systems, Distributed Mobility Management (DMM), UAV-assisted communication, Intelligent Transportation Systems (ITS), and Software-Defined Networking (SDN). I earned my Ph.D. from Jadavpur University, Kolkata. I earned my both B.Tech and M.Tech in the Department of CSE under West Bengal University of Technology. My work has been published in leading international journals and conferences, including IEEE Transactions on Intelligent Transportation Systems and IEEE ANTS. My research interests include wireless networking, network virtualization, edge computing, and intelligent mobility solutions for future communication systems. ",
     "education": "Ph.D., M.Tech. (CSE), B.Tech. (CSE)",
     "publications": [
@@ -3729,7 +3729,7 @@
         "link": "https://link.springer.com/chapter/10.1007/978-3-032-17187-0_10"
       }
     ],
-    "resume": "/assets/resume/debadreetabose_resume.pdf",
+    "resume": "/assets/resume/debadreetadas_resume.pdf",
     "expertise": "5G/6G Networks, Distributed Mobility Management, UAV Communication, Intelligent Transportation Systems, Software-Defined Networking, Edge Computing, Wireless Networking",
     "email": "debadreeta_cse@iiitp.ac.in",
     "phone": "9476288801",
@@ -3979,7 +3979,7 @@
   "sonu-bose": {
     "designation": "Adjunct Assistant Professor",
     "image": "/assets/faculty_photos/sonubose.jpeg",
-    "bio": "Dr. Sonu Bose is an Adjunct Assistant Professor in the Department of Applied Sciences and Humanities at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Applied Mathematics from the Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram. His research interests include numerical analysis, scientific computing, singularly perturbed differential equations, adaptive mesh methods, and computational methods for partial differential equations. His research has been published in reputed international peer-reviewed journals and conference proceedings.",
+    "bio": "Dr. Sonu Bose is an Adjunct Assistant Professor in the Department of Applied Sciences and Humanities at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Applied Mathematics from the Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram. His research interests include numerical analysis, scientific computing, systems of singularly perturbed differential equations, higher-dimensional time-delay partial differential equations, adaptive mesh methods, finite difference and finite element methods, numerical approximation of diffusive fluxes, and computational fluid dynamics. His research has been published in reputed international peer-reviewed journals and conference proceedings.",
     "education": "Ph.D. (Applied Mathematics)",
     "publications": [
       {
@@ -4008,7 +4008,7 @@
     "email": "sonubose@iiitp.ac.in",
     "phone": "9567131379",
     "google_scholar": "https://scholar.google.com/citations?user=kK0rbUQAAAAJ&hl=en",
-    "orcid": "https://orcid.org/my-orcid?orcid=0009-0005-5102-6459",
+    "orcid": "https://orcid.org/0009-0005-5102-6459",
     "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57807640700",
     "books_chapters": "",
     "patents": "",
@@ -4082,14 +4082,6 @@
     {
       "title": "Eight-Element Self-Isolated MIMO Antenna Based on Wideband SIW Rectangular Ring Slot Antenna",
       "link": "https://doi.org/10.1016/j.aeue.2023.154555"
-    },
-    {
-      "title": "A Non-Uniform Matching Layer Design for Wide-Angle Matching Bumper in Automotive Radar Applications",
-      "link": ""
-    },
-    {
-      "title": "A Wideband SIW Cavity-Backed Bident-Shaped Slot Antenna",
-      "link": ""
     },
     {
       "title": "Detecting Hemoglobin Structural Variations Through Microwave Dielectric Analysis Using Horn Antennas",

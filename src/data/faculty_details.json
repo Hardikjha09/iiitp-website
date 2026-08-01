@@ -4067,5 +4067,128 @@
     "linkedin": "https://www.linkedin.com/in/csksuraj17/",
     "researchLinks": [],
     "department": "CSE"
-  }
+  },
+    "nancy-modi": {
+  "designation": "Adjunct Assistant Professor",
+  "image": "/assets/faculty_photos/nancymodi.jpg",
+  "bio": "Dr. Nancy Modi is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. She received her Ph.D. in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay, where her research focused on microwave engineering, automotive radar systems, and antenna design. She completed her M.Tech. in Digital Communication from Maulana Azad National Institute of Technology (MANIT), Bhopal, and her B.E. in Electronics and Communication Engineering from ITM Group of Institutions, Gwalior. Her research interests include microwave and millimeter-wave antennas, substrate integrated waveguide (SIW) antennas, automotive radar, electromagnetic compatibility (EMC), frequency selective surfaces (FSS), metasurfaces, and computational electromagnetics. She has published research articles in reputed international journals and conferences and actively reviews manuscripts for leading journals and conferences in antennas and electromagnetics.",
+  "education": "Ph.D. (Electrical Engineering), M.Tech. (Digital Communication), B.E. (Electronics and Communication Engineering)",
+
+  "publications": [
+    {
+      "title": "Design of Wideband and Wide-Angle Matching Bumper to Improve Automotive Radar Performance",
+      "link": "https://doi.org/10.1109/LSENS.2024.3392431"
+    },
+    {
+      "title": "Eight-Element Self-Isolated MIMO Antenna Based on Wideband SIW Rectangular Ring Slot Antenna",
+      "link": "https://doi.org/10.1016/j.aeue.2023.154555"
+    },
+    {
+      "title": "A Non-Uniform Matching Layer Design for Wide-Angle Matching Bumper in Automotive Radar Applications",
+      "link": ""
+    },
+    {
+      "title": "A Wideband SIW Cavity-Backed Bident-Shaped Slot Antenna",
+      "link": ""
+    },
+    {
+      "title": "Detecting Hemoglobin Structural Variations Through Microwave Dielectric Analysis Using Horn Antennas",
+      "link": "https://doi.org/10.1109/MAPCON65020.2025.11426425"
+    },
+    {
+      "title": "Investigation of Bumper Thickness to Study Automotive Radar Performance for Wide Incidence Angles",
+      "link": "https://doi.org/10.46620/URSIAPRASC25/RPYZ6669"
+    },
+    {
+      "title": "Wideband Matching Automotive Bumper Using Frequency Selective Surface",
+      "link": "https://doi.org/10.1109/APMC60911.2024.10867544"
+    },
+    {
+      "title": "Circularly Polarized MIMO Antenna Based on SIW Cavity-Backed Square Ring Slot",
+      "link": "https://doi.org/10.1109/APMC60911.2024.10867831"
+    },
+    {
+      "title": "A 45-Degree Rotated Square Ring Frequency Selective Surface Structure for Broadband Matching Automotive Bumper",
+      "link": "https://doi.org/10.23919/URSI-RCRS63970.2024.11201117"
+    },
+    {
+      "title": "Analysis of the Effects of Rainwater Covered Bumper on the Automotive Radar Signals",
+      "link": "https://doi.org/10.23919/EuCAP60739.2024.10501490"
+    },
+    {
+      "title": "Self-Isolated MIMO Antenna Using SIW Cavity Antenna for Dual-Band (28, 38 GHz) Applications",
+      "link": "https://doi.org/10.23919/EuCAP60739.2024.10501330"
+    },
+    {
+      "title": "Study of the Tilted Mounting Angle of Automotive Radar Antenna Installed Behind a Painted Bumper",
+      "link": "https://doi.org/10.1109/MAPCON58678.2023.10464176"
+    },
+    {
+      "title": "A Five-Element MIMO Antenna Based on Wideband Triple-Resonance SIW Antenna for Vehicular Communications",
+      "link": "https://doi.org/10.1109/MAPCON58678.2023.10463901"
+    },
+    {
+      "title": "Study of the Bumper Thickness and its Placement for Automotive Radar Applications",
+      "link": "https://doi.org/10.1109/AP-S/USNC-URSI47032.2022.9887075"
+    },
+    {
+      "title": "Analysis of Models to Reduce Complexity and Simulation Time of Multilayered Media for Automotive Radar Applications",
+      "link": "https://doi.org/10.1109/APS/URSI47566.2021.9704777"
+    },
+    {
+      "title": "Performance Evaluation of Automotive Radar in the Presence of Bumper with Multiple Paint Layers Using Bidirectional Loss Model",
+      "link": "https://doi.org/10.23919/EuCAP51087.2021.9411167"
+    },
+    {
+      "title": "Diagnosis of Cancerous Nuclei on Digital HIs: A Review",
+      "link": "https://doi.org/10.2139/ssrn.3572916"
+    },
+    {
+      "title": "MRI Segmentation for CAD of Brain Tumor: A Review",
+      "link": "https://doi.org/10.2139/ssrn.3576459"
+    },
+    {
+      "title": "A Review: Comparative Analysis of Chaotic Systems With Their Fractional Order Counterparts",
+      "link": "https://doi.org/10.2139/ssrn.3576454"
+    }
+  ],
+
+  "resume": "/assets/resume/nancymodi_resume.pdf",
+
+  "expertise": "Microwave Engineering, Automotive Radar, Antenna Design, SIW Antennas, Millimeter-Wave Antennas, Electromagnetic Compatibility (EMC), Frequency Selective Surfaces (FSS), Metasurfaces, Computational Electromagnetics",
+
+  "email": "nancy@iiitp.ac.in",
+  "phone": "7000336231",
+
+  "google_scholar": "https://scholar.google.com/citations?user=dkJl7joAAAAJ&hl=en",
+  "orcid": "",
+  "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57223309336",
+
+  "books_chapters": [],
+
+  "patents": [
+    {
+      "title": "Systems and methods for reducing reflections of radar radio waves",
+      "number": "Indian Patent No. 521364",
+      "status": "Granted"
+    },
+    {
+      "title": "A Non-Uniform Matching Layer Design for Wide-Angle Matching Automotive Bumpers",
+      "number": "Application No. 202521054675",
+      "status": "Published"
+    }
+  ],
+
+  "seminars": [],
+
+  "projects": [],
+
+  "supervisions": [],
+
+  "linkedin": "https://www.linkedin.com/in/nancy-modi/",
+
+  "researchLinks": [],
+
+  "department": "ECE"
+}
 }

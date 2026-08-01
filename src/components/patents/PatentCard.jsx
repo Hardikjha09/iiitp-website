@@ -99,10 +99,24 @@ const PatentCard = ({ patent }) => {
           </div>
         </div>
 
-        <button className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-semibold text-white transition-all duration-300 hover:bg-blue-800">
-          View Details
-          <ArrowRight size={18} />
-        </button>
+        {patent.certificate ? (
+          <a
+            href={patent.certificate}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-xl border-2 border-[#0F4C81] py-3 font-semibold text-[#0F4C81] hover:bg-[#0F4C81] hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            View Certificate
+            <ArrowRight size={18} />
+          </a>
+        ) : (
+          <button
+            disabled
+            className="w-full rounded-xl border-2 border-gray-300 py-3 text-gray-400 cursor-not-allowed"
+          >
+            Certificate Not Available
+          </button>
+        )}
       </div>
     </div>
   );

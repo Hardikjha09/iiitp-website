@@ -76,6 +76,7 @@ const PatentFilters = ({
           <option value="Published">Published</option>
           <option value="Filed">Filed</option>
           <option value="Design Registered">Design Registered</option>
+          <option value="Under Examination">Under Examination</option>
         </select>
       </div>
     </div>

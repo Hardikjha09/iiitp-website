@@ -5,15 +5,16 @@ import { Link } from 'react-router';
 
 const slides = [
   { id: 1, image: '/carousel/slide_1.jpeg' },
-  { id: 2, image: '/carousel/slide_2.jpeg' },
-  { id: 3, image: '/carousel/slide_3.jpeg' },
-  { id: 4, image: '/carousel/slide_4.jpeg' },
-  { id: 5, image: '/carousel/slide_5.jpeg' },
-  { id: 6, image: '/carousel/slide_6.jpeg' },
-  { id: 7, image: '/carousel/slide_7.jpeg' },
-  { id: 8, image: '/carousel/slide_8.jpeg' },
-  { id: 9, image: '/carousel/slide_9.jpeg' },
-  { id: 10, image: '/carousel/slide_10.jpeg' }
+  { id: 2, image: '/carousel/slide_11.jpeg' },
+  { id: 3, image: '/carousel/slide_2.jpeg' },
+  { id: 4, image: '/carousel/slide_3.jpeg' },
+  { id: 5, image: '/carousel/slide_4.jpeg' },
+  { id: 6, image: '/carousel/slide_5.jpeg' },
+  { id: 7, image: '/carousel/slide_6.jpeg' },
+  { id: 8, image: '/carousel/slide_7.jpeg' },
+  { id: 9, image: '/carousel/slide_8.jpeg' },
+  { id: 10, image: '/carousel/slide_9.jpeg' },
+  { id: 11, image: '/carousel/slide_10.jpeg' }
 ];
 
 const HeroCarousel = () => {

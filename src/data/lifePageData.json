@@ -1014,6 +1014,29 @@
   ],
   "EVENTS": [
     {
+      "name": "HBTM 2026 – Hack Better Than Me (National Hackathon)",
+      "type": "Hackathon",
+      "typeColor": "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300",
+      "desc": "The 24-hour National Hackathon, HBTM 2026 – Hack Better Than Me, organised by the IEEE Student Branch of the Indian Institute of Information Technology (IIIT) Pune in collaboration with IABTM and the IEEE Maharashtra Section, has been officially inaugurated by the Hon’ble Director, Prof. Vineet Kansal, along with the IABTM organising team. This much-anticipated event has brought together talented participants from across the nation, who will engage in an intense 24-hour journey of innovation, collaboration, and problem-solving. During the hackathon, participants will work across diverse domains, pushing the boundaries of creativity and transforming their ideas into impactful real-world solutions. The institute extends its best wishes to all participating teams and looks forward to witnessing groundbreaking innovations emerging from this dynamic platform.",
+      "images": [
+        "/assets/lifepage/hbtm2026_1.JPG",
+        "/assets/lifepage/hbtm2026_2.JPG",
+        "/assets/lifepage/hbtm2026_3.JPG",
+        "/assets/lifepage/hbtm2026_4.JPG",
+        "/assets/lifepage/hbtm2026_5.JPG",
+        "/assets/lifepage/hbtm2026_6.JPG",
+        "/assets/lifepage/hbtm2026_7.JPG",
+        "/assets/lifepage/hbtm2026_8.JPG",
+        "/assets/lifepage/hbtm2026_9.JPG"
+      ],
+      "highlights": [
+        "24-hour National Hackathon – HBTM 2026",
+        "Inaugurated by Hon’ble Director Prof. Vineet Kansal",
+        "Participants from across India",
+        "Innovation, collaboration, and real-world problem solving"
+      ]
+    },
+    {
       "name": "Campus Visit by CTO of Narravance (22 July 2026)",
       "type": "Industry Visit",
       "typeColor": "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300",

@@ -399,7 +399,7 @@ const Navbar = () => {
           path: "#",
           hasDropdown: true,
           subLinks: [
-            { name: "HR Summit 2021", path: "https://placements.iiitp.ac.in/HrSummit/", isExternal: true },
+            { name: "HR Summit 2021", path: "/HRSummit", isExternal: false },
             { name: "HR Summit 2026", path: "https://www.youtube.com/watch?v=mFjN-mZoT7A", isExternal: true }
           ]
         },

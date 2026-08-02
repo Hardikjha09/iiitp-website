@@ -143,6 +143,7 @@ const InternationalCollaborationsPage = lazy(
 const InternationalContactPage = lazy(
   () => import("./pages/InternationalContactPage"),
 );
+const HRSummitPage = lazy(() => import("./pages/HRSummit"));
 
 function AppContent() {
   const location = useLocation();
@@ -359,6 +360,7 @@ function AppContent() {
             <Route path="/departments/ash" element={<AshDepartmentPage />} />
 
             {/* Other Pages */}
+            <Route path="/HRSummit" element={<HRSummitPage />} />
             <Route path="/life" element={<LifeOverviewPage />} />
             <Route path="/life/clubs" element={<LifeClubsPage />} />
             <Route path="/life/activities" element={<LifeActivitiesPage />} />

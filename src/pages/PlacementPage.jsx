@@ -142,21 +142,6 @@ function StatCard({ icon: Icon, value, label, sub, color, delay }) {
 // ── Main Page ─────────────────────────────────────────────────────────────────
 
 const PlacementPage = () => {
-  React.useEffect(() => {
-    window.location.replace("https://placements.iiitp.ac.in/");
-  }, []);
-
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-bg dark:bg-bg-dark transition-colors duration-200">
-      <div className="text-center py-20">
-        <p className="text-lg font-semibold text-primary dark:text-white mb-2 animate-pulse">Redirecting to Placement Portal...</p>
-        <p className="text-sm text-gray-500 dark:text-gray-400">If you are not redirected, <a href="https://placements.iiitp.ac.in/" className="text-accent dark:text-accent-dark hover:underline font-bold">click here</a>.</p>
-      </div>
-    </div>
-  );
-};
-
-const OldPlacementPage = () => {
   const [activeSector, setActiveSector] = React.useState(0);
   const chartsRef = useRef(null);
   const chartsInView = useInView(chartsRef, { once: true, margin: '-80px' });

@@ -41,9 +41,11 @@ const GalleryModal = ({
     window.addEventListener("keydown", handleKey);
 
     return () => window.removeEventListener("keydown", handleKey);
-  });
+  }, [isOpen, onClose, images.length]);
 
   const nextImage = () => {
+    if (images.length === 0) return;
+
     setCurrentIndex((prev) =>
       prev === images.length - 1 ? 0 : prev + 1
     );
@@ -87,23 +89,29 @@ const GalleryModal = ({
 
         {/* Image */}
 
-        <motion.img
-          key={currentIndex}
-          src={images[currentIndex]}
-          alt=""
-          className="max-w-full max-h-[80vh] rounded-2xl shadow-2xl"
-          initial={{
-            opacity: 0,
-            scale: 0.95,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.3,
-          }}
-        />
+        {images.length > 0 ? (
+          <motion.img
+            key={currentIndex}
+            src={images[currentIndex]}
+            alt={title}
+            className="max-w-full max-h-[80vh] rounded-2xl shadow-2xl"
+            initial={{
+              opacity: 0,
+              scale: 0.95,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+          />
+        ) : (
+          <div className="max-w-full max-h-[80vh] rounded-2xl shadow-2xl bg-slate-900/80 p-10 text-center text-white">
+            No gallery images available.
+          </div>
+        )}
 
         {/* Next */}
 

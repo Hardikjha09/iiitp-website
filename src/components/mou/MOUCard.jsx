@@ -16,23 +16,24 @@ const MOUCard = ({ mou, onOpenGallery }) => {
     <div
       className="
       bg-white
-      dark:bg-slate-900
+      dark:bg-surface-dark
       rounded-2xl
-      shadow-md
-      hover:shadow-xl
+      shadow-xl
+      hover:shadow-2xl
       border
       border-gray-200
-      dark:border-slate-700
+      dark:border-gray-800
       transition-all
       duration-300
-      hover:-translate-y-1
+      transform
+      hover:-translate-y-2
       overflow-hidden
       "
     >
 
       {/* Logo */}
 
-<div className="h-40 overflow-hidden rounded-t-2xl bg-gray-50 dark:bg-slate-800">
+<div className="h-40 overflow-hidden rounded-t-2xl bg-slate-50 dark:bg-surface-dark">
   <img
     src={mou.logo}
     alt={mou.organization}
@@ -54,11 +55,15 @@ const MOUCard = ({ mou, onOpenGallery }) => {
 
       <div className="p-6">
 
-        <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
 
           {mou.organization}
 
         </h3>
+
+        <p className="mt-3 text-sm text-gray-600 dark:text-gray-300 leading-6">
+          {mou.description}
+        </p>
 
         <div className="mt-5 space-y-3">
 
@@ -142,73 +147,59 @@ const MOUCard = ({ mou, onOpenGallery }) => {
 
         </div>
 
-        {/* Group */}
-          <div
-            className="
-                group
-                bg-white
-                dark:bg-slate-900
-                rounded-2xl
-                shadow-md
-                hover:shadow-xl
-                border
-                border-gray-200
-                dark:border-slate-700
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                overflow-hidden
-            "
-        ></div>
-
         {/* Buttons */}
 
-        <div className="grid grid-cols-2 gap-3 mt-8">
+        <div className="mt-8 space-y-3">
 
           <button
-            onClick={openPDF}
+            onClick={() => onOpenGallery(mou)}
             className="
-            flex
-            items-center
-            justify-center
-            gap-2
-            bg-blue-600
-            hover:bg-blue-700
-            text-white
-            py-3
-            rounded-xl
-            font-medium
-            transition
+              w-full
+              flex
+              items-center
+              justify-center
+              gap-2
+              bg-primary
+              hover:bg-primary/90
+              text-white
+              py-4
+              rounded-xl
+              font-medium
+              transition
             "
           >
-
-            <ExternalLink size={18} />
-
-            View MOU
-
+            <Images size={18} />
+            Signing Ceremony
           </button>
 
-           <button
-             onClick={() => onOpenGallery(mou)}
-             className="
+          {mou.pdf && (
+            <button
+              onClick={openPDF}
+              className="
+                w-full
                 flex
                 items-center
                 justify-center
                 gap-2
                 border
-                border-blue-600
-                text-blue-600
-                hover:bg-blue-50
-                dark:hover:bg-slate-800
-                py-3
+                border-gray-200
+                dark:border-gray-800
+                bg-white
+                dark:bg-surface-dark
+                text-gray-700
+                dark:text-gray-200
+                py-4
                 rounded-xl
                 font-medium
                 transition
-                "
-                >
-                <Images size={18} />
-                Gallery
+                hover:bg-gray-50
+                dark:hover:bg-slate-800
+              "
+            >
+              <ExternalLink size={18} />
+              View MoU PDF
             </button>
+          )}
 
         </div>
 

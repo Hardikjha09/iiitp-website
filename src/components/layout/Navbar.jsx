@@ -30,16 +30,16 @@ const InstagramIcon = ({ size }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="ig-grad-new" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#f09433"/>
-        <stop offset="0.25" stopColor="#e6683c"/>
-        <stop offset="0.5" stopColor="#dc2743"/>
-        <stop offset="0.75" stopColor="#cc2366"/>
-        <stop offset="1" stopColor="#bc1888"/>
+        <stop stopColor="#f09433" />
+        <stop offset="0.25" stopColor="#e6683c" />
+        <stop offset="0.5" stopColor="#dc2743" />
+        <stop offset="0.75" stopColor="#cc2366" />
+        <stop offset="1" stopColor="#bc1888" />
       </linearGradient>
     </defs>
     <rect width="24" height="24" rx="6" fill="url(#ig-grad-new)" />
-    <path d="M12 7.026c-2.748 0-4.974 2.226-4.974 4.974s2.226 4.974 4.974 4.974 4.974-2.226 4.974-4.974-2.226-4.974-4.974-4.974zm0 8.163c-1.758 0-3.189-1.431-3.189-3.189s1.431-3.189 3.189-3.189 3.189 1.431 3.189 3.189-1.431 3.189-3.189 3.189zM16.963 8.193c-.643 0-1.166-.523-1.166-1.166s.523-1.166 1.166-1.166 1.166.523 1.166 1.166-.523 1.166-1.166 1.166z" fill="white"/>
-    <path d="M11.996 4.148c2.617 0 2.929.01 3.963.057 2.658.121 3.731 1.206 3.854 3.854.047 1.034.057 1.346.057 3.963 0 2.617-.01 2.929-.057 3.963-.123 2.648-1.196 3.733-3.854 3.854-1.034.047-1.346.057-3.963.057-2.617 0-2.929-.01-3.963-.057-2.658-.121-3.731-1.206-3.854-3.854-.047-1.034-.057-1.346-.057-3.963 0-2.617.01-2.929.057-3.963.123-2.648 1.196-3.733 3.854-3.854 1.034-.047 1.346-.057 3.963-.057m0-1.776c-2.66 0-2.997.011-4.043.059-3.324.152-4.99 1.83-5.143 5.143-.048 1.046-.059 1.383-.059 4.043 0 2.66.011 2.997.059 4.043.153 3.313 1.819 4.99 5.143 5.143 1.046.048 1.383.059 4.043.059 2.66 0 2.997-.011 4.043-.059 3.324-.152 4.99-1.83 5.143-5.143.048-1.046.059-1.383.059-4.043 0-2.66-.011-2.997-.059-4.043-.153-3.313-1.819-4.99-5.143-5.143-1.046-.048-1.383-.059-4.043-.059z" fill="white"/>
+    <path d="M12 7.026c-2.748 0-4.974 2.226-4.974 4.974s2.226 4.974 4.974 4.974 4.974-2.226 4.974-4.974-2.226-4.974-4.974-4.974zm0 8.163c-1.758 0-3.189-1.431-3.189-3.189s1.431-3.189 3.189-3.189 3.189 1.431 3.189 3.189-1.431 3.189-3.189 3.189zM16.963 8.193c-.643 0-1.166-.523-1.166-1.166s.523-1.166 1.166-1.166 1.166.523 1.166 1.166-.523 1.166-1.166 1.166z" fill="white" />
+    <path d="M11.996 4.148c2.617 0 2.929.01 3.963.057 2.658.121 3.731 1.206 3.854 3.854.047 1.034.057 1.346.057 3.963 0 2.617-.01 2.929-.057 3.963-.123 2.648-1.196 3.733-3.854 3.854-1.034.047-1.346.057-3.963.057-2.617 0-2.929-.01-3.963-.057-2.658-.121-3.731-1.206-3.854-3.854-.047-1.034-.057-1.346-.057-3.963 0-2.617.01-2.929.057-3.963.123-2.648 1.196-3.733 3.854-3.854 1.034-.047 1.346-.057 3.963-.057m0-1.776c-2.66 0-2.997.011-4.043.059-3.324.152-4.99 1.83-5.143 5.143-.048 1.046-.059 1.383-.059 4.043 0 2.66.011 2.997.059 4.043.153 3.313 1.819 4.99 5.143 5.143 1.046.048 1.383.059 4.043.059 2.66 0 2.997-.011 4.043-.059 3.324-.152 4.99-1.83 5.143-5.143.048-1.046.059-1.383.059-4.043 0-2.66-.011-2.997-.059-4.043-.153-3.313-1.819-4.99-5.143-5.143-1.046-.048-1.383-.059-4.043-.059z" fill="white" />
   </svg>
 );
 
@@ -176,7 +176,7 @@ const Navbar = () => {
       name: "Student Portal",
       path: "https://iiitp.webpointsolutions.in/StudentPortal/index.html#!/Login",
       hasDropdown: false,
-      isExternal: true
+      isExternal: true,
     },
     {
       name: "About Us",
@@ -189,8 +189,16 @@ const Navbar = () => {
           path: "#",
           hasDropdown: true,
           subLinks: [
-            { name: "Act", path: "/documents/IIIT-PPP-Act-2017.pdf", isExternal: true },
-            { name: "Amendment Act", path: "/documents/iiit_ppp_amendment_act.pdf", isExternal: true },
+            {
+              name: "Act",
+              path: "/documents/IIIT-PPP-Act-2017.pdf",
+              isExternal: true,
+            },
+            {
+              name: "Amendment Act",
+              path: "/documents/iiit_ppp_amendment_act.pdf",
+              isExternal: true,
+            },
           ],
         },
         {
@@ -198,16 +206,28 @@ const Navbar = () => {
           path: "#",
           hasDropdown: true,
           subLinks: [
-            { name: "STATUTE", path: "/documents/IIIT_Pune_Statute_2017 22.10.2018.pdf", isExternal: true },
-            { name: "statute(amendment)", path: "/documents/ammendment.pdf", isExternal: true },
+            {
+              name: "STATUTE",
+              path: "/documents/IIIT_Pune_Statute_2017 22.10.2018.pdf",
+              isExternal: true,
+            },
+            {
+              name: "statute(amendment)",
+              path: "/documents/ammendment.pdf",
+              isExternal: true,
+            },
           ],
         },
         { name: "Vision & Mission", path: "/about/vision-mission" },
         // { name: "Director Desk", path: "/about/director-desk" },
         { name: "Student Achievements", path: "/about/student-achievements" },
         { name: "Faculty Achievements", path: "/about/faculty-achievements" },
-        { name: "ARIIA Ranking", path: "/documents/ARI-U-0804-1-3.pdf", isExternal: true },
-      ]
+        {
+          name: "ARIIA Ranking",
+          path: "/documents/ARI-U-0804-1-3.pdf",
+          isExternal: true,
+        },
+      ],
     },
     {
       name: "Administration",
@@ -217,14 +237,26 @@ const Navbar = () => {
         { name: "Chairperson", path: "/administration/chairperson" },
         { name: "Director", path: "/administration/director" },
         { name: "Registrar", path: "/administration/registrar" },
-        { name: "Board of Governors", path: "/administration/board-of-governors" },
-        { name: "Finance Committee", path: "/administration/finance-committee" },
-        { name: "Building and Works Committee", path: "/administration/building-and-works-committee" },
+        {
+          name: "Board of Governors",
+          path: "/administration/board-of-governors",
+        },
+        {
+          name: "Finance Committee",
+          path: "/administration/finance-committee",
+        },
+        {
+          name: "Building and Works Committee",
+          path: "/administration/building-and-works-committee",
+        },
         { name: "Senate", path: "/administration/senate" },
         { name: "Board of Studies", path: "/administration/board-of-studies" },
-        { name: "Chief Vigilance Officer", path: "/administration/chief-vigilance-officer" },
+        {
+          name: "Chief Vigilance Officer",
+          path: "/administration/chief-vigilance-officer",
+        },
         { name: "Associate Deans", path: "/administration/associate-deans" },
-      ]
+      ],
     },
     {
       name: "Academics",
@@ -235,10 +267,19 @@ const Navbar = () => {
           name: "Departments",
           hasDropdown: true,
           subLinks: [
-            { name: "Computer Science and Engineering (CSE)", path: "/departments/cse" },
-            { name: "Electronics and Communication Engineering (ECE)", path: "/departments/ece" },
-            { name: "Applied Sciences & Humanities (AS & H)", path: "/departments/ash" },
-          ]
+            {
+              name: "Computer Science and Engineering (CSE)",
+              path: "/departments/cse",
+            },
+            {
+              name: "Electronics and Communication Engineering (ECE)",
+              path: "/departments/ece",
+            },
+            {
+              name: "Applied Sciences & Humanities (AS & H)",
+              path: "/departments/ash",
+            },
+          ],
         },
         // {
         //   name: "B.Tech.",
@@ -262,47 +303,75 @@ const Navbar = () => {
         // },
         // { name: "Ph.D.", path: "/academics/phd" },
         {
-          name:"Academic Programs",
-          path:"#",
+          name: "Academic Programs",
+          path: "#",
           hasDropdown: true,
           subLinks: [
             { name: "UG Programs", path: "/academics/ug-programs" },
             { name: "PG Programs", path: "/academics/pg-programs" },
             { name: "Ph.D Programs", path: "/academics/phd-programs" },
-          ]
+          ],
         },
         { name: "UG and PG Schemes", path: "/academics/ug-pg-schemes" },
         { name: "Academic Calendar", path: "/academics/calendar" },
-        { name: "Examination Section", path: "/academics/examination-section"},
+        { name: "Examination Section", path: "/academics/examination-section" },
         { name: "Fees", path: "/fees" },
-        { name: "Time Table", path: "/timetable/Examination schedule- Re-and-Backlog Examination July-Aug 2026.pdf", isExternal: true },
+        {
+          name: "Time Table",
+          path: "/timetable/Examination schedule- Re-and-Backlog Examination July-Aug 2026.pdf",
+          isExternal: true,
+        },
         {
           name: "Ordinance",
           path: "#",
           hasDropdown: true,
           subLinks: [
             { name: "B.Tech.", path: "#" },
-            { name: "M.Tech.", path: "/documents/MTech_Ordinances_Updated_till_11th_Senate.docx.pdf", isExternal: true },
-            { 
-              name: "Ph.D.", 
+            {
+              name: "M.Tech.",
+              path: "/documents/MTech_Ordinances_Updated_till_11th_Senate.docx.pdf",
+              isExternal: true,
+            },
+            {
+              name: "Ph.D.",
               path: "#",
               hasDropdown: true,
               subLinks: [
-                { name: "Ph.D. Ordinance 2024", path: "/documents/IIIT Pune_PhD Ordinances and Regulations_Revised.pdf", isExternal: true },
-                { name: "Ph.D. Ordinance 2020", path: "/documents/IIIT_Pune_PhD_Ordinances_and_Regulations_2020.pdf", isExternal: true },
-              ]
-            }
-          ]
+                {
+                  name: "Ph.D. Ordinance 2024",
+                  path: "/documents/IIIT Pune_PhD Ordinances and Regulations_Revised.pdf",
+                  isExternal: true,
+                },
+                {
+                  name: "Ph.D. Ordinance 2020",
+                  path: "/documents/IIIT_Pune_PhD_Ordinances_and_Regulations_2020.pdf",
+                  isExternal: true,
+                },
+              ],
+            },
+          ],
         },
         {
           name: "Library",
           hasDropdown: true,
           subLinks: [
-            { name: "Library OPAC (Campus Network Only)", path: "http://10.10.15.90:8001/", isExternal: true },
-            { name: "Library Website", path: "https://sites.google.com/iiitp.ac.in/library", isExternal: true },
-            { name: "IRINS", path: "https://iiitp.irins.org/", isExternal: true },
+            {
+              name: "Library OPAC (Campus Network Only)",
+              path: "http://10.10.15.90:8001/",
+              isExternal: true,
+            },
+            {
+              name: "Library Website",
+              path: "https://sites.google.com/iiitp.ac.in/library",
+              isExternal: true,
+            },
+            {
+              name: "IRINS",
+              path: "https://iiitp.irins.org/",
+              isExternal: true,
+            },
             { name: "IDP", path: "https://idp.iiitp.ac.in/", isExternal: true },
-          ]
+          ],
         },
       ],
     },
@@ -316,12 +385,18 @@ const Navbar = () => {
           name: "Funded Projects",
           hasDropdown: true,
           subLinks: [
-            { name: "Funded Project (Completed)", path: "/research/funded-projects/completed" },
-            { name: "Funded Project (Ongoing)", path: "/research/funded-projects/ongoing" }
-          ]
+            {
+              name: "Funded Project (Completed)",
+              path: "/research/funded-projects/completed",
+            },
+            {
+              name: "Funded Project (Ongoing)",
+              path: "/research/funded-projects/ongoing",
+            },
+          ],
         },
         { name: "Events", path: "/research/events" },
-        { name: "MOUs", path: "/research/mous" },
+        { name: "MoUs", path: "/research/MoUs" },
         { name: "Patents", path: "/research/patents" },
         { name: "Publications", path: "/research/publications" },
         // {
@@ -334,8 +409,7 @@ const Navbar = () => {
         //   ]
         // },
         // { name: "PostDoc Fellow", path: "/research/postdoc-fellow" },
-      ]
-
+      ],
     },
     {
       name: "People",
@@ -349,17 +423,23 @@ const Navbar = () => {
           hasDropdown: true,
           subLinks: [
             { name: "Regular", path: "/people/non-teaching-staff/regular" },
-            { name: "Contract", path: "/people/non-teaching-staff/contract" }
-          ]
+            { name: "Contract", path: "/people/non-teaching-staff/contract" },
+          ],
         },
         {
           name: "Research Scholar",
           hasDropdown: true,
           subLinks: [
             { name: "Institute Scheme", path: "/research/scholar/institute" },
-            { name: "Visvesvaraya Scheme", path: "/research/scholar/visvesvaraya" },
-            { name: "Graduated PhD Students", path: "/research/scholar/graduated" }
-          ]
+            {
+              name: "Visvesvaraya Scheme",
+              path: "/research/scholar/visvesvaraya",
+            },
+            {
+              name: "Graduated PhD Students",
+              path: "/research/scholar/graduated",
+            },
+          ],
         },
         { name: "PostDoc Fellow", path: "/research/postdoc-fellow" },
         { name: "Alumni", path: "/people/alumni" },
@@ -374,23 +454,32 @@ const Navbar = () => {
         {
           name: "Student Clubs",
           hasDropdown: false,
-          path: "/life/clubs"
+          path: "/life/clubs",
         },
         {
           name: "Activities",
           hasDropdown: true,
           path: "/life/activities",
           subLinks: [
-            { name: "Azadi Ka Amrit Mahotsav", path: "/life/activities?act=azadi" },
+            {
+              name: "Azadi Ka Amrit Mahotsav",
+              path: "/life/activities?act=azadi",
+            },
             { name: "EBSB", path: "/life/activities?act=ebsb" },
-            { name: "Fit India Movement", path: "/life/activities?act=fit-india" },
+            {
+              name: "Fit India Movement",
+              path: "/life/activities?act=fit-india",
+            },
             { name: "Hindi Pakhwada", path: "/life/activities?act=hindi" },
             { name: "Swachh Bharat", path: "/life/activities?act=swachh" },
             { name: "Unity Day", path: "/life/activities?act=unity" },
             { name: "Yoga Day", path: "/life/activities?act=yoga" },
             { name: "Youth Day", path: "/life/activities?act=youth" },
-            { name: "AI Talent Hackathon", path: "/life/activities?act=ai-talent" },
-          ]
+            {
+              name: "AI Talent Hackathon",
+              path: "/life/activities?act=ai-talent",
+            },
+          ],
         },
         { name: "Photo Gallery", path: "/life/gallery" },
         { name: "College Events", path: "/life/events" },
@@ -399,8 +488,16 @@ const Navbar = () => {
           path: "#",
           hasDropdown: true,
           subLinks: [
-            { name: "HR Summit 2021", path: "/HRSummit", isExternal: false },
-            { name: "HR Summit 2026", path: "https://www.youtube.com/watch?v=mFjN-mZoT7A", isExternal: true }
+            {
+              name: "HR Summit 2021",
+              path: "/HRSummit",
+              isExternal: false
+            },
+            {
+              name: "HR Summit 2026",
+              path: "https://www.youtube.com/watch?v=mFjN-mZoT7A",
+              isExternal: true
+            }
           ]
         },
         {
@@ -411,7 +508,7 @@ const Navbar = () => {
             { name: "Magazine", path: "/life/magazine" },
             { name: "Newsletter", path: "/life/newsletter" },
             { name: "Press", path: "/life/press" },
-          ]
+          ],
         },
         { name: "Campus Tour", path: "/life/campus" },
         {
@@ -421,10 +518,10 @@ const Navbar = () => {
           subLinks: [
             { name: "ACM Chapter", path: "/acm" },
             { name: "IEEE Student Branch", path: "/ieee" },
-          ]
+          ],
         },
         // { name: "Sports & Gymnasium", path: "/#" },
-      ]
+      ],
     },
     {
       name: "Notice",
@@ -437,12 +534,17 @@ const Navbar = () => {
       // }))
     },
     { name: "Careers", path: "/careers", hasDropdown: false },
-    { name: "Placement", path: "https://placements.iiitp.ac.in/", hasDropdown: false, isExternal: true },
+    {
+      name: "Placement",
+      path: "http://placement.iiitp.ac.in/",
+      hasDropdown: false,
+      isExternal: true
+    },
     { name: "Contact Us", path: "/contact", hasDropdown: false },
     {
       name: "International Relations",
       path: "/international",
-      hasDropdown: false
+      hasDropdown: false,
     },
     {
       name: "E-TENDER",
@@ -451,8 +553,12 @@ const Navbar = () => {
       subLinks: [
         { name: "Live E-Tender", path: "/e-tender/live" },
         { name: "Archive E-Tender", path: "/e-tender/archive" },
-        { name: "Awarded Tender", path: "/documents/Awarde Tender.pdf", isExternal: true },
-      ]
+        {
+          name: "Awarded Tender",
+          path: "/documents/Awarde Tender.pdf",
+          isExternal: true,
+        },
+      ],
     },
   ];
 

@@ -1152,22 +1152,31 @@
     "resume": "/assets/resume/sonammaurya_resume.pdf",
     "patents": [
       {
-        "title": "Indian Patent 202241027994 Published 27-05-2022 Delay Tolerant Internet of Things Smart Wallet with Enhanced Features for Preventing Misuse"
+        "title": "Design Patent granted on the topic \"Board Game\" in 2025."
       },
       {
-        "title": "Indian Patent 202241026708 Published 20-05-2022 and Alarm System for the Same Indian Design Prototype submitted"
+        "title": "Design Patent granted on the topic \"Board Game\" in 2026."
       },
       {
-        "title": "Board Game Based on Ramayana 350861-001 07-10-2021 Board Game Based on Historical Indian Design Prototype submitted"
+        "title": "Design Patent granted on the topic \"Board Game\" in 2025."
       },
       {
-        "title": "350860-001 07-10-2021 Board Game Based on King Indian Design Prototype submitted"
+        "title": "Design Patent under examination on the topic \"Board Game\"."
       },
       {
-        "title": "350859-001 07-10-2021 Board Game Based on Indian Design Prototype submitted"
+        "title": "Design Patent under examination on the topic \"Eco Friendly Dice (Toy)\"."
       },
       {
-        "title": "350862-001 07-10-2021"
+        "title": "Design Patent under examination on the topic \"Eco Friendly Cone (Toy)\"."
+      },
+      {
+        "title": "Innovation Patent granted on the topic \"An Artificial Intelligence (AI) Based Automatic Monitoring System and a Method Thereof\" in 2026."
+      },
+      {
+        "title": "Innovation Patent published on the topic \"A System and Method for Assisting a Blind and Visually Impaired Person\" in 2025."
+      },
+      {
+        "title": "Innovation Patent published on the topic \"System and Method for Multimodal Prediction of Autism Spectrum Disorder using Vision Transformers\" in 2025."
       }
     ],
     "seminars": [
@@ -3700,5 +3709,480 @@
     "linkedin": "",
     "researchLinks": [],
     "department": "CSE"
-  }
+  },
+    "debadreeta-das": {
+    "designation": "Adjunct Assistant Professor",
+    "image": "/assets/faculty_photos/debadreetadas.jpg",
+    "bio": "I'm a researcher and academic specializing in next-generation wireless communication networks, with expertise in 5G/6G systems, Distributed Mobility Management (DMM), UAV-assisted communication, Intelligent Transportation Systems (ITS), and Software-Defined Networking (SDN). I earned my Ph.D. from Jadavpur University, Kolkata. I earned my both B.Tech and M.Tech in the Department of CSE under West Bengal University of Technology. My work has been published in leading international journals and conferences, including IEEE Transactions on Intelligent Transportation Systems and IEEE ANTS. My research interests include wireless networking, network virtualization, edge computing, and intelligent mobility solutions for future communication systems. ",
+    "education": "Ph.D., M.Tech. (CSE), B.Tech. (CSE)",
+    "publications": [
+      {
+        "title": "A Comparative Analysis of Distributed Mobility Management Schemes for 5G-Based Intelligent Transportation Systems",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10786882"
+      },
+      {
+        "title": "A 5G-Based Distributed Mobility Management Scheme for UAV-Assisted Intelligent Transportation Systems",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11429744"
+      },
+      {
+        "title": "Performance Analysis of Distributed Mobility Management Schemes in UAV-Based 5G Networks",
+        "link": "https://link.springer.com/chapter/10.1007/978-3-032-17187-0_10"
+      }
+    ],
+    "resume": "/assets/resume/debadreetadas_resume.pdf",
+    "expertise": "5G/6G Networks, Distributed Mobility Management, UAV Communication, Intelligent Transportation Systems, Software-Defined Networking, Edge Computing, Wireless Networking",
+    "email": "debadreeta_cse@iiitp.ac.in",
+    "phone": "9476288801",
+    "google_scholar": "https://scholar.google.com/citations?user=0EENfI4AAAAJ&hl=en&oi=ao",
+    "orcid": "https://orcid.org/0009-0001-2745-7145",
+    "scopus": "",
+    "books_chapters": "Computational Intelligence in Communications and Business Analytics; Performance Analysis of Distributed Mobility Management Schemes in UAV-Based 5G Networks",
+    "patents": "",
+    "seminars": [],
+    "projects": [
+      {
+        "title": "Discovering Bi-clusters in Gene Expression Data Using a Graph Theoretic Approach",
+        "description": "Graph-theoretic analysis of gene expression data for identifying biologically significant bi-clusters."
+      },
+      {
+        "title": "Queuing Delay Analysis in 5G/6G Non-Terrestrial Networks (NTNs) and Satellite Communication Systems",
+        "description": "Performance analysis of integrated terrestrial-satellite communication systems focusing on QoS, latency and resource optimization."
+      }
+    ],
+    "supervisions": "",
+    "linkedin": "",
+    "researchLinks": [],
+    "department": "CSE"
+  },
+  "prithwish-sen": {
+    "designation": "Adjunct Assistant Professor",
+    "image": "/assets/faculty_photos/prithwishsen.png",
+    "bio": "Mr. Prithwish Sen is currently working as an Adjunct Assistant Professor in the Department of Computer Science and Engineering at the Indian Institute of Information Technology (IIIT) Pune. He completed his M.Tech. in Computer Science and Engineering from IIIT Guwahati, securing first rank, and is currently pursuing his Ph.D. at NIT Silchar, where his thesis has been submitted. His research focuses on chronic wound assessment, autonomous vision systems, and lightweight deep learning models for real-world deployment. His research interests include Deep Learning, Computer Vision, Medical Image Analysis, Machine Learning, and IoT-enabled Healthcare.",
+    "education": "M.Tech. (CSE), Ph.D. (Thesis Submitted)",
+    "publications": [
+      {
+        "title": "An energy-aware, load-balanced and secure IoMT edge-cloud framework for real-time wound assessment",
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S2542660526000958"
+      },
+      {
+        "title": "YOLO meets CCViT- A lightweight end-to-end system for wound tissue analysis",
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S1746809425002459"
+      },
+      {
+        "title": "Rendering scenes for simulating adverse weather conditions",
+        "link": "https://link.springer.com/chapter/10.1007/978-3-030-85030-2_29"
+      },
+      {
+        "title": "Object detection in foggy weather conditions",
+        "link": "https://link.springer.com/chapter/10.1007/978-3-030-93247-3_70"
+      },
+      {
+        "title": "End-to-end scene text recognition system for Devanagari and Bengali text",
+        "link": "https://link.springer.com/chapter/10.1007/978-3-030-93247-3_34"
+      },
+      {
+        "title": "Adaptive style transfer using SISR",
+        "link": "https://link.springer.com/chapter/10.1007/978-3-030-89128-2_34"
+      }
+    ],
+    "resume": "/assets/resume/prithwishsen_resume.pdf",
+    "expertise": "Deep Learning, Computer Vision, Medical Image Analysis, Machine Learning, IoT-enabled Healthcare",
+    "email": "prithwish@iiitp.ac.in",
+    "phone": "7002942866",
+    "google_scholar": "https://scholar.google.com/citations?user=awoJar4AAAAJ&hl=en",
+    "orcid": "",
+    "scopus": "",
+    "books_chapters": "",
+    "patents": "",
+    "seminars": [],
+    "projects": "",
+    "supervisions": "",
+    "linkedin": "https://www.linkedin.com/in/prithwish-sen-184689130/",
+    "researchLinks": [],
+    "department": "CSE"
+  },
+  "rahul-kaushik": {
+  "designation": "Adjunct Assistant Professor",
+  "image": "/assets/faculty_photos/rahulkaushik.jpeg",
+  "bio": "Dr. Rahul Kaushik is an Adjunct Assistant Professor of Mathematics in the Department of Applied Sciences and Humanities (ASH) at IIIT Pune. He obtained his Ph.D. in Mathematics from the Harish-Chandra Research Institute (HRI), Prayagraj, under the supervision of Prof. Manoj K. Yadav. Prior to joining IIIT Pune, he served as an NBHM Postdoctoral Fellow and Institute Postdoctoral Fellow at IISER Pune, followed by a Postdoctoral Fellowship at NISER Bhubaneswar. His research interests include finite p-groups, the Matrix Waring Problem, Lie algebras, word maps, and group theory. His research has been published in reputed journals such as the Journal of Algebra, Journal of Algebra and Its Applications, and Linear Algebra and Its Applications. He has presented his work at several national and international conferences and has received the NBHM Postdoctoral Fellowship, the Harish-Chandra Memorial Award, and secured AIR 14 in the CSIR-JRF/NET examination.",
+  "education": "Ph.D. (Mathematics)",
+  "publications": [
+    {
+      "title": "Commutators and Commutator Subgroups of Finite p-Groups",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0021869320305238?via%3Dihub"
+    },
+    {
+      "title": "Commutators in Groups of Order p⁷",
+      "link": "https://www.worldscientific.com/doi/10.1142/S021949882350158X"
+    },
+    {
+      "title": "Waring Problem for Triangular Matrix Algebra",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S0024379524001277?via%3Dihub"
+    }
+  ],
+  "resume": "/assets/resume/rahulkaushik_resume.pdf",
+  "expertise": "Finite p-Groups, Matrix Waring Problem, Lie Algebras, Word Maps, Group Theory",
+  "email": "rahul@iiitp.ac.in",
+  "phone": "+91-9017390074",
+  "google_scholar": "https://scholar.google.com/citations?hl=en&user=i4A0EN0AAAAJ&authuser=3",
+  "orcid": "",
+  "scopus": "",
+  "books_chapters": [],
+  "patents": [],
+  "seminars": [],
+  "projects": [],
+  "supervisions": [],
+  "linkedin": "https://www.linkedin.com/in/r-rahulkaushik/",
+  "researchLinks": [
+    {
+      "title": "Personal Academic Website",
+      "url": "https://sites.google.com/view/rahulkaushik/home"
+    }
+  ],
+  "department": "ASH"
+},
+  "rohit-ramchandra-joshi": {
+    "designation": "Adjunct Assistant Professor",
+    "image": "/assets/faculty_photos/rohitjoshi.jpeg",
+    "bio": "Dr. Rohit Ramchandra Joshi specializes in English Language Teaching, Business Communication, and Theatre Studies. He holds a Ph.D. in English (Theatre Studies) from the Central University of Karnataka and an M.A. in English (Honours) from the English and Foreign Languages University (EFLU), Hyderabad. He has qualified the UGC-NET and MH-SET examinations. His research interests include Indian theatre, literature in translation, professional communication, AI-assisted language learning, and language pedagogy. Dr. Joshi has published research in interdisciplinary fields spanning theatre, technology, and legal studies. He is committed to outcome-based education and innovative teaching practices, integrating technology and the ethical use of AI into communication skills training while contributing to curriculum development, assessment, and academic administration.",
+    "education": "Ph.D. (English), M.A. (English)",
+    "publications": [
+      {
+        "title": "Digital Dragnets: Constitutional Limits of AI and Drone Surveillance in Drug Enforcement",
+        "link": ""
+      },
+      {
+        "title": "Between Empire and Cosmopolis: Service, Sovereignty, and the Ethical Crisis of Modernity in The Remains of the Day",
+        "link": ""
+      },
+      {
+        "title": "Visual Design Frameworks for Creative Quality Management: Integrating Lean Six Sigma in Contemporary Design Industries",
+        "link": ""
+      },
+      {
+        "title": "Mahadevbhai (1892–1942): Rectifying and Revitalizing Gandhi through Theatre",
+        "link": ""
+      }
+    ],
+    "resume": "/assets/resume/rohitjoshi_resume.pdf",
+    "expertise": "English Language Teaching, Business Communication, Theatre Studies, AI-assisted Language Learning, Language Pedagogy",
+    "email": "rohitjoshi@iiitp.ac.in",
+    "phone": "",
+    "google_scholar": "https://scholar.google.com/citations?hl=en&user=mGhZ0hUAAAAJ",
+    "orcid": "https://orcid.org/0000-0002-0052-765X",
+    "scopus": "",
+    "books_chapters": [
+      {
+        "title": "The India-Europe Connection in the Social Reformist Discourse in Marathi Theatre: Configurations of Indian Reformers, European Influences, and Performances in Marathi Theatre",
+        "link": "https://www.tplondon.com/product/oddea-2023/"
+      },
+      {
+        "title": "Engineering English: Precision in Communication (A Skills-Based Approach for Academic and Workplace Success)",
+        "link": ""
+      }
+    ],
+    "patents": [
+      {
+        "title": "Interactive System for Language Learning and Performance-based Training"
+      },
+      {
+        "title": "Digital Linguistic Analysis Device for Sanskrit and Regional Languages"
+      }
+    ],
+    "seminars": [],
+    "projects": "",
+    "supervisions": "",
+    "linkedin": "https://www.linkedin.com/in/rohit-joshi-phd-848a62136",
+    "researchLinks": [],
+    "department": "ASH"
+  },
+  "amartya-paul": {
+    "designation": "Adjunct Assistant Professor",
+    "image": "/assets/faculty_photos/amartyapaul.jpeg",
+    "bio": "Amartya Paul is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He is pursuing his Ph.D. in Electronics and Communication Engineering from the National Institute of Technology (NIT) Meghalaya. His research focuses on integrating microwave engineering with artificial intelligence for intelligent sensing systems, non-destructive evaluation, and microwave imaging. His work spans RF and microwave sensors, computational imaging, machine learning, embedded sensing platforms, and electromagnetic-based material characterization.",
+    "education": "Ph.D. (Pursuing)",
+    "publications": [
+      {
+        "title": "Non-destructive evaluation of strength and porosity of bituminous mixes using log-periodic feedlines-based ring filter",
+        "link": "https://doi.org/10.1109/TIM.2024.3381667"
+      },
+      {
+        "title": "Design and validation of a microstrip log-periodic feedline based filter for microwave imaging of rebar",
+        "link": "https://doi.org/10.1109/TIM.2024.3481566"
+      },
+      {
+        "title": "Dual-band microwave spectroscopy and machine learning for rapid milk adulteration detection",
+        "link": "https://doi.org/10.1109/TAFE.2025.3614005"
+      },
+      {
+        "title": "Low cost microwave system development for analysis of classification and adulteration of honey",
+        "link": "https://doi.org/10.1109/TAFE.2026.3666205"
+      },
+      {
+        "title": "Non-invasive RCC beam assessment via SDR-integrated microstrip filter",
+        "link": "https://doi.org/10.1109/LSENS.2025.3607598"
+      },
+      {
+        "title": "EconoScan: Affordable microwave imaging for non-destructive strength testing of bituminous materials",
+        "link": "https://doi.org/10.1109/LSENS.2025.3613338"
+      },
+      {
+        "title": "Impact of holes in an interdigital parallel folded coupled line-based wideband bandpass filter for X-band applications",
+        "link": "https://doi.org/10.1002/mop.33903"
+      },
+      {
+        "title": "Development and characterization of log periodic feedline based filter for water leakage detection in size invariant PVC pipes",
+        "link": "https://doi.org/10.1016/j.flowmeasinst.2024.102647"
+      },
+      {
+        "title": "Microwave imaging and non-destructive testing of bituminous mix binder-aggregate behavior using log-periodic feedline-based microstrip filter",
+        "link": "https://doi.org/10.3390/ndt2030021"
+      },
+      {
+        "title": "Surrogate-assisted framework for log-periodic feedlines based filter optimization",
+        "link": ""
+      },
+      {
+        "title": "A compact dual-band power amplifier using spoof surface plasmon polaritons for broadband RF applications",
+        "link": "https://doi.org/10.1016/j.aeue.2025.156116"
+      },
+      {
+        "title": "Exhibiting the superiority of metal-filled SSPP in advanced output matching networks for high-performance power amplifier",
+        "link": "https://doi.org/10.1016/j.aeue.2025.156016"
+      },
+      {
+        "title": "Machine learning based design of ultra-wideband GaN HEMT power amplifiers for next-generation 6G systems",
+        "link": "https://doi.org/10.1007/s00542-025-05939-5"
+      },
+      {
+        "title": "APD–SSPP: Enhancing linearization of power amplifier using spoof surface plasmon polariton propagation",
+        "link": "https://doi.org/10.1002/mop.70409"
+      }
+    ],
+    "resume": "/assets/resume/amartyapaul_resume.pdf",
+    "expertise": "RF & Microwave Sensors, Microwave Imaging, Artificial Intelligence, Machine Learning, Computational Imaging, Software Defined Radio, Antenna Design",
+    "email": "a.paul@iiitp.ac.in",
+    "phone": "+91 7837622017",
+    "google_scholar": "https://scholar.google.com/citations?user=tFqGI8kAAAAJ&hl=en",
+    "orcid": "https://orcid.org/my-orcid?orcid=0009-0000-0829-6131",
+    "scopus": "",
+    "books_chapters": "",
+    "patents": "",
+    "seminars": [],
+    "projects": "",
+    "supervisions": "",
+    "linkedin": "https://www.linkedin.com/in/amartya-paul-329949178/",
+    "researchLinks": [],
+    "department": "ECE"
+  },
+
+  "sonu-bose": {
+    "designation": "Adjunct Assistant Professor",
+    "image": "/assets/faculty_photos/sonubose.jpeg",
+    "bio": "Dr. Sonu Bose is an Adjunct Assistant Professor in the Department of Applied Sciences and Humanities at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Applied Mathematics from the Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram. His research interests include numerical analysis, scientific computing, systems of singularly perturbed differential equations, higher-dimensional time-delay partial differential equations, adaptive mesh methods, finite difference and finite element methods, numerical approximation of diffusive fluxes, and computational fluid dynamics. His research has been published in reputed international peer-reviewed journals and conference proceedings.",
+    "education": "Ph.D. (Applied Mathematics)",
+    "publications": [
+      {
+        "title": "A Parameter-Robust Approach on Generalized Mesh to Numerical Solution and Diffusive Fluxes for 2D-System of Singularly Perturbed Convection-Diffusion Elliptic PDEs",
+        "link": "https://doi.org/10.1016/j.apnum.2026.02.020"
+      },
+      {
+        "title": "Faster Convergence of Extrapolation Technique for System of Singularly Perturbed Time-Delay Parabolic PDEs",
+        "link": "https://doi.org/10.1002/mma.70622"
+      },
+      {
+        "title": "Efficient Approximation of Solution Derivatives for System of Singularly Perturbed Time-Dependent Convection-Diffusion PDEs on Shishkin Mesh",
+        "link": "https://doi.org/10.1007/s10910-024-01587-8"
+      },
+      {
+        "title": "A Fast Uniformly Accurate Global Numerical Approximation to Solution and Scaled Derivative of System of Singularly Perturbed Problems",
+        "link": "https://doi.org/10.1007/s40314-023-02218-9"
+      },
+      {
+        "title": "Numerical Approximation of System of Singularly Perturbed Convection-Diffusion Problems on Different Layer-Adapted Meshes",
+        "link": "https://doi.org/10.1007/978-981-19-0836-1_40"
+      }
+    ],
+    "resume": "/assets/resume/sonubose_resume.pdf",
+    "expertise": "Numerical Analysis, Scientific Computing, Singularly Perturbed Differential Equations, Adaptive Mesh Methods, Partial Differential Equations",
+    "email": "sonubose@iiitp.ac.in",
+    "phone": "9567131379",
+    "google_scholar": "https://scholar.google.com/citations?user=kK0rbUQAAAAJ&hl=en",
+    "orcid": "https://orcid.org/0009-0005-5102-6459",
+    "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57807640700",
+    "books_chapters": "",
+    "patents": "",
+    "seminars": [],
+    "projects": [],
+    "supervisions": [
+      "Prof. Sumit Kundu",
+      "Prof. Sanjay Dhar Roy"
+    ],
+    "linkedin": "",
+    "researchLinks": [],
+    "department": "ASH"
+  },
+
+  "soumen-mondal": {
+    "designation": "Adjunct Assistant Professor",
+    "image": "/assets/faculty_photos/soumenmondal.jpeg",
+    "bio": "Dr. Soumen Mondal is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. from NIT Durgapur under the Visvesvaraya Ph.D. Scheme. He previously served as an Institute Post-Doctoral Fellow at IIT Guwahati and as a Post-Doctoral Fellow at National Sun Yat-sen University, Taiwan. His research interests include signal processing for wireless communication, free-space optical communication, multiple access, energy harvesting, and MIMO. He has served as a reviewer for several IEEE Transactions and international journals and was recognized as an Exemplary Reviewer by IEEE Communications Letters in 2024.",
+    "education": "Ph.D. (ECE), M.Tech. (ECE), B.Tech. (ECE)",
+    "publications": [],
+    "resume": "/assets/resume/soumenmondal_resume.pdf",
+    "expertise": "Wireless Communication, Signal Processing, Free Space Optical Communication, Multiple Access, Energy Harvesting, MIMO",
+    "email": "soumen@iiitp.ac.in",
+    "phone": "9609612396",
+    "google_scholar": "https://scholar.google.com/citations?user=JvRTfrYAAAAJ&hl=en&oi=sra",
+    "orcid": "https://orcid.org/0000-0003-1632-4619",
+    "scopus": "https://www.scopus.com/authid/detail.uri?authorId=36632602800",
+    "books_chapters": "",
+    "patents": "",
+    "seminars": [],
+    "projects": "",
+    "supervisions": "",
+    "linkedin": "",
+    "researchLinks": [],
+    "department": "ECE"
+  },
+
+  "suraj-kumar": {
+    "designation": "Adjunct Assistant Professor",
+    "image": "/assets/faculty_photos/surajkumar.jpeg",
+    "bio": "Dr. Suraj Kumar is an Adjunct Assistant Professor in the Department of Computer Science and Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Computer Science and Engineering from IIT Indore. His research interests include graph machine learning, multimodal learning, trustworthy artificial intelligence, recommendation systems, natural language processing, and service computing. His work has been published in leading journals and conferences, including IEEE Transactions on Services Computing, IEEE Transactions on Network and Service Management, WWW, BMVC, ICSOC, ICDAR, and IJCNN. Before joining IIIT Pune, he served as an Assistant Professor at GLA University Mathura and actively contributes as a reviewer for leading international journals.",
+    "education": "Ph.D. (Computer Science and Engineering)",
+    "publications": [],
+    "resume": "/assets/resume/surajkumar_resume.pdf",
+    "expertise": "Graph Machine Learning, Multimodal Learning, Trustworthy AI, Recommendation Systems, Natural Language Processing, Service Computing",
+    "email": "",
+    "phone": "",
+    "google_scholar": "https://scholar.google.com/citations?user=udjwruAAAAAJ&hl=en",
+    "orcid": "https://orcid.org/0000-0003-1085-1821",
+    "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57194783936",
+    "books_chapters": "",
+    "patents": "",
+    "seminars": [],
+    "projects": "",
+    "supervisions": "",
+    "linkedin": "https://www.linkedin.com/in/csksuraj17/",
+    "researchLinks": [],
+    "department": "CSE"
+  },
+    "nancy-modi": {
+  "designation": "Adjunct Assistant Professor",
+  "image": "/assets/faculty_photos/nancymodi.jpg",
+  "bio": "Dr. Nancy Modi is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. She received her Ph.D. in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay, where her research focused on microwave engineering, automotive radar systems, and antenna design. She completed her M.Tech. in Digital Communication from Maulana Azad National Institute of Technology (MANIT), Bhopal, and her B.E. in Electronics and Communication Engineering from ITM Group of Institutions, Gwalior. Her research interests include microwave and millimeter-wave antennas, substrate integrated waveguide (SIW) antennas, automotive radar, electromagnetic compatibility (EMC), frequency selective surfaces (FSS), metasurfaces, and computational electromagnetics. She has published research articles in reputed international journals and conferences and actively reviews manuscripts for leading journals and conferences in antennas and electromagnetics.",
+  "education": "Ph.D. (Electrical Engineering), M.Tech. (Digital Communication), B.E. (Electronics and Communication Engineering)",
+
+  "publications": [
+    {
+      "title": "Design of Wideband and Wide-Angle Matching Bumper to Improve Automotive Radar Performance",
+      "link": "https://doi.org/10.1109/LSENS.2024.3392431"
+    },
+    {
+      "title": "Eight-Element Self-Isolated MIMO Antenna Based on Wideband SIW Rectangular Ring Slot Antenna",
+      "link": "https://doi.org/10.1016/j.aeue.2023.154555"
+    },
+    {
+      "title": "Detecting Hemoglobin Structural Variations Through Microwave Dielectric Analysis Using Horn Antennas",
+      "link": "https://doi.org/10.1109/MAPCON65020.2025.11426425"
+    },
+    {
+      "title": "Investigation of Bumper Thickness to Study Automotive Radar Performance for Wide Incidence Angles",
+      "link": "https://doi.org/10.46620/URSIAPRASC25/RPYZ6669"
+    },
+    {
+      "title": "Wideband Matching Automotive Bumper Using Frequency Selective Surface",
+      "link": "https://doi.org/10.1109/APMC60911.2024.10867544"
+    },
+    {
+      "title": "Circularly Polarized MIMO Antenna Based on SIW Cavity-Backed Square Ring Slot",
+      "link": "https://doi.org/10.1109/APMC60911.2024.10867831"
+    },
+    {
+      "title": "A 45-Degree Rotated Square Ring Frequency Selective Surface Structure for Broadband Matching Automotive Bumper",
+      "link": "https://doi.org/10.23919/URSI-RCRS63970.2024.11201117"
+    },
+    {
+      "title": "Analysis of the Effects of Rainwater Covered Bumper on the Automotive Radar Signals",
+      "link": "https://doi.org/10.23919/EuCAP60739.2024.10501490"
+    },
+    {
+      "title": "Self-Isolated MIMO Antenna Using SIW Cavity Antenna for Dual-Band (28, 38 GHz) Applications",
+      "link": "https://doi.org/10.23919/EuCAP60739.2024.10501330"
+    },
+    {
+      "title": "Study of the Tilted Mounting Angle of Automotive Radar Antenna Installed Behind a Painted Bumper",
+      "link": "https://doi.org/10.1109/MAPCON58678.2023.10464176"
+    },
+    {
+      "title": "A Five-Element MIMO Antenna Based on Wideband Triple-Resonance SIW Antenna for Vehicular Communications",
+      "link": "https://doi.org/10.1109/MAPCON58678.2023.10463901"
+    },
+    {
+      "title": "Study of the Bumper Thickness and its Placement for Automotive Radar Applications",
+      "link": "https://doi.org/10.1109/AP-S/USNC-URSI47032.2022.9887075"
+    },
+    {
+      "title": "Analysis of Models to Reduce Complexity and Simulation Time of Multilayered Media for Automotive Radar Applications",
+      "link": "https://doi.org/10.1109/APS/URSI47566.2021.9704777"
+    },
+    {
+      "title": "Performance Evaluation of Automotive Radar in the Presence of Bumper with Multiple Paint Layers Using Bidirectional Loss Model",
+      "link": "https://doi.org/10.23919/EuCAP51087.2021.9411167"
+    },
+    {
+      "title": "Diagnosis of Cancerous Nuclei on Digital HIs: A Review",
+      "link": "https://doi.org/10.2139/ssrn.3572916"
+    },
+    {
+      "title": "MRI Segmentation for CAD of Brain Tumor: A Review",
+      "link": "https://doi.org/10.2139/ssrn.3576459"
+    },
+    {
+      "title": "A Review: Comparative Analysis of Chaotic Systems With Their Fractional Order Counterparts",
+      "link": "https://doi.org/10.2139/ssrn.3576454"
+    }
+  ],
+
+  "resume": "/assets/resume/nancymodi_resume.pdf",
+
+  "expertise": "Microwave Engineering, Automotive Radar, Antenna Design, SIW Antennas, Millimeter-Wave Antennas, Electromagnetic Compatibility (EMC), Frequency Selective Surfaces (FSS), Metasurfaces, Computational Electromagnetics",
+
+  "email": "nancy@iiitp.ac.in",
+  "phone": "7000336231",
+
+  "google_scholar": "https://scholar.google.com/citations?user=dkJl7joAAAAJ&hl=en",
+  "orcid": "",
+  "scopus": "https://www.scopus.com/authid/detail.uri?authorId=57223309336",
+
+  "books_chapters": [ 
+    
+  ],
+
+  "patents": [
+    {
+      "title": "Systems and methods for reducing reflections of radar radio waves",
+      "number": "Indian Patent No. 521364",
+      "status": "Granted"
+    },
+    {
+      "title": "A Non-Uniform Matching Layer Design for Wide-Angle Matching Automotive Bumpers",
+      "number": "Application No. 202521054675",
+      "status": "Published"
+    }
+  ],
+
+  "seminars": [],
+
+  "projects": [],
+
+  "supervisions": [],
+
+  "linkedin": "https://www.linkedin.com/in/nancy-modi/",
+
+  "researchLinks": [],
+
+  "department": "ECE"
+}
 }

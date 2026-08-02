@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PageHeader from "../components/shared/PageHeader";
-import YearAccordion from "../components/mou/YearAccordion";
+import MOUCard from "../components/mou/MOUCard";
 import GalleryModal from "../components/mou/GalleryModal";
 import mousData from "../data/mous.json";
 
@@ -9,72 +9,54 @@ const MousPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Gallery State
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [galleryImages, setGalleryImages] = useState([]);
   const [galleryTitle, setGalleryTitle] = useState("");
 
-  // Open Gallery
   const openGallery = (mou) => {
     setGalleryImages(mou.gallery || []);
     setGalleryTitle(mou.organization);
     setGalleryOpen(true);
   };
 
-  // Group by Year
-  const groupedData = mousData.reduce((acc, item) => {
-    if (!acc[item.year]) {
-      acc[item.year] = [];
-    }
-
-    acc[item.year].push(item);
-
-    return acc;
-  }, {});
-
-  const years = Object.keys(groupedData).sort((a, b) => b - a);
+  const sortedMous = [...mousData].sort((a, b) => b.year - a.year);
+  const totalMOUs = mousData.length;
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-900 transition-colors duration-300">
+    <div className="min-h-screen bg-grid-sky dark:bg-slate-900 transition-colors duration-200">
 
-      <PageHeader title="MOUs" />
+      <PageHeader title="MoUs" />
 
       <div className="max-w-7xl mx-auto px-4 py-16">
 
         {/* Intro */}
 
-        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 mb-10">
+        <div className="bg-white dark:bg-surface-dark rounded-2xl shadow-lg p-8 mb-10 border border-gray-100 dark:border-gray-800">
 
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
-            Memorandum of Understanding (MOUs)
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+            Memorandum of Understanding (MoUs)
           </h2>
 
-          <div className="w-24 h-1 bg-blue-600 mt-3 rounded-full"></div>
+          <div className="w-24 h-1 bg-primary mt-3 rounded-full"></div>
 
           <p className="mt-6 text-gray-600 dark:text-gray-300 leading-8">
             The Institute has established Memorandums of Understanding
-            (MOUs) with leading industries, universities and research
+            (MoUs) with leading industries, universities and research
             organizations to promote academic collaboration,
             internships, faculty exchange, research activities,
             innovation and skill development.
           </p>
 
+          <p className="mt-4 text-sm font-semibold text-primary dark:text-accent-dark">
+            Total MoUs: {totalMOUs}
+          </p>
+
         </div>
 
-        {/* Accordions */}
-
-        <div className="space-y-6">
-
-          {years.map((year, index) => (
-            <YearAccordion
-              key={year}
-              year={year}
-              data={groupedData[year]}
-              onOpenGallery={openGallery}
-              defaultOpen={index === 0}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {sortedMous.map((mou) => (
+            <MOUCard key={mou.id} mou={mou} onOpenGallery={openGallery} />
           ))}
-
         </div>
 
       </div>

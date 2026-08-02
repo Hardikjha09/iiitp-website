@@ -116,6 +116,7 @@ const MinutesPage = lazy(() => import("./pages/ReportsAndMinutes"));
 const ScholarshipPage = lazy(() => import("./pages/ScholarshipPage"));
 const IEEEPage = lazy(() => import("./pages/IEEEPage"));
 const ACMPage = lazy(() => import("./pages/ACMPage"));
+
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const StudentAchievementsPage = lazy(
   () => import("./pages/StudentAchievementsPage"),

@@ -1,5 +1,36 @@
 [
   {
+  "date": "1st August 2026",
+  "title": "IIIT Pune launches three new B.Tech programmes",
+  "desc": "The Indian Institute of Information Technology (IIIT) Pune has launched three new B.Tech programmes in Cyber Security, Artificial Intelligence, and Semiconductor Engineering, expanding its academic offerings to meet emerging industry demands and prepare students for future technologies.",
+  "articles": [
+    {
+      "publisher": "The Times of India",
+      "link": "https://timesofindia.indiatimes.com/city/pune/iiit-pune-launches-three-new-btech-programmes/articleshow/132776129.cms"
+    },
+    {
+      "publisher": "Dainik Bhaskar",
+      "link": "/press/dainik bhaskar_new_branch.jpeg"
+    },
+    {
+      "publisher": "Lokmat",
+      "link": "/press/Lokmat_new_branch.jpeg"
+    },
+    {
+      "publisher": "Maharashtra Times",
+      "link": "/press/maharashtra times_new_branch.jpeg"
+    },
+    {
+      "publisher": "Navrashtra",
+      "link": "/press/navrashtra times_new_branch.jpeg"
+    },
+    {
+      "publisher": "Sakal",
+      "link": "/press/Sakal_new_branch.jpeg"
+    }
+  ]
+},
+  {
     "date": "27th June 2026",
     "title": "Yoga Day Celebrated with Various Activities at IIIT Pune",
     "desc": "International Yoga Day was celebrated with great enthusiasm and a unique spirit at the Indian Institute of Information Technology (IIIT), Pune, this year. Under the guidance of Institute Director Prof. Vineet Kansal and with the cooperation of Registrar Dr. Nagendra Kushwaha, a series of innovative programs spanning an entire week rather than just a single day, was organized.",

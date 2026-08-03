@@ -1014,10 +1014,34 @@
   ],
   "EVENTS": [
     {
-      "name": "HBTM 2026 – Hack Better Than Me (National Hackathon)",
+      "name": "IIIT Pune Organises Activities under the Nasha Mukt Yuva for Viksit Bharat Campaign",
+      "type": "Awareness Campaign",
+      "typeColor": "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300",
+      "desc": "The Indian Institute of Information Technology, Pune actively participated in the Nasha Mukt Yuva for Viksit Bharat campaign, a national initiative aimed at raising awareness about substance abuse and promoting the vision of a drug-free India by 2047. As part of the campaign, the Institute organised a 1 km Marathon, 1 km Walkathon, and a Signature Campaign, followed by the live telecast of the address by the Hon'ble Prime Minister of India. The programme was led by the Director, Prof. Vineet Kansal, with enthusiastic participation from students, faculty members, and staff. The initiative reaffirmed the Institute's commitment to promoting health, social responsibility, and civic awareness while encouraging young people to contribute towards building a healthier and more responsible society.",
+      "images": [
+        "/assets/lifepage/nasha_mukt_1.jpg",
+        "/assets/lifepage/nasha_mukt_2.JPG",
+        "/assets/lifepage/nasha_mukt_3.JPG",
+        "/assets/lifepage/nasha_mukt_4.JPG",
+        "/assets/lifepage/nasha_mukt_5.jpg",
+        "/assets/lifepage/nasha_mukt_6.jpg",
+        "/assets/lifepage/nasha_mukt_7.JPG",
+        "/assets/lifepage/nasha_mukt_8.jpg"
+      ],
+      "highlights": [
+        "1 km Marathon and Walkathon for drug-free awareness",
+        "Participation in the Hon'ble Prime Minister's Virtual Address",
+        "Signature Campaign against substance abuse",
+        "Aligned with SDG 3 – Good Health and Well-being",
+        "Active participation from students, faculty, and staff",
+        "In support of the Nasha Mukt Bharat Abhiyaan and the vision of Viksit Bharat 2047"
+      ]
+    },
+    {
+      "name": "HBTM 2026: National-Level 24-Hour Hackathon Organised at IIIT Pune",
       "type": "Hackathon",
       "typeColor": "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300",
-      "desc": "The 24-hour National Hackathon, HBTM 2026 – Hack Better Than Me, organised by the IEEE Student Branch of the Indian Institute of Information Technology (IIIT) Pune in collaboration with IABTM and the IEEE Maharashtra Section, has been officially inaugurated by the Hon’ble Director, Prof. Vineet Kansal, along with the IABTM organising team. This much-anticipated event has brought together talented participants from across the nation, who will engage in an intense 24-hour journey of innovation, collaboration, and problem-solving. During the hackathon, participants will work across diverse domains, pushing the boundaries of creativity and transforming their ideas into impactful real-world solutions. The institute extends its best wishes to all participating teams and looks forward to witnessing groundbreaking innovations emerging from this dynamic platform.",
+      "desc": "The IEEE Student Branch at the Indian Institute of Information Technology, Pune, in collaboration with IABTM and the IEEE Maharashtra Section, successfully organised HBTM 2026 – Hack Better Than Me, a 24-hour national-level hackathon. The event was inaugurated by the Director, Prof. Vineet Kansal, along with members of the organising team, marking the beginning of an intensive innovation challenge that brought together students, developers, and innovators from across the country.\n Over the course of 24 hours, participants collaborated to design and develop technology-driven solutions to real-world problems, demonstrating creativity, technical expertise, and teamwork. The hackathon provided a dynamic platform for experiential learning, innovation, and interdisciplinary collaboration. A prize pool of USD 500 was awarded to the top-performing teams in recognition of their outstanding solutions and overall performance. The event also reflected the Institute's strong culture of student-led initiatives and its commitment to fostering innovation, leadership, and excellence in technology.",
       "images": [
         "/assets/lifepage/hbtm2026_1.JPG",
         "/assets/lifepage/hbtm2026_2.JPG",

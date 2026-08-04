@@ -155,7 +155,7 @@ const ImportantLinks = () => {
                   </div>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 max-h-[240px] overflow-y-auto pr-2 custom-scrollbar">
                     {[
-                      { name: 'Hostel Application Form 2026', path: '/downloads/Hostel Application Form.pdf', category: 'student' },
+                      { name: 'Hostel Application Form 2026', path: '/downloads/Hostel-application-form-2026.pdf', category: 'student' },
                       { name: 'Official Vehicle Requisition Form', path: 'https://forms.gle/wFvWWn17hoH9Eyaw7', category: 'faculty' },
                       { name: 'Medical Reimbursement Claim Form', path: '/downloads/Medical reimbursement CLAIM FORM.pdf', category: 'faculty' },
                       { name: 'M.Tech. CCMT Physical Reporting Details (AY 2026-27)', path: '/documents/PHYSICAL_REPORTING_DETAILS_OF_ADMISSION_PROCESS_FOR_MTECH_THROUGH_CCMT_FIRST_SEMESTER_2026-27.pdf', category: 'student' },

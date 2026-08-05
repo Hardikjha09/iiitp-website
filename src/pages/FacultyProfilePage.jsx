@@ -177,7 +177,7 @@ const FacultyProfilePage = () => {
         compact={true}
       >
         <Link
-          to="/people/faculty"
+          to={`/people/faculty?dept=${profile.department === 'Electronics & Communication Engineering' ? 'ece' : profile.department === 'Applied Science & Humanities' ? 'ash' : 'cse'}`}
           className="inline-flex items-center text-white/80 hover:text-white transition-colors text-sm uppercase tracking-wide font-medium group"
         >
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />

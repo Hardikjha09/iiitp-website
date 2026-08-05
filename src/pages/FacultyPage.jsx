@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router';
 import PageHeader from '../components/shared/PageHeader';
 import { Link } from 'react-router';
 import { Search } from 'lucide-react';
@@ -97,8 +98,17 @@ const FacultyPage = () => {
     );
   };
 
-  const [activeTab, setActiveTab] = useState('CSE');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialTab = searchParams.get('dept')?.toUpperCase();
+  const [activeTab, setActiveTab] = useState(
+    initialTab === 'ECE' || initialTab === 'ASH' ? initialTab : 'CSE',
+  );
   const [searchQuery, setSearchQuery] = useState('');
+
+  const updateActiveTab = (tab) => {
+    setActiveTab(tab);
+    setSearchParams({ dept: tab.toLowerCase() }, { replace: true });
+  };
 
   return (
     <div className="min-h-screen transition-colors duration-200">
@@ -129,7 +139,7 @@ const FacultyPage = () => {
 
             <div className="flex flex-wrap bg-gray-100 dark:bg-gray-800 p-1.5 rounded-full w-fit shrink-0 shadow-inner gap-1">
               <button
-                onClick={() => setActiveTab('CSE')}
+                onClick={() => updateActiveTab('CSE')}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeTab === 'CSE' 
                     ? 'bg-brand-red text-white shadow-md' 
@@ -139,7 +149,7 @@ const FacultyPage = () => {
                 CSE
               </button>
               <button
-                onClick={() => setActiveTab('ECE')}
+                onClick={() => updateActiveTab('ECE')}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeTab === 'ECE' 
                     ? 'bg-brand-red text-white shadow-md' 
@@ -149,7 +159,7 @@ const FacultyPage = () => {
                 ECE
               </button>
               <button
-                onClick={() => setActiveTab('ASH')}
+                onClick={() => updateActiveTab('ASH')}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeTab === 'ASH' 
                     ? 'bg-brand-red text-white shadow-md' 

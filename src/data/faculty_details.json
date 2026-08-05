@@ -1472,6 +1472,9 @@
       }
     ],
     "projects": [
+     {
+        "title": "High Data Rate Channel Codec Architecture for Free Space Classical RF and Optical Communication, ₹19 Lakh (Granted, June 2026)."
+      },
       {
         "title": "Design and Implementation of Consent Management Platform (CMP) for DPDP Rules 2025 — ANRF, ₹4.35 Crore (Granted, July 2025)."
       },
@@ -2271,7 +2274,7 @@
     "supervisions": "",
     "email": "dipen@iiitp.ac.in",
     "phone": "8240750687",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/dipen-bepari-815b51217/",
     "researchLinks": [],
     "department": "ECE"
   },
@@ -2344,7 +2347,7 @@
     ],
     "email": "shivangi@iiitp.ac.in",
     "phone": "9451180932",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/shivangi-shukla-815b51217/",
     "researchLinks": [],
     "department": "CSE"
   },
@@ -2705,7 +2708,7 @@
     "supervisions": "",
     "email": "habila@iiitp.ac.in",
     "phone": "8133911040",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/habila-basumatary-93a49058/",
     "researchLinks": [],
     "department": "CSE"
   },
@@ -3014,7 +3017,7 @@
     "supervisions": "",
     "email": "sanga@iiitp.ac.in",
     "phone": "",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/sanga-chaki-597a6724/",
     "researchLinks": [],
     "department": "CSE"
   },
@@ -3711,7 +3714,7 @@
     "department": "CSE"
   },
     "debadreeta-das": {
-    "designation": "Adjunct Assistant Professor",
+    "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/debadreetadas.jpg",
     "bio": "I'm a researcher and academic specializing in next-generation wireless communication networks, with expertise in 5G/6G systems, Distributed Mobility Management (DMM), UAV-assisted communication, Intelligent Transportation Systems (ITS), and Software-Defined Networking (SDN). I earned my Ph.D. from Jadavpur University, Kolkata. I earned my both B.Tech and M.Tech in the Department of CSE under West Bengal University of Technology. My work has been published in leading international journals and conferences, including IEEE Transactions on Intelligent Transportation Systems and IEEE ANTS. My research interests include wireless networking, network virtualization, edge computing, and intelligent mobility solutions for future communication systems. ",
     "education": "Ph.D., M.Tech. (CSE), B.Tech. (CSE)",
@@ -3755,9 +3758,9 @@
     "department": "CSE"
   },
   "prithwish-sen": {
-    "designation": "Adjunct Assistant Professor",
+    "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/prithwishsen.png",
-    "bio": "Mr. Prithwish Sen is currently working as an Adjunct Assistant Professor in the Department of Computer Science and Engineering at the Indian Institute of Information Technology (IIIT) Pune. He completed his M.Tech. in Computer Science and Engineering from IIIT Guwahati, securing first rank, and is currently pursuing his Ph.D. at NIT Silchar, where his thesis has been submitted. His research focuses on chronic wound assessment, autonomous vision systems, and lightweight deep learning models for real-world deployment. His research interests include Deep Learning, Computer Vision, Medical Image Analysis, Machine Learning, and IoT-enabled Healthcare.",
+    "bio": "Mr. Prithwish Sen is currently working as an Assistant Professor(T) in the Department of Computer Science and Engineering at the Indian Institute of Information Technology (IIIT) Pune. He completed his M.Tech. in Computer Science and Engineering from IIIT Guwahati, securing first rank, and is currently pursuing his Ph.D. at NIT Silchar, where his thesis has been submitted. His research focuses on chronic wound assessment, autonomous vision systems, and lightweight deep learning models for real-world deployment. His research interests include Deep Learning, Computer Vision, Medical Image Analysis, Machine Learning, and IoT-enabled Healthcare.",
     "education": "M.Tech. (CSE), Ph.D. (Thesis Submitted)",
     "publications": [
       {
@@ -3802,9 +3805,9 @@
     "department": "CSE"
   },
   "rahul-kaushik": {
-  "designation": "Adjunct Assistant Professor",
+  "designation": "Assistant Professor(T)",
   "image": "/assets/faculty_photos/rahulkaushik.jpeg",
-  "bio": "Dr. Rahul Kaushik is an Adjunct Assistant Professor of Mathematics in the Department of Applied Sciences and Humanities (ASH) at IIIT Pune. He obtained his Ph.D. in Mathematics from the Harish-Chandra Research Institute (HRI), Prayagraj, under the supervision of Prof. Manoj K. Yadav. Prior to joining IIIT Pune, he served as an NBHM Postdoctoral Fellow and Institute Postdoctoral Fellow at IISER Pune, followed by a Postdoctoral Fellowship at NISER Bhubaneswar. His research interests include finite p-groups, the Matrix Waring Problem, Lie algebras, word maps, and group theory. His research has been published in reputed journals such as the Journal of Algebra, Journal of Algebra and Its Applications, and Linear Algebra and Its Applications. He has presented his work at several national and international conferences and has received the NBHM Postdoctoral Fellowship, the Harish-Chandra Memorial Award, and secured AIR 14 in the CSIR-JRF/NET examination.",
+  "bio": "Dr. Rahul Kaushik is an Assistant Professor(T) of Mathematics in the Department of Applied Sciences and Humanities (ASH) at IIIT Pune. He obtained his Ph.D. in Mathematics from the Harish-Chandra Research Institute (HRI), Prayagraj, under the supervision of Prof. Manoj K. Yadav. Prior to joining IIIT Pune, he served as an NBHM Postdoctoral Fellow and Institute Postdoctoral Fellow at IISER Pune, followed by a Postdoctoral Fellowship at NISER Bhubaneswar. His research interests include finite p-groups, the Matrix Waring Problem, Lie algebras, word maps, and group theory. His research has been published in reputed journals such as the Journal of Algebra, Journal of Algebra and Its Applications, and Linear Algebra and Its Applications. He has presented his work at several national and international conferences and has received the NBHM Postdoctoral Fellowship, the Harish-Chandra Memorial Award, and secured AIR 14 in the CSIR-JRF/NET examination.",
   "education": "Ph.D. (Mathematics)",
   "publications": [
     {
@@ -3842,7 +3845,7 @@
   "department": "ASH"
 },
   "rohit-ramchandra-joshi": {
-    "designation": "Adjunct Assistant Professor",
+    "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/rohitjoshi.jpeg",
     "bio": "Dr. Rohit Ramchandra Joshi specializes in English Language Teaching, Business Communication, and Theatre Studies. He holds a Ph.D. in English (Theatre Studies) from the Central University of Karnataka and an M.A. in English (Honours) from the English and Foreign Languages University (EFLU), Hyderabad. He has qualified the UGC-NET and MH-SET examinations. His research interests include Indian theatre, literature in translation, professional communication, AI-assisted language learning, and language pedagogy. Dr. Joshi has published research in interdisciplinary fields spanning theatre, technology, and legal studies. He is committed to outcome-based education and innovative teaching practices, integrating technology and the ethical use of AI into communication skills training while contributing to curriculum development, assessment, and academic administration.",
     "education": "Ph.D. (English), M.A. (English)",
@@ -3897,9 +3900,9 @@
     "department": "ASH"
   },
   "amartya-paul": {
-    "designation": "Adjunct Assistant Professor",
+    "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/amartyapaul.jpeg",
-    "bio": "Amartya Paul is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He is pursuing his Ph.D. in Electronics and Communication Engineering from the National Institute of Technology (NIT) Meghalaya. His research focuses on integrating microwave engineering with artificial intelligence for intelligent sensing systems, non-destructive evaluation, and microwave imaging. His work spans RF and microwave sensors, computational imaging, machine learning, embedded sensing platforms, and electromagnetic-based material characterization.",
+    "bio": "Amartya Paul is an Assistant Professor(T) in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He is pursuing his Ph.D. in Electronics and Communication Engineering from the National Institute of Technology (NIT) Meghalaya. His research focuses on integrating microwave engineering with artificial intelligence for intelligent sensing systems, non-destructive evaluation, and microwave imaging. His work spans RF and microwave sensors, computational imaging, machine learning, embedded sensing platforms, and electromagnetic-based material characterization.",
     "education": "Ph.D. (Pursuing)",
     "publications": [
       {
@@ -3977,9 +3980,9 @@
   },
 
   "sonu-bose": {
-    "designation": "Adjunct Assistant Professor",
+    "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/sonubose.jpeg",
-    "bio": "Dr. Sonu Bose is an Adjunct Assistant Professor in the Department of Applied Sciences and Humanities at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Applied Mathematics from the Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram. His research interests include numerical analysis, scientific computing, systems of singularly perturbed differential equations, higher-dimensional time-delay partial differential equations, adaptive mesh methods, finite difference and finite element methods, numerical approximation of diffusive fluxes, and computational fluid dynamics. His research has been published in reputed international peer-reviewed journals and conference proceedings.",
+    "bio": "Dr. Sonu Bose is an Assistant Professor(T) in the Department of Applied Sciences and Humanities at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Applied Mathematics from the Indian Institute of Space Science and Technology (IIST), Thiruvananthapuram. His research interests include numerical analysis, scientific computing, systems of singularly perturbed differential equations, higher-dimensional time-delay partial differential equations, adaptive mesh methods, finite difference and finite element methods, numerical approximation of diffusive fluxes, and computational fluid dynamics. His research has been published in reputed international peer-reviewed journals and conference proceedings.",
     "education": "Ph.D. (Applied Mathematics)",
     "publications": [
       {
@@ -4024,9 +4027,9 @@
   },
 
   "soumen-mondal": {
-    "designation": "Adjunct Assistant Professor",
+    "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/soumenmondal.jpeg",
-    "bio": "Dr. Soumen Mondal is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. from NIT Durgapur under the Visvesvaraya Ph.D. Scheme. He previously served as an Institute Post-Doctoral Fellow at IIT Guwahati and as a Post-Doctoral Fellow at National Sun Yat-sen University, Taiwan. His research interests include signal processing for wireless communication, free-space optical communication, multiple access, energy harvesting, and MIMO. He has served as a reviewer for several IEEE Transactions and international journals and was recognized as an Exemplary Reviewer by IEEE Communications Letters in 2024.",
+    "bio": "Dr. Soumen Mondal is an Assistant Professor(T) in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. from NIT Durgapur under the Visvesvaraya Ph.D. Scheme. He previously served as an Institute Post-Doctoral Fellow at IIT Guwahati and as a Post-Doctoral Fellow at National Sun Yat-sen University, Taiwan. His research interests include signal processing for wireless communication, free-space optical communication, multiple access, energy harvesting, and MIMO. He has served as a reviewer for several IEEE Transactions and international journals and was recognized as an Exemplary Reviewer by IEEE Communications Letters in 2024.",
     "education": "Ph.D. (ECE), M.Tech. (ECE), B.Tech. (ECE)",
     "publications": [],
     "resume": "/assets/resume/soumenmondal_resume.pdf",
@@ -4047,9 +4050,9 @@
   },
 
   "suraj-kumar": {
-    "designation": "Adjunct Assistant Professor",
+    "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/surajkumar.jpeg",
-    "bio": "Dr. Suraj Kumar is an Adjunct Assistant Professor in the Department of Computer Science and Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Computer Science and Engineering from IIT Indore. His research interests include graph machine learning, multimodal learning, trustworthy artificial intelligence, recommendation systems, natural language processing, and service computing. His work has been published in leading journals and conferences, including IEEE Transactions on Services Computing, IEEE Transactions on Network and Service Management, WWW, BMVC, ICSOC, ICDAR, and IJCNN. Before joining IIIT Pune, he served as an Assistant Professor at GLA University Mathura and actively contributes as a reviewer for leading international journals.",
+    "bio": "Dr. Suraj Kumar is an Assistant Professor(T) in the Department of Computer Science and Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Computer Science and Engineering from IIT Indore. His research interests include graph machine learning, multimodal learning, trustworthy artificial intelligence, recommendation systems, natural language processing, and service computing. His work has been published in leading journals and conferences, including IEEE Transactions on Services Computing, IEEE Transactions on Network and Service Management, WWW, BMVC, ICSOC, ICDAR, and IJCNN. Before joining IIIT Pune, he served as an Assistant Professor at GLA University Mathura and actively contributes as a reviewer for leading international journals.",
     "education": "Ph.D. (Computer Science and Engineering)",
     "publications": [],
     "resume": "/assets/resume/surajkumar_resume.pdf",
@@ -4069,9 +4072,9 @@
     "department": "CSE"
   },
     "nancy-modi": {
-  "designation": "Adjunct Assistant Professor",
+  "designation": "Assistant Professor(T)",
   "image": "/assets/faculty_photos/nancymodi.jpg",
-  "bio": "Dr. Nancy Modi is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. She received her Ph.D. in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay, where her research focused on microwave engineering, automotive radar systems, and antenna design. She completed her M.Tech. in Digital Communication from Maulana Azad National Institute of Technology (MANIT), Bhopal, and her B.E. in Electronics and Communication Engineering from ITM Group of Institutions, Gwalior. Her research interests include microwave and millimeter-wave antennas, substrate integrated waveguide (SIW) antennas, automotive radar, electromagnetic compatibility (EMC), frequency selective surfaces (FSS), metasurfaces, and computational electromagnetics. She has published research articles in reputed international journals and conferences and actively reviews manuscripts for leading journals and conferences in antennas and electromagnetics.",
+  "bio": "Dr. Nancy Modi is an Assistant Professor(T) in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. She received her Ph.D. in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay, where her research focused on microwave engineering, automotive radar systems, and antenna design. She completed her M.Tech. in Digital Communication from Maulana Azad National Institute of Technology (MANIT), Bhopal, and her B.E. in Electronics and Communication Engineering from ITM Group of Institutions, Gwalior. Her research interests include microwave and millimeter-wave antennas, substrate integrated waveguide (SIW) antennas, automotive radar, electromagnetic compatibility (EMC), frequency selective surfaces (FSS), metasurfaces, and computational electromagnetics. She has published research articles in reputed international journals and conferences and actively reviews manuscripts for leading journals and conferences in antennas and electromagnetics.",
   "education": "Ph.D. (Electrical Engineering), M.Tech. (Digital Communication), B.E. (Electronics and Communication Engineering)",
 
   "publications": [

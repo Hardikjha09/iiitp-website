@@ -42,6 +42,13 @@ const researchProjects = [
     copi: "Dr. Bhupendra Singh",
     amount: "5.6 Lakh",
     duration: "6 Months"
+  },
+  {
+    title: "High Data Rate Channel Codec Architecture for Free Space Classical RF and Optical Communication",
+    agency: "ISRO",
+    pi: "Dr. Dheeraj Dubey ",
+    amount: "19 Lakh",
+    duration: "2 Years"
   }
 ];
 
@@ -55,7 +62,7 @@ const patents = [
   },
   {
     title: "A BIOSENSOR FOR DETECTION OF DISEASE BIOMARKERS",
-    status: "Published",
+    status: "Granted",
     date: "15th July 2025",
     appNo: "202311044904",
     inventors: "Dr. Dheeraj Dubey (Assistant Professor, Dept of ECE, IIIT Pune), Dr. Shivam Singh, Bhargavi Chaudhary, Dr. Akash Srivastava, Dr. Anurag Upadhyay"

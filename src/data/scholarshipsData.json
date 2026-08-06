@@ -8,15 +8,6 @@
   { "sr": 7, "category": "Maharashtra", "scheme": "Post-Matric Tuition Fee and Examination Fee (Freeship)", "governedBy": "Social Justice and Special Assistance", "link": "https://mahadbt.maharashtra.gov.in/" },
   { "sr": 8, "category": "Gujarat", "scheme": "Post Metric Scholarships Guideline for Scheduled Caste, SEBC and ST Students Only", "governedBy": "Social Welfare Department", "link": "https://gssp.gujarat.gov.in/" },
   { "sr": 9, "category": "Madhya Pradesh", "scheme": "Mukhya Mantri Medhavi Vidyarthi Yojana (MMVY)", "governedBy": "Department of Technical Education & Skill Development", "link": "https://medhavikalyan.mp.gov.in" },
-  { "sr": 10, "category": "Uttar Pradesh", "scheme": "Dashmottar Scholarship (Post-Matric Outside State)", "governedBy": "Social Welfare, Backward Classes Welfare and Minority Welfare Departments", "link": "https://scholarship.up.gov.in" },
-  { "sr": 11, "category": "Rajasthan", "scheme": "Post Matric Scholarship for Students", "governedBy": "Social Justice and Empowerment Department", "link": "https://scholarship.rajasthan.gov.in/" },
-  { "sr": 12, "category": "Jammu & Kashmir / Ladakh", "scheme": "Special Scholarship Scheme for Students from Jammu & Kashmir and Ladakh", "governedBy": "AICTE", "link": "https://www.aicte-jk-scholarship-gov.in/" },
-  { "sr": 13, "category": "PMSS", "scheme": "Prime Minister's Scholarship Scheme (PMSS)", "governedBy": "Department of Ex-Servicemen Welfare (DESW)", "link": "https://www.desw.gov.in/prime-ministers-scholarship-scheme-pmss" },
-  { "sr": 14, "category": "SPDC", "scheme": "Scholarship Programme for Diaspora Children (SPDC)", "governedBy": "Ministry of External Affairs", "link": "https://www.mea.gov.in/spdc-25-26" },
-  { "sr": 15, "category": "ONGC", "scheme": "ONGC Scholarship to Meritorious SC/ST Category Students", "governedBy": "ONGC Foundation", "link": "https://ongcscholar.org/#/fellowshipScheme" },
-  { "sr": 16, "category": "Reliance Foundation", "scheme": "Reliance Foundation Undergraduate Scholarships", "governedBy": "Reliance Foundation", "link": "https://www.scholarships.reliancefoundation.org/" },
-  { "sr": 17, "category": "SMILE Foundation", "scheme": "SMILE Foundation Scholarship Program", "governedBy": "SMILE Foundation", "link": "https://sfsp.smilefoundationindia.org/" },
-  { "sr": 18, "category": "Foundation for Excellence", "scheme": "Foundation for Excellence Scholarship", "governedBy": "Foundation for Excellence", "link": "https://ffe.org/scholarships/" },
-  { "sr": 19, "category": "FAEA", "scheme": "Foundation for Academic Excellence & Access Scholarship", "governedBy": "Sponsored by TATA's and Other Donors", "link": "https://www.faeaindia.org/" },
-  { "sr": 20, "category": "National Overseas Scholarship", "scheme": "National Overseas Scholarship Scheme", "governedBy": "Ministry of Social Justice & Empowerment / Ministry of Tribal Affairs", "link": "https://socialjustice.gov.in/schemes/28" }
+  { "sr": 10, "category": "Jammu & Kashmir / Ladakh", "scheme": "Special Scholarship Scheme for Students from Jammu & Kashmir and Ladakh", "governedBy": "AICTE", "link": "https://www.aicte-jk-scholarship-gov.in/" }
+
 ]

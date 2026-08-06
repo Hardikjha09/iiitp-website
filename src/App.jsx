@@ -116,6 +116,7 @@ const MinutesPage = lazy(() => import("./pages/ReportsAndMinutes"));
 const ScholarshipPage = lazy(() => import("./pages/ScholarshipPage"));
 const IEEEPage = lazy(() => import("./pages/IEEEPage"));
 const ACMPage = lazy(() => import("./pages/ACMPage"));
+const SitemapPage = lazy(() => import("./pages/SitemapPage"));
 
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const StudentAchievementsPage = lazy(
@@ -409,6 +410,7 @@ function AppContent() {
             <Route path="/scholarships" element={<ScholarshipPage />} />
             <Route path="/ieee" element={<IEEEPage />} />
             <Route path="/acm" element={<ACMPage />} />
+            <Route path="/sitemap" element={<SitemapPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>

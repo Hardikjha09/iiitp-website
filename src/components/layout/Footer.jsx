@@ -136,6 +136,12 @@ const Footer = () => {
                   <span className="leading-tight">Equal Opportunity Cell (EOC)</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/sitemap" className="hover:text-brand-red transition-colors flex items-start group">
+                  <ExternalLink size={14} className="mr-2 mt-1 shrink-0 text-[#0d6efd]" />
+                  <span className="leading-tight">Sitemap</span>
+                </Link>
+              </li>
               {/* <li>
                 <Link to="/contact" className="hover:text-brand-red transition-colors flex items-start group">
                   <ExternalLink size={14} className="mr-2 mt-1 shrink-0 text-[#0d6efd]" />

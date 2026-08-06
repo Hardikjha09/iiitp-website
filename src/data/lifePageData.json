@@ -1014,6 +1014,24 @@
   ],
   "EVENTS": [
     {
+      "name": "Expert Lecture on Research, Entrepreneurship, and Global Industry Careers",
+      "type": "Expert Lecture",
+      "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+      "desc": "The Indian Institute of Information Technology, Pune organised an expert lecture by Mr. Pratik Ratadiya, CTO and Head of Product at Narravance, New York City. The session provided students with valuable insights into research, entrepreneurship, and opportunities in the global technology industry. Drawing on his professional journey from India to New York, Mr. Ratadiya shared practical perspectives on building successful careers in emerging fields such as artificial intelligence, machine learning, and natural language processing. The interactive session encouraged students to explore innovation, research-driven problem-solving, and entrepreneurial thinking while offering guidance on navigating international career pathways. The lecture reflected IIIT Pune's continued commitment to strengthening industry-academia engagement and preparing students to become globally competent technology professionals.",
+      "images": [
+        "/assets/lifepage/expert_lecture_1.jpg",
+        "/assets/lifepage/expert_lecture_2.jpg",
+        "/assets/lifepage/expert_lecture_3.jpg",
+        "/assets/lifepage/expert_lecture_4.jpg"
+      ],
+      "highlights": [
+        "Insights into research, entrepreneurship, and global technology careers",
+        "Encouraged innovation, research-driven problem-solving, and entrepreneurial thinking",
+        "Interactive session on international career opportunities",
+        "Strengthened industry-academia collaboration and global career readiness"
+      ]
+    },
+    {
       "name": "IIIT Pune Organises Activities under the Nasha Mukt Yuva for Viksit Bharat Campaign",
       "type": "Awareness Campaign",
       "typeColor": "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300",

@@ -13,12 +13,12 @@ const VisitingFacultyPage = () => {
       {
         name: "Prof. J Dhar",
         designation: "Professor, ABV-IIITM Gwalior",
-        image: "https://www.iiitm.ac.in/images/demo/teachers/1533094412_jdhar.jpg"
+        image: "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=7L977F8AAAAJ&citpid=26"
       },
       {
         name: "Prof. B B Gupta",
         designation: "Professor, Asia University, Taiwan",
-        image: "https://aicybersecuritycenter.com/wp-content/uploads/2022/04/Brij-Photo.jpg"
+        image: "https://csie.asia.edu.tw/uploads/member_profile/avatar/605071c1063ca28c7a0000b9/S__6987779.jpg"
       },
       {
         name: "Dr. Raghunath Tewari",
@@ -28,7 +28,7 @@ const VisitingFacultyPage = () => {
       {
         name: "Dr. Soumya Prakash Dash",
         designation: "Assistant Professor, IIT Bhubaneswar",
-        image: "http://www.iitbbs.ac.in/faculty/iit_1621523582.JPG"
+        image: "/assets/faculty_photos/Dr. Soumya Prakash Dash.jpg"
       },
       {
         name: "Dr. Bodhisatwa Mazumdar",

@@ -364,6 +364,30 @@ const InfoCards = () => {
                       </p>
                     </div>
                   </div>
+
+                  <div className="flex gap-3">
+                    <div className="mt-1.5 shrink-0">
+                      <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Industry–Academia Collaboration</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                        Through industry-led microcredit courses, expert lectures, internships, and collaborative initiatives, IIIT Pune provides students with hands-on exposure to emerging technologies and real-world industry practices.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <div className="mt-1.5 shrink-0">
+                      <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Startup & Incubation Ecosystem</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                        A dedicated Startup & Incubation Cell empowers students to transform innovative ideas into scalable ventures through mentorship, industry partnerships, investor networks, and structured incubation programmes.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -412,6 +436,30 @@ const InfoCards = () => {
                       <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Autonomy & Collaborations</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
                         Academic and research freedom to lead collaborative laboratories, industry consulting projects, and global university partnerships.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <div className="mt-1.5 shrink-0">
+                      <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Continuous Professional Development Allowance (CPDA)</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                        IIIT Pune supports the continuous academic and professional growth of its faculty through a Continuous Professional Development Allowance (CPDA) that enables faculties to participate in conferences, workshops, training programmes, and other scholarly activities.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <div className="mt-1.5 shrink-0">
+                      <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Seed Research Grant</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                        IIIT Pune promotes a strong research culture by providing Seed Research Grants to regular faculty members, offering initial funding to support innovative research projects. This initiative empowers faculty to pursue high-impact research, generate new ideas, and secure competitive external funding.
                       </p>
                     </div>
                   </div>

@@ -15,6 +15,7 @@ const NewsTicker = () => {
       .catch(() => {
         // Fallback mock news
         setNews([
+          { id: 104, title: "SPOT Admission for M.Tech. (Without Scholarship) Programme 2026-27", link: "/admissions" },
           { id: 101, title: "Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE)", link: "/careers-documents/ECE - AP Temp advt.pdf" },
           { id: 103, title: "Physical Reporting Instructions: JoSAA/CSAB 2026", link: "/documents/DETAILS%20OF%20ADMISSION%20PROCESS%20FOR%20FIRST%20SEMESTER%202026-27.pdf" },
           { id: 1, title: "Admissions for B.Tech 2025-26 via JoSAA/CSAB are now open" },

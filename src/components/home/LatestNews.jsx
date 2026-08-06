@@ -16,6 +16,13 @@ const LatestNews = () => {
       .catch(() => {
         setNews([
           {
+            id: 104,
+            title: "SPOT Admission for M.Tech. (Without Scholarship) Programme 2026-27",
+            date: "06-08-2026",
+            excerpt: "SPOT Admission for M.Tech. (Without Scholarship) Programme 2026-27 has been announced.",
+            link: "/admissions",
+          },
+          {
             id: 101,
             title: "Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE)",
             date: "29-07-2026",

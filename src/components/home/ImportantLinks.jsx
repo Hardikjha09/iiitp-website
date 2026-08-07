@@ -149,7 +149,7 @@ const ImportantLinks = () => {
                             : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                         }`}
                       >
-                        Faculty & Staff
+                        Faculty
                       </button>
                     </div>
                   </div>
@@ -165,7 +165,7 @@ const ImportantLinks = () => {
                       { name: 'Library Membership Form (Employees)', path: '/downloads/IIITP_Library-Membership_Form_for-All Employees.pdf', category: 'faculty' },
                       { name: 'Library Membership Form (Students & RS)', path: '/downloads/IIITP_Library-Membership_Form_for-Students&RS.pdf', category: 'student' },
                       { name: 'Travelling Allowance / Adjustment for Tour', path: '/downloads/TRAVELLING ALLOWANCEADJUSTMENT FOR TOUR.pdf', category: 'faculty' },
-                      { name: 'Form for Dispatch of Official Letters', path: '/downloads/FORM FOR DISPATCH OF OFFICIAL LETTER ETC BY SPEED POST.pdf', category: 'both' },
+                      { name: 'Form for Dispatch of Official Letters', path: '/downloads/FORM FOR DISPATCH OF OFFICIAL LETTER ETC BY SPEED POST.pdf', category: 'faculty' },
                       { name: 'Official Memento Approval Form', path: '/downloads/OFFICIAL MEMENTO ISSUANCE FORM.pdf', category: 'faculty' },
                       { name: 'Vehicle Requisition Form', path: '/downloads/IIITP_Vehicle_form (1)_0.pdf', category: 'faculty' },
                       { name: 'Petty Contingency Form', path: '/downloads/PETTY CONTINGENT VOUCHER.pdf', category: 'faculty' },
@@ -189,6 +189,7 @@ const ImportantLinks = () => {
                       { name: 'SBI Education Loan Contact Details', path: '/downloads/SBI Education Loan Check List and Contact Details_0.pdf', category: 'student' },
                       { name: 'Indent Form for Consumable Items', path: '/downloads/Indent for stationery consumable items.pdf', category: 'faculty' },
                       { name: 'Internet Credentials Form', path: '/downloads/Internet Login Form.pdf', category: 'faculty' },
+                      { name : 'Leave Form for Project Staff', path: '/downloads/Leave Form for Project Staff.pdf', category: 'project staff' },
                     ]
                     .filter(doc => docFilter === 'all' || doc.category === docFilter || doc.category === 'both')
                     .map((doc, idx) => (

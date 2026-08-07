@@ -1,5 +1,12 @@
 [
   {
+    "id": 105,
+    "title": "Shortlisted Candidates for Stage - II (Presentation)in Start-up & Incubation Centre",
+    "date": "07-08-2026",
+    "excerpt": "List of Shortlisted Candidates for Second Stage of Selection Process (Presentation) in Start-up & Incubation Centre (S&IC), IIIT Pune",
+    "link": "https://www.iiitp.ac.in/careers-documents/2nd%20Stage%20of%20Selection%20-%20Presentation.pdf"
+  },
+  {
     "id": 104,
     "title": "SPOT Admission for M.Tech. (Without Scholarship) Programme 2026-27",
     "date": "06-08-2026",
@@ -21,69 +28,6 @@
     "link": "/documents/DETAILS OF ADMISSION PROCESS FOR FIRST SEMESTER 2026-27.pdf"
   },
   {
-    "id": 102,
-    "title": "Odd Semester Registration Instructions for B.Tech, M.Tech & PhD (AY 2026-27) are now available.",
-    "date": "18-07-2026",
-    "excerpt": "Detailed instructions for the odd semester registration for B.Tech, M.Tech, and PhD for the Academic Year 2026-27 are now available under the Notices section.",
-    "link": "/notice"
-  },
-  {
-    "id": 101,
-    "title": "Result notification for the recruitment to the post of Assistant Professor (Temporary)",
-    "date": "15-07-2026",
-    "excerpt": "Result notification for the recruitment to the post of Assistant Professor (Temporary) is now available.",
-    "link": "/careers"
-  },
-  {
-    "id": 100,
-    "title": "Faculty Advisor List for the Odd Semester 2026-27.",
-    "date": "13-07-2026",
-    "excerpt": "The Faculty Advisor List for the Odd Semester 2026-27 has been released. Please check the notices page for details.",
-    "link": "/notices"
-  },
-  {
-    "id": 0,
-    "title": "Odd semester registration instructions available on the website now",
-    "date": "10-07-2026",
-    "excerpt": "Detailed instructions for the odd semester registration for B.Tech, M.Tech, and PhD are now available.",
-    "link": "/admissions"
-  },
-  {
-    "id": 1,
-    "title": "Advertisement for Positions in Start-up and Incubation Cell on contract basis",
-    "date": "7-7-2026",
-    "excerpt": "Applications are invited for various contractual positions in the Start-up and Incubation Cell.",
-    "link": "/careers"
-  },
-  {
-    "id": 2,
-    "title": "Advertisement for various research positions under ANRF-PAIR Initiative",
-    "date": "22-06-2026",
-    "excerpt": "Applications are invited from interested candidates for various research positions to work on the cybersecurity-based research project, sanctioned under the project entitled “ANRF PAIR IITB HUB (ANRF/PAIR/2025/000017/PAIR)-A” under the Anusandhan National Research Foundation-Partnerships for Accelerated Innovation and Research (ANRF-PAIR) initiative.",
-    "link": "/careers"
-  },
-  {
-    "id": 3,
-    "title": "RECRUITMENT NOTICE FOR THE POST OF ASSISTANT PROFFESOR (TEMPORARY)",
-    "date": "17-06-2026",
-    "excerpt": "The institute is seeking qualified candidates with strong academic backgrounds, preferably with PhD qualifications and relevant teaching, research, or industry experience.",
-    "link": "/careers"
-  },
-  {
-    "id": 4,
-    "title": "Extension of Deadline for P.hD Applications",
-    "date": "17-06-2026",
-    "excerpt": "The Deadline for P.hD applications for 2026 has been extended.",
-    "link": "/documents/Extension of Deadline 2026.pdf"
-  },
-  {
-    "id": 5,
-    "title": "Admissions for B.Tech 2026-27 via JoSAA/CSAB are now open",
-    "date": "25-05-2025",
-    "excerpt": "The JoSAA counseling process will begin shortly. Prospective candidates are requested to check the portal for regular updates on opening and closing ranks.",
-    "link": "/admissions"
-  },
-  {
     "id": 6,
     "title": "IIIT Pune secures top rank in National Smart India Hackathon 2024",
     "date": "15-05-2025",
@@ -96,19 +40,5 @@
     "date": "02-05-2025",
     "excerpt": "The new laboratory is equipped with state-of-the-art GPUs for deep learning research and advanced robotic arms for autonomous systems.",
     "link": "/research"
-  },
-  {
-    "id": 8,
-    "title": "Call for Papers: International Conference on VLSI and Embedded Systems",
-    "date": "20-04-2025",
-    "excerpt": "The Department of ECE is organizing the annual conference. Researchers are invited to submit their original work by June 30.",
-    "link": "/research"
-  },
-  {
-    "id": 9,
-    "title": "Excellent Placement Season 2024-25 with Highest Package of 53 LPA",
-    "date": "10-04-2025",
-    "excerpt": "The institute witnessed a record-breaking placement season with top recruiters including Atlassian, Microsoft, and Amazon visiting the campus.",
-    "link": "https://placements.iiitp.ac.in/"
   }
 ]

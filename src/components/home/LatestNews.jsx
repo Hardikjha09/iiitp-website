@@ -16,6 +16,13 @@ const LatestNews = () => {
       .catch(() => {
         setNews([
           {
+            id: 105,
+            title: "Shortlisted Candidates for Stage - II (Presentation)in Start-up & Incubation Centre",
+            date: "07-08-2026",
+            excerpt: "List of Shortlisted Candidates for Second Stage of Selection Process (Presentation) in Start-up & Incubation Centre (S&IC), IIIT Pune",
+            link: "https://www.iiitp.ac.in/careers-documents/2nd%20Stage%20of%20Selection%20-%20Presentation.pdf",
+          },
+          {
             id: 104,
             title: "SPOT Admission for M.Tech. (Without Scholarship) Programme 2026-27",
             date: "06-08-2026",
@@ -37,14 +44,6 @@ const LatestNews = () => {
             excerpt:
               "Physical Reporting Instructions for B.Tech candidates admitted through JoSAA/CSAB 2026 are now available.",
             link: "/documents/DETAILS%20OF%20ADMISSION%20PROCESS%20FOR%20FIRST%20SEMESTER%202026-27.pdf",
-          },
-          {
-            id: 1,
-            title: "Admissions for B.Tech 2025-26 are now open",
-            date: "May 15, 2025",
-            excerpt:
-              "The JoSAA counseling process will begin shortly. Candidates are requested to check the portal.",
-            link: "/notice",
           },
           {
             id: 2,

@@ -21,10 +21,7 @@ const recruiters = [
   { name: 'Intel' },
   { name: 'IBM' },
   { name: 'Siemens' },
-  { name: 'TCS' },
   { name: 'Infosys' },
-  { name: 'Wipro' },
-  { name: 'VMware' },
   { name: 'Capgemini' },
 ];
 

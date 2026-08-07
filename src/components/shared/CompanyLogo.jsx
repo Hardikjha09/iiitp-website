@@ -168,16 +168,6 @@ export const CompanyLogo = ({ name, className = 'w-full h-full' }) => {
     );
   }
 
-  // 16. TCS
-  if (normalized.includes('tcs') || normalized.includes('tata')) {
-    return (
-      <svg viewBox="0 0 100 30" className={className}>
-        <text x="0" y="21" fontSize="18" fontWeight="bold" fontFamily="sans-serif" fill="#1F70C1">TCS</text>
-        <path d="M50 8c12 2 24 10 32 10" stroke="#E9182C" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-        <path d="M46 14c12 2 24 10 32 10" stroke="#1F70C1" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-      </svg>
-    );
-  }
 
   // 17. Infosys
   if (normalized.includes('infosys')) {

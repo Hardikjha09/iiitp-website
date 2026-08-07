@@ -133,10 +133,74 @@ const categoryIcons = {
   Entrepreneurship: Award
 };
 
+const studentWhyPoints = [
+  {
+    title: 'Competitive Coding Culture',
+    description: 'Strong presence in SIH (winners in 2023, 2024), ACM-ICPC, and high ranking coders on Codeforces driven by active student coding clubs.'
+  },
+  {
+    title: 'Outstanding Placements',
+    description: 'Impressive track record with a highest package of 53 LPA for B.Tech in recent placement drives, with recruiters like Microsoft, Amazon, and Atlassian.'
+  },
+  {
+    title: 'State-of-the-Art Curriculum',
+    description: 'Industry-relevant curriculum tailored for current developments in Artificial Intelligence, Machine Learning, IoT, and Cyber-Physical Systems.'
+  },
+  {
+    title: 'Industry–Academia Collaboration',
+    description: 'Through industry-led microcredit courses, expert lectures, internships, and collaborative initiatives, IIIT Pune provides students with hands-on exposure to emerging technologies and real-world industry practices.'
+  },
+  {
+    title: 'Startup & Incubation Ecosystem',
+    description: 'A dedicated Startup & Incubation Cell empowers students to transform innovative ideas into scalable ventures through mentorship, industry partnerships, investor networks, and structured incubation programmes.'
+  }
+];
+
+const facultyWhyPoints = [
+  {
+    title: 'Rich Research Ecosystem',
+    description: 'Over ₹3 Crores of ongoing and completed external research grants from MeitY, DST-SERB, and various research ministries.'
+  },
+  {
+    title: 'Intellectual Property & Innovation',
+    description: 'Robust support for filing patents, copyrights, and publications in top-tier international journals and research conferences with strong support from major organisations like the IEEE.'
+  },
+  {
+    title: 'Autonomy & Collaborations',
+    description: 'Academic and research freedom to lead collaborative laboratories, industry consulting projects, and global university partnerships.'
+  },
+  {
+    title: 'Continuous Professional Development Allowance (CPDA)',
+    description: 'Continuous Professional Development Allowance (CPDA) enables faculty members to participate in conferences, workshops, training programmes, and other scholarly activities.'
+  },
+  {
+    title: 'Seed Research Grant',
+    description: 'Seed Research Grants to regular faculty members, offering initial funding to support innovative research projects. This initiative empowers faculty to pursue high-impact research, generate new ideas, and secure competitive external funding.'
+  },
+  {
+    title: 'Health Insurance',
+    description: 'Medical insurance coverage is available to eligible employees in accordance with applicable Government of India rules, supporting their health and financial well-being.'
+  }
+];
+
+const getVisiblePoints = (items, startIndex) => {
+  if (!items.length) return [];
+  if (items.length === 1) return [items[0]];
+
+  const visible = [];
+  const secondIndex = (startIndex + 1) % items.length;
+  visible.push(items[startIndex % items.length]);
+  visible.push(items[secondIndex]);
+  return visible;
+};
+
 const InfoCards = () => {
   const [activeTab, setActiveTab] = useState('students');
   const [startIndex, setStartIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [expandedReasonSection, setExpandedReasonSection] = useState(null);
+  const [studentReasonIndex, setStudentReasonIndex] = useState(0);
+  const [facultyReasonIndex, setFacultyReasonIndex] = useState(0);
 
   const currentList = activeTab === 'students' ? studentAchievements : facultyAchievements;
 
@@ -151,6 +215,26 @@ const InfoCards = () => {
     return () => clearInterval(timer);
   }, [currentList.length, isHovered]);
 
+  useEffect(() => {
+    if (expandedReasonSection === 'students') return;
+
+    const timer = setInterval(() => {
+      setStudentReasonIndex((prev) => (prev + 1) % studentWhyPoints.length);
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, [expandedReasonSection]);
+
+  useEffect(() => {
+    if (expandedReasonSection === 'faculty') return;
+
+    const timer = setInterval(() => {
+      setFacultyReasonIndex((prev) => (prev + 1) % facultyWhyPoints.length);
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, [expandedReasonSection]);
+
   const nextSlide = () => {
     setStartIndex((prev) => (prev + 1) % currentList.length);
   };
@@ -162,6 +246,10 @@ const InfoCards = () => {
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     setStartIndex(0);
+  };
+
+  const handleReasonToggle = (section) => {
+    setExpandedReasonSection((prev) => (prev === section ? null : section));
   };
 
   const renderCard = (item) => {
@@ -318,7 +406,18 @@ const InfoCards = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* For Students */}
-            <div className="bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => handleReasonToggle('students')}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  handleReasonToggle('students');
+                }
+              }}
+              className="bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group cursor-pointer"
+            >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl" />
               <div>
                 <div className="flex items-center space-x-3 mb-6">
@@ -328,72 +427,40 @@ const InfoCards = () => {
                   <h3 className="text-xl font-bold font-serif text-gray-800 dark:text-white">For Students</h3>
                 </div>
 
-                <div className="space-y-5">
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+                <div className="space-y-3 overflow-hidden">
+                  {(expandedReasonSection === 'students'
+                    ? studentWhyPoints
+                    : getVisiblePoints(studentWhyPoints, studentReasonIndex)
+                  ).map((item, index) => (
+                    <div key={`student-${index}`} className="flex gap-3">
+                      <div className="mt-1.5 shrink-0">
+                        <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">{item.title}</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Competitive Coding Culture</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        Strong presence in SIH (winners in 2023, 2024), ACM-ICPC, and high ranking coders on Codeforces driven by active student coding clubs.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Outstanding Placements</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        Impressive track record with a highest package of 53 LPA for B.Tech in recent placement drives, with recruiters like Microsoft, Amazon, and Atlassian.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">State-of-the-Art Curriculum</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        Industry-relevant curriculum tailored for current developments in Artificial Intelligence, Machine Learning, IoT, and Cyber-Physical Systems.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Industry–Academia Collaboration</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        Through industry-led microcredit courses, expert lectures, internships, and collaborative initiatives, IIIT Pune provides students with hands-on exposure to emerging technologies and real-world industry practices.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Startup & Incubation Ecosystem</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        A dedicated Startup & Incubation Cell empowers students to transform innovative ideas into scalable ventures through mentorship, industry partnerships, investor networks, and structured incubation programmes.
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
 
             {/* For Faculty */}
-            <div className="bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => handleReasonToggle('faculty')}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  handleReasonToggle('faculty');
+                }
+              }}
+              className="bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group cursor-pointer"
+            >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-500 to-brand-red rounded-t-2xl" />
               <div>
                 <div className="flex items-center space-x-3 mb-6">
@@ -403,66 +470,23 @@ const InfoCards = () => {
                   <h3 className="text-xl font-bold font-serif text-gray-800 dark:text-white">For Faculty</h3>
                 </div>
 
-                <div className="space-y-5">
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
+                <div className="space-y-3 overflow-hidden">
+                  {(expandedReasonSection === 'faculty'
+                    ? facultyWhyPoints
+                    : getVisiblePoints(facultyWhyPoints, facultyReasonIndex)
+                  ).map((item, index) => (
+                    <div key={`faculty-${index}`} className="flex gap-3">
+                      <div className="mt-1.5 shrink-0">
+                        <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">{item.title}</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Rich Research Ecosystem</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        Over ₹3 Crores of ongoing and completed external research grants from MeitY, DST-SERB, and various research ministries.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Intellectual Property & Innovation</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        Robust support for filing patents, copyrights, and publications in top-tier international journals and research conferences with strong support from major organisations like the IEEE.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Autonomy & Collaborations</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        Academic and research freedom to lead collaborative laboratories, industry consulting projects, and global university partnerships.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Continuous Professional Development Allowance (CPDA)</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        IIIT Pune supports the continuous academic and professional growth of its faculty through a Continuous Professional Development Allowance (CPDA) that enables faculties to participate in conferences, workshops, training programmes, and other scholarly activities.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-3">
-                    <div className="mt-1.5 shrink-0">
-                      <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">Seed Research Grant</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                        IIIT Pune promotes a strong research culture by providing Seed Research Grants to regular faculty members, offering initial funding to support innovative research projects. This initiative empowers faculty to pursue high-impact research, generate new ideas, and secure competitive external funding.
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>

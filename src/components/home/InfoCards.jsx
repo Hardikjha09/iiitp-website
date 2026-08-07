@@ -426,7 +426,7 @@ const InfoCards = () => {
                   </span>
                   <h3 className="text-xl font-bold font-serif text-gray-800 dark:text-white">For Students</h3>
                 </div>
-
+                  
                 <div className="space-y-3 overflow-hidden">
                   {(expandedReasonSection === 'students'
                     ? studentWhyPoints
@@ -446,6 +446,11 @@ const InfoCards = () => {
                   ))}
                 </div>
               </div>
+              <div className="mt-auto pt-5">
+                <p className="text-left text-xs text-blue-600 dark:text-blue-400 font-medium animate-pulse">
+                  👆 Click this card to view all details
+                </p>
+              </div>
             </div>
 
             {/* For Faculty */}
@@ -460,7 +465,7 @@ const InfoCards = () => {
                 }
               }}
               className="bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group cursor-pointer"
-            >
+              >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-500 to-brand-red rounded-t-2xl" />
               <div>
                 <div className="flex items-center space-x-3 mb-6">
@@ -488,6 +493,11 @@ const InfoCards = () => {
                     </div>
                   ))}
                 </div>
+              </div>
+              <div className="mt-auto pt-5">
+                <p className="text-left text-xs text-blue-600 dark:text-blue-400 font-medium animate-pulse">
+                  👆 Click this card to view all details
+                </p>
               </div>
             </div>
           </div>

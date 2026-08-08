@@ -5,9 +5,9 @@ const AlumniEventsPage = () => {
   const puneChapterImages = [
     '/assets/lifepage/linkedin_img_1785173090725_16.jpg',
     '/assets/lifepage/linkedin_img_1785173090757_17.jpg',
-    '/public/alumni/IMG_2776.JPG',
-    '/public/alumni/IMG_2761.JPG',
-    '/public/alumni/IMG_2808.JPG',
+    '/assets/lifepage/Alumni/IMG_2776.JPG',
+    '/assets/lifepage/Alumni/IMG_2761.JPG',
+    '/assets/lifepage/Alumni/IMG_2808.JPG',
     '/assets/lifepage/linkedin_img_1785173090788_18.jpg',
     '/assets/lifepage/linkedin_img_1785173090819_19.jpg',
     '/assets/lifepage/linkedin_img_1785173090849_20.jpg',

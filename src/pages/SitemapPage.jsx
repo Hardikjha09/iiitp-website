@@ -83,7 +83,13 @@ const SitemapPage = () => {
         { label: "Faculty", path: "/people/faculty" },
         { label: "Visiting Faculty", path: "/people/visiting-faculty" },
         { label: "Non-Teaching Staff", path: "/people/non-teaching-staff/regular" },
-        { label: "Alumni", path: "/people/alumni" },
+        { label: "Alumni", path: "/alumni" },
+        { label: "Alumni About", path: "/alumni/about" },
+        { label: "Alumni Events", path: "/alumni/events" },
+        { label: "Alumni Network", path: "/alumni/network" },
+        { label: "Alumni Get Involved", path: "/alumni/get-involved" },
+        { label: "Alumni Resources", path: "/alumni/resources" },
+        { label: "Alumni Contact", path: "/alumni/contact" },
       ]
     },
     {

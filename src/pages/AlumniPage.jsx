@@ -1,241 +1,289 @@
-import React, { useState } from 'react';
 import PageHeader from '../components/shared/PageHeader';
-import alumniData from '../data/alumni.json';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const AlumniPage = () => {
-  const [activeBatch, setActiveBatch] = useState('all');
-
-  const batches = [
-    { id: 'all', name: 'All Batches', tag: 'Complete Directory' },
-    { id: 'batch2017_2021', name: 'Batch 2017-2021', tag: 'B.Tech Program' },
-    { id: 'batch2016_2020', name: 'Batch 2016-2020', tag: 'B.Tech Program' },
-    { id: 'mtech2019_2021', name: 'M.Tech 2019-2021', tag: 'Postgraduate' },
+  const navTabs = [
+    'Overview',
+    'Alumni Directory',
+    'Events',
+    'Network',
+    'Get Involved',
+    'Resources',
+    'Contact',
   ];
 
-  const getFilteredHigherEd = (list) => {
-    if (activeBatch === 'all') return list;
-    const yearRange = activeBatch === 'batch2017_2021' ? '2017-2021' : 
-                      activeBatch === 'batch2016_2020' ? '2016-2020' : 
-                      '2019-2021';
-    return list.filter(alumnus => alumnus.branchYear.includes(yearRange));
-  };
+  const overviewLinks = [
+    'About Us',
+    'Alumni Highlights',
+    'Latest News',
+    'Engage',
+    'Volunteer',
+    'Share Achievements',
+    'Share Opportunities',
+    'Mentor',
+  ];
 
-  const filteredAbroad = getFilteredHigherEd(alumniData.higherEducation.abroad);
-  const filteredIndia = getFilteredHigherEd(alumniData.higherEducation.india);
-  const hasHigherEd = filteredAbroad.length > 0 || filteredIndia.length > 0;
+  const quickLinks = [
+    { label: 'IIIT Pune Website', url: 'https://iiitp.ac.in' },
+    { label: 'Placement Cell', url: 'https://placement.iiitp.ac.in' },
+    { label: 'Career Services', url: 'https://iiitp.ac.in/careers' },
+    { label: 'Student Portal', url: 'https://iiitp.ac.in/student-portal' },
+  ];
 
-  const placementBatchesToShow = activeBatch === 'all' 
-    ? ['batch2017_2021', 'batch2016_2020', 'mtech2019_2021'] 
-    : [activeBatch];
+  const events = [
+    {
+      title: 'First-Ever Alumni Interaction: Pune Chapter',
+      date: '06 June 2026',
+      status: 'COMPLETED',
+      description:
+        'IIIT Pune successfully hosted its first-ever Alumni Interaction: Pune Chapter on 06 June 2026, bringing together alumni from the 2020–2025 graduating batches to reconnect, network, and celebrate their shared journey.',
+      cta: 'View Highlights',
+      href: '#',
+    },
+    {
+      title: 'Upcoming Chapter: 2nd Alumni Interaction – Bangalore Chapter',
+      date: '05 September 2026',
+      status: 'UPCOMING',
+      description:
+        'Building on the success of the inaugural Pune Chapter, IIIT Pune is delighted to host the 2nd Alumni Interaction – Bangalore Chapter on 05 September 2026. Join us for networking, knowledge sharing, and meaningful connections.',
+      cta: 'Know More',
+      href: '#',
+    },
+  ];
 
-  const placementTitles = {
-    batch2017_2021: "Alumni working in MNCs (Batch 2017-2021)",
-    batch2016_2020: "Alumni working in MNCs (Batch 2016-2020)",
-    mtech2019_2021: "Alumni working in MNCs (M.Tech Batch 2019-2021)"
-  };
+  const highlightCards = [
+    { value: '450+', label: 'Registered Alumni & Counting' },
+    { value: 'Many', label: 'Pursuing higher education at IIT, IIM, IISc & more' },
+    { value: 'Many', label: 'In Government Jobs (Public Banks, Police, Indian Navy, etc.)' },
+    { value: 'Several', label: 'Building their own Start-ups' },
+    { value: 'Many', label: 'Associated with top companies like Google, Microsoft, JP Morgan, Amazon & more' },
+  ];
 
-  const TableHeader = ({ children }) => (
-    <th className="px-6 py-4 text-left text-sm font-bold text-white tracking-wider bg-primary dark:bg-primary/95">
-      {children}
-    </th>
-  );
+  const engagementCards = [
+    {
+      title: 'Engage',
+      description:
+        'Participate in alumni events, networking initiatives, and Institute activities. Strengthen lifelong relationships while contributing to the growth of the alumni community.',
+    },
+    {
+      title: 'Volunteer',
+      description:
+        'Support the Institute by contributing your time, expertise, and experience to alumni programmes, student initiatives, and institutional activities.',
+    },
+    {
+      title: 'Share Achievements',
+      description:
+        'Celebrate your professional and personal milestones with the IIIT Pune community. Your achievements inspire current students and fellow alumni.',
+    },
+    {
+      title: 'Share Opportunities',
+      description:
+        'Help fellow alumni and students grow by sharing job openings, internships, research positions, and entrepreneurial opportunities.',
+    },
+    {
+      title: 'Mentor',
+      description:
+        'Guide the next generation of IIIT Pune students by sharing your knowledge, industry insights, and career experiences.',
+    },
+  ];
 
-  const TableCell = ({ children, isFirst }) => (
-    <td className={`px-6 py-4 whitespace-nowrap text-sm ${isFirst ? 'font-medium text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-300'}`}>
-      {children}
-    </td>
-  );
+  const contacts = [
+    {
+      name: 'Kedar Bhogshetti',
+      title: 'Training And Placement Officer',
+      phone: '+91 93264 79440',
+      email: 'alumniassociation@iiitp.ac.in',
+    },
+    {
+      name: 'Dr. Kaptan Singh',
+      title: 'Faculty Incharge',
+      phone: '+91 98265 24212',
+      email: 'kaptansingh@iiitp.ac.in',
+    },
+  ];
 
   return (
-    <div className="min-h-screen">
-      <PageHeader 
-        title="Our Alumni" 
-        subtitle="The pride of IIIT Pune making global impact"
-        backgroundImage="/campus-image.jpg"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
-        {/* Intro Section */}
-        <section className="bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-8 mb-10">
-          <h2 className="text-2xl font-serif font-bold text-primary dark:text-accent mb-6">
-            Alumni Overview
-          </h2>
-          <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 whitespace-pre-line text-lg">
-            {alumniData.intro}
-          </div>
-        </section>
-
-        {/* Directory & Content Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
-          {/* Left Column: Sidebar Selection Directory */}
-          <div className="lg:col-span-3">
-            <div className="bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-2xl p-4 shadow-sm lg:sticky lg:top-44 self-start w-full space-y-4">
-              <h3 className="text-gray-800 dark:text-white font-bold font-serif px-2 pb-2 border-b border-gray-200 dark:border-gray-800 text-sm">
-                Alumni Directory
-              </h3>
-              <div className="flex flex-row overflow-x-auto gap-2 no-scrollbar lg:flex-col pb-1 lg:pb-0">
-                {batches.map((b) => {
-                  const isSelected = activeBatch === b.id;
-                  return (
-                    <button
-                      key={b.id}
-                      onClick={() => setActiveBatch(b.id)}
-                      className={`shrink-0 lg:shrink lg:w-full flex flex-row lg:flex-col items-center lg:items-start gap-2 lg:gap-0 px-4 py-2 lg:px-3.5 lg:py-2.5 rounded-full lg:rounded-xl text-left transition-all duration-200 border ${
-                        isSelected
-                          ? "bg-primary text-white border-primary shadow-sm"
-                          : "text-gray-700 dark:text-gray-300 bg-transparent border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-700"
-                      }`}
-                    >
-                      <div className="flex items-center gap-2 w-full">
-                        <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${isSelected ? "bg-white" : "bg-primary"}`} />
-                        <span className="font-bold text-xs lg:text-sm">{b.name}</span>
-                      </div>
-                      <span className={`hidden lg:block text-[10px] mt-0.5 ${isSelected ? "text-white/80" : "text-gray-400 dark:text-gray-500"}`}>
-                        {b.tag}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Main Content area */}
-          <div className="lg:col-span-9 space-y-12">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeBatch}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.2 }}
-                className="space-y-12"
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+        <div className="overflow-x-auto bg-white dark:bg-slate-900 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 px-4 py-4">
+          <div className="inline-flex gap-3">
+            {navTabs.map((tab) => (
+              <a
+                key={tab}
+                href="#overview"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-4 py-3 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm transition hover:bg-slate-100 dark:hover:bg-slate-800"
               >
-                {/* Higher Education Section */}
-                {hasHigherEd && (
-                  <section className="space-y-8">
-                    <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white border-b-2 border-primary inline-block pb-2">Higher Education</h2>
-                    
-                    <div className="space-y-12">
-                      {/* Abroad */}
-                      {filteredAbroad.length > 0 && (
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-                            Pursuing Higher Studies Abroad
-                          </h3>
-                          <div className="bg-white dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-800">
-                            <div className="overflow-x-auto">
-                              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                <thead>
-                                  <tr>
-                                    <TableHeader>Name of Alumni</TableHeader>
-                                    <TableHeader>Branch-Year</TableHeader>
-                                    <TableHeader>Name of the University</TableHeader>
-                                    <TableHeader>Masters or PhD</TableHeader>
-                                  </tr>
-                                </thead>
-                                <tbody className="bg-white dark:bg-surface-dark divide-y divide-gray-200 dark:divide-gray-800">
-                                  {filteredAbroad.map((alumnus, idx) => (
-                                    <tr key={idx} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-                                      <TableCell isFirst>{alumnus.name}</TableCell>
-                                      <TableCell>{alumnus.branchYear}</TableCell>
-                                      <TableCell>{alumnus.university}</TableCell>
-                                      <TableCell>{alumnus.degree}</TableCell>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* India */}
-                      {filteredIndia.length > 0 && (
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-                            Pursuing Higher Studies in India
-                          </h3>
-                          <div className="bg-white dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-800">
-                            <div className="overflow-x-auto">
-                              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                <thead>
-                                  <tr>
-                                    <TableHeader>Name of Alumni</TableHeader>
-                                    <TableHeader>Branch-Year</TableHeader>
-                                    <TableHeader>Name of the University</TableHeader>
-                                    <TableHeader>Masters or PhD</TableHeader>
-                                  </tr>
-                                </thead>
-                                <tbody className="bg-white dark:bg-surface-dark divide-y divide-gray-200 dark:divide-gray-800">
-                                  {filteredIndia.map((alumnus, idx) => (
-                                    <tr key={idx} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-                                      <TableCell isFirst>{alumnus.name}</TableCell>
-                                      <TableCell>{alumnus.branchYear}</TableCell>
-                                      <TableCell>{alumnus.university}</TableCell>
-                                      <TableCell>{alumnus.degree}</TableCell>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </section>
-                )}
-
-                {/* Placements Section */}
-                <section className="space-y-8">
-                  <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white border-b-2 border-primary inline-block pb-2">Industry Placements</h2>
-                  
-                  <div className="space-y-12">
-                    {placementBatchesToShow.map((batchKey) => {
-                      const list = alumniData.placements[batchKey];
-                      if (!list || list.length === 0) return null;
-                      
-                      return (
-                        <div key={batchKey}>
-                          <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-                            {placementTitles[batchKey]}
-                          </h3>
-                          <div className="bg-white dark:bg-surface-dark rounded-xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-800">
-                            <div className="overflow-x-auto">
-                              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                <thead>
-                                  <tr>
-                                    <TableHeader>Name of Alumni</TableHeader>
-                                    <TableHeader>Company</TableHeader>
-                                  </tr>
-                                </thead>
-                                <tbody className="bg-white dark:bg-surface-dark divide-y divide-gray-200 dark:divide-gray-800">
-                                  {list.map((alumnus, idx) => (
-                                    <tr key={idx} className="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
-                                      <TableCell isFirst>{alumnus.name}</TableCell>
-                                      <TableCell>{alumnus.company}</TableCell>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </section>
-
-                <div className="text-right text-sm text-gray-500 dark:text-gray-400 italic">
-                  Last Updated: {alumniData.lastUpdated}
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                <span className="h-4 w-4 rounded-full bg-primary"></span>
+                {tab}
+              </a>
+            ))}
           </div>
+        </div>
 
+        <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-8">
+          <aside className="space-y-6">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400 mb-4">
+                Alumni Overview
+              </h3>
+              <div className="space-y-2">
+                {overviewLinks.map((link) => (
+                  <a
+                    key={link}
+                    href="#overview"
+                    className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+                  >
+                    {link}
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400 mb-4">
+                Quick Links
+              </h3>
+              <div className="space-y-3">
+                {quickLinks.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:hover:border-primary"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-primary/20 bg-primary/5 p-6 shadow-sm dark:border-primary/30 dark:bg-primary/10">
+              <div className="space-y-4">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">Be a Part of IIIT Pune Legacy</p>
+                <p className="text-sm text-slate-700 dark:text-slate-200">
+                  Reconnect. Contribute. Inspire.
+                </p>
+                <a
+                  href="#contact"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                >
+                  Join Alumni Network
+                </a>
+              </div>
+            </section>
+          </aside>
+
+          <main className="space-y-10">
+            <section id="overview" className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <div className="grid gap-8 lg:grid-cols-[1.4fr_0.85fr]">
+                <div className="space-y-6">
+                  <p className="text-sm uppercase tracking-[0.24em] text-primary">About Us</p>
+                  <h2 className="text-3xl font-semibold text-slate-900 dark:text-white">
+                    The IIIT Pune Alumni community is a lifelong network of graduates who continue to contribute to academia, industry, entrepreneurship, and society.
+                  </h2>
+                  <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-7">
+                    <p>
+                      As ambassadors of the Institute, our alumni strengthen the IIIT Pune legacy through their professional achievements, mentorship, collaborations, and continued engagement with the Institute.
+                    </p>
+                    <p>
+                      The Alumni Association fosters meaningful connections between graduates, students, and faculty, creating opportunities for networking, knowledge sharing, and giving back to the IIIT Pune community.
+                    </p>
+                  </div>
+                </div>
+                <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
+                  <div className="space-y-4">
+                    <p className="text-sm uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Engage</p>
+                    <p className="text-slate-700 dark:text-slate-200">
+                      Keep in touch with alumni initiatives, upcoming events, and opportunities to collaborate with the IIIT Pune community.
+                    </p>
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                    >
+                      Contact Alumni Team
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="space-y-6">
+              <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.24em] text-primary">Events</p>
+                  <h3 className="text-2xl font-semibold text-slate-900 dark:text-white">Recent and Upcoming Alumni Events</h3>
+                </div>
+                <a href="#" className="text-sm font-semibold text-primary hover:underline">View All Events →</a>
+              </div>
+              <div className="grid gap-6 lg:grid-cols-2">
+                {events.map((event) => (
+                  <article key={event.title} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                    <div className="h-44 bg-slate-200 dark:bg-slate-800"></div>
+                    <div className="p-6 space-y-4">
+                      <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+                        <span className="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">{event.status}</span>
+                        <span>{event.date}</span>
+                      </div>
+                      <h4 className="text-xl font-semibold text-slate-900 dark:text-white">{event.title}</h4>
+                      <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">{event.description}</p>
+                      <a
+                        href={event.href}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+                      >
+                        {event.cta}
+                      </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="space-y-6">
+              <p className="text-sm uppercase tracking-[0.24em] text-primary">Alumni Highlights</p>
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+                {highlightCards.map((item) => (
+                  <div key={item.label} className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                    <p className="text-3xl font-semibold text-slate-900 dark:text-white">{item.value}</p>
+                    <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="space-y-6">
+              <p className="text-sm uppercase tracking-[0.24em] text-primary">Engage with IIIT Pune</p>
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+                {engagementCards.map((card) => (
+                  <div key={card.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                    <p className="text-lg font-semibold text-slate-900 dark:text-white">{card.title}</p>
+                    <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{card.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section id="contact" className="space-y-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.24em] text-primary">Contact Us</p>
+                  <h3 className="text-2xl font-semibold text-slate-900 dark:text-white">We'd love to hear from you</h3>
+                </div>
+                <a href="mailto:alumniassociation@iiitp.ac.in" className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark">
+                  Contact Us
+                </a>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2">
+                {contacts.map((person) => (
+                  <div key={person.name} className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                    <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">{person.title}</p>
+                    <h4 className="mt-3 text-xl font-semibold text-slate-900 dark:text-white">{person.name}</h4>
+                    <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">Phone: <a href={`tel:${person.phone.replace(/\s+/g, '')}`} className="text-primary">{person.phone}</a></p>
+                    <p className="text-sm text-slate-600 dark:text-slate-300">Email: <a href={`mailto:${person.email}`} className="text-primary">{person.email}</a></p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </main>
         </div>
       </div>
     </div>

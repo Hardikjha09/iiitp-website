@@ -844,3 +844,292 @@ html {
 .dark .international-relations-page nav[aria-label="Breadcrumb"] a:hover {
   color: #F87171 !important;
 }
+
+/* ==========================================================================
+   IIIT Pune — Alumni Section Scoped CSS
+   ========================================================================== */
+
+.alumni-page {
+  --alumni-primary: #1B3A6B;
+  --alumni-primary-dark: #112546;
+  --alumni-accent: #DC2626;
+  --alumni-accent-light: #EF4444;
+  --alumni-text-main: #111827;
+  --alumni-text-muted: #4b5563;
+  --alumni-bg-light: #F5F8FC;
+  --alumni-bg-white: #ffffff;
+  --alumni-border: #e5e7eb;
+
+  --alumni-serif: 'Merriweather', Georgia, serif;
+  --alumni-sans: 'Inter', sans-serif;
+
+  font-family: var(--alumni-sans);
+  color: var(--alumni-text-main);
+  line-height: 1.68;
+}
+
+.dark .alumni-page,
+.dark.alumni-page {
+  --alumni-primary: #93c5fd;
+  --alumni-primary-dark: #60a5fa;
+  --alumni-accent: #f87171;
+  --alumni-accent-light: #fca5a5;
+  --alumni-text-main: #e5e7eb;
+  --alumni-text-muted: #9ca3af;
+  --alumni-bg-light: #111827;
+  --alumni-bg-white: #0f172a;
+  --alumni-border: #334155;
+}
+
+.alumni-page h1,
+.alumni-page h2,
+.alumni-page h3,
+.alumni-page h4,
+.alumni-page h5,
+.alumni-page h6 {
+  font-family: var(--alumni-serif);
+  color: var(--alumni-primary);
+  line-height: 1.35;
+}
+
+.alumni-page p {
+  color: var(--alumni-text-muted);
+  font-size: 1.01rem;
+}
+
+.alumni-page .page-layout {
+  display: grid;
+  grid-template-columns: 8.5fr 3.5fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.alumni-page .section-headline {
+  font-size: 1.72rem;
+  color: var(--alumni-primary);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--alumni-border);
+  position: relative;
+}
+
+.alumni-page .section-headline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--alumni-accent);
+}
+
+.alumni-page .about-block {
+  margin-bottom: 34px;
+}
+
+.alumni-page .about-block p {
+  margin-bottom: 16px;
+}
+
+.alumni-page .sidebar-widget {
+  background-color: var(--alumni-bg-white);
+  border: 1px solid var(--alumni-border);
+  padding: 26px;
+  margin-bottom: 24px;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.alumni-page .sidebar-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--alumni-primary);
+}
+
+.alumni-page .widget-title {
+  font-size: 1.2rem;
+  color: var(--alumni-primary);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--alumni-border);
+}
+
+.alumni-page .quick-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.alumni-page .quick-links-list li a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--alumni-text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alumni-page .quick-links-list li a::before {
+  content: '→';
+  color: var(--alumni-accent);
+  font-weight: bold;
+}
+
+.alumni-page .quick-links-list li a:hover {
+  color: var(--alumni-accent);
+}
+
+.alumni-page article {
+  background-color: var(--alumni-bg-white);
+  border: 1px solid var(--alumni-border);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.alumni-page article h3,
+.alumni-page article h2 {
+  color: var(--alumni-primary);
+}
+
+.alumni-page .slideshow-wrapper {
+  margin-bottom: 38px;
+  border: 1px solid var(--alumni-border);
+  padding: 10px;
+  background-color: var(--alumni-bg-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.alumni-page .slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 420px;
+  border-radius: 12px;
+}
+
+.alumni-page .slideshow-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.alumni-page .slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.alumni-page .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.alumni-page .slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.68);
+  color: #fff;
+  padding: 14px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.alumni-page .slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--alumni-primary);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  font-weight: 700;
+  border: 1px solid var(--alumni-border);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+
+.alumni-page .slide-btn:hover {
+  background-color: var(--alumni-accent);
+  color: #ffffff;
+  border-color: var(--alumni-accent);
+}
+
+.alumni-page .slide-btn--prev {
+  left: 14px;
+}
+
+.alumni-page .slide-btn--next {
+  right: 14px;
+}
+
+.alumni-page .slide-dots {
+  position: absolute;
+  bottom: 14px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.alumni-page .slide-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.alumni-page .slide-dot.active {
+  background-color: var(--alumni-accent);
+}
+
+@media (max-width: 1024px) {
+  .alumni-page .page-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .alumni-page .slideshow-container {
+    height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .alumni-page .slideshow-container {
+    height: 240px;
+  }
+
+  .alumni-page .slide-caption {
+    font-size: 0.86rem;
+    padding: 10px 14px;
+  }
+
+  .alumni-page .slide-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.05rem;
+  }
+
+  .alumni-page .section-headline {
+    font-size: 1.45rem;
+  }
+}

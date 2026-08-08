@@ -442,7 +442,6 @@ const Navbar = () => {
           ],
         },
         { name: "PostDoc Fellow", path: "/research/postdoc-fellow" },
-        { name: "Alumni", path: "/people/alumni" },
       ],
     },
     {
@@ -540,7 +539,8 @@ const Navbar = () => {
       hasDropdown: false,
       isExternal: true
     },
-    { name: "Contact Us", path: "/contact", hasDropdown: false },
+    { name: "Alumni", path: "/alumni", hasDropdown: false },
+    //{ name: "Contact Us", path: "/contact", hasDropdown: false },
     {
       name: "International Relations",
       path: "/international",

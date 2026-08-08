@@ -16,6 +16,7 @@ import GlobalLoader from "./components/common/GlobalLoader";
 // International sub-layout components
 import InternationalHeader from "./components/layout/InternationalHeader";
 import InternationalFooter from "./components/layout/InternationalFooter";
+import AlumniLayout from "./components/layout/AlumniLayout";
 
 // Pages (Lazy Loaded for performance)
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -82,7 +83,13 @@ const FacultyPage = lazy(() => import("./pages/FacultyPage"));
 const FacultyProfilePage = lazy(() => import("./pages/FacultyProfilePage"));
 const VisitingFacultyPage = lazy(() => import("./pages/VisitingFacultyPage"));
 const NonTeachingStaffPage = lazy(() => import("./pages/NonTeachingStaffPage"));
-const AlumniPage = lazy(() => import("./pages/AlumniPage"));
+const AlumniHomePage = lazy(() => import("./pages/AlumniHomePage"));
+const AlumniAboutPage = lazy(() => import("./pages/AlumniAboutPage"));
+const AlumniEventsPage = lazy(() => import("./pages/AlumniEventsPage"));
+const AlumniNetworkPage = lazy(() => import("./pages/AlumniNetworkPage"));
+const AlumniGetInvolvedPage = lazy(() => import("./pages/AlumniGetInvolvedPage"));
+const AlumniResourcesPage = lazy(() => import("./pages/AlumniResourcesPage"));
+const AlumniContactPage = lazy(() => import("./pages/AlumniContactPage"));
 const LifeOverviewPage = lazy(() => import("./pages/LifeOverviewPage"));
 const LifeClubsPage = lazy(() => import("./pages/LifeClubsPage"));
 const LifeActivitiesPage = lazy(() => import("./pages/LifeActivitiesPage"));
@@ -150,6 +157,7 @@ const HRSummitPage = lazy(() => import("./pages/HRSummit"));
 function AppContent() {
   const location = useLocation();
   const isInternational = location.pathname.startsWith("/international");
+  const isAlumni = location.pathname.startsWith("/alumni");
 
   if (isInternational) {
     return (
@@ -185,6 +193,25 @@ function AppContent() {
         </main>
         <InternationalFooter />
       </div>
+    );
+  }
+
+  if (isAlumni) {
+    return (
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          <Route element={<AlumniLayout />}>
+            <Route path="/alumni" element={<AlumniHomePage />} />
+            <Route path="/alumni/about" element={<AlumniAboutPage />} />
+            <Route path="/alumni/events" element={<AlumniEventsPage />} />
+            <Route path="/alumni/network" element={<AlumniNetworkPage />} />
+            <Route path="/alumni/get-involved" element={<AlumniGetInvolvedPage />} />
+            <Route path="/alumni/resources" element={<AlumniResourcesPage />} />
+            <Route path="/alumni/contact" element={<AlumniContactPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
     );
   }
 
@@ -354,7 +381,7 @@ function AppContent() {
               path="/people/non-teaching-staff/:type"
               element={<NonTeachingStaffPage />}
             />
-            <Route path="/people/alumni" element={<AlumniPage />} />
+
 
             {/* Departments */}
             <Route path="/departments/cse" element={<CseDepartmentPage />} />
@@ -391,7 +418,7 @@ function AppContent() {
               element={<Navigate to="/e-tender/live" replace />}
             />
             <Route path="/e-tender/:type" element={<ETenderPage />} />
-
+            <Route path="/people/alumni" element={<Navigate to="/alumni" replace />} />
             <Route path="/placement" element={<PlacementPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/nirf" element={<NIRFPage />} />

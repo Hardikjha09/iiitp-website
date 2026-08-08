@@ -183,24 +183,14 @@ const facultyWhyPoints = [
   }
 ];
 
-const getVisiblePoints = (items, startIndex) => {
-  if (!items.length) return [];
-  if (items.length === 1) return [items[0]];
-
-  const visible = [];
-  const secondIndex = (startIndex + 1) % items.length;
-  visible.push(items[startIndex % items.length]);
-  visible.push(items[secondIndex]);
-  return visible;
-};
+const studentWhyPointsLoop = [...studentWhyPoints, ...studentWhyPoints];
+const facultyWhyPointsLoop = [...facultyWhyPoints, ...facultyWhyPoints];
 
 const InfoCards = () => {
   const [activeTab, setActiveTab] = useState('students');
   const [startIndex, setStartIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [expandedReasonSection, setExpandedReasonSection] = useState(null);
-  const [studentReasonIndex, setStudentReasonIndex] = useState(0);
-  const [facultyReasonIndex, setFacultyReasonIndex] = useState(0);
 
   const currentList = activeTab === 'students' ? studentAchievements : facultyAchievements;
 
@@ -214,26 +204,6 @@ const InfoCards = () => {
 
     return () => clearInterval(timer);
   }, [currentList.length, isHovered]);
-
-  useEffect(() => {
-    if (expandedReasonSection === 'students') return;
-
-    const timer = setInterval(() => {
-      setStudentReasonIndex((prev) => (prev + 1) % studentWhyPoints.length);
-    }, 3500);
-
-    return () => clearInterval(timer);
-  }, [expandedReasonSection]);
-
-  useEffect(() => {
-    if (expandedReasonSection === 'faculty') return;
-
-    const timer = setInterval(() => {
-      setFacultyReasonIndex((prev) => (prev + 1) % facultyWhyPoints.length);
-    }, 3500);
-
-    return () => clearInterval(timer);
-  }, [expandedReasonSection]);
 
   const nextSlide = () => {
     setStartIndex((prev) => (prev + 1) % currentList.length);
@@ -427,23 +397,22 @@ const InfoCards = () => {
                   <h3 className="text-xl font-bold font-serif text-gray-800 dark:text-white">For Students</h3>
                 </div>
                   
-                <div className="space-y-3 overflow-hidden">
-                  {(expandedReasonSection === 'students'
-                    ? studentWhyPoints
-                    : getVisiblePoints(studentWhyPoints, studentReasonIndex)
-                  ).map((item, index) => (
-                    <div key={`student-${index}`} className="flex gap-3">
-                      <div className="mt-1.5 shrink-0">
-                        <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+                <div className="relative h-56 overflow-hidden">
+                  <div className={expandedReasonSection === 'students' ? 'space-y-3' : 'flex flex-col gap-3 animate-reason-scroll-up'}>
+                    {(expandedReasonSection === 'students' ? studentWhyPoints : studentWhyPointsLoop).map((item, index) => (
+                      <div key={`student-${index}`} className="flex gap-3">
+                        <div className="mt-1.5 shrink-0">
+                          <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 block"></span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">{item.title}</h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">{item.title}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="mt-auto pt-5">
@@ -475,28 +444,27 @@ const InfoCards = () => {
                   <h3 className="text-xl font-bold font-serif text-gray-800 dark:text-white">For Faculty</h3>
                 </div>
 
-                <div className="space-y-3 overflow-hidden">
-                  {(expandedReasonSection === 'faculty'
-                    ? facultyWhyPoints
-                    : getVisiblePoints(facultyWhyPoints, facultyReasonIndex)
-                  ).map((item, index) => (
-                    <div key={`faculty-${index}`} className="flex gap-3">
-                      <div className="mt-1.5 shrink-0">
-                        <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
+                <div className="relative h-56 overflow-hidden">
+                  <div className={expandedReasonSection === 'faculty' ? 'space-y-3' : 'flex flex-col gap-3 animate-reason-scroll-up'}>
+                    {(expandedReasonSection === 'faculty' ? facultyWhyPoints : facultyWhyPointsLoop).map((item, index) => (
+                      <div key={`faculty-${index}`} className="flex gap-3">
+                        <div className="mt-1.5 shrink-0">
+                          <span className="w-2 h-2 rounded-full bg-brand-red dark:bg-brand-red-dark block"></span>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">{item.title}</h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-bold text-base text-gray-800 dark:text-gray-200">{item.title}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed text-justify">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
               <div className="mt-auto pt-5">
-                <p className="text-left text-xs text-blue-600 dark:text-blue-400 font-medium animate-pulse">
-                  👆 Click this card to view all details
+                <p className="text-right text-xs text-blue-600 dark:text-blue-400 font-medium animate-pulse">
+                  Click this card to view all details 👆 
                 </p>
               </div>
             </div>
@@ -591,6 +559,20 @@ const InfoCards = () => {
         </FadeInSection>
 
       </div>
+
+      <style>{`
+        @keyframes reasonScrollUp {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(-50%); }
+        }
+        .animate-reason-scroll-up {
+          animation: reasonScrollUp 16s linear infinite;
+          will-change: transform;
+        }
+        .animate-reason-scroll-up:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };

@@ -5,19 +5,19 @@ import { Link } from 'react-router';
 import { image } from 'framer-motion/client';
 
 const slides = [
-  { id: 1, image: '/carousel/slide_1.jpeg' },
-  { id: 2, image: '/carousel/slide_13.jpeg' },
-  { id: 3, image: '/carousel/slide_12.jpeg' },
-  { id: 4, image: '/carousel/slide_11.jpeg' },
-  { id: 5, image: '/carousel/slide_2.jpeg' },
-  { id: 6, image: '/carousel/slide_3.jpeg' },
-  { id: 7, image: '/carousel/slide_4.jpeg' },
-  { id: 8, image: '/carousel/slide_5.jpeg' },
-  { id: 9, image: '/carousel/slide_6.jpeg' },
-  { id: 10, image: '/carousel/slide_7.jpeg' },
-  { id: 11, image: '/carousel/slide_8.jpeg' },
-  { id: 12, image: '/carousel/slide_9.jpeg' },
-  { id: 13, image: '/carousel/slide_10.jpeg' }
+  { id: 1, image: '/carousel/slide_1.jpeg', alt: 'IIIT Pune academic building and campus view', caption: 'IIIT Pune academic building and campus environment', date: '2026' },
+  { id: 2, image: '/carousel/slide_13.jpeg', alt: 'IIIT Pune campus landscape with modern architecture', caption: 'IIIT Pune campus landscape featuring modern architecture', date: '2026' },
+  { id: 3, image: '/carousel/slide_12.jpeg', alt: 'Students and faculty at IIIT Pune campus', caption: 'Students and faculty engaged in academic life at IIIT Pune', date: '2026' },
+  { id: 4, image: '/carousel/slide_11.jpeg', alt: 'IIIT Pune campus event and student activities', caption: 'Campus event showcasing student activities and engagement', date: '2026' },
+  { id: 5, image: '/carousel/slide_2.jpeg', alt: 'IIIT Pune institute building surrounded by greenery', caption: 'IIIT Pune institute building surrounded by greenery', date: '2026' },
+  { id: 6, image: '/carousel/slide_3.jpeg', alt: 'IIIT Pune campus corridors and academic spaces', caption: 'Academic corridors and learning spaces at IIIT Pune', date: '2026' },
+  { id: 7, image: '/carousel/slide_4.jpeg', alt: 'IIIT Pune campus facilities and infrastructure', caption: 'Campus facilities and infrastructure at IIIT Pune', date: '2026' },
+  { id: 8, image: '/carousel/slide_5.jpeg', alt: 'IIIT Pune campus view with students and greenery', caption: 'IIIT Pune campus view with students enjoying the environment', date: '2026' },
+  { id: 9, image: '/carousel/slide_6.jpeg', alt: 'IIIT Pune academic campus scene', caption: 'Academic campus scene at IIIT Pune', date: '2026' },
+  { id: 10, image: '/carousel/slide_7.jpeg', alt: 'IIIT Pune campus environment and student life', caption: 'Campus environment reflecting student life at IIIT Pune', date: '2026' },
+  { id: 11, image: '/carousel/slide_8.jpeg', alt: 'IIIT Pune campus building and surroundings', caption: 'Campus building and surroundings at IIIT Pune', date: '2026' },
+  { id: 12, image: '/carousel/slide_9.jpeg', alt: 'IIIT Pune campus activities and gatherings', caption: 'Campus activities and gatherings at IIIT Pune', date: '2026' },
+  { id: 13, image: '/carousel/slide_10.jpeg', alt: 'IIIT Pune campus view during an event', caption: 'IIIT Pune campus view during an academic event', date: '2026' }
 ];
 
 const HeroCarousel = () => {
@@ -34,7 +34,8 @@ const HeroCarousel = () => {
   const prevSlide = () => setCurrent(current === 0 ? slides.length - 1 : current - 1);
 
   return (
-    <div className="relative w-full h-[28vh] sm:h-[69vh] md:h-[72vh] overflow-hidden bg-gray-900"> {/* changed to h-31 for fixing carousel on mobile*/}
+    <div className="w-full">
+      <div className="relative w-full h-[28vh] sm:h-[69vh] md:h-[72vh] overflow-hidden bg-gray-900"> {/* changed to h-31 for fixing carousel on mobile*/}
       {slides.map((slide, idx) => (
         <div
           key={slide.id}
@@ -44,7 +45,7 @@ const HeroCarousel = () => {
           {/* Blurred background to fill any letterbox area */}
           <motion.img
             src={slide.image}
-            alt=""
+            alt={slide.alt}
             initial={{ opacity: 0 }}
             animate={{ opacity: current === idx ? 0.35 : 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -53,7 +54,7 @@ const HeroCarousel = () => {
           {/* Sharp foreground image shown in full */}
           <motion.img
             src={slide.image}
-            alt={`Slide ${idx + 1}`}
+            alt={slide.alt}
             initial={{ opacity: 0 }}
             animate={{ opacity: current === idx ? 1 : 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -63,6 +64,8 @@ const HeroCarousel = () => {
       ))}
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10 z-10" />
+
+      {/* Caption bar hidden for now; kept in code for later use */}
 
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center px-4 pb-20">
         <motion.h1
@@ -115,6 +118,8 @@ const HeroCarousel = () => {
           />
         ))}
       </div>
+    </div>
+
     </div>
   );
 };

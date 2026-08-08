@@ -386,7 +386,7 @@ const InfoCards = () => {
                   handleReasonToggle('students');
                 }
               }}
-              className="bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group cursor-pointer"
+              className={`bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group cursor-pointer ${expandedReasonSection === 'students' ? 'h-auto' : 'h-[24rem]'}`}
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl" />
               <div>
@@ -397,7 +397,7 @@ const InfoCards = () => {
                   <h3 className="text-xl font-bold font-serif text-gray-800 dark:text-white">For Students</h3>
                 </div>
                   
-                <div className="relative h-56 overflow-hidden">
+                <div className={`relative overflow-hidden transition-all duration-300 ${expandedReasonSection === 'students' ? 'h-auto' : 'h-56'}`}>
                   <div className={expandedReasonSection === 'students' ? 'space-y-3' : 'flex flex-col gap-3 animate-reason-scroll-up'}>
                     {(expandedReasonSection === 'students' ? studentWhyPoints : studentWhyPointsLoop).map((item, index) => (
                       <div key={`student-${index}`} className="flex gap-3">
@@ -417,7 +417,7 @@ const InfoCards = () => {
               </div>
               <div className="mt-auto pt-5">
                 <p className="text-left text-xs text-blue-600 dark:text-blue-400 font-medium animate-pulse">
-                  👆 Click this card to view all details
+                  {expandedReasonSection === 'students' ? 'Click again to collapse details' : '👆 Click the card to view all details'}
                 </p>
               </div>
             </div>
@@ -433,7 +433,7 @@ const InfoCards = () => {
                   handleReasonToggle('faculty');
                 }
               }}
-              className="bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group cursor-pointer"
+              className={`bg-white dark:bg-surface-dark rounded-2xl shadow-md border border-gray-150 dark:border-gray-800 p-6 md:p-8 hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group cursor-pointer ${expandedReasonSection === 'faculty' ? 'h-auto' : 'h-[24rem]'}`}
               >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-red-500 to-brand-red rounded-t-2xl" />
               <div>
@@ -444,7 +444,7 @@ const InfoCards = () => {
                   <h3 className="text-xl font-bold font-serif text-gray-800 dark:text-white">For Faculty</h3>
                 </div>
 
-                <div className="relative h-56 overflow-hidden">
+                <div className={`relative overflow-hidden transition-all duration-300 ${expandedReasonSection === 'faculty' ? 'h-auto' : 'h-56'}`}>
                   <div className={expandedReasonSection === 'faculty' ? 'space-y-3' : 'flex flex-col gap-3 animate-reason-scroll-up'}>
                     {(expandedReasonSection === 'faculty' ? facultyWhyPoints : facultyWhyPointsLoop).map((item, index) => (
                       <div key={`faculty-${index}`} className="flex gap-3">
@@ -464,7 +464,7 @@ const InfoCards = () => {
               </div>
               <div className="mt-auto pt-5">
                 <p className="text-right text-xs text-blue-600 dark:text-blue-400 font-medium animate-pulse">
-                  Click this card to view all details 👆 
+                  {expandedReasonSection === 'faculty' ? 'Click again to collapse details' : 'Click the card to view all details 👆'}
                 </p>
               </div>
             </div>

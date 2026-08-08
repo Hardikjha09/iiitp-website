@@ -53,7 +53,7 @@ const AlumniFooter = () => {
     { label: 'Events', to: '/alumni/events' },
     { label: 'Alumni Network', to: '/alumni/network' },
     { label: 'Engage', to: '/alumni/get-involved' },
-    { label: 'Contact Us', to: '/alumni/contact' },
+    { label: 'Placement Portal', to: 'https://placement.iiitp.ac.in', external: true },
   ];
 
   const firstColumnLinks = footerLinks.slice(0, 3);
@@ -72,18 +72,30 @@ const AlumniFooter = () => {
               <ul className="space-y-3">
                 {firstColumnLinks.map((link) => (
                   <li key={link.label}>
-                    <Link to={link.to} className="hover:text-brand-red transition-colors flex items-center group text-sm">
-                      <ExternalLink size={14} className="mr-2 text-gray-500 group-hover:text-brand-red" /> {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a href={link.to} target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors flex items-center group text-sm">
+                        <ExternalLink size={14} className="mr-2 text-gray-500 group-hover:text-brand-red" /> {link.label}
+                      </a>
+                    ) : (
+                      <Link to={link.to} className="hover:text-brand-red transition-colors flex items-center group text-sm">
+                        <ExternalLink size={14} className="mr-2 text-gray-500 group-hover:text-brand-red" /> {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
               <ul className="space-y-3">
                 {secondColumnLinks.map((link) => (
                   <li key={link.label}>
-                    <Link to={link.to} className="hover:text-brand-red transition-colors flex items-center group text-sm">
-                      <ExternalLink size={14} className="mr-2 text-gray-500 group-hover:text-brand-red" /> {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a href={link.to} target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors flex items-center group text-sm">
+                        <ExternalLink size={14} className="mr-2 text-gray-500 group-hover:text-brand-red" /> {link.label}
+                      </a>
+                    ) : (
+                      <Link to={link.to} className="hover:text-brand-red transition-colors flex items-center group text-sm">
+                        <ExternalLink size={14} className="mr-2 text-gray-500 group-hover:text-brand-red" /> {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
                 <li>

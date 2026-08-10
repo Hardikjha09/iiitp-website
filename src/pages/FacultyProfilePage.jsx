@@ -49,6 +49,39 @@ const normalizeResearchLinks = (links = []) => {
     .filter(Boolean);
 };
 
+const normalizePublications = (entries = []) => {
+  const items = Array.isArray(entries)
+    ? entries
+    : typeof entries === 'string'
+      ? entries.split(/\n\n+/).filter(Boolean)
+      : [];
+
+  return items
+    .map((item) => {
+      if (typeof item === 'string') {
+        const title = item.trim();
+        return title ? { title, authors: '', journal: '', link: '' } : null;
+      }
+
+      if (item && typeof item === 'object') {
+        const title = (item.title || '').trim();
+        if (!title) {
+          return null;
+        }
+
+        return {
+          title,
+          authors: item.authors || '',
+          journal: item.journal || '',
+          link: item.link || item.url || '',
+        };
+      }
+
+      return null;
+    })
+    .filter(Boolean);
+};
+
 const FacultyProfilePage = () => {
   const { slug } = useParams();
   const [activeTab, setActiveTab] = useState('biography');
@@ -115,7 +148,7 @@ const FacultyProfilePage = () => {
       linkedin: details.linkedin || '',
       researchLinks: otherLinks,
       books_chapters: details.books_chapters || '',
-      publications: details.publications || '',
+      publications: normalizePublications(details.publications),
       patents: details.patents || '',
       seminars: details.seminars || '',
       projects: details.projects || '',

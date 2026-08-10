@@ -4048,16 +4048,48 @@
     "researchLinks": [],
     "department": "ECE"
   },
-
   "suraj-kumar": {
     "designation": "Assistant Professor(T)",
     "image": "/assets/faculty_photos/surajkumar.jpeg",
     "bio": "Dr. Suraj Kumar is an Assistant Professor(T) in the Department of Computer Science and Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his Ph.D. in Computer Science and Engineering from IIT Indore. His research interests include graph machine learning, multimodal learning, trustworthy artificial intelligence, recommendation systems, natural language processing, and service computing. His work has been published in leading journals and conferences, including IEEE Transactions on Services Computing, IEEE Transactions on Network and Service Management, WWW, BMVC, ICSOC, ICDAR, and IJCNN. Before joining IIIT Pune, he served as an Assistant Professor at GLA University Mathura and actively contributes as a reviewer for leading international journals.",
     "education": "Ph.D. (Computer Science and Engineering)",
-    "publications": [],
+    "publications": [
+      {
+        "title": "U. K. Nareti, S. Chattopadhyay, C. Adak, P. Mallick, S. Kumar, A. V. Daga, A. Wase, and A.Roy, “An Adaptive Data-Resilient Multi-Modal Framework for Hierarchical Multi-Label Book Genre Identification”.",
+        "link": "https://arxiv.org/abs/2505.03839 "
+      },
+      {
+        "title": "S. Kumar and S. Chattopadhyay, \"ARRQP: Anomaly Resilient Real-Time QoS Prediction Framework With Graph Convolution,\" in IEEE Transactions on Services Computing, vol. 18, no. 3, pp. 1245-1261, May-June 2025, doi: 10.1109/TSC.2025.3565376",
+        "link": "https://ieeexplore.ieee.org/document/10980054 "
+      },
+      {
+        "title": "S. Kumar, S. Chattopadhyay and C. Adak,\"Anomaly-Resilient Temporal QoS Prediction Using Hypergraph Convoluted Transformer Network,\" in IEEE Transactions on Network and Service Management, vol. 23, pp. 3556-3568, 2026, doi: 10.1109/TNSM.2026.3674650",
+        "link": "https://ieeexplore.ieee.org/document/11435444 "  
+      },
+      {
+        "title": "K. Priya, S. Kumar, et al., “Graph Convolutional Teacher-Student Framework for Writer Inspection from Handwritten Words with Intra-Writer Variability,” in 2025 19th IAPR International Conference on Document Analysis and Recognition (ICDAR), Springer, 2025",
+        "link": "https://dl.acm.org/doi/10.1007/978-3-032-04624-6_7 "
+      },
+      {
+        "title": "S. Chattopadhyay, R. Chanda, S. Kumar, and C. Adak, “OﬀDQ: An Oﬄine Deep Learning Framework for QoS Prediction,” in Proceedings of the ACM Web Conference 2022, ser. WWW ’22, Virtual Event, Lyon, France: Association for Computing Machinery, 2022, pp. 1987–1996, isbn: 9781450390965.  doi: 10.1145/3485447.3512107. ",
+        "link": "https://dl.acm.org/doi/pdf/10.1145/3485447.3512107"
+      },
+      {
+        "title": "S. Kumar and S. Chattopadhyay, “TRQP: Trust-Aware Real-Time QoS Prediction Framework Using Graph-Based Learning,” in Service-Oriented Computing: 20th International Conference, ICSOC 2022, Seville, Spain, November 29 – December 2, 2022, pp. 143–152, doi:10.1007/978-3-031-20984-0_10. ",
+        "link": "https://link.springer.com/chapter/10.1007/978-3-031-20984-0_10"
+      },
+     {
+        "title": "A. Jaiswal, S. Kumar, and A. Nigam, “En-VStegNET: Video Steganography using spatio-temporal feature enhancement with 3D-CNN and Hourglass,” in 2020 International Joint Conference on Neural Networks (ĲCNN), IEEE, 2020, pp. 1–8.  doi: 10.1109/IJCNN48605.2020.9206921. ",
+        "link": "https://ieeexplore.ieee.org/document/9206921/ "
+      },
+     {
+        "title": "A. Mishra∗ , S. Kumar∗ , A. Nigam, and S. Islam, “VStegNET: Video Steganography Network using Spatio-Temporal features and Micro-Bottleneck,” in 30th British Machine Vision Conference 2019, BMVC 2019, Cardiﬀ, UK, September 9-12, 2019, BMVA Press, 2019, p. 274.",
+        "link": "https://l1nq.com/6ryixxq"
+      }
+    ],
     "resume": "/assets/resume/surajkumar_resume.pdf",
     "expertise": "Graph Machine Learning, Multimodal Learning, Trustworthy AI, Recommendation Systems, Natural Language Processing, Service Computing",
-    "email": "",
+    "email": "surajk@iiitp.ac.in",
     "phone": "",
     "google_scholar": "https://scholar.google.com/citations?user=udjwruAAAAAJ&hl=en",
     "orcid": "https://orcid.org/0000-0003-1085-1821",
@@ -4071,7 +4103,7 @@
     "researchLinks": [],
     "department": "CSE"
   },
-    "nancy-modi": {
+  "nancy-modi": {
   "designation": "Assistant Professor(T)",
   "image": "/assets/faculty_photos/nancymodi.jpg",
   "bio": "Dr. Nancy Modi is an Assistant Professor(T) in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. She received her Ph.D. in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay, where her research focused on microwave engineering, automotive radar systems, and antenna design. She completed her M.Tech. in Digital Communication from Maulana Azad National Institute of Technology (MANIT), Bhopal, and her B.E. in Electronics and Communication Engineering from ITM Group of Institutions, Gwalior. Her research interests include microwave and millimeter-wave antennas, substrate integrated waveguide (SIW) antennas, automotive radar, electromagnetic compatibility (EMC), frequency selective surfaces (FSS), metasurfaces, and computational electromagnetics. She has published research articles in reputed international journals and conferences and actively reviews manuscripts for leading journals and conferences in antennas and electromagnetics.",
@@ -4187,5 +4219,111 @@
   "researchLinks": [],
 
   "department": "ECE"
-}
+},
+"m-a-seenivasan": {
+    "designation": "Assistant Professor(T)",
+    "image": "/assets/faculty_photos/maseenivasan.jpeg",
+    "bio": "Mr. M. A. Seenivasan is an Adjunct Assistant Professor in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received his graduate degree in Applied Electronics from the College of Engineering, Guindy, Anna University, Chennai, and his Ph.D. thesis has been submitted in Electronics and Communication Engineering at the National Institute of Technology (NIT) Meghalaya. His research interests include neuromorphic computing, VLSI design, analog and digital integrated circuits, CMOS-based bio-inspired circuit design, and Spiking Neural Networks (SNNs). His work focuses on developing energy-efficient hardware for next-generation AI and brain-inspired computing systems, with an emphasis on low-power VLSI architectures and intelligent semiconductor technologies.",
+    "education": "B.E. (Applied Electronics), Ph.D. (Thesis Submitted)",
+    "publications": [
+      {
+        "title": "Biologically inspired STDP hardware learning architecture for neuromorphic perception computing",
+        "authors": "M. A. Seenivasan, Prabir Saha, Shubhankar Majumdar, and Gautam Srivastava",
+        "journal": "Computers and Electrical Engineering, Elsevier, 2026 (SCI Q1, revision submitted)"
+      },
+      {
+        "title": "A compact mathematical model and hardware implementation of spike-frequency adaptation for low-power neuromorphic computing",
+        "authors": "M. A. Seenivasan, Prabir Saha, Shubhankar Majumdar, and Alak Majumdar",
+        "journal": "IEEE Transactions on Nanotechnology, IEEE, 2026 (SCI, published)",
+        "link": "https://doi.org/10.1109/TNANO.2026.3710331"
+      },
+      {
+        "title": "Synaptic plasticity dynamics of a biological neuron from a model of excitatory and inhibitory neurotransmitter releases towards hardware implementation of STDP in CMOS",
+        "authors": "M. A. Seenivasan, R. U. Ahmed, Prabir Saha, and Shubhankar Majumdar",
+        "journal": "Neurocomputing, Elsevier, 2026 (SCI Q1, published)",
+        "link": "https://doi.org/10.1016/j.neucom.2026.134138"
+      },
+      {
+        "title": "Design of synaptic interconnection of a sensory LIF neuron in CMOS for high-speed in-sensor neuromorphic systems",
+        "authors": "M. A. Seenivasan, Prabir Saha, Shubhankar Majumdar, and Gautam Srivastava",
+        "journal": "IEEE Sensors Journal, IEEE, 2026 (SCI Q1, published)",
+        "link": "https://doi.org/10.1109/JSEN.2026.3684804"
+      },
+      {
+        "title": "Mathematical model and its realization of subthreshold internal membrane dynamics and implementation in CMOS neuromorphic systems",
+        "authors": "M. A. Seenivasan, Prabir Saha, and Shubhankar Majumdar",
+        "journal": "International Journal of Numerical Modelling: Electronic Networks, Devices and Fields, Wiley, 2026 (SCI Q2, published)",
+        "link": "https://doi.org/10.1002/jnm.70143"
+      },
+      {
+        "title": "Biologically inspired tonic and bursting LIF neuron model for spiking neural network: a CMOS implementation",
+        "authors": "M. A. Seenivasan, A. V. Parekkattil, R. U. Ahmed, P. Saha et al.",
+        "journal": "Microsystem Technologies 31, 475-489, Springer Nature, 2025 (SCI Q3, published)",
+        "link": "https://doi.org/10.1007/s00542-024-05755-3"
+      },
+      {
+        "title": "Power-efficient VLSI realization of decimal convolution algorithms for resource-constrained environments: A design perspective in CMOS and double-gate CMOS technology",
+        "authors": "R. U. Ahmed, H. R. Thakur, M. A. Seenivasan, and P. Saha",
+        "journal": "Microsystem Technologies, Springer Nature, 2024 (SCI Q3, published)",
+        "link": "https://doi.org/10.1007/s00542-024-05667-2"
+      },
+      {
+        "title": "The energy-efficient and distortion-blocking leaky integrate-and-fire neuron model",
+        "authors": "M. A. Seenivasan and P. Saha",
+        "journal": "IEEE International Conference on Energy, Power and Environment (ICEPE), 2024",
+        "link": "https://doi.org/10.1109/ICEPE63236.2024.10668956"
+      },
+      {
+        "title": "A 32 x 32 CMOS image sensor: Tested using process and temperature compensated voltage-controlled current source",
+        "authors": "P. Saidesh Kumar and M. A. Seenivasan",
+        "journal": "18th International Symposium on VLSI Design and Test, 2014",
+        "link": "https://doi.org/10.1109/ISVDAT.2014.6881073"
+      }
+    ],
+    "resume": "/assets/resume/maseenivasan_resume.pdf",
+    "expertise": "Neuromorphic Computing, VLSI Design, Analog and Digital Integrated Circuits, CMOS Bio-inspired Circuit Design, Spiking Neural Networks, Low-power AI Hardware",
+    "email": "aseenivasan@iiitp.ac.in",
+    "phone": "9962224603",
+    "google_scholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=kG1xLX8AAAAJ",
+    "orcid": "https://orcid.org/my-orcid?orcid=0000-0002-6104-2250",
+    "scopus": "https://www.scopus.com/pages/authors/56340679300",
+    "books_chapters": "",
+    "patents": "",
+    "seminars": [
+      {
+        "title": "Organized a webinar on Bio Sensors and its Applications",
+        "journal": "19-11-2020"
+      },
+      {
+        "title": "Coordinated National Level Technical Symposium TARAS 2K20",
+        "journal": "15-02-2020"
+      },
+      {
+        "title": "Conducted a seminar on Opportunities in Civil Services for Engineers",
+        "journal": "18-07-2018"
+      },
+      {
+        "title": "Organized a Faculty Development Programme on Electronic Circuit-I",
+        "journal": "June 2017"
+      },
+      {
+        "title": "Conducted an expert lecture on Next Generation Networks",
+        "journal": "06-02-2017"
+      },
+      {
+        "title": "Coordinated a value-added course on Embedded and Real Time Systems",
+        "journal": "2017"
+      }
+    ],
+    "projects": "",
+    "supervisions": "",
+    "linkedin": "https://www.linkedin.com/in/m-a-seenivasan-4076b21b7/",
+    "researchLinks": [
+      {
+        "title": "ResearchGate",
+        "url": "https://www.researchgate.net/profile/M-A-Seenivasan-2?ev=hdr_xprf"
+      }
+    ],
+    "department": "ECE"
+  }
 }

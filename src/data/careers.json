@@ -35,6 +35,10 @@
       "title": "RECRUITMENT NOTICE FOR THE POST OF ASSISTANT PROFESSOR (TEMPORARY)",
       "buttons": [
         {
+          "label": "Shortlistings",
+          "link": "/careers-documents/SHORTLIST FOR THE POST OF ASSISTANT PROFESSOR(T) CSE.pdf"
+        },
+        {
           "label": "Details",
           "file": "/careers-documents/CSE - Assistant Prof. (Temporary).pdf"
         },

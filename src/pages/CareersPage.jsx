@@ -5,6 +5,42 @@ import careersData from '../data/careers.json';
 
 const CareersPage = () => {
   const [activeTab, setActiveTab] = useState('live');
+  const expiredRecruitmentMessage = 'You missed the opportunity. The recruitment date has ended for this position. Please keep checking our careers page for upcoming positions.';
+
+  const parseDmyDate = (value) => {
+    if (!value || typeof value !== 'string') {
+      return null;
+    }
+
+    const [day, month, year] = value.split('-').map((part) => Number(part));
+    if (!day || !month || !year) {
+      return null;
+    }
+
+    const parsedDate = new Date(year, month - 1, day);
+    parsedDate.setHours(0, 0, 0, 0);
+    return Number.isNaN(parsedDate.getTime()) ? null : parsedDate;
+  };
+
+  const isRecruitmentEnded = (job, btn) => {
+    if (typeof btn.isRecruitmentEnded === 'boolean') {
+      return btn.isRecruitmentEnded;
+    }
+
+    const lastDate = parseDmyDate(job.lastDate);
+    if (!lastDate) {
+      return false;
+    }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return today > lastDate;
+  };
+
+  const handleApplyNowClick = (event) => {
+    event.preventDefault();
+    window.alert(expiredRecruitmentMessage);
+  };
 
   const jobs = activeTab === 'live' ? careersData.live : careersData.archive;
 
@@ -62,6 +98,7 @@ const CareersPage = () => {
                         <Link
                           key={bidx}
                           to={btn.link}
+                          onClick={btn.label?.toLowerCase() === 'apply now' && isRecruitmentEnded(job, btn) ? handleApplyNowClick : undefined}
                           className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white text-xs font-semibold py-2.5 px-5 rounded-lg transition-all duration-200 shadow-sm hover:shadow active:scale-95 text-center"
                         >
                           {btn.label}
@@ -71,6 +108,7 @@ const CareersPage = () => {
                           key={bidx}
                           href={btn.link || btn.file}
                           target="_blank" rel="noopener noreferrer"
+                          onClick={btn.label?.toLowerCase() === 'apply now' && isRecruitmentEnded(job, btn) ? handleApplyNowClick : undefined}
                           className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white text-xs font-semibold py-2.5 px-5 rounded-lg transition-all duration-200 shadow-sm hover:shadow active:scale-95 text-center"
                         >
                           {btn.label}

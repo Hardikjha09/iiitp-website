@@ -6,6 +6,43 @@ import { Search } from 'lucide-react';
 import facultyDetails from '../data/faculty_details.json';
 
 const FacultyPage = () => {
+  const copyTextWithFallback = async (text) => {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch {
+      // Fall through to textarea fallback.
+    }
+
+    try {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      const copied = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return copied;
+    } catch {
+      return false;
+    }
+  };
+
+  const copyFacultyName = async (event, person) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const copied = await copyTextWithFallback(person.name);
+    if (copied) {
+      setCopiedSlug(person.slug);
+      setTimeout(() => setCopiedSlug(''), 1800);
+    }
+  };
+
   // Extract and format valid faculty from faculty_details.json
   const validFaculty = useMemo(() => {
     return Object.entries(facultyDetails).map(([slug, details]) => {
@@ -68,9 +105,18 @@ const FacultyPage = () => {
           </div>
           
           <div className="p-4 flex-grow flex flex-col items-center text-center bg-white dark:bg-surface-dark z-10 w-full mt-1">
-            <h3 className="text-lg font-bold font-serif text-gray-900 dark:text-white mb-1 group-hover:text-primary dark:group-hover:text-accent transition-colors line-clamp-1 w-full">
-              {person.name}
-            </h3>
+            <div className="w-full mb-1 flex items-start justify-center">
+              <h3
+                onClick={(e) => copyFacultyName(e, person)}
+                className="text-lg font-bold font-serif text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent transition-colors line-clamp-1 select-text cursor-copy"
+                title={`Click to copy ${person.name}`}
+              >
+                {person.name}
+              </h3>
+            </div>
+            {copiedSlug === person.slug && (
+              <p className="text-xs text-green-600 dark:text-green-400 font-semibold mb-1">Copied name</p>
+            )}
             
             {/* Fixed height container for designation (up to 2 lines) */}
             <div className="h-10 flex items-start justify-center w-full mb-1">
@@ -104,6 +150,7 @@ const FacultyPage = () => {
     initialTab === 'ECE' || initialTab === 'ASH' ? initialTab : 'CSE',
   );
   const [searchQuery, setSearchQuery] = useState('');
+  const [copiedSlug, setCopiedSlug] = useState('');
 
   const updateActiveTab = (tab) => {
     setActiveTab(tab);

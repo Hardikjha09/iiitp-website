@@ -93,7 +93,7 @@ const NewsTicker = () => {
         }
         .animate-marquee-horizontal {
           display: inline-block;
-          animation: marquee-horizontal 150s linear infinite;
+          animation: marquee-horizontal 90s linear infinite;
         }
       `}} />
     </div>

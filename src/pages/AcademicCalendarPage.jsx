@@ -40,6 +40,14 @@ const AcademicCalendarPage = () => {
                   >
                     Download Odd Semester Calendar
                   </a>
+                  <a
+                    href="/documents/Academic%20Calender%202026-27.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white text-sm font-semibold py-2.5 px-5 rounded-lg transition-all duration-200 shadow-sm hover:shadow active:scale-95"
+                  >
+                    Download st Sem Academic calender
+                  </a>
                   
                   <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">
                     Last Updated: 25-04-2026

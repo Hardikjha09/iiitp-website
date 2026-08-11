@@ -83,6 +83,10 @@
       "title": "Advertisement for Positions in Start-up and Incubation Cell on contract basis",
       "buttons": [
         {
+          "label": "Result",
+          "link": "/careers-documents/Result - CEO & CIO.pdf"
+        },
+        {
           "label": "Stage II – Presentation",
           "link": "/careers-documents/2nd Stage of Selection - Presentation.pdf"
         },
@@ -96,7 +100,7 @@
         }
       ],
       "date": "07-07-2026",
-      "lastDate": "01-01-2026"
+      "lastDate": "01-08-2026"
     }
   ],
   "archive": [

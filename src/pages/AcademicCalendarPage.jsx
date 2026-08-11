@@ -46,11 +46,11 @@ const AcademicCalendarPage = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white text-sm font-semibold py-2.5 px-5 rounded-lg transition-all duration-200 shadow-sm hover:shadow active:scale-95"
                   >
-                    Download st Sem Academic calender
+                    Download 1st Semester Academic Calendar
                   </a>
                   
                   <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">
-                    Last Updated: 25-04-2026
+                    Last Updated: 11-08-2026
                   </span>
                 </div>
               </div>

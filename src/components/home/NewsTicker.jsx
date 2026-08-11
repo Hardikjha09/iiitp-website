@@ -15,6 +15,7 @@ const NewsTicker = () => {
       .catch(() => {
         // Fallback mock news
         setNews([
+          { id: 106, title: "ADVERTISEMENT FOR POSITIONS IN START-UP & INCUBATION CELL IN INSTITUTE", link: "/careers-documents/Advt. for CEO, CIO, Manager.pdf" },
           { id: 105, title: "Shortlisted Candidates for Stage - II (Presentation) in Start-up & Incubation Centre", link: "https://www.iiitp.ac.in/careers-documents/2nd%20Stage%20of%20Selection%20-%20Presentation.pdf" },
           { id: 104, title: "SPOT Admission for M.Tech. (Without Scholarship) Programme 2026-27", link: "/admissions" },
           { id: 101, title: "Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE)", link: "/careers-documents/ECE - AP Temp advt.pdf" },

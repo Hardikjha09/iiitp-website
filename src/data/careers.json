@@ -1,6 +1,21 @@
 {
   "live": [
     {
+      "title": "ADVERTISEMENT FOR POSITIONS IN START-UP & INCUBATION CELL IN INSTITUTE",
+      "buttons": [
+        {
+          "label": "Details",
+          "file": "/careers-documents/Advt. for CEO, CIO, Manager.pdf"
+        },
+        {
+          "label": "Apply Now",
+          "link": "https://iiitprec.samarth.edu.in/"
+        }
+      ],
+      "date": "11-08-2026",
+      "lastDate": "25-08-2026"
+    },
+    {
       "title": "ADVERTISEMENT FOR HIRING OF MANPOWER THROUGH THE OUTSOURCING AGENCY",
       "buttons": [
         {
@@ -82,9 +97,11 @@
       ],
       "date": "07-07-2026",
       "lastDate": "01-01-2026"
-    },
+    }
+  ],
+  "archive": [
     {
-      "title": "Advertisement for the Post of Project Associate-I under the Project SMDP-Chips to Startup (C2S)",
+    "title": "Advertisement for the Post of Project Associate-I under the Project SMDP-Chips to Startup (C2S)",
       "buttons": [
         {
           "label": "Details",
@@ -106,9 +123,7 @@
         }
       ],
       "date": "20-06-2026"
-    }
-  ],
-  "archive": [
+    },
     {
       "title": "RECRUITMENT NOTICE FOR THE POST OF ASSISTANT PROFESSOR (TEMPORARY)",
       "buttons": [

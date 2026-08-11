@@ -16,6 +16,13 @@ const LatestNews = () => {
       .catch(() => {
         setNews([
           {
+            id: 106,
+            title: "ADVERTISEMENT FOR POSITIONS IN START-UP & INCUBATION CELL IN INSTITUTE",
+            date: "11-08-2026",
+            excerpt:"Applications are invited for the positions of CEO, CIO, and Manager in the Start-up & Incubation Cell at IIIT Pune.",
+            link: "/careers-documents/Advt. for CEO, CIO, Manager.pdf",
+          },
+          {
             id: 105,
             title: "Shortlisted Candidates for Stage - II (Presentation)in Start-up & Incubation Centre",
             date: "07-08-2026",

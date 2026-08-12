@@ -35,6 +35,10 @@
       "title": "Assistant Professor (Temporary) in the Department of Electronics and Communication Engineering (ECE)",
       "buttons": [
         {
+          "label": "Result",
+          "file": "/careers-documents/Result - AP (T) ECE.pdf"
+        },
+        {
           "label": "Shortlistings",
           "link": "/careers-documents/SHORTLIST FOR THE POST OF ASSISTANT PROFESSOR(T) ECE.pdf"
         },
@@ -53,6 +57,10 @@
     {
       "title": "RECRUITMENT NOTICE FOR THE POST OF ASSISTANT PROFESSOR (TEMPORARY)",
       "buttons": [
+        {
+          "label": "Result",
+          "file": "/careers-documents/Result - AP (T) CSE.pdf"
+        },
         {
           "label": "Shortlistings",
           "link": "/careers-documents/SHORTLIST FOR THE POST OF ASSISTANT PROFESSOR(T) CSE.pdf"

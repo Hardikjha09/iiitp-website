@@ -65,6 +65,10 @@ const AdmissionsPage = () => {
               <div className="space-y-4">
                 {[
                   {
+                    title: "Physical Reporting Instructions: DASA (AY 2026-27)",
+                    link: "/documents/DASA physical reporting instructions.pdf"
+                  },
+                  {
                     title: "Physical Reporting Instructions: JoSAA/CSAB 2026",
                     link: "/documents/DETAILS%20OF%20ADMISSION%20PROCESS%20FOR%20FIRST%20SEMESTER%202026-27.pdf"
                   },

@@ -16,6 +16,13 @@ const LatestNews = () => {
       .catch(() => {
         setNews([
           {
+            id: 107,
+            title: "Institte_Bus_Service_Extra Running_Bus-32A_13th_August2026",
+            date: "13-08-2026",
+            excerpt: "Extra running bus service for Bus-32A has been arranged on 13th August 2026.",
+            link: "/documents/Institte_Bus_Service_Extra Running_Bus-32A_13th_August2026..pdf"
+          },
+          {
             id: 106,
             title: "ADVERTISEMENT FOR POSITIONS IN START-UP & INCUBATION CELL IN INSTITUTE",
             date: "11-08-2026",

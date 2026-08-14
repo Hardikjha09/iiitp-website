@@ -1,5 +1,47 @@
 [
   {
+    "date": "13th August 2026",
+    "title": "IIIT Pune Selected as Onsite Centre for ICPC Kanpur Multi-Site 2026 Regional Contest",
+    "desc": "The Indian Institute of Information Technology (IIIT) Pune has been selected as one of the three official onsite centres for the ICPC Kanpur Multi-Site 2026 Regional Contest. The prestigious International Collegiate Programming Contest (ICPC), often regarded as the Olympics of university-level programming, will bring the regional competition to Pune for the first time. The onsite contest is scheduled to be held on 22–23 December 2026 at IIIT Pune, alongside CSJM University Kanpur and IIT Gandhinagar. The event will provide students from Maharashtra and neighbouring regions with an opportunity to compete at a global standard in competitive programming, problem-solving, teamwork and algorithmic excellence.",
+    "articles": [
+      {
+        "publisher": "Navarashtra",
+        "link": "/press/Navarashtra_Times_ICPC.jpeg"
+      },
+      {
+        "publisher": "Times of India",
+        "link": "/press/ToI_ICPC.jpeg"
+      },
+      {
+        "publisher": "Punekar News",
+        "link": "https://www.punekarnews.in/pune-to-host-icpc-2026-regional-contest-as-iiit-pune-selected-as-onsite-centre/"
+      },
+      {
+        "publisher": "MH Times",
+        "link": "https://www.mhtimes.in/icpc-2026-pune-iiit-pune-coding-competition/"
+      }
+    ]
+  },
+  {
+    "date": "13th August 2026",
+    "title": "IIIT Pune in News for Six Research Projects Worth ₹7.84 Crore",
+    "desc": "The Indian Institute of Information Technology (IIIT) Pune is undertaking six major research projects with financial support of ₹7.84 crore. The projects focus on emerging and future technologies, including artificial intelligence, cybersecurity, semiconductors, quantum computing, and advanced communication technologies. The research initiatives are being carried out in collaboration with various national institutions and agencies, with the objective of developing innovative technological solutions and strengthening research capabilities at IIIT Pune.",
+    "articles": [
+      {
+        "publisher": "Dainik Bhaskar",
+        "link": "/press/Dainik_Bhaskar_RP.jpeg"
+      },
+      {
+        "publisher": "Lokmat",
+        "link": "/press/Lokmat_RP.jpeg"
+      },
+      {
+        "publisher": "Sakal",
+        "link": "/press/Sakal_RP.jpeg"
+      }
+    ]
+  },
+  {
   "date": "1st August 2026",
   "title": "IIIT Pune launches three new B.Tech programmes",
   "desc": "The Indian Institute of Information Technology (IIIT) Pune has launched three new B.Tech programmes in Cyber Security, Artificial Intelligence, and Semiconductor Engineering, expanding its academic offerings to meet emerging industry demands and prepare students for future technologies.",

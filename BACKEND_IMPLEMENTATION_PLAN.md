@@ -43,7 +43,7 @@
 | Admin Dashboard | React 19 + Vite (new SPA) | Vercel or same host |
 | Backend API | Node.js + Express + Prisma | **Hostinger Cloud VPS** |
 | Database | **MySQL** | **Hostinger Cloud (built-in)** |
-| File Storage | Cloudinary (free tier) OR `/uploads` on VPS | Cloudinary CDN or Hostinger VPS disk |
+| File Storage | **`/uploads` on Hostinger VPS disk** | Served via Nginx from Hostinger VPS |
 | Auth | Google OAuth2 (via `google-auth-library`) | — |
 
 ---
@@ -947,12 +947,10 @@ Each script:
 
 Files currently in `public/` (notices PDFs, career PDFs, tender PDFs, faculty photos, etc.) have URLs like `/documents/filename.pdf`, `/assets/faculty_photos/bhupendrasingh.jpg`.
 
-**Option A (Simplest)**: Keep serving them from the existing static host. Store their current URL strings in the DB. The website already knows these URLs.
+> [!IMPORTANT]
+> **Decision: Option A — Keep existing URLs as-is.** Store the current URL strings directly in the DB. The Vercel-hosted frontend already resolves these relative URLs against the existing public host. No file migration needed for seed data.
 
-**Option B (Recommended for long term)**: Upload them to Cloudinary (or your server `/uploads`) and update the DB rows with new URLs. Write a migration script that:
-1. Reads each file from `public/`
-2. Uploads to Cloudinary
-3. Stores the returned CDN URL in the DB
+**For new uploads** (Phase 2+): Files uploaded via the admin dashboard are stored in `/uploads` on the Hostinger VPS and served via Nginx at `https://api.iiitp.ac.in/uploads/<filename>`. The `UPLOAD_BASE_URL` env var controls this base URL.
 
 ### Step 3: Handle faculty_details.json
 
@@ -982,7 +980,7 @@ The faculty JSON uses a slug as the key (`"bhupendra-singh": {...}`). Migration:
 | Admin Dashboard | **Vercel** (second project) | Free tier, auto-deploy from `admin/` folder |
 | Backend API | **Hostinger Cloud VPS** | Deploy Node.js app via PM2 + Nginx reverse proxy |
 | Database | **Hostinger MySQL** (built-in) | Already provisioned; access via `localhost:3306` from VPS |
-| File storage | **Cloudinary** free tier OR `/uploads` on VPS disk | Cloudinary recommended to avoid disk space limits |
+| File storage | **Hostinger VPS local disk** `/uploads` | Served by Nginx; enforce `Content-Disposition: attachment` for PDFs [FIX #6] |
 | SSL | **Let's Encrypt** via Certbot | Free, auto-renews |
 | Process manager | **PM2** | Keeps Node.js running, restarts on crash |
 
@@ -1121,12 +1119,8 @@ CORS_ORIGINS=https://iiitp.ac.in,https://admin.iiitp.ac.in
 COOKIE_DOMAIN=.iiitp.ac.in
 COOKIE_SECURE=true
 
-# File storage — pick one
-FILE_STORAGE=cloudinary   # or 'local'
-CLOUDINARY_CLOUD_NAME=iiitp
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
-# Only used when FILE_STORAGE=local:
+# File storage — local VPS disk
+FILE_STORAGE=local
 UPLOAD_DIR=/var/www/backend/uploads
 UPLOAD_BASE_URL=https://api.iiitp.ac.in/uploads
 
@@ -1162,7 +1156,10 @@ export const env = cleanEnv(process.env, {
   0 2 * * * mysqldump -u iiitp_user -pyourpassword iiitp_cms > /backups/iiitp_$(date +\%F).sql
   ```
   Upload dumps to cloud storage (Backblaze B2 / Google Drive) via `rclone`.
-- **Uploaded files**: If storing on VPS disk, sync `/uploads` to cloud daily. Cloudinary handles its own redundancy.
+- **Uploaded files**: Sync `/uploads` directory to cloud storage daily via `rclone` (Backblaze B2 / Google Drive). Command example:
+  ```bash
+  0 3 * * * rclone sync /var/www/backend/uploads remote:iiitp-uploads-backup
+  ```
 - **Code**: Git is source of truth. DB schema tracked in `prisma/migrations/` — never edit the DB directly.
 
 ---

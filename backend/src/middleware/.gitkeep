@@ -1,0 +1,7 @@
+# Middleware (Phase 1+)
+#
+# auth.middleware.ts     — JWT verification + token_version check + is_active check [FIX #4]
+# role.middleware.ts     — requireRole(), requireSection() guards
+# audit.middleware.ts    — auto-log mutations with old/new value snapshots [FIX #3]
+# upload.middleware.ts   — Multer config for file uploads [FIX #6]
+# csrf.middleware.ts     — CSRF double-submit pattern

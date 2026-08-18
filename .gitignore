@@ -1,3 +1,10 @@
+# === Backend Secrets (NEVER commit these) ===
+.env
+.env.*
+!.env.example
+backend/.env
+admin/.env
+
 # Logs
 logs
 *.log

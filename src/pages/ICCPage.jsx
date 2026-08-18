@@ -4,12 +4,13 @@ import PageHeader from '../components/shared/PageHeader';
 const ICCPage = () => {
   const iccData = [
     { sno: 1, name: <a href="/people/faculty/sonam-maurya" className="hover:underline text-[#0056b3] dark:text-blue-400 font-medium">Dr. Sonam Maurya</a>, designation: "Chairperson", contact: "+91-8989172018", email: "sonam.m@iiitp.ac.in" },
-    { sno: 2, name: <a href="/people/faculty/sushant-kumar" className="hover:underline text-[#0056b3] dark:text-blue-400 font-medium">Dr. Sushant Kumar</a>, designation: "Member", contact: "+91-8292305145", email: "sushant@iiitp.ac.in" },
-    { sno: 3, name: <a href="/people/faculty/habila-basumatary" className="text-[#0056b3] dark:text-blue-400 font-medium">Dr. Habila Basumatary</a>, designation: "Member", contact: "+91-8133911040", email: "habila@iiitp.ac.in" },
-    { sno: 4, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Ms. Rishika Dakhle</span>, designation: "Staff Representative", contact: "+91----", email: "asst2.academics@iiitp.ac.in" },
-    { sno: 5, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">External Member</span>, designation: "External Member", contact: "+91----", email: "" },
-    { sno: 6, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Ms. Rachna Jambhalikar</span>, designation: "Student Representative", contact: "+91-8956654210", email: "rachnajambhalikar36@gmail.com" },
-    { sno: 7, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Representative from Establishment Section</span>, designation: "Member-Secretary", contact: "", email: "" },
+    { sno: 2, name: <a href="/people/faculty/anagha-uday-khiste" className="hover:underline text-[#0056b3] dark:text-blue-400 font-medium">Dr. Anagha Khiste</a>, designation: "Nodal Officer for SHe-Box Portal", contact: "+91-8698242522", email:"anaghakhiste@iiitp.ac.in"},
+    { sno: 3, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Prof. Nisha Gupta<br/>(Retired Professor, IIT Kharagpur)</span>, designation: "External Member", contact: "+91----", email: "" },
+    { sno: 4, name: <a href="/people/faculty/sushant-kumar" className="hover:underline text-[#0056b3] dark:text-blue-400 font-medium">Dr. Sushant Kumar</a>, designation: "Member", contact: "+91-8292305145", email: "sushant@iiitp.ac.in" },
+    { sno: 5, name: <a href="/people/faculty/habila-basumatary" className="text-[#0056b3] dark:text-blue-400 font-medium">Dr. Habila Basumatary</a>, designation: "Member", contact: "+91-8133911040", email: "habila@iiitp.ac.in" },
+    { sno: 6, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Ms. Rishika Dakhle</span>, designation: "Staff Representative", contact: "+91----", email: "asst2.academics@iiitp.ac.in" },
+    { sno: 7, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Ms. Rachana Jambhalikar</span>, designation: "Student Representative", contact: "+91-8956654210", email: "rachanajambhalikar36@gmail" },
+    { sno: 8, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Superintendent<br/> Representative from Establishment Section</span>, designation: "Member-Secretary", contact: "02114-224510, Extn. 115", email: "supdt.estt@iiitp.ac.in" },
   ];
 
   return (
@@ -81,14 +82,14 @@ const ICCPage = () => {
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Composition:</h3>
           <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mb-6">
             <li>Dr. Sonam Maurya, Assistant Professor, Dept. of CSE - Presiding Officer (Chairperson)</li>
+            <li>Dr. Anagha Uday Khiste, Assistant Professor, Dept. of CSE - Nodal Officer for SHe-Box Portal</li>
+            <li>Prof. Nisha Gupta, Retired Professor, IIT Kharagpur - External Member</li>
             <li>Dr. Sushant Kumar, Associate Dean (R&amp;D &amp; FW) - Member</li>
             <li>Dr. Habila Basumatary, Assistant Professor Grade II - Member</li>
             <li>Ms. Rishika Dakhle, Junior Assistant - Member (Staff Representative)</li>
-            <li>External Member - (To be nominated by the Competent Authority)</li>
-            <li>Student Representative - (To be nominated by Associate Dean) - Member</li>
-            <li>Representative from Establishment Section - Member-Secretary</li>
+            <li>Ms. Rachana Jambhalikar, Student Representative - Member (Student Representative)</li>
+            <li>Superintendent, Establishment Section - Member-Secretary</li>
           </ul>
-
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Useful Links:</h3>
           <p className="text-blue-600 dark:text-blue-400 hover:underline mb-6">
             <a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:3ae44a55-6143-3327-b53c-54e882250644" target="_blank" rel="noopener noreferrer">

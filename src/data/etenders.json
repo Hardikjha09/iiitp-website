@@ -1,6 +1,15 @@
 {
   "live": [
     {
+      "title": "GeM Bid for Hiring of CAG Empaneled/Experienced CA Services",
+      "tenderNumber": "GEM/2026/B/7930005",
+      "fileUrl": "/assets/etenders/GeM bid for CA Services.pdf",
+      "fileText": "Document",
+      "corrigendumUrl": "",
+      "corrigendumText": "",
+      "submissionDate": "01.09.2026; 13:30"
+    },
+    {
       "title": "GeM Bid for Steel Almirah / Cabinets (Library Racks)",
       "tenderNumber": "GEM/2026/B/7922478",
       "fileUrl": "/assets/etenders/GeM bid for the Library Racks.pdf",
@@ -35,8 +44,10 @@
       "corrigendumUrl": "",
       "corrigendumText": "",
       "submissionDate": "28-07-2026, 17:00"
-    },
-    {
+    }
+  ],
+  "archive": [
+        {
       "title": "GeM Bid for Empanelment of Service Providers for Hiring of Cars",
       "tenderNumber": "GEM/2026/B/7734352",
       "fileUrl": "/assets/etenders/GeM Bid for Empanelment of Service Providers for Hiring of Cars copy.pdf",
@@ -71,9 +82,7 @@
       "corrigendumUrl": "/assets/etenders/Corrigendum-Office Manpower.pdf",
       "corrigendumText": "Document",
       "submissionDate": "11-12-2025 - 11:30"
-    }
-  ],
-  "archive": [
+    },
     {
       "title": "Invitation of Quotations for Printing of Answer Sheets for Indian Institute of Information Technology Pune - Result of Financial Evaluation",
       "tenderNumber": "2026_IIITP_915207_1",

@@ -15,6 +15,7 @@ const NewsTicker = () => {
       .catch(() => {
         // Fallback mock news
         setNews([
+          {id: 108, title: "Orientation Programme for B.Tech./ M.Tech I Year (AY 2026-27)", link: "/docs/Final orientation.pdf" },
           {id: 107, title: "Institte_Bus_Service_Extra Running_Bus-32A_13th_August2026", link: "/documents/Institte_Bus_Service_Extra Running_Bus-32A_13th_August2026..pdf" },
           { id: 106, title: "ADVERTISEMENT FOR POSITIONS IN START-UP & INCUBATION CELL IN INSTITUTE", link: "/careers-documents/Advt. for CEO, CIO, Manager.pdf" },
           { id: 105, title: "Shortlisted Candidates for Stage - II (Presentation) in Start-up & Incubation Centre", link: "https://www.iiitp.ac.in/careers-documents/2nd%20Stage%20of%20Selection%20-%20Presentation.pdf" },

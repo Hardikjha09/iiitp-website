@@ -6,7 +6,7 @@ import { PrismaClient } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/scholarshipsData.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/scholarshipsData.json');
 
 export async function seed(prisma: PrismaClient) {
   const raw: Array<{
@@ -14,6 +14,7 @@ export async function seed(prisma: PrismaClient) {
   }> = JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8'));
 
   console.log(`  📚 Seeding ${raw.length} scholarships...`);
+  await prisma.scholarship.deleteMany();
   await prisma.scholarship.createMany({
     data: raw.map(s => ({
       sr_no: s.sr,

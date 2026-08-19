@@ -11,7 +11,7 @@ import { PrismaClient } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/notices.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/notices.json');
 
 function parseDate(ddmmyyyy: string): Date {
   const [dd, mm, yyyy] = ddmmyyyy.split('-').map(Number);

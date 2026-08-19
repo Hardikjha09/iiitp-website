@@ -11,7 +11,7 @@ import { PrismaClient, Prisma } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/press.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/press.json');
 
 export async function seed(prisma: PrismaClient) {
   const raw: Array<{
@@ -22,6 +22,7 @@ export async function seed(prisma: PrismaClient) {
   }> = JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8'));
 
   console.log(`  📰 Seeding ${raw.length} press coverage stories...`);
+  await prisma.pressCoverage.deleteMany();
   await prisma.pressCoverage.createMany({
     data: raw.map(p => ({
       title: p.title,

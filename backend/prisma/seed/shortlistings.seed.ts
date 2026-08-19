@@ -18,7 +18,7 @@ import { PrismaClient } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/shortlistings.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/shortlistings.json');
 
 export async function seed(prisma: PrismaClient) {
   const raw: Record<string, {
@@ -31,6 +31,9 @@ export async function seed(prisma: PrismaClient) {
 
   let totalShortlistings = 0;
   let totalCandidates = 0;
+
+  await prisma.shortlistedCandidate.deleteMany();
+  await prisma.shortlisting.deleteMany();
 
   for (const [category, catData] of Object.entries(raw)) {
     for (const [dept, deptData] of Object.entries(catData.departments ?? {})) {

@@ -9,19 +9,19 @@ import { PrismaClient } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/careers.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/careers.json');
 
 function parseDate(ddmmyyyy?: string): Date | undefined {
-  if (!ddmmyyyy) return undefined;
+  if (!ddmmyyyy || ddmmyyyy.trim() === '' || ddmmyyyy === '--') return undefined;
   const parts = ddmmyyyy.split('-').map(Number);
-  if (parts.length !== 3) return undefined;
+  if (parts.length !== 3 || parts.some(isNaN)) return undefined;
   const [dd, mm, yyyy] = parts;
   return new Date(yyyy, mm - 1, dd);
 }
 
 type Button = { label: string; file?: string; link?: string };
 type CareerItem = { title: string; buttons: Button[]; date?: string; lastDate?: string };
-type CareersData = { live: CareerItem[]; past: CareerItem[] };
+type CareersData = { live?: CareerItem[]; past?: CareerItem[]; archive?: CareerItem[] };
 
 async function seedGroup(prisma: PrismaClient, items: CareerItem[], type: 'live' | 'past') {
   for (const item of items) {
@@ -52,9 +52,14 @@ async function seedGroup(prisma: PrismaClient, items: CareerItem[], type: 'live'
 
 export async function seed(prisma: PrismaClient) {
   const raw: CareersData = JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8'));
+  const liveItems = raw.live ?? [];
+  const pastItems = raw.archive ?? raw.past ?? [];
 
-  console.log(`  💼 Seeding ${raw.live.length} live + ${raw.past.length} past careers...`);
-  await seedGroup(prisma, raw.live, 'live');
-  await seedGroup(prisma, raw.past, 'past');
+  console.log(`  💼 Seeding ${liveItems.length} live + ${pastItems.length} past careers...`);
+  await prisma.careerButton.deleteMany();
+  await prisma.career.deleteMany();
+
+  await seedGroup(prisma, liveItems, 'live');
+  await seedGroup(prisma, pastItems, 'past');
   console.log(`  ✅ Careers seeded`);
 }

@@ -38,10 +38,10 @@
 
 | File | DB Table(s) | Seed Script | API Routes | Frontend Migration | Status |
 |---|---|---|---|---|---|
-| `notices.json` | `notices` | 🟢 `notices.seed.ts` | 🔴 | 🔴 `NoticePage.jsx`, `Navbar.jsx`, `LatestNews.jsx` | 🔴 |
-| `news.json` | `news` | 🟢 `news.seed.ts` | 🔴 | 🔴 `NewsPage.jsx`, `NewsTicker.jsx`, `LatestNews.jsx` | 🔴 |
-| `careers.json` | `careers` + `career_buttons` | 🟢 `careers.seed.ts` | 🔴 | 🔴 `CareersPage.jsx` | 🔴 |
-| `etenders.json` | `etenders` | 🟢 `etenders.seed.ts` | 🔴 | 🔴 `ETenderPage.jsx` | 🔴 |
+| `notices.json` | `notices` | 🟢 `notices.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `news.json` | `news` | 🟢 `news.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `careers.json` | `careers` + `career_buttons` | 🟢 `careers.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `etenders.json` | `etenders` | 🟢 `etenders.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
 | Media upload endpoint | `media_files` | — | 🔴 | — | 🔴 |
 | Admin: Notices Manager screen | — | — | — | — | 🔴 |
 | Admin: News Manager screen | — | — | — | — | 🔴 |
@@ -54,7 +54,7 @@
 
 | File | DB Table(s) | Seed Script | API Routes | Frontend Migration | Status |
 |---|---|---|---|---|---|
-| `faculty_details.json` | `faculty_profiles` + 5 child tables | 🟢 `faculty.seed.ts` | 🔴 | 🔴 `FacultyPage.jsx`, `FacultyProfilePage.jsx`, dept pages | 🔴 |
+| `faculty_details.json` | `faculty_profiles` + 5 child tables | 🟢 `faculty.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
 | Faculty: publications sub-resource | `faculty_publications` | 🟢 (in faculty.seed.ts) | 🔴 | — | 🔴 |
 | Faculty: projects sub-resource | `faculty_projects` | 🟢 | 🔴 | — | 🔴 |
 | Faculty: patents sub-resource | `faculty_patents` | 🟢 | 🔴 | — | 🔴 |
@@ -80,16 +80,16 @@
 
 ---
 
-## Phase 4 — Supplementary Content Migration
+## Phase 5 — Supplementary Content Migration
 
 | File | DB Table(s) | Seed Script | API Routes | Frontend Migration | Status |
 |---|---|---|---|---|---|
-| `mous.json` | `mous` | 🟢 `mous.seed.ts` | 🔴 | 🔴 `MousPage.jsx` | 🔴 |
-| `alumni.json` | `alumni` | 🟢 `alumni.seed.ts` | 🔴 | 🔴 `AlumniPage.jsx` | 🔴 |
-| `non_teaching_staff.json` | `non_teaching_staff` | 🟢 `non_teaching_staff.seed.ts` | 🔴 | 🔴 `NonTeachingStaffPage.jsx` | 🔴 |
-| `press.json` | `press_coverage` | 🟢 `press.seed.ts` | 🔴 | 🔴 `LifePressPage.jsx` | 🔴 |
-| `scholarshipsData.json` | `scholarships` | 🟢 `scholarships.seed.ts` | 🔴 | 🔴 `ScholarshipPage.jsx` | 🔴 |
-| `shortlistings.json` | `shortlistings` + `shortlisted_candidates` | 🟢 `shortlistings.seed.ts` | 🔴 | 🔴 `ShortlistingsPage.jsx` | 🔴 |
+| `mous.json` | `mous` | 🟢 `mous.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `alumni.json` | `alumni` | 🟢 `alumni.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `non_teaching_staff.json` | `non_teaching_staff` | 🟢 `non_teaching_staff.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `press.json` | `press_coverage` | 🟢 `press.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `scholarshipsData.json` | `scholarships` | 🟢 `scholarships.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `shortlistings.json` | `shortlistings` + `shortlisted_candidates` | 🟢 `shortlistings.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
 
 ---
 
@@ -116,13 +116,13 @@
 
 ## Local Dev Setup Checklist
 
-- [ ] Install MySQL 8.x locally (or use Docker: `docker run -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 mysql:8`)
-- [ ] Create database: `CREATE DATABASE iiitp_cms;`
-- [ ] Create user with privileges
-- [ ] Copy `backend/.env.example` → `backend/.env` and fill in credentials
-- [ ] `cd backend && npm install`
-- [ ] `npx prisma migrate dev --name init`
-- [ ] `npm run db:seed`
+- [x] Install MySQL 8.x locally
+- [x] Create database: `CREATE DATABASE iiitp_cms;`
+- [x] Create user with privileges
+- [x] Copy `backend/.env.example` → `backend/.env` and fill in credentials
+- [x] `cd backend && npm install`
+- [x] `npx prisma db push` (synced schema with MySQL)
+- [x] `npm run db:seed` (populated all initial data from JSON files)
 - [ ] `npm run dev` → verify `GET http://localhost:4000/health` returns `{ status: "ok" }`
 
 ## File Storage Decision

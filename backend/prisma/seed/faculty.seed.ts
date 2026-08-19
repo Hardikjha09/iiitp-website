@@ -19,7 +19,7 @@ import { PrismaClient } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/faculty_details.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/faculty_details.json');
 
 type FacultyEntry = {
   designation?: string;

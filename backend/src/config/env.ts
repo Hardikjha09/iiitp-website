@@ -7,6 +7,7 @@
  * File storage: local VPS disk only (Hostinger Cloud Startup plan).
  * Uploaded files are stored in UPLOAD_DIR and served at UPLOAD_BASE_URL via Nginx.
  */
+import 'dotenv/config';
 import { cleanEnv, str, port, bool } from 'envalid';
 
 export const env = cleanEnv(process.env, {

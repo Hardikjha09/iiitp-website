@@ -19,7 +19,7 @@ import { PrismaClient } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/alumni.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/alumni.json');
 
 export async function seed(prisma: PrismaClient) {
   const raw = JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8'));
@@ -53,6 +53,7 @@ export async function seed(prisma: PrismaClient) {
   }
 
   console.log(`  🎓 Seeding ${records.length} alumni records...`);
+  await prisma.alumni.deleteMany();
   await prisma.alumni.createMany({ data: records, skipDuplicates: true });
   console.log(`  ✅ Alumni seeded`);
 }

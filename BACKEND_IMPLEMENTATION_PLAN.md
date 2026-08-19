@@ -727,7 +727,7 @@ Keep JSON files in `src/data/` working during migration. Replace one section at 
 
 ### Migration Priority Order
 
-#### Priority 1 (Phase 2) — High-frequency updates
+#### Priority 1 (Phase 6) — High-frequency updates
 
 | Page | Current source | Migration approach |
 |---|---|---|
@@ -747,13 +747,13 @@ const { data: notices, loading } = useApi('/notices?status=published&limit=50');
 
 Create a shared `useApi(url)` hook that handles loading/error states and falls back gracefully.
 
-#### Priority 2 (Phase 3) — Faculty profiles
+#### Priority 2 (Phase 6) — Faculty profiles
 
 `FacultyPage.jsx` and `FacultyProfilePage.jsx` import from `faculty_details.json` (276 KB, 4329 lines).
 - Replace with `GET /faculty` (list) and `GET /faculty/:slug` (profile).
 - Faculty can then log in and edit their own records via the dashboard.
 
-#### Priority 3 (Phase 4+) — Lower-frequency content
+#### Priority 3 (Phase 6) — Lower-frequency content
 
 | Page | Source | Notes |
 |---|---|---|
@@ -764,7 +764,7 @@ Create a shared `useApi(url)` hook that handles loading/error states and falls b
 | Scholarships | `scholarshipsData.json` | Small table, easy |
 | Press | `press.json` | — |
 
-#### Priority 4 (Phase 5) — Hardcoded JSX pages
+#### Priority 4 (Phase 6) — Hardcoded JSX pages
 
 Pages like `CseDepartmentPage.jsx` (40 KB), `UgPgSchemesPage.jsx` (76 KB), `AshDepartmentPage.jsx` (35 KB) have content hardcoded in JSX. These are lowest priority — migrate only when content requires frequent updates.
 
@@ -1168,13 +1168,13 @@ export const env = cleanEnv(process.env, {
 
 ### Phase 0 — Content & Codebase Audit (1–2 weeks)
 
-- [ ] List every JSON file and hardcoded JSX data block
-- [ ] Catalog all files in `public/` that are referenced by data files
-- [ ] Set up a shared spreadsheet: file name → DB table → migration status
-- [ ] Set up the monorepo: `frontend/` (existing), `admin/` (new), `backend/` (new)
-- [ ] Set up local **MySQL 8.x** + Prisma (provider = `mysql`, NOT `postgresql`)
-- [ ] Document all current URL patterns that must be preserved
-- [ ] Add `.env` to `.gitignore` immediately (do this before creating `.env`)
+- [x] List every JSON file and hardcoded JSX data block
+- [x] Catalog all files in `public/` that are referenced by data files
+- [x] Set up a shared spreadsheet / tracker: file name → DB table → migration status
+- [x] Set up the monorepo: `frontend/` (existing), `admin/` (new), `backend/` (new)
+- [x] Set up local **MySQL 8.x** + Prisma (provider = `mysql`, NOT `postgresql`)
+- [x] Document all current URL patterns that must be preserved
+- [x] Add `.env` to `.gitignore` immediately (do this before creating `.env`)
 - [ ] Create `GOOGLE_OAUTH_CLIENT_ID` in Google Cloud Console with correct authorized JS origins and redirect URIs
 
 ### Phase 1 — Backend Core: Auth + User Model (2–3 weeks)
@@ -1205,9 +1205,7 @@ export const env = cleanEnv(process.env, {
 - [ ] Media upload endpoint (Cloudinary integration)
 - [ ] Seed database from JSON files
 - [ ] Admin dashboard: Notices/News/Careers/Tenders manager screens
-- [ ] Migrate `NoticePage.jsx`, `NewsPage.jsx`, `CareersPage.jsx`, `ETenderPage.jsx` to API calls
-- [ ] Remove old JSON imports after verifying API output matches
-- [ ] **Deliverable**: Editors can manage notices/news/careers/tenders via dashboard without touching code.
+- [ ] **Deliverable**: Editors can manage notices/news/careers/tenders via dashboard without touching code. (Frontend continues using JSON)
 
 ### Phase 3 — Faculty Self-Editing (2–3 weeks)
 
@@ -1218,8 +1216,7 @@ export const env = cleanEnv(process.env, {
 - [ ] Sub-resource endpoints for publications/projects/patents/seminars
 - [ ] Admin dashboard: Faculty profile browser + editor
 - [ ] Faculty dashboard: "My Profile" edit page
-- [ ] Migrate `FacultyPage.jsx` and `FacultyProfilePage.jsx` to API
-- [ ] **Deliverable**: Faculty can log in and edit their own profile from a dashboard.
+- [ ] **Deliverable**: Faculty can log in and edit their own profile from a dashboard. (Frontend continues using JSON)
 
 ### Phase 4 — Approval Workflow + Security Hardening (2 weeks)
 
@@ -1238,13 +1235,20 @@ export const env = cleanEnv(process.env, {
 - [ ] Run `npm audit --audit-level=high` and resolve all critical findings
 - [ ] **Deliverable**: Optional reviewer role can approve/reject editor submissions. Editors can save drafts without disrupting live content.
 
-### Phase 5 — Remaining Content Migration (4–6 weeks, incremental)
+### Phase 5 — Remaining Content APIs & Admin Dashboard (4–6 weeks, incremental)
 
 - [ ] Scholarships, non-teaching staff, alumni, MoUs, press, shortlistings schemas + APIs
 - [ ] Seed all from JSON files
-- [ ] Migrate remaining pages: `ScholarshipPage`, `NonTeachingStaffPage`, `AlumniPage`, `MousPage`, `LifePressPage`, `ShortlistingsPage`
 - [ ] Admin dashboard screens for these sections
+- [ ] **Deliverable**: All backend endpoints and admin dashboards are fully complete and operational.
+
+### Phase 6 — Frontend API Integration (Final Phase)
+
+- [ ] Migrate `NoticePage.jsx`, `NewsPage.jsx`, `CareersPage.jsx`, `ETenderPage.jsx` to API calls
+- [ ] Migrate `FacultyPage.jsx` and `FacultyProfilePage.jsx` to API
+- [ ] Migrate remaining pages: `ScholarshipPage`, `NonTeachingStaffPage`, `AlumniPage`, `MousPage`, `LifePressPage`, `ShortlistingsPage`
 - [ ] Begin migrating highest-priority hardcoded JSX pages (dept pages)
+- [ ] Remove old JSON imports after verifying API output matches
 - [ ] Remove all `src/data/*.json` files once pages are fully migrated
 - [ ] **Deliverable**: All content served from DB; no static JSON in frontend.
 

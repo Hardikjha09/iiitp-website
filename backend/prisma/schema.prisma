@@ -7,7 +7,6 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
 }
 
 // ============================================================
@@ -311,7 +310,7 @@ model CareerButton {
 model Etender {
   id                    Int           @id @default(autoincrement())
   title                 String        @db.Text
-  tender_number         String?       @db.VarChar(100)
+  tender_number         String?       @db.Text
   tender_type           String        @default("live") @db.VarChar(10) // 'live','past'
   file_url              String?       @db.Text
   corrigendum_url       String?       @db.Text

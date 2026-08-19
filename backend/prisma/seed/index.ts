@@ -8,7 +8,9 @@
  * This orchestrator passes a shared PrismaClient so connections are not multiplied,
  * and awaits each seeder to completion before starting the next — ensuring correct order.
  */
+import 'dotenv/config'; // load .env before anything else
 import { PrismaClient } from '@prisma/client';
+import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 
 import { seed as seedNotices } from './notices.seed';
 import { seed as seedNews } from './news.seed';
@@ -22,7 +24,17 @@ import { seed as seedMous } from './mous.seed';
 import { seed as seedShortlistings } from './shortlistings.seed';
 import { seed as seedPress } from './press.seed';
 
-const prisma = new PrismaClient();
+const dbUrl = new URL(process.env.DATABASE_URL!);
+
+const adapter = new PrismaMariaDb({
+  host: dbUrl.hostname,
+  port: parseInt(dbUrl.port) || 3306,
+  user: decodeURIComponent(dbUrl.username),
+  password: decodeURIComponent(dbUrl.password),
+  database: dbUrl.pathname.replace(/^\//, ''),
+  allowPublicKeyRetrieval: true, // required for MySQL 8 caching_sha2_password
+});
+const prisma = new PrismaClient({ adapter });
 
 async function main() {
   console.log('🌱 Starting database seed...\n');

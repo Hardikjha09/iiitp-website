@@ -6,7 +6,7 @@ import { PrismaClient, Prisma } from '@prisma/client';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../../src/data/mous.json');
+const JSON_PATH = path.resolve(__dirname, '../../../src/data/mous.json');
 
 export async function seed(prisma: PrismaClient) {
   const raw: Array<{

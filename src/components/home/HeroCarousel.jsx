@@ -5,19 +5,20 @@ import { Link } from 'react-router';
 import { image } from 'framer-motion/client';
 
 const slides = [
-  { id: 1, image: '/carousel/slide_1.jpeg', alt: 'IIIT Pune academic building and campus view', caption: 'IIIT Pune academic building and campus environment', date: '2026' },
-  { id: 2, image: '/carousel/slide_13.jpeg', alt: 'IIIT Pune campus landscape with modern architecture', caption: 'IIIT Pune campus landscape featuring modern architecture', date: '2026' },
-  { id: 3, image: '/carousel/slide_12.jpeg', alt: 'Students and faculty at IIIT Pune campus', caption: 'Students and faculty engaged in academic life at IIIT Pune', date: '2026' },
-  { id: 4, image: '/carousel/slide_11.jpeg', alt: 'IIIT Pune campus event and student activities', caption: 'Campus event showcasing student activities and engagement', date: '2026' },
-  { id: 5, image: '/carousel/slide_2.jpeg', alt: 'IIIT Pune institute building surrounded by greenery', caption: 'IIIT Pune institute building surrounded by greenery', date: '2026' },
-  { id: 6, image: '/carousel/slide_3.jpeg', alt: 'IIIT Pune campus corridors and academic spaces', caption: 'Academic corridors and learning spaces at IIIT Pune', date: '2026' },
-  { id: 7, image: '/carousel/slide_4.jpeg', alt: 'IIIT Pune campus facilities and infrastructure', caption: 'Campus facilities and infrastructure at IIIT Pune', date: '2026' },
-  { id: 8, image: '/carousel/slide_5.jpeg', alt: 'IIIT Pune campus view with students and greenery', caption: 'IIIT Pune campus view with students enjoying the environment', date: '2026' },
-  { id: 9, image: '/carousel/slide_6.jpeg', alt: 'IIIT Pune academic campus scene', caption: 'Academic campus scene at IIIT Pune', date: '2026' },
-  { id: 10, image: '/carousel/slide_7.jpeg', alt: 'IIIT Pune campus environment and student life', caption: 'Campus environment reflecting student life at IIIT Pune', date: '2026' },
-  { id: 11, image: '/carousel/slide_8.jpeg', alt: 'IIIT Pune campus building and surroundings', caption: 'Campus building and surroundings at IIIT Pune', date: '2026' },
-  { id: 12, image: '/carousel/slide_9.jpeg', alt: 'IIIT Pune campus activities and gatherings', caption: 'Campus activities and gatherings at IIIT Pune', date: '2026' },
-  { id: 13, image: '/carousel/slide_10.jpeg', alt: 'IIIT Pune campus view during an event', caption: 'IIIT Pune campus view during an academic event', date: '2026' }
+  { id: 1, image: '/carousel/slide_14.png', alt: 'IIIT Pune campus with students and greenery', caption: 'IIIT Pune campus showcasing students and greenery', date: '2026' },
+  { id: 2, image: '/carousel/slide_1.jpeg', alt: 'IIIT Pune academic building and campus view', caption: 'IIIT Pune academic building and campus environment', date: '2026' },
+  { id: 3, image: '/carousel/slide_13.jpeg', alt: 'IIIT Pune campus landscape with modern architecture', caption: 'IIIT Pune campus landscape featuring modern architecture', date: '2026' },
+  { id: 4, image: '/carousel/slide_12.jpeg', alt: 'Students and faculty at IIIT Pune campus', caption: 'Students and faculty engaged in academic life at IIIT Pune', date: '2026' },
+  { id: 5, image: '/carousel/slide_11.jpeg', alt: 'IIIT Pune campus event and student activities', caption: 'Campus event showcasing student activities and engagement', date: '2026' },
+  { id: 6, image: '/carousel/slide_2.jpeg', alt: 'IIIT Pune institute building surrounded by greenery', caption: 'IIIT Pune institute building surrounded by greenery', date: '2026' },
+  { id: 7, image: '/carousel/slide_3.jpeg', alt: 'IIIT Pune campus corridors and academic spaces', caption: 'Academic corridors and learning spaces at IIIT Pune', date: '2026' },
+  { id: 8, image: '/carousel/slide_4.jpeg', alt: 'IIIT Pune campus facilities and infrastructure', caption: 'Campus facilities and infrastructure at IIIT Pune', date: '2026' },
+  { id: 9, image: '/carousel/slide_5.jpeg', alt: 'IIIT Pune campus view with students and greenery', caption: 'IIIT Pune campus view with students enjoying the environment', date: '2026' },
+  { id: 10, image: '/carousel/slide_6.jpeg', alt: 'IIIT Pune academic campus scene', caption: 'Academic campus scene at IIIT Pune', date: '2026' },
+  { id: 11, image: '/carousel/slide_7.jpeg', alt: 'IIIT Pune campus environment and student life', caption: 'Campus environment reflecting student life at IIIT Pune', date: '2026' },
+  { id: 12, image: '/carousel/slide_8.jpeg', alt: 'IIIT Pune campus building and surroundings', caption: 'Campus building and surroundings at IIIT Pune', date: '2026' },
+  { id: 13, image: '/carousel/slide_9.jpeg', alt: 'IIIT Pune campus activities and gatherings', caption: 'Campus activities and gatherings at IIIT Pune', date: '2026' },
+  { id: 14, image: '/carousel/slide_10.jpeg', alt: 'IIIT Pune campus view during an event', caption: 'IIIT Pune campus view during an academic event', date: '2026' },
 ];
 
 const HeroCarousel = () => {

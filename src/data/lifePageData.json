@@ -1014,6 +1014,31 @@
   ],
   "EVENTS": [
     {
+      "name": "IIIT Pune Celebrates 80th Independence Day with Patriotic Fervour",
+      "type": "National Celebration",
+      "typeColor": "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",
+      "desc": "The Indian Institute of Information Technology (IIIT), Pune celebrated the 80th Independence Day with great enthusiasm and patriotic spirit, bringing together students, faculty, staff, and members of the Institute community. The celebrations were presided over by Director Prof. Vineet Kansal, who unfurled the National Flag and addressed the gathering on the significance of the occasion. A spirited Tiranga Yatra was organised to celebrate national unity and pride, followed by a Prize Distribution Ceremony recognising achievers from the IIIT Pune community. The celebrations also featured a vibrant cultural programme, with students showcasing their talent and patriotic spirit through various performances. As India commemorates 80 years of Independence, IIIT Pune reaffirmed its commitment to the values and aspirations that have shaped the nation. The Institute continues to contribute towards a knowledge-driven, innovative, and self-reliant India by fostering academic excellence, responsible citizenship, and a spirit of service to the nation. Jai Hind! Vande Mataram!",
+      "images": [
+        "/assets/lifepage/independence_day_1.JPG",
+        "/assets/lifepage/independence_day_2.JPG",
+        "/assets/lifepage/independence_day_3.JPG",
+        "/assets/lifepage/independence_day_4.JPG",
+        "/assets/lifepage/independence_day_5.JPG",
+        "/assets/lifepage/independence_day_6.JPG",
+        "/assets/lifepage/independence_day_7.JPG",
+        "/assets/lifepage/independence_day_8.JPG",
+        "/assets/lifepage/independence_day_9.JPG"
+      ],
+      "highlights": [
+        "Flag hoisting ceremony presided by Director Prof. Vineet Kansal",
+        "Spirited Tiranga Yatra celebrating national unity and pride",
+        "Prize Distribution Ceremony recognising achievers",
+        "Vibrant cultural programme showcasing student talent and patriotic performances",
+        "Reaffirming commitment to knowledge-driven, innovative, and self-reliant India"
+      ],
+      "links": []
+    },
+    {
       "name": "Expert Lecture on Research, Entrepreneurship, and Global Industry Careers",
       "type": "Expert Lecture",
       "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",

@@ -33,9 +33,16 @@ const LifeEventsPage = () => {
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="flex-1">
                     <div className="mb-4">
-                      <span className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide mb-3 ${evt.typeColor}`}>
-                        {evt.type}
-                      </span>
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide ${evt.typeColor}`}>
+                          {evt.type}
+                        </span>
+                        {evt.date && (
+                          <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">
+                            {evt.date}
+                          </span>
+                        )}
+                      </div>
                       <div className="flex flex-wrap items-center justify-between gap-4 mb-3">
                         <h3 className="text-2xl font-bold font-serif text-gray-800 dark:text-white">
                           {evt.name}
@@ -68,9 +75,16 @@ const LifeEventsPage = () => {
                           );
                         })}
                       </div>
-                      <p className="text-sm text-gray-650 dark:text-gray-300 leading-relaxed text-justify">
-                        {evt.desc}
-                      </p>
+                      <div className="text-sm text-gray-650 dark:text-gray-300 leading-relaxed text-justify">
+                        {evt.desc && evt.desc.includes('\n\n**') ? (
+                          <>
+                            <p>{evt.desc.split('\n\n**')[0]}</p>
+                            <p className="font-bold mt-3">{evt.desc.split('\n\n**')[1].replace('**', '')}</p>
+                          </>
+                        ) : (
+                          <p>{evt.desc}</p>
+                        )}
+                      </div>
                     </div>
                     
                     <div className="mt-4">

@@ -978,6 +978,27 @@
   ],
   "EVENTS": [
     {
+      "name": "IIIT Pune Welcomes New Students with Orientation Programme for AY 2026–27 Batch",
+      "type": "Orientation Programme",
+      "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+      "desc": "The Indian Institute of Information Technology (IIIT), Pune organised an Orientation Programme for the first-year B.Tech. and M.Tech. students of Academic Year 2026–27 on 19 August 2026, welcoming the new batch to the Institute and familiarising students and parents with its academic environment, facilities, and campus life. The programme commenced with the traditional lamp-lighting ceremony and Saraswati Vandana, followed by a welcome address. Students were introduced to important aspects of the Institute, including its academic and examination structure, administrative procedures, hostel facilities and regulations, infrastructure, internships, research and development opportunities, international relations, sports, student activities, and placement opportunities. The Director, Registrar, Associate Deans, International Relations Office, Heads of Departments, and other faculty members interacted with the incoming students and shared insights into the academic and institutional ecosystem at IIIT Pune. A dedicated Parents' Interaction Session provided an opportunity for parents to engage with the Institute authorities and seek information about academics and student life. The afternoon session featured introductions to the various student clubs, giving the new batch a glimpse into the vibrant co-curricular and extracurricular opportunities available on campus. The day concluded with a Vote of Thanks followed by the National Anthem. The Orientation Programme marked the beginning of a new academic journey for the incoming students, encouraging them to make the most of the opportunities for learning, research, innovation, collaboration, and holistic development at IIIT Pune.",
+      "images": [
+        "/assets/lifepage/Orientation_1.jpg",
+        "/assets/lifepage/Orientation_2.jpg",
+        "/assets/lifepage/Orientation_3.jpg",
+        "/assets/lifepage/Orientation_4.jpg"
+      ],
+      "highlights": [
+        "Orientation Programme for first-year B.Tech. and M.Tech. students of AY 2026–27",
+        "Traditional lamp-lighting ceremony and Saraswati Vandana",
+        "Welcome address and introduction to academic and administrative aspects of the Institute",
+        "Interaction with faculty members, Associate Deans, and Heads of Departments",
+        "Parents' Interaction Session for engagement with Institute authorities",
+        "Introduction to student clubs and co-curricular opportunities on campus"
+      ],
+      "links": []
+    },
+    {
       "name": "IIIT Pune Celebrates 80th Independence Day with Patriotic Fervour",
       "type": "National Celebration",
       "typeColor": "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",

@@ -206,42 +206,6 @@
       },
       "flyer": "/assets/clubs/bitlegion_flyer.jpg"
     },
-    "c-cube": {
-      "name": "C-CUBE",
-      "desc": "Intellectual education influences the head and value-based education influences the heart. In fact, education that does not train the heart can be dangerous. If we want to build character in our offices, homes and society, we must have the wisdom to live a principle-centered life based on honesty, compassion, courage, responsibility etc. Educated persons are those who can choose wisely and courageously under any circumstances between good and bad, between virtuousness and vulgarities regardless of the academic degrees they have.",
-      "tags": [
-        "Personality Development",
-        "Life Ethics",
-        "Leadership"
-      ],
-      "flagship": [
-        {
-          "title": "Discover Yourself (DYS) Seminar Series",
-          "desc": "A series of value education seminars designed to help students gain a well-balanced perspective in life, manage stress, and build character."
-        }
-      ],
-      "workshops": [
-        {
-          "title": "Youth Empowerment Seminars (YES)",
-          "desc": "Inviting eminent speakers from MNCs and Fortune 500 companies to share advice on professional ethics and career values."
-        },
-        {
-          "title": "Technical Talks & Core Engineering Forums",
-          "desc": "Inviting academic and industry specialists to discuss research and advancements in CS, ECE, and production engineering."
-        }
-      ],
-      "achievements": [
-        "Helped over 300 students build leadership, career ethics, and a balanced lifestyle through DYS seminars",
-        "Successfully established key mentor relationships with experts from leading corporate companies"
-      ],
-      "images": [],
-      "leadership": {
-        "heads": [],
-        "email": "ccube@iiitp.ac.in",
-        "instagram": "@c_cube_iiitp",
-        "website": ""
-      }
-    },
     "e-cell": {
       "name": "E-Cell",
       "desc": "Entrepreneurship and Incubation Cell at IIIT Pune was established as the first-ever student club of IIIT Pune in the year 2020 to create a startup-supporting ecosystem and establish a functional mechanism for scouting innovative ideas, pre-incubation activities, rewarding innovations, and sharing entrepreneurial success stories.\n\nFor implementation of NISP 2019 at the Institute level, IIIT Pune developed a roadmap that includes:\n• Formation of Entrepreneurship, Innovation, and Incubation Cell.\n• Formation of E-Cell and I-Cell.\n• Faculty nomination for NISP implementation.\n• Creation of a Section-8 company at the Institute level.",

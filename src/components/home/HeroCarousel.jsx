@@ -20,7 +20,6 @@ const slides = [
   { id: 13, image: '/carousel/slide_9.jpeg', alt: 'IIIT Pune campus activities and gatherings', caption: 'Campus activities and gatherings at IIIT Pune', date: '2026' },
   { id: 14, image: '/carousel/slide_10.jpeg', alt: 'IIIT Pune campus view during an event', caption: 'IIIT Pune campus view during an academic event', date: '2026' },
 ];
-
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
 

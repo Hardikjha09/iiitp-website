@@ -1134,7 +1134,7 @@ export const env = cleanEnv(process.env, {
 - [x] Set up local **MySQL 8.x** + Prisma (provider = `mysql`, NOT `postgresql`)
 - [x] Document all current URL patterns that must be preserved
 - [x] Add `.env` to `.gitignore` immediately (do this before creating `.env`)
-- [ ] Create `GOOGLE_OAUTH_CLIENT_ID` in Google Cloud Console with correct authorized JS origins and redirect URIs
+- [x] Create `GOOGLE_OAUTH_CLIENT_ID` in Google Cloud Console with correct authorized JS origins and redirect URIs
 
 ### Phase 1 — Backend Core: Auth + User Model (2–3 weeks)
 

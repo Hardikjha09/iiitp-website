@@ -21,7 +21,6 @@ import { seed as seedAlumni } from './alumni.seed';
 import { seed as seedStaff } from './non_teaching_staff.seed';
 import { seed as seedScholarships } from './scholarships.seed';
 import { seed as seedMous } from './mous.seed';
-import { seed as seedShortlistings } from './shortlistings.seed';
 import { seed as seedPress } from './press.seed';
 
 const dbUrl = new URL(process.env.DATABASE_URL!);
@@ -49,7 +48,6 @@ async function main() {
   await seedStaff(prisma);
   await seedScholarships(prisma);
   await seedMous(prisma);
-  await seedShortlistings(prisma);
   await seedPress(prisma);
 
   console.log('\n✅ All seed scripts complete.');

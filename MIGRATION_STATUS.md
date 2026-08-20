@@ -65,13 +65,13 @@
 
 ---
 
-## Phase 4 — Approval Workflow + Security Hardening
+## Phase 4 — Security Hardening & Admin Tools
 
 | Task | Status |
 |---|---|
-| `content_approvals` table | 🟢 (in schema.prisma) |
-| Approval API endpoints | 🔴 |
-| Dashboard: Pending approvals queue | 🔴 |
+| `content_approvals` table | ❌ Removed (Direct edit/publish model adopted) |
+| Approval API endpoints | ❌ Removed |
+| Dashboard: Pending approvals queue | ❌ Removed |
 | CSRF protection (`csrf-csrf`) | 🔴 |
 | Rate limiting all endpoints | 🟢 (general limiter in `src/index.ts`) |
 | Security audit + pen tests | 🔴 |
@@ -89,14 +89,14 @@
 | `non_teaching_staff.json` | `non_teaching_staff` | 🟢 `non_teaching_staff.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
 | `press.json` | `press_coverage` | 🟢 `press.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
 | `scholarshipsData.json` | `scholarships` | 🟢 `scholarships.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `shortlistings.json` | `shortlistings` + `shortlisted_candidates` | 🟢 `shortlistings.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
 
 ---
 
-## Phase 5 — Hardcoded JSX Pages (Lowest Priority)
+## Phase 5 — Hardcoded JSX Pages & Deferred Content (Lowest Priority)
 
-| Page | Content Type | Target Table | Status |
+| Page / File | Content Type | Target Table | Status |
 |---|---|---|---|
+| `shortlistings.json` | Job candidate shortlists | None (Kept in JSON) | ⏭️ Deferred |
 | `sgrc.json` | SGRC committee members | `committees` (TBD) | ⏭️ Deferred |
 | `lifePageData.json` | Life section — events, clubs, gallery | Schema TBD | ⏭️ Deferred |
 | `UgPgSchemesPage.jsx` (75.9 KB) | Course scheme tables | TBD | ⏭️ Deferred |

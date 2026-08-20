@@ -17,21 +17,14 @@ enum UserRole {
   admin
   editor
   faculty
-  reviewer
 }
 
 enum ContentStatus {
   draft
-  pending_review
   published
   archived
 }
 
-enum ApprovalStatus {
-  pending
-  approved
-  rejected
-}
 
 // ============================================================
 // USERS & AUTH
@@ -63,8 +56,6 @@ model User {
   etenders_created      Etender[]                  @relation("EtenderCreatedBy")
   etenders_updated      Etender[]                  @relation("EtenderUpdatedBy")
   media_uploaded        MediaFile[]
-  approvals_submitted   ContentApproval[]          @relation("SubmittedBy")
-  approvals_reviewed    ContentApproval[]          @relation("ReviewedBy")
 
   @@map("users")
 }
@@ -392,30 +383,6 @@ model Mou {
   @@map("mous")
 }
 
-model Shortlisting {
-  id        Int     @id @default(autoincrement())
-  category  String  @db.Text
-  title     String  @db.Text
-  department String? @db.Text
-  pdf_url   String? @db.Text
-  is_active Boolean @default(true)
-
-  candidates ShortlistedCandidate[]
-
-  @@map("shortlistings")
-}
-
-model ShortlistedCandidate {
-  id              Int          @id @default(autoincrement())
-  shortlisting_id Int
-  shortlisting    Shortlisting @relation(fields: [shortlisting_id], references: [id], onDelete: Cascade)
-  sno             String?      @db.Text
-  form_no         String?      @db.Text
-  display_order   Int          @default(0) @db.SmallInt
-
-  @@map("shortlisted_candidates")
-}
-
 model PressCoverage {
   id         Int      @id @default(autoincrement())
   title      String   @db.Text
@@ -470,23 +437,4 @@ model AuditLog {
   @@map("audit_logs")
 }
 
-// ============================================================
-// APPROVAL WORKFLOW
-// ============================================================
 
-model ContentApproval {
-  id           Int            @id @default(autoincrement())
-  resource     String         @db.VarChar(100)
-  resource_id  Int
-  submitted_by Int?
-  submitter    User?          @relation("SubmittedBy", fields: [submitted_by], references: [id], onDelete: SetNull)
-  reviewed_by  Int?
-  reviewer     User?          @relation("ReviewedBy", fields: [reviewed_by], references: [id], onDelete: SetNull)
-  status       ApprovalStatus @default(pending)
-  notes        String?        @db.Text
-  submitted_at DateTime       @default(now())
-  reviewed_at  DateTime?
-
-  @@index([status, submitted_at(sort: Desc)])
-  @@map("content_approvals")
-}

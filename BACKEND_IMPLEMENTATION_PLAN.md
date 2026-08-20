@@ -110,7 +110,7 @@ http-graceful-shutdown - Graceful shutdown (drains in-flight requests before pro
 
 ```sql
 -- Prisma schema enum (auto-maps to MySQL ENUM):
--- enum UserRole { admin editor faculty reviewer }
+-- enum UserRole { admin editor faculty }
 
 -- MySQL equivalent (Prisma generates this from schema.prisma):
 CREATE TABLE users (
@@ -241,14 +241,14 @@ CREATE TABLE faculty_supervisions (
 ### 3.3 Notices, News, Careers, E-Tenders
 
 > [!IMPORTANT]
-> **[FIX #2 — Live Content Disappears on Edit]:** Every content table now has `draft_*` shadow columns for each major editable field, plus a `has_unpublished_draft BOOLEAN`. When an editor edits a *published* record, changes are written only to the `draft_*` fields and `has_unpublished_draft` is set `true` — **the live content is untouched**. A reviewer or admin then publishes the draft by copying `draft_*` fields into the live fields and resetting `has_unpublished_draft`. This is the "working copy" pattern used by WordPress and Contentful.
+> **[FIX #2 — Live Content Disappears on Edit]:** Every content table now has `draft_*` shadow columns for each major editable field, plus a `has_unpublished_draft BOOLEAN`. When an editor edits a *published* record, changes are written only to the `draft_*` fields and `has_unpublished_draft` is set `true` — **the live content is untouched**. An editor or admin then publishes the draft by copying `draft_*` fields into the live fields and resetting `has_unpublished_draft`. This is the "working copy" pattern used by WordPress and Contentful.
 
 > [!NOTE]
 > **[FIX #3 — FK Crash on User Delete]:** All `created_by` / `updated_by` FK columns use `ON DELETE SET NULL`. Deleting a user will never crash the DB with a FK constraint error. Historical content is preserved; authorship is marked `NULL`.
 
 ```sql
 -- Shared content status enum (MySQL ENUM via Prisma)
--- enum ContentStatus { draft pending_review published archived }
+-- enum ContentStatus { draft published archived }
 
 CREATE TABLE notices (
   id                    INT AUTO_INCREMENT PRIMARY KEY,
@@ -258,7 +258,7 @@ CREATE TABLE notices (
   link_url              TEXT,
   file_url              TEXT,
   notice_date           DATE NOT NULL,
-  status                ENUM('draft','pending_review','published','archived') DEFAULT 'draft',
+  status                ENUM('draft','published','archived') DEFAULT 'draft',
   -- === DRAFT (working copy) fields [FIX #2] ===
   draft_title           TEXT,
   draft_category        VARCHAR(100),
@@ -282,7 +282,7 @@ CREATE TABLE news (
   link_url              TEXT,
   file_url              TEXT,
   news_date             DATE NOT NULL,
-  status                ENUM('draft','pending_review','published','archived') DEFAULT 'draft',
+  status                ENUM('draft','published','archived') DEFAULT 'draft',
   -- Draft fields [FIX #2]
   draft_title           TEXT,
   draft_excerpt         TEXT,
@@ -303,7 +303,7 @@ CREATE TABLE careers (
   career_type           VARCHAR(10) DEFAULT 'live',    -- 'live','past'
   post_date             DATE,
   last_date             DATE,
-  status                ENUM('draft','pending_review','published','archived') DEFAULT 'draft',
+  status                ENUM('draft','published','archived') DEFAULT 'draft',
   draft_title           TEXT,
   draft_last_date       DATE,
   has_unpublished_draft BOOLEAN NOT NULL DEFAULT false,
@@ -330,7 +330,7 @@ CREATE TABLE etenders (
   file_url              TEXT,
   corrigendum_url       TEXT,
   submission_date       TEXT,
-  status                ENUM('draft','pending_review','published','archived') DEFAULT 'draft',
+  status                ENUM('draft','published','archived') DEFAULT 'draft',
   draft_title           TEXT,
   draft_file_url        TEXT,
   draft_corrigendum_url TEXT,
@@ -394,23 +394,6 @@ CREATE TABLE mous (
   is_active     BOOLEAN DEFAULT true
 );
 
-CREATE TABLE shortlistings (
-  id           SERIAL PRIMARY KEY,
-  category     TEXT NOT NULL,               -- 'assistant-professor', etc.
-  title        TEXT NOT NULL,
-  department   TEXT,
-  pdf_url      TEXT,
-  is_active    BOOLEAN DEFAULT true
-);
-
-CREATE TABLE shortlisted_candidates (
-  id              SERIAL PRIMARY KEY,
-  shortlisting_id INTEGER REFERENCES shortlistings(id) ON DELETE CASCADE,
-  sno             TEXT,
-  form_no         TEXT,
-  display_order   SMALLINT DEFAULT 0
-);
-
 CREATE TABLE press_coverage (
   id          SERIAL PRIMARY KEY,
   title       TEXT NOT NULL,
@@ -465,24 +448,10 @@ CREATE INDEX idx_audit_user ON audit_logs(user_id, created_at DESC);
 > [!NOTE]
 > `user_id` in `audit_logs` is deliberately **not a foreign key**. If a user is deleted from the `users` table, the audit trail must remain intact for compliance. Instead, `user_email` is snapshotted at log-write time. This makes the audit log a true append-only ledger that can never be invalidated by user deletions.
 
-### 3.7 Approval Workflow
+### 3.7 Approval Workflow (Removed)
 
-```sql
--- enum ApprovalStatus { pending approved rejected }
-
-CREATE TABLE content_approvals (
-  id            INT AUTO_INCREMENT PRIMARY KEY,
-  resource      VARCHAR(100) NOT NULL,
-  resource_id   INT NOT NULL,
-  submitted_by  INT REFERENCES users(id) ON DELETE SET NULL,  -- [FIX #3]
-  reviewed_by   INT REFERENCES users(id) ON DELETE SET NULL,  -- [FIX #3]
-  status        ENUM('pending','approved','rejected') DEFAULT 'pending',
-  notes         TEXT,
-  submitted_at  DATETIME DEFAULT NOW(),
-  reviewed_at   DATETIME,
-  INDEX idx_approvals_status (status, submitted_at DESC)
-);
-```
+> [!NOTE]
+> The separate Content Approval workflow table has been removed in favor of a direct edit and publish model. Users with appropriate permissions can directly edit drafts and publish them.
 
 ### 3.8 DB-Level Performance Indexes
 
@@ -516,20 +485,18 @@ CREATE INDEX idx_media_uploader ON media_files(uploaded_by, created_at DESC);
 
 ### Role Matrix
 
-| Action | `admin` | `editor` | `faculty` | `reviewer` |
-|---|:---:|:---:|:---:|:---:|
-| Manage users (invite/deactivate) | ✅ | ❌ | ❌ | ❌ |
-| Assign editor sections | ✅ | ❌ | ❌ | ❌ |
-| View audit logs | ✅ | ❌ | ❌ | ❌ |
-| CRUD **all** notices/news/careers/tenders | ✅ | ✅ assigned sections only | ❌ | ❌ |
-| Publish (set status=published) | ✅ | ✅ (if no reviewer role exists) | ❌ | ✅ |
-| Submit for review | ✅ | ✅ | ❌ | ❌ |
-| Approve/reject submissions | ✅ | ❌ | ❌ | ✅ |
-| View faculty profiles (all) | ✅ | ✅ | ✅ | ✅ |
-| Edit **own** faculty profile | ✅ | ❌ | ✅ own only | ❌ |
-| Edit **any** faculty profile | ✅ | ❌ | ❌ | ❌ |
-| Upload media files | ✅ | ✅ | ✅ (own profile only) | ❌ |
-| CRUD scholarships/staff/alumni/MoUs | ✅ | ✅ if assigned | ❌ | ❌ |
+| Action | `admin` | `editor` | `faculty` |
+|---|:---:|:---:|:---:|
+| Manage users (invite/deactivate) | ✅ | ❌ | ❌ |
+| Assign editor sections | ✅ | ❌ | ❌ |
+| View audit logs | ✅ | ❌ | ❌ |
+| CRUD **all** notices/news/careers/tenders | ✅ | ✅ assigned sections only | ❌ |
+| Publish (set status=published) | ✅ | ✅ | ❌ |
+| View faculty profiles (all) | ✅ | ✅ | ✅ |
+| Edit **own** faculty profile | ✅ | ❌ | ✅ own only |
+| Edit **any** faculty profile | ✅ | ❌ | ❌ |
+| Upload media files | ✅ | ✅ | ✅ (own profile only) |
+| CRUD scholarships/staff/alumni/MoUs | ✅ | ✅ if assigned | ❌ |
 
 ### Faculty Self-Edit Rule
 
@@ -631,8 +598,7 @@ This ensures a faculty member always sees their seeded profile on first login. I
 | `POST` | `/notices` | Create notice (saved as `draft`) | editor (notices) / admin |
 | `PATCH` | `/notices/:id` | Update draft fields only | editor (notices) / admin |
 | `DELETE` | `/notices/:id` | Delete notice (soft-delete or hard) | admin |
-| `PATCH` | `/notices/:id/submit` | Submit draft for review → `pending_review` | editor / admin |
-| `PATCH` | `/notices/:id/publish` | Copy draft fields to live fields → `published` | reviewer / admin |
+| `PATCH` | `/notices/:id/publish` | Copy draft fields to live fields → `published` | editor / admin |
 | `PATCH` | `/notices/:id/archive` | Set status=archived | editor / admin |
 
 > [!IMPORTANT]
@@ -690,14 +656,7 @@ field: context  (optional: 'notice','faculty','tender')
 > [!CAUTION]
 > **[FIX #6 — PDF Serving]:** When a client requests a self-hosted file with `is_pdf = true`, the backend MUST respond with `Content-Disposition: attachment; filename="originalname.pdf"`. This forces a download rather than inline rendering, preventing PDF-embedded JavaScript from executing in the browser and stealing admin session cookies. See the Nginx config in Section 10 for server-level enforcement.
 
-### 5.7 Approval Workflow
 
-| Method | Endpoint | Description | Auth |
-|---|---|---|---|
-| `POST` | `/approvals` | Submit resource for review | editor |
-| `GET` | `/approvals?status=pending` | List pending approvals | reviewer/admin |
-| `PATCH` | `/approvals/:id/approve` | Approve + publish | reviewer/admin |
-| `PATCH` | `/approvals/:id/reject` | Reject with note | reviewer/admin |
 
 ### 5.8 Audit Logs
 
@@ -779,7 +738,7 @@ Pages like `CseDepartmentPage.jsx` (40 KB), `UgPgSchemesPage.jsx` (76 KB), `AshD
 | Screen | Role access | Key features |
 |---|---|---|
 | **Login** | All | "Sign in with Google" button only. No username/password. |
-| **Dashboard Home** | All | Quick stats: # notices, # pending approvals, recent activity feed |
+| **Dashboard Home** | All | Quick stats: # notices, # recent updates, recent activity feed |
 | **User Management** | admin | Table of users, invite form, role switcher, deactivate button |
 | **Invites** | admin | List of pending invites, revoke, copy invite link |
 | **Notices Manager** | admin, editor (notices) | Table with filters, Create/Edit modal, publish/archive toggle |
@@ -1218,11 +1177,8 @@ export const env = cleanEnv(process.env, {
 - [ ] Faculty dashboard: "My Profile" edit page
 - [ ] **Deliverable**: Faculty can log in and edit their own profile from a dashboard. (Frontend continues using JSON)
 
-### Phase 4 — Approval Workflow + Security Hardening (2 weeks)
+### Phase 4 — Security Hardening & Admin Tools (2 weeks)
 
-- [ ] `content_approvals` table + reviewer role
-- [ ] Approval API endpoints (`/approvals`, `/approvals/:id/approve`, `/approvals/:id/reject`)
-- [ ] Dashboard: Pending approvals queue showing live vs. draft diff for reviewer/admin
 - [ ] Dashboard: "Publish Draft" button that atomically copies draft fields → live fields [FIX #2]
 - [ ] CSRF protection hardening (`csrf-csrf` package)
 - [ ] Rate limiting on all endpoints (stricter on `/auth/*` and `/media/upload`)
@@ -1233,7 +1189,7 @@ export const env = cleanEnv(process.env, {
 - [ ] Set up automated daily DB backup (`mysqldump` cron → rclone → cloud storage)
 - [ ] Add `audit_logs` viewer screen in dashboard
 - [ ] Run `npm audit --audit-level=high` and resolve all critical findings
-- [ ] **Deliverable**: Optional reviewer role can approve/reject editor submissions. Editors can save drafts without disrupting live content.
+- [ ] **Deliverable**: Direct publish workflow, audit log viewer, and security hardening complete.
 
 ### Phase 5 — Remaining Content APIs & Admin Dashboard (4–6 weeks, incremental)
 
@@ -1259,7 +1215,7 @@ export const env = cleanEnv(process.env, {
 | Risk | Likelihood | Impact | Mitigation | Fix Applied |
 |---|---|---|---|---|
 | **Editor sections lost at invite claim** — invited editor logs in with no section permissions | High | Critical | `sections` JSON column added to `invites` table; claimed atomically in login transaction | ✅ FIX #1 |
-| **Live content disappears on edit** — editing a published notice pushes it to pending_review | High | High | Working-copy pattern: edits write to `draft_*` columns only; live fields unchanged until explicitly published | ✅ FIX #2 |
+| **Live content disappears on edit** — editing a published notice overwrites it directly | High | High | Working-copy pattern: edits write to `draft_*` columns only; live fields unchanged until explicitly published | ✅ FIX #2 |
 | **FK crash on user delete** — deleting a user crashes DB due to FK violations | Medium | High | All content `created_by`/`updated_by` FKs use `ON DELETE SET NULL`; audit log `user_id` is not a FK | ✅ FIX #3 |
 | **Deactivated user retains API access for up to 1h** — rogue editor keeps posting | Medium | Critical | Access token reduced to 15m; `token_version` check invalidates all tokens instantly on deactivation | ✅ FIX #4 |
 | **Search broken after JSON → API migration** — frontend search bar stops working | High | High | All list endpoints support `?search=` with MySQL FULLTEXT indexes on title columns | ✅ FIX #5 |

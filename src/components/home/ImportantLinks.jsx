@@ -190,6 +190,7 @@ const ImportantLinks = () => {
                       { name: 'Indent Form for Consumable Items', path: '/downloads/Indent for stationery consumable items.pdf', category: 'faculty' },
                       { name: 'Internet Credentials Form', path: '/downloads/Internet Login Form.pdf', category: 'faculty' },
                       { name : 'Leave Form for Project Staff', path: '/downloads/Leave Form for Project Staff.pdf', category: 'project staff' },
+                      { name: 'No Dues Certificate (For Faculty/Staff)', path: '/downloads/No_Dues_Certificate_Bilingual.pdf', category: 'faculty' },
                     ]
                     .filter(doc => docFilter === 'all' || doc.category === docFilter || doc.category === 'both')
                     .map((doc, idx) => (

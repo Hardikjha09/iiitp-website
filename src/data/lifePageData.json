@@ -978,6 +978,65 @@
   ],
   "EVENTS": [
     {
+      "name": "IIIT Pune Organises ICC Orientation on POSH, Women’s Rights and Workplace Safety",
+      "type": "Orientation",
+      "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+      "desc": "The Internal Complaints Committee (ICC), IIIT Pune organised an orientation session on POSH, Women’s Rights, Safety and the SHe-Box Initiative on 20 August 2026. Advocate Eeshani Mangesh Joshi, Pune, delivered the guest lecture, offering insights into the Vishaka Guidelines, POSH Act, women’s rights, workplace safety, SHe-Box Initiative, and the role and functioning of the ICC. With active and attentive participation from the IIIT Pune community, the session emphasised awareness as an essential step towards prevention and reinforced the Institute’s collective commitment to fostering a campus rooted in safety, dignity, equality, respect, and empowerment.",
+      "images": [
+        "/assets/lifepage/icc_1.JPG",
+        "/assets/lifepage/icc_2.JPG",
+        "/assets/lifepage/icc_3.JPG",
+        "/assets/lifepage/icc_4.JPG",
+        "/assets/lifepage/icc_5.jpg",
+        "/assets/lifepage/icc_6.JPG",
+        "/assets/lifepage/icc_7.jpg",
+        "/assets/lifepage/icc_8.jpg",
+        "/assets/lifepage/icc_9.JPG"
+      ],
+      "highlights": [
+        "Orientation session on POSH, Women’s Rights, Safety and the SHe-Box Initiative",
+        "Guest lecture by Advocate Eeshani Mangesh Joshi, Pune",
+        "Insights into Vishaka Guidelines, POSH Act, women’s rights, workplace safety, SHe-Box Initiative, and ICC functioning",
+        "Active participation from the IIIT Pune community emphasising awareness and prevention"
+      ],
+      "links": [
+      ]
+    },
+    {
+      "name":"IIIT Pune Hosts Campus France for Interaction on Higher Education Opportunities",
+      "type":"Conference",
+      "typeColor":"bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+      "desc":"IIIT Pune hosted Ms. Rini Abraham, Manager – Campus France India, for an interactive session with the Director, faculty, and students. The discussion explored higher education and research opportunities in France, including scholarships, admission pathways, research collaborations, and the academic ecosystem available to international students. The interaction reflects IIIT Pune’s continued efforts to strengthen international academic engagement and expand global learning and research opportunities for its students and faculty, in alignment with SDG 4 (Quality Education) and SDG 17 (Partnerships for the Goals).",
+      "images":[
+        "/assets/lifepage/France_1.jpg",
+        "/assets/lifepage/France_2.jpg",
+        "/assets/lifepage/France_3.jpg",
+        "/assets/lifepage/France_4.jpg"
+      ],
+      "highlights":[
+        "Interactive session with Ms. Rini Abraham, Manager – Campus France India",
+        "Discussion on higher education and research opportunities in France",
+        "Insights into scholarships, admission pathways, research collaborations, and academic ecosystem for international students",
+        "Reflecting IIIT Pune’s efforts to strengthen international academic engagement and expand global learning and research opportunities"
+      ]
+    },
+    {
+      "name": "IIIT Pune Explores Strategic Partnership with Ansys and Synopsys",
+      "type": "Expert Lecture",
+      "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+      "desc": "IIIT Pune hosted a strategic meeting with the academic and technical leadership of Ansys and Synopsys, chaired by Director Prof. Vineet Kansal, to explore avenues for a long-term industry-academia partnership. The discussions focused on joint research and thesis supervision, industry-led micro-credit courses, internships, hackathons, Faculty Development Programmes (FDPs), and collaborative academic initiatives, including the possibility of co-organising MAPCON 2028 with IEEE Pune Section. The interaction marks another step towards strengthening IIIT Pune’s industry-academia ecosystem and creating meaningful research, learning, and professional opportunities for students and faculty.",
+      "images": [
+        "/assets/lifepage/Synopsys_1.jpg"
+      ],
+      "highlights": [
+        "Strategic meeting with academic and technical leadership of Ansys and Synopsys",
+        "Discussions on joint research, thesis supervision, industry-led micro-credit courses, internships, hackathons, Faculty Development Programmes (FDPs), and collaborative academic initiatives",
+        "Exploration of co-organising MAPCON 2028 with IEEE Pune Section",
+        "Strengthening IIIT Pune’s industry-academia ecosystem and creating meaningful research, learning, and professional opportunities for students and faculty"
+      ],
+      "links": []
+    },
+    {
       "name": "IIIT Pune Welcomes New Students with Orientation Programme for AY 2026–27 Batch",
       "type": "Orientation Programme",
       "typeColor": "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
@@ -996,7 +1055,12 @@
         "Parents' Interaction Session for engagement with Institute authorities",
         "Introduction to student clubs and co-curricular opportunities on campus"
       ],
-      "links": []
+      "links": [
+        {
+          "label": "View Report",
+          "url": "/assets/lifepage/Induction Event Report.pdf"
+        }
+      ]
     },
     {
       "name": "IIIT Pune Celebrates 80th Independence Day with Patriotic Fervour",

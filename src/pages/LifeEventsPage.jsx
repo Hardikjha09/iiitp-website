@@ -69,7 +69,7 @@ const LifeEventsPage = () => {
                               rel="noopener noreferrer"
                               className={`inline-flex items-center gap-2 px-4 py-1.5 text-sm font-semibold rounded-full border transition-colors ${buttonClass}`}
                             >
-                              View More
+                              View Report
                               <ExternalLink size={14} />
                             </a>
                           );

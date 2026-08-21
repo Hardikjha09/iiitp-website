@@ -35,7 +35,7 @@ const BtechEcePage = () => {
         { name: "Computer Programming Concept & Practice", hours: "3-0-2", credits: 4 },
         { name: "Language & Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Innovation", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 }
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 }
       ]
     },
     {

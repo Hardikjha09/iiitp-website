@@ -61,7 +61,7 @@ const UgPgSchemesPage = () => {
         { name: "Engineering Mathematics-I", hours: "3-0-0", credits: 3 },
         { name: "Language & Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Innovation", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 },
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 },
       ]
     },
     {
@@ -161,7 +161,7 @@ const UgPgSchemesPage = () => {
         { name: "Calculus and Differential Equations", hours: "3-1-0", credits: 4 },
         { name: "Language and Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Indian Knowledge System (IKS)", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 },
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 },
       ]
     },
     {
@@ -258,7 +258,7 @@ const UgPgSchemesPage = () => {
         { name: "Engineering Calculus", hours: "3-0-0", credits: 3 },
         { name: "Language & Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Innovation", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 },
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 },
       ]
     },
     {
@@ -389,7 +389,7 @@ const UgPgSchemesPage = () => {
         { name: "Calculus and Differential Equations", hours: "3-1-0", credits: 4 },
         { name: "Language & Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Indian Knowledge System", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 },
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 },
       ]
     },
     {
@@ -488,7 +488,7 @@ const UgPgSchemesPage = () => {
         { name: "Calculus and Differential Equations", hours: "3-1-0", credits: 4 },
         { name: "Language and Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Indian Knowledge System (IKS)", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 },
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 },
       ]
     },
     {
@@ -587,7 +587,7 @@ const UgPgSchemesPage = () => {
         { name: "Computer Programming Concept & Practice", hours: "3-0-2", credits: 4 },
         { name: "Language & Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Innovation", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 }
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 }
       ]
     },
     {

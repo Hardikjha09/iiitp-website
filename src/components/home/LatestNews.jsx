@@ -16,15 +16,22 @@ const LatestNews = () => {
       .catch(() => {
         setNews([
           {
+            id: 109,
+            title: "SAC Club Heads and Co-Heads for the Academic Year 2026–27",
+            date: "21-08-2026",
+            excerpt: "The Student Activity Council (SAC) has announced the Club Heads and Co-Heads for the Academic Year 2026–27.",
+            link: "/documents/SAC Club Heads and Co-Heads.pdf"
+          },
+          {
             id: 108,
             title: "Orientation Programme for B.Tech./ M.Tech I Year (AY 2026-27)",
             date: "19-08-2026",
             excerpt: "Orientation Programme for B.Tech./ M.Tech I Year students for the Academic Year 2026-27.",
-            link: "/docs/Final orientation.pdf"
+            link: "/documents/Final orientation.pdf"
           },
           {
             id: 107,
-            title: "Institte_Bus_Service_Extra Running_Bus-32A_13th_August2026",
+            title: "Institute Bus Service: Extra Running Bus-32A on 13th August 2026",
             date: "13-08-2026",
             excerpt: "Extra running bus service for Bus-32A has been arranged on 13th August 2026.",
             link: "/documents/Institte_Bus_Service_Extra Running_Bus-32A_13th_August2026..pdf"

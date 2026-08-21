@@ -17,7 +17,7 @@ const BtechCybersecurityPage = () => {
         { name: "Calculus and Differential Equations", hours: "3-1-0", credits: 4 },
         { name: "Language and Writing Skills", hours: "2-0-0", credits: 2 },
         { name: "Indian Knowledge System (IKS)", hours: "1-0-0", credits: 1 },
-        { name: "Environmental Science", hours: "2-0-0", credits: 2 },
+        { name: "Environmental Studies", hours: "2-0-0", credits: 2 },
       ]
     },
     {

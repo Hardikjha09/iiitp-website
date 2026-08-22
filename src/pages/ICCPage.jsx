@@ -5,7 +5,7 @@ const ICCPage = () => {
   const iccData = [
     { sno: 1, name: <a href="/people/faculty/sonam-maurya" className="hover:underline text-[#0056b3] dark:text-blue-400 font-medium">Dr. Sonam Maurya</a>, designation: "Chairperson", contact: "+91-8989172018", email: "sonam.m@iiitp.ac.in" },
     { sno: 2, name: <a href="/people/faculty/anagha-uday-khiste" className="hover:underline text-[#0056b3] dark:text-blue-400 font-medium">Dr. Anagha Khiste</a>, designation: "Nodal Officer for SHe-Box Portal", contact: "+91-8698242522", email:"anaghakhiste@iiitp.ac.in"},
-    { sno: 3, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Prof. Nisha Gupta<br/>(Retired Professor, IIT Kharagpur)</span>, designation: "External Member", contact: "+91----", email: "" },
+    { sno: 3, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Prof. Nisha Gupta<br/>(Retired Professor, BIT Mesra)</span>, designation: "External Member", contact: "+91----", email: "" },
     { sno: 4, name: <a href="/people/faculty/sushant-kumar" className="hover:underline text-[#0056b3] dark:text-blue-400 font-medium">Dr. Sushant Kumar</a>, designation: "Member", contact: "+91-8292305145", email: "sushant@iiitp.ac.in" },
     { sno: 5, name: <a href="/people/faculty/habila-basumatary" className="text-[#0056b3] dark:text-blue-400 font-medium">Dr. Habila Basumatary</a>, designation: "Member", contact: "+91-8133911040", email: "habila@iiitp.ac.in" },
     { sno: 6, name: <span className="text-[#0056b3] dark:text-blue-400 font-medium">Ms. Rishika Dakhle</span>, designation: "Staff Representative", contact: "+91----", email: "asst2.academics@iiitp.ac.in" },

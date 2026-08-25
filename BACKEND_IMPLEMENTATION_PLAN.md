@@ -686,7 +686,7 @@ Keep JSON files in `src/data/` working during migration. Replace one section at 
 
 ### Migration Priority Order
 
-#### Priority 1 (Phase 6) — High-frequency updates
+#### Priority 1 (Phase 5) — High-frequency updates
 
 | Page | Current source | Migration approach |
 |---|---|---|
@@ -706,13 +706,13 @@ const { data: notices, loading } = useApi('/notices?status=published&limit=50');
 
 Create a shared `useApi(url)` hook that handles loading/error states and falls back gracefully.
 
-#### Priority 2 (Phase 6) — Faculty profiles
+#### Priority 2 (Phase 5) — Faculty profiles
 
 `FacultyPage.jsx` and `FacultyProfilePage.jsx` import from `faculty_details.json` (276 KB, 4329 lines).
 - Replace with `GET /faculty` (list) and `GET /faculty/:slug` (profile).
 - Faculty can then log in and edit their own records via the dashboard.
 
-#### Priority 3 (Phase 6) — Lower-frequency content
+#### Priority 3 (Phase 6) — Lower-frequency content (Deferred)
 
 | Page | Source | Notes |
 |---|---|---|
@@ -1191,22 +1191,28 @@ export const env = cleanEnv(process.env, {
 - [ ] Run `npm audit --audit-level=high` and resolve all critical findings
 - [ ] **Deliverable**: Direct publish workflow, audit log viewer, and security hardening complete.
 
-### Phase 5 — Remaining Content APIs & Admin Dashboard (4–6 weeks, incremental)
+### Phase 5 — Frontend API Integration & Life Page CMS (2–3 weeks)
+
+- [ ] Build shared `useApi(url)` hook with loading, error states, caching, and fallback handling
+- [ ] Migrate `NoticePage.jsx`, `NewsPage.jsx`, `CareersPage.jsx`, `ETenderPage.jsx` to live API calls
+- [ ] Migrate `FacultyPage.jsx` and `FacultyProfilePage.jsx` to `GET /faculty` and `GET /faculty/:slug`
+- [ ] Schema, APIs, Admin screens, and Frontend Migration for **Life Page Data** (`lifePageData.json` -> `GET /life-events` used by `Life*` pages)
+- [ ] Connect search, filter, and pagination with backend query params (`?search=`, `?page=`, `?limit=`)
+- [ ] Update frontend environment configuration (`VITE_API_BASE_URL`)
+- [ ] Remove old JSON imports after verifying API output matches
+- [ ] Remove migrated static JSON files from `src/data/`
+- [ ] **Deliverable**: Core frontend pages (Notices, News, Careers, Tenders, Faculty, Life pages) fully driven by backend database & REST APIs.
+
+### Phase 6 — Deferred Supplementary Content & Hardcoded Pages (Post-MVP / Future Phase)
+
+> **Note:** The seed scripts for the Phase 6 sections below (mous, alumni, staff, press, scholarships) have already been written and tested in advance. The work done so far is retained. Their API routes, dashboard screens, and frontend integration are deferred to Phase 6.
 
 - [ ] Scholarships, non-teaching staff, alumni, MoUs, press, shortlistings schemas + APIs
-- [ ] Seed all from JSON files
-- [ ] Admin dashboard screens for these sections
-- [ ] **Deliverable**: All backend endpoints and admin dashboards are fully complete and operational.
-
-### Phase 6 — Frontend API Integration (Final Phase)
-
-- [ ] Migrate `NoticePage.jsx`, `NewsPage.jsx`, `CareersPage.jsx`, `ETenderPage.jsx` to API calls
-- [ ] Migrate `FacultyPage.jsx` and `FacultyProfilePage.jsx` to API
-- [ ] Migrate remaining pages: `ScholarshipPage`, `NonTeachingStaffPage`, `AlumniPage`, `MousPage`, `LifePressPage`, `ShortlistingsPage`
-- [ ] Begin migrating highest-priority hardcoded JSX pages (dept pages)
-- [ ] Remove old JSON imports after verifying API output matches
-- [ ] Remove all `src/data/*.json` files once pages are fully migrated
-- [ ] **Deliverable**: All content served from DB; no static JSON in frontend.
+- [ ] Admin dashboard manager screens for supplementary sections (Scholarships, Staff, Alumni, MoUs, Press, Shortlistings)
+- [ ] Migrate remaining supplementary pages: `ScholarshipPage`, `NonTeachingStaffPage`, `AlumniPage`, `MousPage`, `LifePressPage` (press data), `ShortlistingsPage`
+- [ ] Begin migrating hardcoded JSX pages (`CseDepartmentPage.jsx`, `EceDepartmentPage.jsx`, `AshDepartmentPage.jsx`, `UgPgSchemesPage.jsx`, etc.)
+- [ ] Remove remaining static JSON files once all supplementary pages are fully migrated
+- [ ] **Deliverable**: All remaining secondary content, committees, and departmental JSX pages migrated to CMS.
 
 ---
 

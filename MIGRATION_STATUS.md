@@ -38,10 +38,10 @@
 
 | File | DB Table(s) | Seed Script | API Routes | Frontend Migration | Status |
 |---|---|---|---|---|---|
-| `notices.json` | `notices` | 🟢 `notices.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `news.json` | `news` | 🟢 `news.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `careers.json` | `careers` + `career_buttons` | 🟢 `careers.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `etenders.json` | `etenders` | 🟢 `etenders.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `notices.json` | `notices` | 🟢 `notices.seed.ts` | 🔴 | ⏭️ Phase 5 | 🔴 |
+| `news.json` | `news` | 🟢 `news.seed.ts` | 🔴 | ⏭️ Phase 5 | 🔴 |
+| `careers.json` | `careers` + `career_buttons` | 🟢 `careers.seed.ts` | 🔴 | ⏭️ Phase 5 | 🔴 |
+| `etenders.json` | `etenders` | 🟢 `etenders.seed.ts` | 🔴 | ⏭️ Phase 5 | 🔴 |
 | Media upload endpoint | `media_files` | — | 🔴 | — | 🔴 |
 | Admin: Notices Manager screen | — | — | — | — | 🔴 |
 | Admin: News Manager screen | — | — | — | — | 🔴 |
@@ -54,7 +54,7 @@
 
 | File | DB Table(s) | Seed Script | API Routes | Frontend Migration | Status |
 |---|---|---|---|---|---|
-| `faculty_details.json` | `faculty_profiles` + 5 child tables | 🟢 `faculty.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `faculty_details.json` | `faculty_profiles` + 5 child tables | 🟢 `faculty.seed.ts` | 🔴 | ⏭️ Phase 5 | 🔴 |
 | Faculty: publications sub-resource | `faculty_publications` | 🟢 (in faculty.seed.ts) | 🔴 | — | 🔴 |
 | Faculty: projects sub-resource | `faculty_projects` | 🟢 | 🔴 | — | 🔴 |
 | Faculty: patents sub-resource | `faculty_patents` | 🟢 | 🔴 | — | 🔴 |
@@ -80,25 +80,47 @@
 
 ---
 
-## Phase 5 — Supplementary Content Migration
+## Phase 5 — Life Page CMS & Frontend API Integration
 
+### 5A. Life Page Data
 | File | DB Table(s) | Seed Script | API Routes | Frontend Migration | Status |
 |---|---|---|---|---|---|
-| `mous.json` | `mous` | 🟢 `mous.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `alumni.json` | `alumni` | 🟢 `alumni.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `non_teaching_staff.json` | `non_teaching_staff` | 🟢 `non_teaching_staff.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `press.json` | `press_coverage` | 🟢 `press.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
-| `scholarshipsData.json` | `scholarships` | 🟢 `scholarships.seed.ts` | 🔴 | ⏭️ Phase 6 | 🔴 |
+| `lifePageData.json` | `life_events` (TBD) | 🔴 | 🔴 | 🔴 | 🔴 |
+
+### 5B. Frontend API Integration
+| Target Page / Component | Endpoint(s) Used | Replaces Data File | Status |
+|---|---|---|---|
+| `NoticePage.jsx` | `GET /notices` | `src/data/notices.json` | 🔴 |
+| `NewsPage.jsx` | `GET /news` | `src/data/news.json` | 🔴 |
+| `CareersPage.jsx` | `GET /careers` | `src/data/careers.json` | 🔴 |
+| `ETenderPage.jsx` | `GET /etenders` | `src/data/etenders.json` | 🔴 |
+| `FacultyPage.jsx` | `GET /faculty` | `src/data/faculty_details.json` | 🔴 |
+| `FacultyProfilePage.jsx` | `GET /faculty/:slug` | `src/data/faculty_details.json` | 🔴 |
+| `Life Pages (Activities, Clubs, Events)` | `GET /life-events` | `src/data/lifePageData.json` | 🔴 |
+| Shared `useApi` Hook | Centralized fetch + error handling | — | 🔴 |
 
 ---
 
-## Phase 5 — Hardcoded JSX Pages & Deferred Content (Lowest Priority)
+## Phase 6 — Supplementary Content Migration (Deferred)
+
+> **Note:** Seed scripts for the Phase 6 sections below have already been completed and tested in advance. The API routes, Admin Dashboard integration, and Frontend Migration are deferred to Phase 6.
+
+| File | DB Table(s) | Seed Script | API Routes | Frontend Migration | Status |
+|---|---|---|---|---|---|
+| `mous.json` | `mous` | 🟢 `mous.seed.ts` (Done for Phase 6) | 🔴 | ⏭️ Phase 6 | ⏭️ Deferred |
+| `alumni.json` | `alumni` | 🟢 `alumni.seed.ts` (Done for Phase 6) | 🔴 | ⏭️ Phase 6 | ⏭️ Deferred |
+| `non_teaching_staff.json` | `non_teaching_staff` | 🟢 `non_teaching_staff.seed.ts` (Done for Phase 6) | 🔴 | ⏭️ Phase 6 | ⏭️ Deferred |
+| `press.json` | `press_coverage` | 🟢 `press.seed.ts` (Done for Phase 6) | 🔴 | ⏭️ Phase 6 | ⏭️ Deferred |
+| `scholarshipsData.json` | `scholarships` | 🟢 `scholarships.seed.ts` (Done for Phase 6) | 🔴 | ⏭️ Phase 6 | ⏭️ Deferred |
+
+---
+
+## Phase 6 — Hardcoded JSX Pages & Deferred Content (Lowest Priority)
 
 | Page / File | Content Type | Target Table | Status |
 |---|---|---|---|
 | `shortlistings.json` | Job candidate shortlists | None (Kept in JSON) | ⏭️ Deferred |
 | `sgrc.json` | SGRC committee members | `committees` (TBD) | ⏭️ Deferred |
-| `lifePageData.json` | Life section — events, clubs, gallery | Schema TBD | ⏭️ Deferred |
 | `UgPgSchemesPage.jsx` (75.9 KB) | Course scheme tables | TBD | ⏭️ Deferred |
 | `CseDepartmentPage.jsx` (40.4 KB) | Dept. content | TBD | ⏭️ Deferred |
 | `EceDepartmentPage.jsx` (39.9 KB) | Dept. content | TBD | ⏭️ Deferred |

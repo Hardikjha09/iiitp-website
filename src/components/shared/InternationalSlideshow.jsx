@@ -2,6 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const slidesData = [
   {
+    image: '/carousel/IR01.png',
+    alt: 'IR01',
+    caption: 'IIIT Pune Hosts Campus France for Interaction on Higher Education Opportunities',
+    date: '19th August 2026'
+  },
+  {
     image: '/resources/main_block.jpg',
     alt: 'IIIT Pune Permanent Campus',
     caption: 'IIIT Pune — Main Campus Block'
@@ -116,7 +122,10 @@ const Slideshow = () => {
           {slidesData.map((slide, index) => (
             <div className="slide" key={index}>
               <img src={slide.image} alt={slide.alt} />
-              <div className="slide-caption">{slide.caption}</div>
+              <div className="slide-caption">
+                <span>{slide.caption}</span>
+                {slide.date && <span className="slide-date">{slide.date}</span>}
+              </div>
             </div>
           ))}
         </div>

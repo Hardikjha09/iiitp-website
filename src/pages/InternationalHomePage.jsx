@@ -29,6 +29,30 @@ const InternationalHomePage = () => {
               <div className="news-feed">
                 <article className="news-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border-l-4 border-blue-600 mb-6 transition-shadow hover:shadow-md">
                   <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
+                    Campus France Delegate Visits IIIT Pune to Explore Academic Collaboration with France
+                  </h3>
+                  <div className="text-xs font-semibold text-blue-600 mb-3 uppercase tracking-wider">19th August 2026</div>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
+                    IIIT Pune welcomed Ms Rini Abraham, Campus France Manager, Pune, for a visit aimed at exploring avenues for academic collaboration between IIIT Pune and institutions in France. The visit formed part of the Institutes ongoing efforts to strengthen its international partnerships and expand opportunities for students and faculty.
+                  </p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
+                    Ms Abraham arrived at the campus at 3:00 PM and began her visit with an interactive session with the Director, IIIT Pune, and the Faculty In-Charge, International Relations, IIIT Pune, where the two sides discussed the scope of potential collaboration and the broader landscape of Indo-French academic partnerships.
+                  </p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
+                    This was followed by an interaction with students from 3:30 PM to 4:15 PM, during which Ms Abraham shared insights on study, research, and exchange opportunities available to Indian students in France, and responded to student queries on the application process and available programmes.
+                  </p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
+                    From 4:15 PM to 5:00 PM, Ms Abraham met with faculty members to discuss possible collaboration avenues with French institutions, including areas for joint research, student and faculty exchange, and future partnership programmes.
+                  </p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
+                    The visit concluded with a de-briefing meeting with the Director, IIIT Pune, from 5:00 PM to 5:30 PM, where the outcomes of the day's discussions were reviewed and possible next steps for collaboration with French institutions were outlined. Ms Abraham departed from the campus at 5:30 PM.
+                  </p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 mb-3 leading-relaxed">
+                    The visit reflects IIIT Pune's continued commitment to fostering global academic partnerships and creating international opportunities for its students and faculty.
+                  </p>
+                </article>
+                <article className="news-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border-l-4 border-blue-600 mb-6 transition-shadow hover:shadow-md">
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-2">
                     Visit of South Korean Delegates — Indo-Korean Center, Pune
                   </h3>
                   <div className="text-xs font-semibold text-blue-600 mb-3 uppercase tracking-wider">14 July 2026</div>

@@ -242,6 +242,16 @@ html {
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.international-relations-page .slide-date {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 0.9rem;
 }
 
 .international-relations-page .slide-btn {
@@ -819,6 +829,12 @@ html {
   .international-relations-page .slide-caption {
     font-size: 0.85rem;
     padding: 10px 15px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .international-relations-page .slide-date {
+    font-size: 0.75rem;
   }
 
   .international-relations-page .slide-btn {

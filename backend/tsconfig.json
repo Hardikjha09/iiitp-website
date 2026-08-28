@@ -13,9 +13,10 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "composite": true
+    "composite": true,
+    "types": ["node", "jest"]
   },
-  "include": ["src/**/*", "prisma/seed/**/*"],
+  "include": ["src/**/*", "prisma/seed/**/*", "tests/**/*"],
   "exclude": ["node_modules", "dist"]
 }
 

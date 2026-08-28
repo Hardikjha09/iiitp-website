@@ -1,65 +1,106 @@
 /**
- * careers.seed.ts — Seeds `careers` + `career_buttons` from src/data/careers.json
+ * prisma/seed/careers.seed.ts
  *
- * Source JSON shape:
- *   { live: [ { title, buttons[], date, lastDate } ], past: [...] }
- * Each button: { label, file?, link? }
+ * Imports careers and nested action buttons from src/data/careers.json into MySQL tables.
  */
-import { PrismaClient } from '@prisma/client';
-import * as fs from 'fs';
-import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../src/data/careers.json');
+import path from 'path';
+import fs from 'fs';
+import { ContentStatus } from '@prisma/client';
+import prisma from '../../src/config/prisma';
+import { logger } from '../../src/utils/logger';
 
-function parseDate(ddmmyyyy?: string): Date | undefined {
-  if (!ddmmyyyy || ddmmyyyy.trim() === '' || ddmmyyyy === '--') return undefined;
-  const parts = ddmmyyyy.split('-').map(Number);
-  if (parts.length !== 3 || parts.some(isNaN)) return undefined;
-  const [dd, mm, yyyy] = parts;
-  return new Date(yyyy, mm - 1, dd);
+interface RawCareerButton {
+  label: string;
+  file?: string;
+  link?: string;
 }
 
-type Button = { label: string; file?: string; link?: string };
-type CareerItem = { title: string; buttons: Button[]; date?: string; lastDate?: string };
-type CareersData = { live?: CareerItem[]; past?: CareerItem[]; archive?: CareerItem[] };
+interface RawCareer {
+  title: string;
+  date?: string;
+  lastDate?: string;
+  buttons?: RawCareerButton[];
+}
 
-async function seedGroup(prisma: PrismaClient, items: CareerItem[], type: 'live' | 'past') {
-  for (const item of items) {
-    const career = await prisma.career.create({
-      data: {
-        title: item.title,
-        career_type: type,
-        post_date: parseDate(item.date),
-        last_date: parseDate(item.lastDate),
-        status: 'published',
-        has_unpublished_draft: false,
-      },
-    });
+interface RawCareersFile {
+  live?: RawCareer[];
+  past?: RawCareer[];
+}
 
-    if (item.buttons?.length) {
-      await prisma.careerButton.createMany({
-        data: item.buttons.map((btn, idx) => ({
-          career_id: career.id,
-          label: btn.label,
-          file_url: btn.file ?? null,
-          url: btn.link ?? null,
-          display_order: idx,
-        })),
-      });
+function parseLastDate(dateStr?: string): Date | null {
+  if (!dateStr) return null;
+  // Supports DD-MM-YYYY or DD.MM.YYYY
+  const parts = dateStr.split(/[-./]/);
+  if (parts.length === 3) {
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1;
+    const year = parseInt(parts[2], 10);
+    if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+      return new Date(Date.UTC(year, month, day));
     }
   }
+  const parsed = new Date(dateStr);
+  return isNaN(parsed.getTime()) ? null : parsed;
 }
 
-export async function seed(prisma: PrismaClient) {
-  const raw: CareersData = JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8'));
-  const liveItems = raw.live ?? [];
-  const pastItems = raw.archive ?? raw.past ?? [];
+export async function seedCareers(): Promise<number> {
+  const filePath = path.resolve(process.cwd(), '../src/data/careers.json');
+  if (!fs.existsSync(filePath)) {
+    logger.warn('careers.json not found at ' + filePath);
+    return 0;
+  }
 
-  console.log(`  💼 Seeding ${liveItems.length} live + ${pastItems.length} past careers...`);
-  await prisma.careerButton.deleteMany();
-  await prisma.career.deleteMany();
+  const rawData: RawCareersFile = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  const liveList = rawData.live || [];
+  const pastList = rawData.past || [];
 
-  await seedGroup(prisma, liveItems, 'live');
-  await seedGroup(prisma, pastItems, 'past');
-  console.log(`  ✅ Careers seeded`);
+  logger.info(`Found ${liveList.length} live and ${pastList.length} past careers in JSON to seed...`);
+
+  await prisma.careerButton.deleteMany({});
+  await prisma.career.deleteMany({});
+
+  let count = 0;
+
+  async function insertGroup(items: RawCareer[], type: 'live' | 'past') {
+    for (const item of items) {
+      if (!item.title) continue;
+
+      const lastDate = parseLastDate(item.lastDate);
+
+      const career = await prisma.career.create({
+        data: {
+          title: item.title.trim(),
+          career_type: type,
+          last_date: lastDate,
+          status: ContentStatus.published,
+          draft_title: item.title.trim(),
+          draft_last_date: lastDate,
+          has_unpublished_draft: false,
+        },
+      });
+
+      if (Array.isArray(item.buttons) && item.buttons.length > 0) {
+        let order = 0;
+        for (const btn of item.buttons) {
+          const url = btn.file || btn.link || '#';
+          await prisma.careerButton.create({
+            data: {
+              career_id: career.id,
+              label: btn.label || 'Details',
+              url: url.trim(),
+              display_order: order++,
+            },
+          });
+        }
+      }
+      count++;
+    }
+  }
+
+  await insertGroup(liveList, 'live');
+  await insertGroup(pastList, 'past');
+
+  logger.info(`✅ Seeded ${count} careers with action buttons into MySQL.`);
+  return count;
 }

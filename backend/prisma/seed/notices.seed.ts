@@ -1,51 +1,76 @@
 /**
- * notices.seed.ts — Seeds the `notices` table from src/data/notices.json
+ * prisma/seed/notices.seed.ts
  *
- * Source JSON shape:  [ { id, title, date: "DD-MM-YYYY", category, link } ]
- * Mapping:
- *   date  → notice_date (parsed from DD-MM-YYYY)
- *   link  → file_url if starts with '/', else link_url
- *   All seeded records get status='published' (they were live on the public site)
+ * Imports notices from src/data/notices.json into the MySQL notices table.
  */
-import { PrismaClient } from '@prisma/client';
-import * as fs from 'fs';
-import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../src/data/notices.json');
+import path from 'path';
+import fs from 'fs';
+import { ContentStatus } from '@prisma/client';
+import prisma from '../../src/config/prisma';
+import { logger } from '../../src/utils/logger';
 
-function parseDate(ddmmyyyy: string): Date {
-  const [dd, mm, yyyy] = ddmmyyyy.split('-').map(Number);
-  return new Date(yyyy, mm - 1, dd);
+interface RawNotice {
+  id?: number;
+  title: string;
+  date?: string;
+  category?: string;
+  link?: string;
 }
 
-export async function seed(prisma: PrismaClient) {
-  const raw: Array<{
-    id: number;
-    title: string;
-    date: string;
-    category: string;
-    link: string;
-  }> = JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8'));
+function parseNoticeDate(dateStr?: string): Date {
+  if (!dateStr) return new Date();
+  const parts = dateStr.split(/[-./]/);
+  if (parts.length === 3) {
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1;
+    const year = parseInt(parts[2], 10);
+    if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+      return new Date(Date.UTC(year, month, day));
+    }
+  }
+  const parsed = new Date(dateStr);
+  return isNaN(parsed.getTime()) ? new Date() : parsed;
+}
 
-  console.log(`  📋 Seeding ${raw.length} notices...`);
-
-  for (const item of raw) {
-    const isFile = item.link?.startsWith('/');
-    await prisma.notice.upsert({
-      where: { id: item.id },
-      create: {
-        id: item.id,
-        title: item.title,
-        category: item.category,
-        notice_date: parseDate(item.date),
-        file_url: isFile ? item.link : null,
-        link_url: !isFile ? item.link : null,
-        status: 'published',
-        has_unpublished_draft: false,
-      },
-      update: {}, // don't overwrite existing records on re-run
-    });
+export async function seedNotices(): Promise<number> {
+  const filePath = path.resolve(process.cwd(), '../src/data/notices.json');
+  if (!fs.existsSync(filePath)) {
+    logger.warn('notices.json not found at ' + filePath);
+    return 0;
   }
 
-  console.log(`  ✅ Notices seeded (${raw.length} records)`);
+  const rawData: RawNotice[] = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  logger.info(`Found ${rawData.length} notices in JSON to seed...`);
+
+  await prisma.notice.deleteMany({});
+
+  let count = 0;
+  for (const item of rawData) {
+    if (!item.title) continue;
+
+    const isPdf = Boolean(item.link?.toLowerCase().endsWith('.pdf'));
+    const noticeDate = parseNoticeDate(item.date);
+
+    await prisma.notice.create({
+      data: {
+        title: item.title.trim(),
+        category: item.category ? item.category.trim() : null,
+        notice_date: noticeDate,
+        file_url: isPdf ? item.link?.trim() : null,
+        link_url: !isPdf ? item.link?.trim() : null,
+        status: ContentStatus.published,
+        draft_title: item.title.trim(),
+        draft_category: item.category ? item.category.trim() : null,
+        draft_notice_date: noticeDate,
+        draft_file_url: isPdf ? item.link?.trim() : null,
+        draft_link_url: !isPdf ? item.link?.trim() : null,
+        has_unpublished_draft: false,
+      },
+    });
+    count++;
+  }
+
+  logger.info(`✅ Seeded ${count} notices into MySQL.`);
+  return count;
 }

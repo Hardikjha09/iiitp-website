@@ -1,52 +1,73 @@
 /**
- * etenders.seed.ts — Seeds `etenders` from src/data/etenders.json
+ * prisma/seed/etenders.seed.ts
  *
- * Source JSON shape:
- *   { live: [ { title, tenderNumber, fileUrl, corrigendumUrl, submissionDate } ], past: [...] }
- *
- * NOTE: submissionDate kept as TEXT — format varies across entries ("25-08-2026, 19:00" vs "16-07-2026 - 11:30")
+ * Imports e-tenders from src/data/etenders.json into the MySQL etenders table.
  */
-import { PrismaClient } from '@prisma/client';
-import * as fs from 'fs';
-import * as path from 'path';
 
-const JSON_PATH = path.resolve(__dirname, '../../../src/data/etenders.json');
+import path from 'path';
+import fs from 'fs';
+import { ContentStatus } from '@prisma/client';
+import prisma from '../../src/config/prisma';
+import { logger } from '../../src/utils/logger';
 
-type TenderItem = {
+interface RawEtender {
   title: string;
   tenderNumber?: string;
   fileUrl?: string;
+  fileText?: string;
   corrigendumUrl?: string;
+  corrigendumText?: string;
   submissionDate?: string;
-};
-type EtendersData = { live?: TenderItem[]; past?: TenderItem[]; archive?: TenderItem[] };
-
-async function seedGroup(prisma: PrismaClient, items: TenderItem[], type: 'live' | 'past') {
-  for (const item of items) {
-    await prisma.etender.create({
-      data: {
-        title: item.title,
-        tender_number: item.tenderNumber ?? null,
-        tender_type: type,
-        file_url: item.fileUrl || null,
-        corrigendum_url: item.corrigendumUrl || null,
-        submission_date: item.submissionDate ?? null,
-        status: 'published',
-        has_unpublished_draft: false,
-      },
-    });
-  }
 }
 
-export async function seed(prisma: PrismaClient) {
-  const raw: EtendersData = JSON.parse(fs.readFileSync(JSON_PATH, 'utf-8'));
-  const liveItems = raw.live ?? [];
-  const pastItems = raw.archive ?? raw.past ?? [];
+interface RawEtendersFile {
+  live?: RawEtender[];
+  past?: RawEtender[];
+}
 
-  console.log(`  📄 Seeding ${liveItems.length} live + ${pastItems.length} past tenders...`);
-  await prisma.etender.deleteMany();
+export async function seedEtenders(): Promise<number> {
+  const filePath = path.resolve(process.cwd(), '../src/data/etenders.json');
+  if (!fs.existsSync(filePath)) {
+    logger.warn('etenders.json not found at ' + filePath);
+    return 0;
+  }
 
-  await seedGroup(prisma, liveItems, 'live');
-  await seedGroup(prisma, pastItems, 'past');
-  console.log(`  ✅ E-Tenders seeded`);
+  const rawData: RawEtendersFile = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  const liveList = rawData.live || [];
+  const pastList = rawData.past || [];
+
+  logger.info(`Found ${liveList.length} live and ${pastList.length} past e-tenders in JSON to seed...`);
+
+  await prisma.etender.deleteMany({});
+
+  let count = 0;
+
+  async function insertGroup(items: RawEtender[], type: 'live' | 'past') {
+    for (const item of items) {
+      if (!item.title) continue;
+
+      await prisma.etender.create({
+        data: {
+          title: item.title.trim(),
+          tender_number: item.tenderNumber ? item.tenderNumber.trim() : null,
+          tender_type: type,
+          file_url: item.fileUrl ? item.fileUrl.trim() : null,
+          corrigendum_url: item.corrigendumUrl ? item.corrigendumUrl.trim() : null,
+          submission_date: item.submissionDate ? item.submissionDate.trim() : null,
+          status: ContentStatus.published,
+          draft_title: item.title.trim(),
+          draft_file_url: item.fileUrl ? item.fileUrl.trim() : null,
+          draft_corrigendum_url: item.corrigendumUrl ? item.corrigendumUrl.trim() : null,
+          has_unpublished_draft: false,
+        },
+      });
+      count++;
+    }
+  }
+
+  await insertGroup(liveList, 'live');
+  await insertGroup(pastList, 'past');
+
+  logger.info(`✅ Seeded ${count} e-tenders into MySQL.`);
+  return count;
 }

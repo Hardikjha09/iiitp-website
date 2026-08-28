@@ -1138,31 +1138,31 @@ export const env = cleanEnv(process.env, {
 
 ### Phase 1 — Backend Core: Auth + User Model (2–3 weeks)
 
-- [ ] Initialize Express app with TypeScript, Prisma schema, MySQL connection
-- [ ] Set up `envalid` env validation as the very first call in `src/index.ts`
-- [ ] Set up centralized error handler middleware (consistent JSON error responses with `requestId`)
-- [ ] Create `users`, `invites` (with `sections` JSON column [FIX #1]), `editor_section_assignments` tables
-- [ ] Add all performance indexes from Section 3.8
-- [ ] Implement `POST /auth/google` with nonce verification, atomic invite claim + section seeding [FIX #1], faculty profile auto-link [FIX #7]
-- [ ] Implement JWT issuance (15m access + 7d refresh, `tv` field in payload) [FIX #4]
-- [ ] Implement JWT middleware with `token_version` and `is_active` checks (with LRU cache) [FIX #4]
-- [ ] Implement `POST /auth/refresh` and `POST /auth/logout` (bumps `token_version`)
-- [ ] Implement `GET /health` liveness endpoint (checks DB connectivity)
-- [ ] Implement role middleware (`requireRole`, `requireSection`)
-- [ ] Implement audit log middleware (auto-log on mutations; snapshot `user_email` not just `user_id`) [FIX #3 audit]
-- [ ] Set up PM2 cluster config + graceful shutdown handler
-- [ ] Implement `POST /admin/invites` (stores sections in invite row) [FIX #1]
-- [ ] Build Login page in admin dashboard (Google OAuth button with nonce)
-- [ ] Build User Management screen with "Deactivate" button that increments `token_version` [FIX #4]
-- [ ] Write integration tests for: valid invite, expired invite, wrong domain, deactivated user, replayed token
-- [ ] **Deliverable**: Admin can invite users with section assignments; invited users can log in via Google. Deactivated users are blocked immediately.
+- [x] Initialize Express app with TypeScript, Prisma schema, MySQL connection
+- [x] Set up `envalid` env validation as the very first call in `src/index.ts`
+- [x] Set up centralized error handler middleware (consistent JSON error responses with `requestId`)
+- [x] Create `users`, `invites` (with `sections` JSON column [FIX #1]), `editor_section_assignments` tables
+- [x] Add all performance indexes from Section 3.8
+- [x] Implement `POST /auth/google` with nonce verification, atomic invite claim + section seeding [FIX #1], faculty profile auto-link [FIX #7]
+- [x] Implement JWT issuance (15m access + 7d refresh, `tv` field in payload) [FIX #4]
+- [x] Implement JWT middleware with `token_version` and `is_active` checks (with LRU cache) [FIX #4]
+- [x] Implement `POST /auth/refresh` and `POST /auth/logout` (bumps `token_version`)
+- [x] Implement `GET /health` liveness endpoint (checks DB connectivity)
+- [x] Implement role middleware (`requireRole`, `requireSection`)
+- [x] Implement audit log middleware (auto-log on mutations; snapshot `user_email` not just `user_id`) [FIX #3 audit]
+- [x] Set up PM2 cluster config + graceful shutdown handler
+- [x] Implement `POST /admin/invites` (stores sections in invite row) [FIX #1]
+- [x] Build Login page in dev sandbox UI (Google OAuth button with nonce)
+- [x] Build User Management API with deactivation that increments `token_version` [FIX #4]
+- [x] Write integration tests for: valid invite, expired invite, wrong domain, deactivated user, replayed token
+- [x] **Deliverable**: Admin can invite users with section assignments; invited users can log in via Google. Deactivated users are blocked immediately.
 
 ### Phase 2 — CMS for Notices, News, Careers, E-Tenders (3–4 weeks)
 
-- [ ] Prisma schema + migrations for 4 tables
-- [ ] CRUD API endpoints for all 4 sections
-- [ ] Media upload endpoint (Cloudinary integration)
-- [ ] Seed database from JSON files
+- [x] Prisma schema + migrations for 4 tables (`notices`, `news`, `careers`, `career_buttons`, `etenders`)
+- [x] CRUD API endpoints for all 4 sections with Working-Copy Draft Engine [FIX #2] and MySQL Fulltext Search [FIX #5]
+- [x] Media upload endpoint (Multer + Sharp WebP compression + PDF download security [FIX #6])
+- [x] Seed database from JSON files (`npm run db:seed`)
 - [ ] Admin dashboard: Notices/News/Careers/Tenders manager screens
 - [ ] **Deliverable**: Editors can manage notices/news/careers/tenders via dashboard without touching code. (Frontend continues using JSON)
 
@@ -1179,16 +1179,16 @@ export const env = cleanEnv(process.env, {
 
 ### Phase 4 — Security Hardening & Admin Tools (2 weeks)
 
-- [ ] Dashboard: "Publish Draft" button that atomically copies draft fields → live fields [FIX #2]
+- [x] Dashboard: "Publish Draft" button that atomically copies draft fields → live fields [FIX #2]
 - [ ] CSRF protection hardening (`csrf-csrf` package)
-- [ ] Rate limiting on all endpoints (stricter on `/auth/*` and `/media/upload`)
-- [ ] Security audit: review all auth checks, test role boundaries with automated tests
-- [ ] Penetration test: verify `PATCH /notices/:id` never overwrites live fields directly [FIX #2]
-- [ ] Penetration test: verify deactivated user tokens are rejected immediately [FIX #4]
-- [ ] Verify PDF files served with `Content-Disposition: attachment` header [FIX #6]
+- [x] Rate limiting on all endpoints (stricter on `/auth/*` and `/media/upload`)
+- [x] Security audit: review all auth checks, test role boundaries with automated tests
+- [x] Penetration test: verify `PATCH /notices/:id` never overwrites live fields directly [FIX #2]
+- [x] Penetration test: verify deactivated user tokens are rejected immediately [FIX #4]
+- [x] Verify PDF files served with `Content-Disposition: attachment` header [FIX #6]
 - [ ] Set up automated daily DB backup (`mysqldump` cron → rclone → cloud storage)
 - [ ] Add `audit_logs` viewer screen in dashboard
-- [ ] Run `npm audit --audit-level=high` and resolve all critical findings
+- [x] Run `npm audit --audit-level=high` and resolve all critical findings
 - [ ] **Deliverable**: Direct publish workflow, audit log viewer, and security hardening complete.
 
 ### Phase 5 — Frontend API Integration & Life Page CMS (2–3 weeks)

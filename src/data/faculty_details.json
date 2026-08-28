@@ -4325,5 +4325,45 @@
       }
     ],
     "department": "ECE"
+  },
+  "dhawal-salwan": {
+    "designation": "Assistant Professor(T)",
+    "image": "/assets/faculty_photos/dhawal_salwan.png",
+    "bio": "Dhawal Salwan is an Assistant Professor (T) in the Department of Electronics and Communication Engineering at the Indian Institute of Information Technology (IIIT) Pune. He received the B.E. degree in Electronics and Communication Engineering from the Thapar Institute of Engineering and Technology (TIET), Patiala, India, in 2021. He is currently pursuing the Ph.D. degree with the Department of Electrical Engineering, Indian Institute of Technology (IIT) Ropar, Rupnagar, India. He has already submitted his Ph.D. thesis. He was selected for the Direct Ph.D. program after completing his B.E. degree in 2021. His research interests include wireless communication, joint sensing and communication, orthogonal time frequency space (OTFS) modulation, advanced air mobility, and UAV communications. He was the recipient of the 3rd prize in the IEEE VTS AAM Concepts-Innovation Challenge in 2022.",
+    "education": "B.Tech. (ECE), Ph.D. (Submitted)",
+    "publications": [
+      {
+        "title": "Practicalities to Communication Receiver for JSC Waveform: Whether to Filter or to Undersample?",
+        "link": "https://ieeexplore.ieee.org/document/11250972"
+      },
+      {
+        "title": "Design and Analysis of Low-Complexity Communication Receiver for PSK-LFM Joint Sensing and Communication Waveform",
+        "link": "https://ieeexplore.ieee.org/document/11203978"
+      },
+      {
+        "title": "Communication receiver design for PSK-LFM joint sensing and communication waveform",
+        "link": "https://ieeexplore.ieee.org/document/10615893"
+      },
+      {
+        "title": "Revolutionizing Air Mobility: Cutting-Edge Infrastructure for Safe Air Corridor Navigation",
+        "link": "https://ieeexplore.ieee.org/document/11317214"
+      }
+    ],
+    "resume": "/assets/resume/dhawal_salwan_resume.pdf",
+    "expertise": "wireless communication, joint sensing and communication, orthogonal time frequency space (OTFS) modulation, advanced air mobility, and UAV communications",
+    "email": "dhawal@iiitp.ac.in",
+    "phone": "9041587405",
+    "google_scholar": "https://scholar.google.com/citations?user=DSU6h5IAAAAJ&hl=en",
+    "orcid": "https://orcid.org/0009-0007-1810-9791",
+    "scopus": "https://www.scopus.com/authid/detail.uri?authorId=59302810500",
+    "books_chapters": "",
+    "patents": "",
+    "seminars": [],
+    "projects": "",
+    "supervisions": "",
+    "linkedin": "www.linkedin.com/in/dhawal-salwan-829080153",
+    "researchLinks": [
+    ],
+    "department": "ECE"
   }
 }

@@ -21,6 +21,8 @@ import { ETendersManager } from './pages/ETendersManager';
 import { UsersPage } from './pages/UsersPage';
 import { InvitesPage } from './pages/InvitesPage';
 import { AuditLogsPage } from './pages/AuditLogsPage';
+import { LoginPage } from './pages/LoginPage';
+import { LoadingSpinner } from './components/LoadingSpinner';
 
 import './App.css';
 
@@ -59,7 +61,19 @@ const rawNavigation: NavGroup[] = [
 ];
 
 function AppLayout() {
-  const { user, isAdmin, canAccessSection, logout } = useAuth();
+  const { user, loading, isAdmin, canAccessSection, logout } = useAuth();
+
+  if (loading) {
+    return (
+      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <LoadingSpinner message="Checking authentication session..." />
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <LoginPage />;
+  }
 
   // Filter navigation items based on role and section permissions
   const filteredNavigation = rawNavigation

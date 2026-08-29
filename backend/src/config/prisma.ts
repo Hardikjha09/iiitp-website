@@ -21,6 +21,8 @@ const adapter = new PrismaMariaDb({
   password: decodeURIComponent(dbUrl.password),
   database: dbUrl.pathname.replace(/^\//, ''),
   allowPublicKeyRetrieval: true, // required for MySQL 8 caching_sha2_password
+  connectionLimit: 20,
+  acquireTimeout: 30000,
 });
 
 const prisma = new PrismaClient({
